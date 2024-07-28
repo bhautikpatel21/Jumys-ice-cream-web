@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,6 +65,30 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+a:hover {
+  color: red;
+}
+
+
+#underline-animate {
+  position: relative;
+}
+
+#underline-animate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  transition:0.3s;
+}
+
+#underline-animate:hover::after {
+  width: 100%;
 }
 
 @tailwind base;

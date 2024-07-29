@@ -21,6 +21,11 @@ a:hover {
   #underline-animate:hover::after {
     width: 100%;
   }
+
+  .dropdown-menu {
+    background-color: aqua;
+    margin-top: 190px;
+  }
   
   @media(max-width : 1200px) {
     #pages {

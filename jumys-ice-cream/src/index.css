@@ -67,29 +67,6 @@ button:focus-visible {
   }
 } */
 
-a:hover {
-  color: red;
-}
-
-
-#underline-animate {
-  position: relative;
-}
-
-#underline-animate::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: red;
-  transition:0.3s;
-}
-
-#underline-animate:hover::after {
-  width: 100%;
-}
 
 @tailwind base;
 @tailwind components;

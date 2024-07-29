@@ -1,0 +1,69 @@
+a:hover {
+    color: red;
+  }
+  
+  
+  #underline-animate {
+    position: relative;
+  }
+  
+  #underline-animate::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: red;
+    transition:0.3s;
+  }
+  
+  #underline-animate:hover::after {
+    width: 100%;
+  }
+  
+  @media(max-width : 1200px) {
+    #pages {
+        display: none;
+    }
+
+    #menuBar {
+        visibility: visible;
+        margin-left: 10px;
+    }
+    #layout {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+    }
+    
+    .icon1{
+        display: none;
+    }
+    .icon2{
+        display: none;
+    }
+    .icon3{
+        display: none;
+    }
+    #icons {
+        justify-content: center;
+        width: 100px;
+    }
+    
+    #logo {
+        margin-left: 100px;
+    }
+   
+  }
+
+  @media(min-width : 1201px) {
+    #menuBar {
+        display: none;
+    }
+
+    #header-footer {
+        display: none;
+    }
+
+  }

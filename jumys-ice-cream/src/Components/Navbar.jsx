@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="dropdown-menu">
         <ul>
         <a className='flex -mt-[10px]' id='underline-animate' href="">Home<FaAngleDown className='mt-[5px] ml-1'/></a>
-        <div className='bg-white mt-3  text-gray-400 shadow-lg'>
+        <div className='bg-white mt-3  text-gray-400 shadow-lg' id='child-menu'>
           <a href=""><li>Home 1</li></a>
           <a href=""><li>Home 2</li></a>
           <a href=""><li>Home 3</li></a>
@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="dropdown-menu">
         <ul>
         <a className='flex -mt-[106px]  ' id='underline-animate' href="">Shop<FaAngleDown className='mt-[5px] ml-1'/></a>
-        <div className='bg-white mt-3 text-gray-400 shadow-lg'>
+        <div className='bg-white mt-3 text-gray-400 shadow-lg' id='child-menu'>
           <a href=""><li>Shop </li></a>
           <a href=""><li>Login</li></a>
           <a href=""><li>Cart</li></a>
@@ -58,7 +58,7 @@ const Navbar = () => {
       <div className="dropdown-menu">
         <ul>
         <a className='flex -mt-[119px] ' id='underline-animate' href="">Products<FaAngleDown className='mt-[5px] ml-1'/></a>
-        <div className='bg-white mt-3 text-gray-400 shadow-lg'>
+        <div className='bg-white mt-3 text-gray-400 shadow-lg' id='child-menu'>
           <a className='text-black' href=""><li className='mb-3'>Products</li></a>
           <a  href=""><li>Simpler <br/>products</li></a>
         </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
       <div className="dropdown-menu">
         <ul>
         <a className='flex -mt-[147px]' id='underline-animate' href="">Blog<FaAngleDown className='mt-[5px] ml-1'/></a>
-        <div className='bg-white mt-3 text-gray-400 shadow-lg'>
+        <div className='bg-white mt-3 text-gray-400 shadow-lg' id='child-menu'>
           <a href=""><li className='mb-2'>Blog</li></a>
           <a href=""><li>Blog Card</li></a>
         </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
       <div className="dropdown-menu">
         <ul>
         <a className='flex -mt-[83px]' id='underline-animate' href="">Page<FaAngleDown className='mt-[5px] ml-1'/></a>
-        <div className=' mt-3 text-gray-400 shadow-lg'>
+        <div className=' mt-3 text-gray-400 shadow-lg bg-white' id='child-menu'>
           <a href=""><li>About us</li></a>
           <a href=""><li>Contact us</li></a>
           <a href=""><li>Blog</li></a>
@@ -97,6 +97,8 @@ const Navbar = () => {
       </div>
     )
   }
+
+  // Menu Bar
 
   // HOME Page
   
@@ -151,7 +153,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className='w-full h-28 flex gap-2 justify-around bg-white ' id='layout'>
+    <div className='w-full h-28 flex gap-2 justify-around' id='layout'>
       <div className='w-11 h-full flex justify-center items-center text-[30px]' id='menuBar'>
         <FaBars/>
       </div>

@@ -27,6 +27,14 @@ a:hover {
     margin-top: 190px;
   }
 
+  #child-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+  }
+
   @media(max-width : 1200px) {
     #pages {
         display: none;

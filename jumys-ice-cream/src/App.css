@@ -41,3 +41,69 @@
   color: #888;
 } */
 
+#slider {
+  background-image: url('./assets/slider1-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Nav-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 58px;
+}
+
+.home-bt-shop {
+  background-color: red;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 40px;
+}
+
+.home-bt2-shop {
+  background-color: black;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+
+
+.spin_of {
+  /* background-size: cover; */
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  transform: rotate(30deg);
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#spin-text {
+  line-height: 28px;
+  color: wheat;
+  margin-left: -85px;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.good-root {
+  width: 130px;
+  height: 130px;
+  background-image: url('./assets/good-root.png');
+  background-size: cover;
+  border-radius: 100%;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import './Navbar.css'
-import { FaAngleDown, FaBars,FaGripVertical, FaHeart, FaSearch, FaShoppingBasket, FaUser } from "react-icons/fa";
+import { FaAngleDown, FaBars,FaGripVertical, FaHeart, FaSearch, FaShoppingBasket, FaUser, } from "react-icons/fa";
 import { useState } from 'react';
 
 

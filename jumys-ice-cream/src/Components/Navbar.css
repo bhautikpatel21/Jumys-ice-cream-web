@@ -23,10 +23,10 @@ a:hover {
   }
 
   .dropdown-menu {
-    background-color: aqua;
+    background-color: white;
     margin-top: 190px;
   }
-  
+
   @media(max-width : 1200px) {
     #pages {
         display: none;

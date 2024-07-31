@@ -2,13 +2,17 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import slider1_img from '../assets/asset 5.png'
 import spin from '../assets/asset 4.svg'
-import Goo_root from '../assets/good-root.png'
+import img_plant from '../assets/asset 38.png'
+import cup from '../assets/asset 16.png'
+import img17 from '../assets/asset 17.jpeg'
+import img18 from '../assets/asset 18.jpeg'
+import img19 from '../assets/asset 19.jpeg'
 
 const Home = () => {
   return (
     <>
     <Navbar/>
-    <div className='w-full h-[800px] flex justify-center items-center gap-11' id='slider'>
+    <div className='w-full h-[800px] flex justify-center items-center gap-11 ' id='slider'>
 
         <div className='w-[500px] h-[350px] '>
             <h4 className='text-[1.1rem] font-semibold'>ICE CREAM SMILES</h4>
@@ -25,12 +29,60 @@ const Home = () => {
             <img  src={slider1_img} alt="not found" />
         </div>
 
-        <div className='w-[300px] h-[620px] '>
-            <div className='good-root'>
-                {/* <img className='ref' src={Goo_root} alt="" /> */}
+        <div className='w-[300px] h-[620px] overflow-hidden -mr-48'>
+            <div className='flip-vertical-right' id='good-root'></div>
+            <img className='mt-80 ml-44' src={img_plant} alt="not found" />
+        </div>
+
+    </div>
+
+    <div className='w-full h-[350px] flex gap-10 justify-center'>
+
+    <div className='h-full w-[700px] '>
+        <div className='h-[60%] w-[700px] flex'>
+            <div className='w-[40%] h-full '>
+                <h1 className='div2-text'>Best Ice Cream Shops</h1>
             </div>
+
+            <div className='w-[60%] h-full'>
+            <p className='info'>It's quite possible that we are living in the golden age of ice cream innovation. Old-school creameries are churning out vanilla bean masterpieces honed over generations while new shops are tossing the term “chef” </p><br />
+            <a href="" className='underline'>Read More</a>
+            </div>
+        </div><br/><br/>
+        <div id='line' className='w-full h-1 border-dashed border-t-4 border-red-600 '> </div>
+    </div>
+
+    <div className='h-full w-[700px] '>
+        <div className='h-[60%] w-[700px] flex'>
+            <div className='w-[40%] h-full '>
+                <h1 className='div21-text'>wave artisan shops</h1>
+            </div>
+
+            <div className='w-[60%] h-full'>
+            <p className='info'>These ice cream shops represent everything that is well and good: new-wave artisan shops challenging the very notion of what should be placed on a cone (or stick, or between cookies), old-school parlors learning…</p><br />
+            <a href="" className='underline'>Read More</a>
+            </div>
+        </div><br/><br/>
+        <div id='line' className='w-full h-1 border-dashed border-t-4 border-red-600 '> </div>
+        <img className='ml-[550px] -mt-[100px]' src={cup} alt="not found" />
+    </div>
+       
+    </div>
+
+    <div className='w-full h-[500px] flex bg-black '>
+        <div className='w-[33%] h-[500px] overflow-hidden bg-green-400'>
+            <img className='w-full h-full hover:scale-110 duration-1000' src={img17} alt="not found" />
+        </div>
+
+        <div className='w-[33%] h-[500px] overflow-hidden bg-green-400'>
+            <img className='w-full h-full hover:scale-110 duration-1000' src={img18} alt="not found" />
+        </div>
+
+        <div className='w-[33%] h-[500px] overflow-hidden bg-green-400'>
+            <img className='w-full h-full hover:scale-110 duration-1000' src={img19} alt="not found" />
         </div>
     </div>
+    <br /><br />
     </>
   )
 }

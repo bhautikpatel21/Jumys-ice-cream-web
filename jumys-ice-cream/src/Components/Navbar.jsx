@@ -197,7 +197,7 @@ const Navbar = () => {
         <a className='icon4' href=""><FaShoppingBasket/></a>
       </div>
     </div>
-    <div className='w-full h-[80px] fixed bottom-0 flex justify-around bg-white' id='header-footer'>
+    <div className='w-full h-[80px] fixed bottom-0 flex justify-around bg-white z-20' id='header-footer'>
       <a className='w-24 h-full flex flex-col justify-center items-center'><FaGripVertical className='text-[30px]'/><p>Shop</p></a>
       <a className='w-24 h-full flex flex-col justify-center items-center'><FaUser className='text-[30px]'/><p>Account</p></a>
       <a className='w-24 h-full flex flex-col justify-center items-center'><FaSearch className='text-[30px]'/><p>Search</p></a>

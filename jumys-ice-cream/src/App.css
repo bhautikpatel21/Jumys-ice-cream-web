@@ -79,17 +79,18 @@
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
   transform: rotate(30deg);
 }
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #spin-text {
@@ -100,10 +101,58 @@
   font-weight: 700;
 }
 
-.good-root {
+#good-root {
   width: 130px;
   height: 130px;
-  background-image: url('./assets/good-root.png');
+  background-image: url('./assets/root_img.png');
   background-size: cover;
   border-radius: 100%;
+}
+
+.div2-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 65px;
+  color: red;
+}
+
+.info {
+  line-height: 25px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.div21-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 65px;
+  color: red;
+  margin-left: 10px;
+}
+
+.flip-vertical-right {
+  animation: flip-vertical-right;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+
+@keyframes flip-vertical-right {
+  0% {
+    transform: rotateY(0);
+  }
+  30% {
+    transform: rotateY(50deg);
+  }
+
+  60% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(-50deg);
+  }
 }

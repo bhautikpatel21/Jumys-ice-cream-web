@@ -156,3 +156,11 @@
     transform: rotateY(-50deg);
   }
 }
+
+.hello-heading {
+    /* color: #fff; */
+    font-family: "Playball", Sans-serif;
+    font-size: 50px;
+    text-transform: lowercase;
+    line-height: 55px;
+}

@@ -7,6 +7,7 @@ import cup from '../assets/asset 16.png'
 import img17 from '../assets/asset 17.jpeg'
 import img18 from '../assets/asset 18.jpeg'
 import img19 from '../assets/asset 19.jpeg'
+// import ProductCard from '../Components/Card'
 
 const Home = () => {
   return (
@@ -14,14 +15,14 @@ const Home = () => {
     <Navbar/>
     <div className='w-full h-[800px] flex justify-center items-center gap-11 ' id='slider'>
 
-        <div className='w-[500px] h-[350px] '>
+        <div className='w-[500px] h-[350px] mt-20'>
             <h4 className='text-[1.1rem] font-semibold'>ICE CREAM SMILES</h4>
             <h1 id='Nav-text'>Frosty Delights: Treat Yourself To Creamy</h1><br />
             <button className='home-bt-shop'>Shop Now</button>
             <button className='home-bt2-shop'>See more</button>
         </div>
 
-        <div className='w-[400px] h-[620px] '>
+        <div className='w-[450px] h-[620px]  '>
             <div class="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center mt-56 -ml-14 ">
                 <img className='spin_of' src={spin} alt="" />
                 <h1 id='spin-text'>Get 30% <br />off</h1>
@@ -34,7 +35,7 @@ const Home = () => {
             <img className='mt-80 ml-44' src={img_plant} alt="not found" />
         </div>
 
-    </div>
+    </div><br /><br />
 
     <div className='w-full h-[350px] flex gap-10 justify-center'>
 
@@ -69,20 +70,31 @@ const Home = () => {
        
     </div>
 
-    <div className='w-full h-[500px] flex bg-black '>
-        <div className='w-[33%] h-[500px] overflow-hidden bg-green-400'>
+    <div className='w-full h-[500px] flex'>
+
+        <div className='w-1/3 h-[500px] overflow-hidden flex justify-center'>
+            <p className='absolute mt-28 font-bold text-white z-30'><i className='hello-heading'>hello</i><br />
+            <p className='text-[55px] -ml-14 leading-tight '>SUMMER!</p></p>
             <img className='w-full h-full hover:scale-110 duration-1000' src={img17} alt="not found" />
         </div>
 
-        <div className='w-[33%] h-[500px] overflow-hidden bg-green-400'>
+        <div className='w-1/3 h-[500px] overflow-hidden '>
+        <div className='w-[170px] h-[170px] absolute object-cover mt-52 ml-28 z-10' >
+            <img className='w-[170px] h-[170px]' src={spin} alt="not found"/>
+            <h1 className='z-10 text-[50px] font-bold -mt-[120px] ml-6 text-white'>-30%</h1>
+        </div>
             <img className='w-full h-full hover:scale-110 duration-1000' src={img18} alt="not found" />
         </div>
 
-        <div className='w-[33%] h-[500px] overflow-hidden bg-green-400'>
+
+        <div className='w-1/3 h-[500px] overflow-hidden flex justify-center items-center'>
+            <p className='absolute font-bold text-white mt-40 z-40'><i className='text-[55px] -ml-14 leading-tight'>CREAMY</i><br />
+            <p className='hello-heading'>enjoy</p></p>
             <img className='w-full h-full hover:scale-110 duration-1000' src={img19} alt="not found" />
         </div>
     </div>
     <br /><br />
+    {/* <ProductCard/> */}
     </>
   )
 }

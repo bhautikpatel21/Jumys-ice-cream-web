@@ -23,14 +23,14 @@ const Navbar = () => {
         <ul>
         <a className='flex -mt-[10px]' id='underline-animate' href="">Home<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className='bg-white mt-3  text-gray-400 shadow-lg' id='child-menu'>
-          <a href=""><li>Home 1</li></a>
-          <a href=""><li>Home 2</li></a>
-          <a href=""><li>Home 3</li></a>
-          <a href=""><li>Home 4</li></a>
-          <a href=""><li>Home 5</li></a>
-          <a href=""><li>Home 6</li></a>
-          <a href=""><li>Home 7</li></a>
-          <a href=""><li>Home 8</li></a>
+          <a className='text-red' href=""><li>Home 1</li></a>
+          <a className='text-red' href=""><li>Home 2</li></a>
+          <a className='text-red' href=""><li>Home 3</li></a>
+          <a className='text-red' href=""><li>Home 4</li></a>
+          <a className='text-red' href=""><li>Home 5</li></a>
+          <a className='text-red' href=""><li>Home 6</li></a>
+          <a className='text-red' href=""><li>Home 7</li></a>
+          <a className='text-red' href=""><li>Home 8</li></a>
         </div>
         </ul>
       </div>
@@ -43,10 +43,10 @@ const Navbar = () => {
         <ul>
         <a className='flex -mt-[106px]  ' id='underline-animate' href="">Shop<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className='bg-white mt-3 text-gray-400 shadow-lg' id='child-menu'>
-          <a href=""><li>Shop </li></a>
-          <a href=""><li>Login</li></a>
-          <a href=""><li>Cart</li></a>
-          <a href=""><li>Wishlist</li></a>
+          <a className='text-red' href=""><li>Shop </li></a>
+          <a className='text-red' href=""><li>Login</li></a>
+          <a className='text-red' href=""><li>Cart</li></a>
+          <a className='text-red' href=""><li>Wishlist</li></a>
         </div>
         </ul>
       </div>
@@ -59,8 +59,8 @@ const Navbar = () => {
         <ul>
         <a className='flex -mt-[119px] ' id='underline-animate' href="">Products<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className='bg-white mt-3 text-gray-400 shadow-lg' id='child-menu'>
-          <a className='text-black' href=""><li className='mb-3'>Products</li></a>
-          <a  href=""><li>Simpler <br/>products</li></a>
+          <a className='text-red text-black' href=""><li className='mb-3'>Products</li></a>
+          <a className='text-red' href=""><li>Simpler <br/>products</li></a>
         </div>
         </ul>
       </div>
@@ -73,8 +73,8 @@ const Navbar = () => {
         <ul>
         <a className='flex -mt-[147px]' id='underline-animate' href="">Blog<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className='bg-white mt-3 text-gray-400 shadow-lg' id='child-menu'>
-          <a href=""><li className='mb-2'>Blog</li></a>
-          <a href=""><li>Blog Card</li></a>
+          <a className='text-red' href=""><li className='mb-2'>Blog</li></a>
+          <a className='text-red' href=""><li>Blog Card</li></a>
         </div>
         </ul>
       </div>
@@ -87,11 +87,11 @@ const Navbar = () => {
         <ul>
         <a className='flex -mt-[83px]' id='underline-animate' href="">Page<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className=' mt-3 text-gray-400 shadow-lg bg-white' id='child-menu'>
-          <a href=""><li>About us</li></a>
-          <a href=""><li>Contact us</li></a>
-          <a href=""><li>Blog</li></a>
-          <a href=""><li>404</li></a>
-          <a href=""><li>Faq 2</li></a>
+          <a className='text-red' href=""><li>About us</li></a>
+          <a className='text-red' href=""><li>Contact us</li></a>
+          <a className='text-red' href=""><li>Blog</li></a>
+          <a className='text-red' href=""><li>404</li></a>
+          <a className='text-red' href=""><li>Faq 2</li></a>
         </div>
         </ul>
       </div>
@@ -191,17 +191,17 @@ const Navbar = () => {
         
       </div>
       <div className='w-[190px] h-full flex justify-around items-center text-[22px]' id='icons'>
-        <a className='icon1' href=""><FaSearch/></a>
-        <a className='icon2' href=""><FaUser/></a>
-        <a className='icon3' href=""><FaHeart/></a>
-        <a className='icon4' href=""><FaShoppingBasket/></a>
+        <a className='icon1 text-red' href=""><FaSearch/></a>
+        <a className='icon2 text-red' href=""><FaUser/></a>
+        <a className='icon3 text-red' href=""><FaHeart/></a>
+        <a className='icon4 text-red' href=""><FaShoppingBasket/></a>
       </div>
     </div>
     <div className='w-full h-[80px] fixed bottom-0 flex justify-around bg-white z-20' id='header-footer'>
-      <a className='w-24 h-full flex flex-col justify-center items-center'><FaGripVertical className='text-[30px]'/><p>Shop</p></a>
-      <a className='w-24 h-full flex flex-col justify-center items-center'><FaUser className='text-[30px]'/><p>Account</p></a>
-      <a className='w-24 h-full flex flex-col justify-center items-center'><FaSearch className='text-[30px]'/><p>Search</p></a>
-      <a className='w-24 h-full flex flex-col justify-center items-center'><FaHeart className='text-[30px]'/><p>Wishlist</p></a>
+      <a className='w-24 h-full flex flex-col justify-center items-center  text-red'><FaGripVertical className='text-[30px]'/><p>Shop</p></a>
+      <a className='w-24 h-full flex flex-col justify-center items-center  text-red'><FaUser className='text-[30px]'/><p>Account</p></a>
+      <a className='w-24 h-full flex flex-col justify-center items-center  text-red'><FaSearch className='text-[30px]'/><p>Search</p></a>
+      <a className='w-24 h-full flex flex-col justify-center items-center  text-red'><FaHeart className='text-[30px]'/><p>Wishlist</p></a>
     </div>
     </>
   )

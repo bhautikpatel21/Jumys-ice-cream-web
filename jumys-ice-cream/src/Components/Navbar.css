@@ -1,6 +1,10 @@
 #underline-animate:hover {
     color: red;
   }
+
+ .text-red:hover {
+  color: red;
+ }
   
   
   #underline-animate {

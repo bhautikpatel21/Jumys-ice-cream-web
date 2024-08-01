@@ -14,7 +14,7 @@ const ProductCard = () => {
   const IconMenu = () => {
     return (
       <>
-    <Card.Body className='z-50'>
+    {/* <Card.Body className='z-50'>
         <div className="flex gap-4 mt-4 z-40">
           <Button variant="outline-secondary" className="mb-2">
             <FaShoppingCart />
@@ -29,7 +29,7 @@ const ProductCard = () => {
             <FaShareAlt />
           </Button>
         </div>
-      </Card.Body>
+      </Card.Body> */}
       </>
     )
   }

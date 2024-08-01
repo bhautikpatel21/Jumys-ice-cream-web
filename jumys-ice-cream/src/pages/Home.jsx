@@ -7,7 +7,7 @@ import cup from '../assets/asset 16.png'
 import img17 from '../assets/asset 17.jpeg'
 import img18 from '../assets/asset 18.jpeg'
 import img19 from '../assets/asset 19.jpeg'
-// import ProductCard from '../Components/Card'
+import ProductCard from '../Components/Card'
 
 const Home = () => {
   return (
@@ -73,7 +73,7 @@ const Home = () => {
     <div className='w-full h-[500px] flex'>
 
         <div className='w-1/3 h-[500px] overflow-hidden flex justify-center'>
-            <p className='absolute mt-28 font-bold text-white z-30'><i className='hello-heading'>hello</i><br />
+            <p className='absolute mt-28 font-bold text-white z-30'><i className='hello-heading font-Playball'>hello</i><br />
             <p className='text-[55px] -ml-14 leading-tight '>SUMMER!</p></p>
             <img className='w-full h-full hover:scale-110 duration-1000' src={img17} alt="not found" />
         </div>
@@ -94,7 +94,13 @@ const Home = () => {
         </div>
     </div>
     <br /><br />
-    {/* <ProductCard/> */}
+    <div className='flex'>
+    <ProductCard/>
+    <ProductCard/>
+    <ProductCard/>
+    <ProductCard/>
+    <ProductCard/>
+    </div>
     </>
   )
 }

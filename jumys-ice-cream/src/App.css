@@ -104,7 +104,7 @@
 #good-root {
   width: 130px;
   height: 130px;
-  background-image: url('./assets/root_img.png');
+  background-image: url('./assets/asset 6.png');
   background-size: cover;
   border-radius: 100%;
 }
@@ -159,7 +159,7 @@
 
 .hello-heading {
     /* color: #fff; */
-    font-family: "Playball", Sans-serif;
+    /* font-family: Playball, sans-serif; */
     font-size: 50px;
     text-transform: lowercase;
     line-height: 55px;

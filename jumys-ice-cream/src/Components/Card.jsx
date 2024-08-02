@@ -14,23 +14,23 @@ const ProductCard = () => {
   const IconMenu = () => {
     return (
       <>
-    <Card.Body className='z-50 -mt-[310px] ml-64 text-[20px] h-10'>
+    <Card.Body className='z-50 -mt-[310px] ml-64 text-[20px] h-10 '>
         <div className="flex gap-4 mt-4 z-40 flex-col">
 
-          <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2'>
-          <Button variant="outline-secondary" className="">
-            <FaShoppingCart />
+          <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2' >
+          <Button variant="outline-secondary">
+            <FaShoppingCart/>
           </Button>
           </div>
 
           <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2'>
-          <Button variant="outline-secondary" className="">
+          <Button variant="outline-secondary">
             <FaSearch />
           </Button>
           </div>
 
           <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2'>
-          <Button variant="outline-secondary" className="">
+          <Button variant="outline-secondary">
             <FaHeart />
           </Button>
           </div>
@@ -42,7 +42,7 @@ const ProductCard = () => {
           </div>
         </div>
       </Card.Body>
-      {/* <h1>Bhautik Dudhat </h1> */}
+      {/* <h1> Bhautik Dudhat </h1> */}
       </>
     )
   }
@@ -62,13 +62,13 @@ const ProductCard = () => {
 
     <Card style={{ width: '18rem' }} className=' ml-11' >
       <div className='w-[300px] h-[300px]' onMouseEnter={() => setImage(img29)} onMouseOut={() => setImage(img28)}>
-        <div className='w-full h-full bg-black' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className='w-full h-full' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Card.Img className='w-[300px] h-[300px]' variant="top" src={image} alt="Darkest Chocolate" />
       {visible && IconMenu()}
       </div>
       </div>
       <Card.Body>
-        <Card.Title className='mt-3'>Sunshine</Card.Title>
+        <Card.Title className='mt-3 font-semibold text-[25px]'>Sunshine</Card.Title>
         <Card.Text>
           <div className="flex mt-2">
             <div className='flex'>
@@ -86,22 +86,6 @@ const ProductCard = () => {
         <ListGroupItem className='mt-2'>
           <strong>$13.00</strong>
         </ListGroupItem>
-        {/* <Card.Body>
-        <div className="flex gap-4 mt-4">
-          <Button className="mb-2">
-            <FaShoppingCart />
-          </Button>
-          <Button className="mb-2">
-            <FaSearch />
-          </Button>
-          <Button className="mb-2">
-            <FaHeart />
-          </Button>
-          <Button className="mb-2">
-            <FaShareAlt />
-          </Button>
-        </div>
-      </Card.Body> */}
       </ListGroup>
     </Card>
   );

@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import './Navbar.css'
 import { FaAngleDown, FaBars,FaGripVertical, FaHeart, FaSearch, FaShoppingBasket, FaUser, } from "react-icons/fa";
 import { useState } from 'react';
 
@@ -23,14 +22,14 @@ const Navbar = () => {
         <ul>
         <a className='flex -mt-[10px]' id='underline-animate' href="">Home<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className='bg-white mt-3  text-gray-400 shadow-lg' id='child-menu'>
-          <a className='text-red' href=""><li>Home 1</li></a>
-          <a className='text-red' href=""><li>Home 2</li></a>
-          <a className='text-red' href=""><li>Home 3</li></a>
-          <a className='text-red' href=""><li>Home 4</li></a>
-          <a className='text-red' href=""><li>Home 5</li></a>
-          <a className='text-red' href=""><li>Home 6</li></a>
-          <a className='text-red' href=""><li>Home 7</li></a>
-          <a className='text-red' href=""><li>Home 8</li></a>
+          <li><a className='text-red' href="">Home 1</a></li>
+          <li><a className='text-red' href="">Home 2</a></li>
+          <li><a className='text-red' href="">Home 3</a></li>
+          <li><a className='text-red' href="">Home 4</a></li>
+          <li><a className='text-red' href="">Home 5</a></li>
+          <li><a className='text-red' href="">Home 6</a></li>
+          <li><a className='text-red' href="">Home 7</a></li>
+          <li><a className='text-red' href="">Home 8</a></li>
         </div>
         </ul>
       </div>
@@ -43,10 +42,10 @@ const Navbar = () => {
         <ul>
         <a className='flex -mt-[106px]  ' id='underline-animate' href="">Shop<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className='bg-white mt-3 text-gray-400 shadow-lg' id='child-menu'>
-          <a className='text-red' href=""><li>Shop </li></a>
-          <a className='text-red' href=""><li>Login</li></a>
-          <a className='text-red' href=""><li>Cart</li></a>
-          <a className='text-red' href=""><li>Wishlist</li></a>
+          <li><a className='text-red' href="">Shop</a></li>
+          <li><a className='text-red' href="">Login</a></li>
+          <li><a className='text-red' href="">Cart</a></li>
+          <li><a className='text-red' href="">Wishlist</a></li>
         </div>
         </ul>
       </div>

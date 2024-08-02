@@ -1,45 +1,90 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#underline-animate:hover {
+  color: red;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.text-red:hover {
+color: red;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+#underline-animate {
+  position: relative;
+}
+
+#underline-animate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  transition:0.3s;
+}
+
+#underline-animate:hover::after {
+  width: 60%;
+}
+
+.dropdown-menu {
+  background-color: white;
+  margin-top: 190px;
+}
+
+#child-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+}
+
+@media(max-width : 1200px) {
+  #pages {
+      display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  #menuBar {
+      visibility: visible;
+      margin-left: 10px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  #layout {
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
   }
+  
+  .icon1{
+      display: none;
+  }
+  .icon2{
+      display: none;
+  }
+  .icon3{
+      display: none;
+  }
+  #icons {
+      justify-content: center;
+      width: 100px;
+  }
+  
+  #logo {
+      margin-left: 100px;
+  }
+ 
 }
 
-.card {
-  padding: 2em;
-}
+@media(min-width : 1201px) {
+  #menuBar {
+      display: none;
+  }
 
-.read-the-docs {
-  color: #888;
-} */
+  #header-footer {
+      display: none;
+    
+  }
+
+}
 
 #slider {
   background-image: url('./assets/slider1-bg.jpg');
@@ -164,3 +209,42 @@
     text-transform: lowercase;
     line-height: 55px;
 }
+
+.homeIcecreem{
+  object-fit:cover;
+  outline: 5px solid white;
+  transition: 1s ease;
+}
+.homeIcecreem:hover{
+  transform: scale(1.1);
+}
+
+.custom-search { 
+  position: relative; 
+  width: 600px; 
+} 
+.custom-search-input { 
+  width: 100%; 
+  border: 1px solid #ccc; 
+  border-radius: 100px; 
+  padding: 10px 100px 10px 20px;  
+  line-height: 1; 
+  box-sizing: border-box; 
+  color: #000;
+  outline: none; 
+  
+} 
+.custom-search-botton { 
+  position: absolute; 
+  right: 3px;  
+  top: 3px; 
+  bottom: 3px; 
+  border: 0; 
+  background: #ff0000; 
+  color: #fff; 
+  outline: none; 
+  margin: 0; 
+  padding: 0 10px; 
+  border-radius: 100px; 
+  z-index: 2; 
+} 

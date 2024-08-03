@@ -7,7 +7,7 @@ import cup from '../assets/asset 16.png'
 import img17 from '../assets/asset 17.jpeg'
 import img18 from '../assets/asset 18.jpeg'
 import img19 from '../assets/asset 19.jpeg'
-import ProductCard from '../Components/Card'
+import List_Rendering from '../Components/MainCard'
 import IceCreamCard from '../Components/HomeCard'
 import ArticleCard from '../Components/ArticalCard'
 import Footer from '../Components/Footer'
@@ -16,9 +16,14 @@ import HomeSlider1 from '../Components/HomeSlider1'
 const Home = () => {
   return (
     <>
+
+    {/* Header */} 
     <Navbar/>
+
+    {/* Slider 1 */}
     <HomeSlider1/>
-    
+
+    {/* Content */}
     <div className='w-full h-[350px] flex gap-10 justify-center'>
 
     <div className='h-full w-[700px] '>
@@ -52,6 +57,8 @@ const Home = () => {
        
     </div>
 
+    {/* 3 ice-creame-information */}
+
     <div className='w-full h-[500px] flex'>
 
         <div className='w-1/3 h-[500px] overflow-hidden flex justify-center'>
@@ -76,15 +83,17 @@ const Home = () => {
         </div>
     </div>
     <br /><br />
-    <div className='flex'>
-    {/* <ProductCard/> */}
-    {/* <ProductCard/>
-    <ProductCard/>
-    <ProductCard/> */}
-    <ProductCard/><br /><br />
-    </div>
+
+    {/* Card Slider */}
+    <List_Rendering/>
+
+    {/* 4 ice-cream-flewers */}
     <IceCreamCard/>
+
+    {/* Testies update Cards */}
     <ArticleCard/>
+
+    {/* Footer */}
     <Footer/>
     </>
   )

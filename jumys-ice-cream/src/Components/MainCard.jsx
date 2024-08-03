@@ -1,14 +1,21 @@
 import React from 'react'
-import item1 from '../assets/asset 24.webp'
-import item2 from '../assets/asset 25.webp'
-import item3 from '../assets/asset 26.webp'
-import item4 from '../assets/asset 27.webp'
-import item5 from '../assets/asset 28.webp'
-import item6 from '../assets/asset 29.webp'
-import item7 from '../assets/asset 30.webp'
-import item8 from '../assets/asset 31.webp'
-import item9 from '../assets/asset 32.webp'
-import item10 from '../assets/asset 33.jpeg'
+import item1 from '../assets/asset 20.webp'
+import item2 from '../assets/asset 21.webp'
+import item3 from '../assets/asset 22.jpeg'
+import item4 from '../assets/asset 23.jpeg'
+import item5 from '../assets/asset 24.webp'
+import item6 from '../assets/asset 25.webp'
+import item7 from '../assets/asset 26.webp'
+import item8 from '../assets/asset 27.webp'
+import item9 from '../assets/asset 28.webp'
+import item10 from '../assets/asset 29.webp'
+import item11 from '../assets/asset 30.webp'
+import item12 from '../assets/asset 31.webp'
+import item13 from '../assets/asset 32.webp'
+import item14 from '../assets/asset 33.jpeg'
+import item15 from '../assets/asset 34.webp'
+import item16 from '../assets/asset 35.jpeg'
+
 import { useState, useEffect } from 'react'
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar } from 'react-icons/fa';
@@ -17,7 +24,7 @@ const List_Rendering = () => {
 
     const [productData, setProductData] = useState([])
 
-    const [visible, setVisible] = useState(false);
+    // const [visible, setVisible] = useState(false);
 
     console.log('productData', productData);
 
@@ -57,73 +64,66 @@ const List_Rendering = () => {
         )
       }
 
-      const handleMouseEnter = () => {
-        setVisible(true);
-      };
+    //   const handleMouseEnter = () => {
+    //     setVisible(true);
+    //   };
       
-      const handleMouseLeave = () => {
-        setVisible(false);
-      };
+    //   const handleMouseLeave = () => {
+    //     setVisible(false);
+    //   };
 
     const Product = [
         {
-            id: 1,
-            name: 'firebolt',
+            name: 'Cookies In Cream',
             price: 1000,
-            dis: '10%',
-            color: 'black',
-            catagories: 'watch',
             img: item1,
             img2 : item2
         },
         {
-            id: 2,
-            name: 'firebolt-fire',
+            name: 'Chocolate Mud',
             price: 10000,
-            dis: '50%',
-            color: 'black',
-            catagories: 'watch',
             img: item3,
             img2 : item4
         },
         {
-            id: 3,
-            name: 'samsung',
+            name: 'Hot Toddy Sorbet',
             price: 20000,
-            dis: '10%',
-            color: 'magicgray',
-            catagories: 'watch',
             img: item5,
             img2 : item6
         },
         {
-            id: 4,
-            name: 'xiomi',
+            name: 'Sorbet Street Treats',
             price: 10000,
-            dis: '10%',
-            color: 'white',
-            catagories: 'mobile',
             img: item7,
             img2 : item8,
         },
         {
-            id: 5,
-            name: 'iphone15',
+            name: 'Darkest Chocolate',
             price: 100000,
-            dis: '10%',
-            color: 'magicgreen',
-            catagories: 'mobile',
             img: item9,
             img2 : item10
+        },
+        {
+            name: 'Blackout Chocolate Cake',
+            price: 100000,
+            img: item11,
+            img2 : item12
+        },
+        {
+            name: 'Sunshine',
+            price: 100000,
+            img: item13,
+            img2 : item14
+        },
+        {
+            name: 'Poe Apple Crisp',
+            price: 100000,
+            img: item15,
+            img2 : item16
         },
 
 
     ]
-
-    
-    const ProductFilter = Product.filter((item) => item.catagories === 'watch')
-
-    console.log(ProductFilter);
 
     useEffect(() => {
         setProductData(Product)
@@ -133,8 +133,6 @@ const List_Rendering = () => {
     return (
         <div>
              <Card style={{ width: '18rem' }} className=' ml-11' ></Card>
-            <h1 className='text-center bg-purple-600 p-2'>This is List-Rendering in React</h1>
-
             {/* <button onClick={data}>Click For Data</button> */}
             <div className='flex flex-wrap justify-evenly'>
 

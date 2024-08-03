@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Home from './Pages/Home'
-import ProductCard from './Components/Card'
+import List_Rendering from './Components/MainCard'
+// import Home from './Pages/Home'
+// import ProductCard from './Components/Card'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Home/>
+    {/* <Home/> */}
+    <List_Rendering/>
     </>
   )
 }

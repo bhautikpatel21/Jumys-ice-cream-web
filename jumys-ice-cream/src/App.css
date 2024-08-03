@@ -86,6 +86,8 @@ color: red;
 
 }
 
+/* |||||||||||||||||||||||          HOME ||||||||||||||||||||||||||| */
+
 #slider {
   background-image: url('./assets/slider1-bg.jpg');
   background-size: cover;
@@ -120,7 +122,6 @@ color: red;
 
 
 .spin_of {
-  /* background-size: cover; */
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -153,6 +154,8 @@ color: red;
   background-size: cover;
   border-radius: 100%;
 }
+
+/* |||||||||||||||||||||||||||   End      ||||||||||||||||||||||||||||||||| */
 
 .div2-text {
   font-family: Kalnia;

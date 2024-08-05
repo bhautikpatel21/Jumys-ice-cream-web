@@ -55,29 +55,30 @@ const ArticleCard = () => {
   );
 
   return (
-    <div className='flex items-center'>
+    <div className='flex items-center px-20'>
       <button
         className="bg-[#ffffff] hover:bg-[#ff0000] rounded-full w-10 h-10 ml-2 p-2 shadow text-gray-950 hover:text-gray-100"
         onClick={handlePrev}
       >
         
-        <FaArrowLeft />
+        <FaArrowLeft/>
       </button>
-      <div className='flex overflow-hidden w-full'>
+      <div className='flex w-full h-[450px]'>
         {visibleArticles.map((article, index) => (
-          <div key={index} className="w-1/3 mx-2 bg-[#ffffff] overflow-hidden">
+          <div key={index} className="w-1/3 h-full mx-2 bg-[#ffffff] overflow-hidden bg-cover">
+            <div className='w-full h-[70%] overflow-hidden'>
           <img
-  className="w-full h-60 object-cover  duration-1000 ease-in-out transform hover:scale-105"
+  className="w-full h-full  duration-1000 hover:scale-110"
   src={article.image}
-  alt={article.title}
-/>
+  alt={article.title}/>
+  </div>
 
             <div className="py-4 ">
-              <div className="text-gray-500 text-sm font-medium w-1/3">
+              <div className="text-gray-500 text-sm font-medium ">
                 BUSINESS TIPS <span className="text-[#ff0000] mx-2">•</span>
                 <span className="text-[#ff0000] mx-2">{article.date}</span>
               </div>
-              <h2 className="text-xl mt-2 font-semibold text-[#000] hover:text-[#ff0000]">
+              <h2 className="text-[30px] mt-2 font-semibold text-[#000] hover:text-[#ff0000]" id='home-slider-2'>
                 {article.title}
                 
               </h2>

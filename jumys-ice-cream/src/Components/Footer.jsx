@@ -5,11 +5,11 @@ import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/
 function Footer() {
   return (
     
-    <footer className="bg-black text-white ">
-      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="bg-black text-white w-full ">
+      <div className=" px-4 py-16">
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center text-center">
-            <h2 className="text-4xl font-bold font-sana-seriDm   ">Sign up for our newsletter!</h2>
+            <h2 className="text-[45px] font-bold" id='footer-text1'>Sign up for our newsletter!</h2>
             <p className="mt-4  text-gray-400">Be the first to know about new flavors and more</p>
           </div><br />
 
@@ -19,7 +19,7 @@ function Footer() {
   <button className="custom-search-botton font-Kalnia" type="submit">Subscribe</button>   
 </div>
 
-      
+      <div className='w-full h-1 bg-gray-800 mt-60 absolute'></div>
  
         </div>
 
@@ -29,7 +29,7 @@ function Footer() {
               <img id='logo' className='w-24 text-white' src={Footerlogo} alt="Logo" />
             </div>
             <p className="text-base text-white text-center sm:text-left">
-              &copy; 2024 – Jumys. All Rights Reserved.
+              &copy; 2024 - Jumys. All Rights Reserved.
             </p>
           </div>
           <div className="flex space-x-4">

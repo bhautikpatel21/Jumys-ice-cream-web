@@ -275,3 +275,15 @@ color: red;
   color: white;
   transition-duration: 1s;
 }
+
+#home-slider-2 {
+  line-height: 40px;
+  font-weight:500;
+  font-family: Kalnia;
+}
+
+#footer-text1 {
+  font-family: Kalnia;
+  font-weight: 500;
+  letter-spacing: 3px;
+}

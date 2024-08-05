@@ -60,19 +60,20 @@ const ArticleCard = () => {
         className="bg-[#ffffff] hover:bg-[#ff0000] rounded-full w-10 h-10 ml-2 p-2 shadow text-gray-950 hover:text-gray-100"
         onClick={handlePrev}
       >
+        
         <FaArrowLeft />
       </button>
-      <div className='flex overflow-hidden'>
+      <div className='flex overflow-hidden w-full'>
         {visibleArticles.map((article, index) => (
-          <div key={index} className="max-w-sm mx-2 bg-[#ffffff] overflow-hidden">
+          <div key={index} className="w-1/3 mx-2 bg-[#ffffff] overflow-hidden">
           <img
-  className="w-[95%] h-60 object-cover  duration-1000 ease-in-out transform hover:scale-105"
+  className="w-full h-60 object-cover  duration-1000 ease-in-out transform hover:scale-105"
   src={article.image}
   alt={article.title}
 />
 
-            <div className="py-4">
-              <div className="text-gray-500 text-sm font-medium">
+            <div className="py-4 ">
+              <div className="text-gray-500 text-sm font-medium w-1/3">
                 BUSINESS TIPS <span className="text-[#ff0000] mx-2">•</span>
                 <span className="text-[#ff0000] mx-2">{article.date}</span>
               </div>

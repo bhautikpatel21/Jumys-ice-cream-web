@@ -96,11 +96,11 @@ const Home = () => {
     <IceCreamCard/>
 
     {/* Testies update Cards */}
-    <ArticleCard/>
+    <ArticleCard/> <br />
 
     {/* Footer */}
     <Footer/>
-    
+
     </>
   )
 }

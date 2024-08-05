@@ -90,7 +90,7 @@ const ArticleCard = () => {
       >
         <FaArrowRight />
       </button>
-    </div>
+    </div> 
   );
 };
 

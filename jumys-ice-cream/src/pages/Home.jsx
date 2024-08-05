@@ -100,6 +100,7 @@ const Home = () => {
 
     {/* Footer */}
     <Footer/>
+    
     </>
   )
 }

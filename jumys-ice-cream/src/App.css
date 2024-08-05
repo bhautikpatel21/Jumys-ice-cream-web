@@ -251,3 +251,27 @@ color: red;
   border-radius: 100px; 
   z-index: 2; 
 } 
+
+#Home-slider-main-com {
+  background-image: url('./assets/asset 52.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-font {
+  font-family: Kalnia;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+#texed {
+  font-family: Kalnia;
+  font-size: 20px;
+}
+
+#home-slider-button:hover {
+  background-color: #ff0000;
+  color: white;
+  transition-duration: 1s;
+}

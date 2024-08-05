@@ -133,7 +133,6 @@ const List_Rendering = () => {
     return (
         <div>
              <Card style={{ width: '18rem' }} className=' ml-11' ></Card>
-            {/* <button onClick={data}>Click For Data</button> */}
             <div className='flex flex-wrap justify-evenly'>
 
                 {

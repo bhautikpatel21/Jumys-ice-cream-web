@@ -14,9 +14,9 @@ function Footer() {
           </div><br />
 
 
-          <div class="custom-search font-Kalnia"> 
-  <input type="text" class="custom-search-input" placeholder="Your Email..."/> 
-  <button class="custom-search-botton font-Kalnia" type="submit">Subscribe</button>   
+          <div className="custom-search font-Kalnia"> 
+  <input type="text" className="custom-search-input" placeholder="Your Email..."/> 
+  <button className="custom-search-botton font-Kalnia" type="submit">Subscribe</button>   
 </div>
 
       

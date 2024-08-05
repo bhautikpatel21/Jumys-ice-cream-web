@@ -12,6 +12,8 @@ import IceCreamCard from '../Components/HomeCard'
 import ArticleCard from '../Components/ArticalCard'
 import Footer from '../Components/Footer'
 import HomeSlider1 from '../Components/HomeSlider1'
+import HomeSecond_slider from '../Components/HomeSecond_slider'
+
 
 const Home = () => {
   return (
@@ -86,6 +88,9 @@ const Home = () => {
 
     {/* Card Slider */}
     <List_Rendering/>
+
+    {/* Home Second Slider */}
+    <HomeSecond_slider/>
 
     {/* 4 ice-cream-flewers */}
     <IceCreamCard/>

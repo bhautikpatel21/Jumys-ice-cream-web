@@ -343,3 +343,7 @@ color: red;
   word-spacing: 5px;
   font-size: 18px;
 }
+
+#login-page-img {
+  background-image: url('./assets/asset 50.jpeg');
+}

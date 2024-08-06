@@ -94,8 +94,8 @@ const LoginRegister = () => {
   return (
     <>
     <Navbar/>
-    <div className='w-full h-auto'>
-      <img src={img} alt="not found" />
+    <div className='w-full h-[420px] mt-44' id='login-page-img'>
+      {/* <img src={} alt="not found" /> */}
       <div className='relative w-full h-16 flex flex-col justify-center items-center -my-40'>
         <p className='my-account'>My Account</p>
         <p className='my-acc-text'><a href="#">Home</a> / <span className='text-red-600'>My Account</span></p>

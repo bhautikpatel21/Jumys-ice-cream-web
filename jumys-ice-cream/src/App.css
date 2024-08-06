@@ -332,3 +332,14 @@ color: red;
     line-height: 20px;
     font-weight: 400;
 }
+
+.my-account {
+  font-family: Kalnia;
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.my-acc-text {
+  word-spacing: 5px;
+  font-size: 18px;
+}

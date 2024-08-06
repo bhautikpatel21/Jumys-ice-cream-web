@@ -57,7 +57,7 @@ const ArticleCard = () => {
   return (
     <div className='flex items-center px-20'>
       <button
-        className="bg-[#ffffff] hover:bg-[#ff0000] rounded-full w-10 h-10 ml-2 p-2 shadow text-gray-950 hover:text-gray-100"
+        className="bg-[#ffffff] -mt-24 hover:bg-[#ff0000] rounded-full w-10 h-10 ml-2 p-2 shadow text-gray-950 hover:text-gray-100"
         onClick={handlePrev}
       >
         
@@ -87,7 +87,7 @@ const ArticleCard = () => {
         ))}
       </div>
       <button
-        className="bg-[#ffffff] hover:bg-[#ff0000] mr-2 rounded-full w-10 h-10 p-2 shadow text-gray-950 hover:text-gray-100"
+        className="bg-[#ffffff] hover:bg-[#ff0000] mr-2 rounded-full w-10 h-10 p-2 shadow text-gray-950 hover:text-gray-100 -mt-24"
         onClick={handleNext}
       >
         <FaArrowRight />

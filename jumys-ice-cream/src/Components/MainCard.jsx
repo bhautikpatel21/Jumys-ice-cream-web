@@ -103,24 +103,24 @@ const List_Rendering = () => {
             img: item9,
             img2 : item10
         },
-        {
-            name: 'Blackout Chocolate Cake',
-            price: 100000,
-            img: item11,
-            img2 : item12
-        },
-        {
-            name: 'Sunshine',
-            price: 100000,
-            img: item13,
-            img2 : item14
-        },
-        {
-            name: 'Poe Apple Crisp',
-            price: 100000,
-            img: item15,
-            img2 : item16
-        },
+        // {
+        //     name: 'Blackout Chocolate Cake',
+        //     price: 100000,
+        //     img: item11,
+        //     img2 : item12
+        // },
+        // {
+        //     name: 'Sunshine',
+        //     price: 100000,
+        //     img: item13,
+        //     img2 : item14
+        // },
+        // {
+        //     name: 'Poe Apple Crisp',
+        //     price: 100000,
+        //     img: item15,
+        //     img2 : item16
+        // },
 
 
     ]

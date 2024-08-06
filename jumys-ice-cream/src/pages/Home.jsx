@@ -1,8 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-// import slider1_img from '../assets/asset 5.png'
 import spin from '../assets/asset 4.svg'
-// import img_plant from '../assets/asset 38.png'
 import cup from '../assets/asset 16.png'
 import img17 from '../assets/asset 17.jpeg'
 import img18 from '../assets/asset 18.jpeg'
@@ -13,7 +11,8 @@ import ArticleCard from '../Components/ArticalCard'
 import Footer from '../Components/Footer'
 import HomeSlider1 from '../Components/HomeSlider1'
 import HomeSecond_slider from '../Components/HomeSecond_slider'
-
+import List_Renderinggg from '../Components/Demo_card_compo_with_hover'
+// import List_Renderingg from '../Components/Demo_slider'
 
 const Home = () => {
   return (
@@ -100,6 +99,10 @@ const Home = () => {
 
     {/* Footer */}
     <Footer/>
+
+    {/* Demo Slider */}
+    {/* <List_Renderingg/> */}
+    <List_Renderinggg/>
 
     </>
   )

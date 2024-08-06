@@ -1,6 +1,7 @@
 import React from 'react';
 import Footerlogo from "../assets/asset 0.svg";
 import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
+import Img from '../assets/asset 48.svg'
 
 function Footer() {
   return (
@@ -19,14 +20,14 @@ function Footer() {
   <button className="custom-search-botton font-Kalnia" type="submit">Subscribe</button>   
 </div>
 
-      <div className='w-full h-1 bg-gray-800 mt-60 absolute'></div>
+      <div className='w-full h-[1px] opacity-80 bg-gray-800 mt-60 absolute'></div>
  
         </div>
 
         <div className="pt-32 md:mt-0 flex justify-between items-center">
           <div className="flex left-0 space-x-5 items-center">
             <div className="mb-1 ">
-              <img id='logo' className='w-24 text-white' src={Footerlogo} alt="Logo" />
+              <img id='logo' className='w-24 text-white' src={Img} alt="Logo" />
             </div>
             <p className="text-base text-white text-center sm:text-left">
               &copy; 2024 - Jumys. All Rights Reserved.

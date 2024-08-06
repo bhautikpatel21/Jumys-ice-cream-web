@@ -318,3 +318,17 @@ color: red;
 #text-card-ice-cream{
   font-family: Kalnia;
 }
+
+.Tastiest-Updates {
+  font-family: Kalnia;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.Our-news {
+  color: #e10914;
+    font-family: Kalnia;
+    font-size: 35px;
+    line-height: 20px;
+    font-weight: 400;
+}

@@ -11,6 +11,7 @@ import Footer from '../Components/Footer'
 import HomeSlider1 from '../Components/HomeSlider1'
 import HomeSecond_slider from '../Components/HomeSecond_slider'
 import List_Renderingg from '../Components/Cards_slider'
+import ScrollToTopButton from '../Components/TopButton'
 
 const Home = () => {
   return (
@@ -95,11 +96,19 @@ const Home = () => {
     {/* 4 ice-cream-flewers */}
     <IceCreamCard/>
 
+    <div className='w-full h-28 flex flex-col justify-center items-center'>
+        <p className='Our-news'><i>Our News</i></p>
+        <p className='Tastiest-Updates'>Tastiest Updates</p>
+    </div>
+
     {/* Testies update Cards */}
     <ArticleCard/> <br />
 
     {/* Footer */}
     <Footer/>
+
+    {/* Scroll To Top Button */}
+    <ScrollToTopButton/>
 
     </>
   )

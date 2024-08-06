@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useRef } from 'react';
 import Slider from 'react-slick';
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar } from 'react-icons/fa';
+import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaLessThan, FaGreaterThan } from 'react-icons/fa';
 
 // Import images
 import item1 from '../assets/asset 20.webp';
@@ -30,7 +30,7 @@ const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
         {
@@ -91,52 +91,60 @@ const sliderSettings = {
 const List_Renderingg = () => {
     const [productData] = useState([
         {
-            name: 'Cookies In Cream',
+            name: 'Sunshine',
             price: 1000,
             img: item1,
-            img2: item2
-        },
-        {
-            name: 'Chocolate Mud',
-            price: 10000,
-            img: item3,
-            img2: item4
-        },
-        {
-            name: 'Hot Toddy Sorbet',
-            price: 20000,
-            img: item5,
-            img2: item6
-        },
-        {
-            name: 'Sorbet Street Treats',
-            price: 10000,
-            img: item7,
-            img2: item8
-        },
-        {
-            name: 'Darkest Chocolate',
-            price: 100000,
-            img: item9,
-            img2: item10
-        },
-        {
-            name: 'Blackout Chocolate Cake',
-            price: 100000,
-            img: item11,
-            img2 : item12
-        },
-        {
-            name: 'Sunshine',
-            price: 100000,
-            img: item13,
-            img2 : item14
+            img2: item2,
+            re : '1 Review'
         },
         {
             name: 'Poe Apple Crisp',
-            price: 100000,
+            price: 1300,
+            img: item3,
+            img2: item4,
+            re : '1 Review'
+        },
+        {
+            name: 'Cookies In Cream',
+            price: 1300,
+            img: item5,
+            img2: item6,
+            re : '0 Review'
+        },
+        {
+            name: 'Chocolate Mud',
+            price: 1500,
+            img: item7,
+            img2: item8,
+            re : '0 Review'
+        },
+        {
+            name: 'Hot Toddy Sorbet',
+            price: 1200,
+            img: item9,
+            img2: item10,
+            re : '0 Review'
+        },
+        {
+            name: 'Sorbet Street Treats',
+            price: 1000,
+            img: item11,
+            img2 : item12,
+            re : '1 Review'
+        },
+        {
+            name: 'Darkest Chocolate',
+            price: 1300,
+            img: item13,
+            img2 : item14,
+            re : '1 Review'
+        },
+        {
+            name: 'Blackout Chocolate Cake',
+            price: 1200,
             img: item15,
-            img2 : item16
+            img2 : item16,
+            re : '1 Review'
         },
     ]);
 
@@ -151,13 +159,13 @@ const List_Renderingg = () => {
     };
 
     return (
-        <div className="carousel-container">
-            <Button onClick={prevSlide} className="carousel-button prev-button -ml-32">Previous</Button>
+        <div className="carousel-container w-full">
+            <Button onClick={prevSlide} className="carousel-button prev-button z-20  w-14 h-14 rounded-full flex justify-center items-center ml-24"><FaLessThan className="w-5 h-5"/></Button>
             <Slider ref={sliderRef} {...sliderSettings} className="carousel-slider">
                 {productData.map((product) => (
-                    <div key={product.name} className="p-2">
-                        <Card className="w-[300px] rounded-md border">
-                            <div className='w-[300px] h-[300px] bg-black'>
+                    <div key={product.name} className="">
+                        <Card className="w-[350px] rounded-md border">
+                            <div className='w-[350px] h-[300px]'>
                                 <img src={product.img} alt={product.name} className='w-full h-full object-cover' />
                             </div>
                             <Card.Body>
@@ -170,7 +178,7 @@ const List_Renderingg = () => {
                                             ))}
                                         </div>
                                         <div>
-                                            <span className="-mt-1 ml-5 absolute">1 Review</span>
+                                            <span className="-mt-1 ml-5 absolute">{product.re}</span>
                                         </div>
                                     </div>
                                 </Card.Text>
@@ -184,7 +192,7 @@ const List_Renderingg = () => {
                     </div>
                 ))}
             </Slider>
-            <Button onClick={nextSlide} className="carousel-button next-button">Next</Button>
+            <Button onClick={nextSlide} className="carousel-button next-button  w-14 h-14 rounded-full border-none flex justify-center items-center mr-24"><FaGreaterThan  className="w-5 h-5"/></Button>
         </div>
     );
 }

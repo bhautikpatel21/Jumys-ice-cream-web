@@ -206,8 +206,6 @@ color: red;
 }
 
 .hello-heading {
-    /* color: #fff; */
-    /* font-family: Playball, sans-serif; */
     font-size: 50px;
     text-transform: lowercase;
     line-height: 55px;
@@ -292,24 +290,21 @@ color: red;
 
 .carousel-container {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
   margin: auto;
 }
 
 .carousel-slider {
-  padding: 0 20px;
+  margin: 30px;
 }
 
 .carousel-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 50%;
   padding: 10px;
   cursor: pointer;
+  margin-top: -50px;
 }
 
 .prev-button {
@@ -320,3 +315,6 @@ color: red;
   right: 10px;
 }
 
+#text-card-ice-cream{
+  font-family: Kalnia;
+}

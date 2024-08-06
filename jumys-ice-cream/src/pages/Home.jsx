@@ -5,14 +5,12 @@ import cup from '../assets/asset 16.png'
 import img17 from '../assets/asset 17.jpeg'
 import img18 from '../assets/asset 18.jpeg'
 import img19 from '../assets/asset 19.jpeg'
-import List_Rendering from '../Components/MainCard'
-import IceCreamCard from '../Components/HomeCard'
+import IceCreamCard from '../Components/IcecreamCard'
 import ArticleCard from '../Components/ArticalCard'
 import Footer from '../Components/Footer'
 import HomeSlider1 from '../Components/HomeSlider1'
 import HomeSecond_slider from '../Components/HomeSecond_slider'
-import List_Renderinggg from '../Components/Demo_card_compo_with_hover'
-// import List_Renderingg from '../Components/Demo_slider'
+import List_Renderingg from '../Components/Cards_slider'
 
 const Home = () => {
   return (
@@ -83,10 +81,13 @@ const Home = () => {
             <img className='w-full h-full hover:scale-110 duration-1000' src={img19} alt="not found" />
         </div>
     </div>
-    <br /><br />
 
-    {/* Card Slider */}
-    <List_Rendering/>
+    <div className='w-full h-32 font-bold flex justify-center items-center text-[40px]' id='text-card-ice-cream'>
+        <h1>Best Ice Cream Shops</h1>
+    </div>
+
+    {/* Demo Slider */}
+    <List_Renderingg/><br/> <br />
 
     {/* Home Second Slider */}
     <HomeSecond_slider/>
@@ -99,10 +100,6 @@ const Home = () => {
 
     {/* Footer */}
     <Footer/>
-
-    {/* Demo Slider */}
-    {/* <List_Renderingg/> */}
-    <List_Renderinggg/>
 
     </>
   )

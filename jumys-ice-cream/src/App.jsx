@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Home from './Pages/Home'
-import Login from './Pages/Login'
-
+import BlogCard from './Pages/BlogCard'
+// import Home from './Pages/Home' 
 // import ProductCard from './Components/Card'
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
   return (
     <>
     {/* <Home/> */}
-    <Login/>
+    <BlogCard/>
     </>
   )
 }

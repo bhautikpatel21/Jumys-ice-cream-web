@@ -360,7 +360,7 @@ color: red;
 }
 
 .slide-top:hover {
-  transform: translateY(-100px); /* Apply the slide-top transformation on hover */
+  transform: translateY(-50px); /* Apply the slide-top transformation on hover */
 }
 
 /* Keyframes for compatibility */
@@ -387,4 +387,9 @@ color: red;
 
 #blog-card1-text {
   line-height: 40px;
+  font-family: kalnia;
+}
+
+.tips-text {
+  font-family: kalnia;
 }

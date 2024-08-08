@@ -13,7 +13,7 @@ function HomeFooter() {
   return (
     <MDBFooter
       bgColor="black"
-      className="text-lg-start text-muted h-[490px] "
+      className="text-lg-start text-muted h-[450px] "
     >
       <section className="pb-5 text-white ">
 
@@ -74,7 +74,7 @@ function HomeFooter() {
         </MDBContainer>
       </section>
       <div className="border border-[#fbfafa] opacity-15"></div>
-      <div className=" md:mt-0 flex justify-between h-[110px] items-end px-3">
+      <div className=" md:mt-0 flex justify-between h-[70px] items-end px-3">
         <div className="flex left-0 space-x-5 items-end ">
           <div className="">
             <p className=" text-base text-white pl-40">

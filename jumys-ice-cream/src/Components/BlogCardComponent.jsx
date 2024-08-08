@@ -9,7 +9,7 @@ const BlogCardComponent = (props) => {
       <div className='slide-top w-full drop-shadow-2xl px-9 -mt-[150px] relative bottom-10'>
         <p className='text-white text-[20px] -mt-4'>June 20,2024</p>
         <p className='text-white text-[35px] font-bold' id='blog-card1-text'>{props.text}</p>
-        <button className='bg-black text-white w-32 h-11 rounded-full'>Read More</button>
+        <button className='bg-black text-white w-32 h-11 rounded-full hover:bg-red-600 duration-200'>Read More</button>
       </div>
       </div>
     </>

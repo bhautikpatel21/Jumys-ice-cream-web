@@ -83,7 +83,7 @@ const Home = () => {
         </div>
     </div>
 
-    <div className='w-full h-32 font-bold flex justify-center items-center text-[40px]' id='text-card-ice-cream'>
+    <div className='w-full h-16 font-bold flex justify-center mt-12 items-center text-[49px]' id='text-card-ice-cream'>
         <h1>Best Ice Cream Shops</h1>
     </div>
 

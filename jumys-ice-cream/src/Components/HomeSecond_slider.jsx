@@ -18,7 +18,7 @@ const HomeSecond_slider = () => {
         <img src={img2} alt="not found" />
     </div>
 
-    <div className='h-full w-1/2 pl-48 justify-center flex flex-col mr-44' >
+    <div className='h-full w-1/2 justify-center flex flex-col mr-44 ml-12' >
     <h1 className='slider-font'>Make Every Day a Sweet Day</h1><br />
     <p className='text-gray-500'>But incorporating liquor into ice cream seems like nothing when you consider how inventive…</p> <br />
     <div className='w-full h-10 flex items-center font-semibold mb-3 pl-10' id='texed'>

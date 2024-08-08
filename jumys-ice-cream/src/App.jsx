@@ -4,6 +4,7 @@ import BlogCard from './Pages/BlogCard'
 import Home from './Pages/Home' 
 import Error404 from './Pages/Error404'
 import AboutUs from './Pages/AboutUsPage'
+import Contact from './Pages/Contact'
 // import ProductCard from './Components/Card'
 
 function App() {
@@ -11,11 +12,13 @@ function App() {
 
   return (
     <>
-    {/* <Home/>  */}
+    <Home/> 
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
-    <AboutUs/>
+    {/* <AboutUs/> */}
+    {/* <Contact/> */}
     </>
+
   )
 }
 

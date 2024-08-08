@@ -84,11 +84,10 @@ const Navbar = () => {
     return(
       <div className="dropdown-menu">
         <ul>
-        <a className='flex -mt-[83px]' id='underline-animate' href="">Page<FaAngleDown className='mt-[5px] ml-1'/></a>
+        <a className='flex -mt-[107px]' id='underline-animate' href="">Page<FaAngleDown className='mt-[5px] ml-1'/></a>
         <div className=' mt-3 text-gray-400 shadow-lg bg-white' id='child-menu'>
           <a className='text-red' href=""><li>About us</li></a>
           <a className='text-red' href=""><li>Contact us</li></a>
-          <a className='text-red' href=""><li>Blog</li></a>
           <a className='text-red' href=""><li>404</li></a>
           <a className='text-red' href=""><li>Faq 2</li></a>
         </div>

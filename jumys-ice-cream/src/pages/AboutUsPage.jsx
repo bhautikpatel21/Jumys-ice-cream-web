@@ -101,11 +101,11 @@ function AboutUs() {
       <h2 className="text-[#ff0000] text-3xl font-serif">Testimonial</h2>
       <h1 className="text-[#000] text-5xl font-serif mt-2">Ice Cream Shop</h1>
     </div>
-    <div className="flex justify-center space-x-6 mx-5">
+    <div className="flex justify-center space-x-6 mx-5 py-20">
       {/* 1st card */}
       <div className="flex flex-col  text-center justify-center items-center p-6 bg-[#faf2e7]  shadow-md max-w-96 h-[300px]">
-        <div className="flex justify-center  items-center gap-x-6 mb-4 ">
-          <div>
+        <div className="flex justify-center  items-center gap-x-6 mb-4">
+          <div >
             <img
               className="w-28 h-28 rounded-full  outline outline-white"
               src={avtar1}
@@ -186,7 +186,7 @@ function AboutUs() {
       </div> */}
 
     </div>
-    <ArticleCard />
+    <ArticleCard/><br />
 
 <Footer2/>
     </div>

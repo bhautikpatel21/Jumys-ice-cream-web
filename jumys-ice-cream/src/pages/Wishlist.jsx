@@ -5,7 +5,7 @@ import Footer2 from "../Components/Footer2";
 
 const Wishlist = () => {
   return (
-    <div className="mt-24">
+    <div>
       <div className="relative w-full h-[400px]">
         <img
           src={backgroundImage}

@@ -6,6 +6,8 @@ import Error404 from './Pages/Error404'
 import AboutUs from './Pages/AboutUsPage'
 import Contact from './Pages/Contact'
 import Faq2 from './Pages/Faq2'
+import Login from './Pages/Login'
+import Wishlist from './Pages/Wishlist'
 // import ProductCard from './Components/Card'
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
     {/* <Contact/> */}
-    <Faq2/>
+    {/* <Faq2/> */}
+    {/* <Login/> */}
+    <Wishlist/>
     </>
 
   )

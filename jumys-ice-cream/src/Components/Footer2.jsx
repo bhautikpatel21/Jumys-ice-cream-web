@@ -17,11 +17,11 @@ function HomeFooter() {
     >
       <section className="pb-5 text-white ">
 
-        <MDBContainer className="px-40 pt-14">
+        <MDBContainer className="px-40 pt-14 ">
 
           <MDBRow className="flex items-center mx-2">
 
-            <MDBCol className="py-7">
+            <MDBCol className="py-7 mr-52">
               <h6 className="text-white font-serif text-xl fw-bold mb-4 ">
                 <MDBIcon icon="gem" className="me-3" />
                 Our Newsletter
@@ -33,7 +33,7 @@ function HomeFooter() {
               <input type="email" id="email" name="email" placeholder="Your Email" className=" bg-black h-[40px] w-[90%] mt-5" />
 
              </div>
-              <div className="bg-[#e10914] hover:bg-gray-50 text-gray-50 hover:text-gray-950 flex justify-center items-center text-2xl text-center w-14  h-14 rounded-full mt-4">
+              <div className="bg-[#e10914] duration-300 hover:bg-gray-50 text-gray-50 hover:text-gray-950 flex justify-center items-center text-2xl text-center w-14  h-14 rounded-full mt-4">
                 <FaArrowRight />
               </div>
             </MDBCol>

@@ -8,6 +8,7 @@ import Contact from './Pages/Contact'
 import Faq2 from './Pages/Faq2'
 import Login from './Pages/Login'
 import Wishlist from './Pages/Wishlist'
+import SignUp from './Pages/SignUp'
 // import ProductCard from './Components/Card'
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
     {/* <Contact/> */}
     {/* <Faq2/> */}
     {/* <Login/> */}
-    <Wishlist/>
+    {/* <Wishlist/> */}
+    <SignUp/>
     </>
 
   )

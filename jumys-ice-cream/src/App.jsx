@@ -10,13 +10,14 @@ import Login from './Pages/Login'
 import Wishlist from './Pages/Wishlist'
 import SignUp from './Pages/SignUp'
 // import ProductCard from './Components/Card'
+import ProductCard from './Components/Card'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    {/* <Home/>  */}
+    <Home/> 
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
@@ -24,7 +25,8 @@ function App() {
     {/* <Faq2/> */}
     {/* <Login/> */}
     {/* <Wishlist/> */}
-    <SignUp/>
+    {/* <SignUp/> */}
+    {/* <ProductCard/> */}
     </>
 
   )

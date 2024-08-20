@@ -12,6 +12,23 @@ import HomeSlider1 from '../Components/HomeSlider1'
 import HomeSecond_slider from '../Components/HomeSecond_slider'
 import List_Renderingg from '../Components/Cards_slider'
 import ScrollToTopButton from '../Components/TopButton'
+import ProductCard from '../Components/Card'
+import item1 from '../assets/asset 20.webp';
+import item2 from '../assets/asset 21.webp';
+import item3 from '../assets/asset 22.jpeg';
+import item4 from '../assets/asset 23.jpeg';
+import item5 from '../assets/asset 24.webp';
+import item6 from '../assets/asset 25.webp';
+import item7 from '../assets/asset 26.webp';
+import item8 from '../assets/asset 27.webp';
+import item9 from '../assets/asset 28.webp';
+import item10 from '../assets/asset 29.webp';
+import item11 from '../assets/asset 30.webp';
+import item12 from '../assets/asset 31.webp';
+import item13 from '../assets/asset 32.webp';
+import item14 from '../assets/asset 33.jpeg';
+import item15 from '../assets/asset 34.webp';
+import item16 from '../assets/asset 35.jpeg';
 
 const Home = () => {
   return (
@@ -88,7 +105,16 @@ const Home = () => {
     </div>
 
     {/* Demo Slider */}
-    <List_Renderingg/><br/> <br />
+    {/* <List_Renderingg/><br/> <br />  */}
+    <ProductCard img1={item1} img2={item2}/>
+    <ProductCard img1={item3} img2={item4}/>
+    <ProductCard img1={item5} img2={item6}/>
+    <ProductCard img1={item7} img2={item8}/>
+    <ProductCard img1={item9} img2={item10}/>
+    <ProductCard img1={item11} img2={item12}/>
+    <ProductCard img1={item13} img2={item14}/>
+    <ProductCard img1={item15} img2={item16}/>
+    
 
     {/* Home Second Slider */}
     <HomeSecond_slider/>

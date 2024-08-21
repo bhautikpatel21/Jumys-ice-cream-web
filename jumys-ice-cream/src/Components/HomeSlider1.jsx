@@ -8,7 +8,7 @@ const HomeSlider1 = () => {
   <>
   <div className='w-full h-[800px] flex justify-center items-center gap-11 m ' id='slider'>
 
-        <div className='w-[500px] h-[350px] mt-20'>
+        <div className='w-[500px] h-[350px] mt-20 mr-40'>
             <h4 className='text-[1.1rem] font-semibold'>ICE CREAM SMILES</h4>
             <h1 id='Nav-text'>Frosty Delights: Treat Yourself To Creamy</h1><br />
             <button className='home-bt-shop'>Shop Now</button>

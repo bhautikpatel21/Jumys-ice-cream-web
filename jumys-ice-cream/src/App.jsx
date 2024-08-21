@@ -11,7 +11,7 @@ import Wishlist from './Pages/Wishlist'
 import SignUp from './Pages/SignUp'
 // import ProductCard from './Components/Card'
 import ProductCard from './Components/Card'
-
+import List_Renderingg from './Components/Cards_slider'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -27,6 +27,8 @@ function App() {
     {/* <Wishlist/> */}
     {/* <SignUp/> */}
     {/* <ProductCard/> */}
+    {/* <Carousel/> */}
+    {/* <List_Renderingg/> */}
     </>
 
   )

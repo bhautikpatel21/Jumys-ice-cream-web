@@ -32,8 +32,8 @@ const ProductCard = (props) => {
   const IconMenu = () => {
     return (
       <>
-        <Card.Body className='z-50 -mt-[310px] ml-64 text-[20px] h-10 '>
-          <div className="flex gap-4 mt-4 z-40 flex-col">
+        <Card.Body className='z-50 -mt-[360px] ml-[300px]  text-[20px] h-10 '>
+          <div className="flex gap-6 mt-4 z-40 flex-col">
             <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2' >
               <Button variant="outline-secondary">
                 <FaShoppingCart />
@@ -73,10 +73,10 @@ const ProductCard = (props) => {
 
   return (
     <div>
-      <Card style={{ width: '18rem' }} className=' ml-11' >
-        <div className='w-[300px] h-[300px]' onMouseEnter={() => setImage(props.img2)} onMouseOut={() => setImage(props.img1)}>
+      <Card style={{ width: '18rem' }} >
+        <div className='w-[380px] h-[350px]' onMouseEnter={() => setImage(props.img2)} onMouseOut={() => setImage(props.img1)}>
           <div className='w-full h-full' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Card.Img className='w-[300px] h-[300px]' variant="top" src={image} alt="Darkest Chocolate" />
+            <Card.Img className='w-[350px] h-[350px]' variant="top" src={image} alt="Darkest Chocolate" />
             {visible && IconMenu()}
           </div>
         </div>

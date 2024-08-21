@@ -164,14 +164,14 @@ const List_Renderingg = () => {
             <Button onClick={prevSlide} className="carousel-button prev-button z-20  w-14 h-14 rounded-full flex justify-center items-center ml-24"><FaLessThan className="w-5 h-5"/></Button>
           
             <Slider ref={sliderRef} {...sliderSettings} className="carousel-slider">
-            <ProductCard img1={item1} img2={item2}/>
-            <ProductCard img1={item3} img2={item4}/>
-            <ProductCard img1={item5} img2={item6}/>
-            <ProductCard img1={item7} img2={item8}/>
-            <ProductCard img1={item9} img2={item10}/>
-            <ProductCard img1={item11} img2={item12}/>
-            <ProductCard img1={item13} img2={item14}/>
-            <ProductCard img1={item15} img2={item16}/>
+            <ProductCard img1={item1} img2={item2} name="Sunshine" review="1 Review" price ="$10.00"/>
+            <ProductCard img1={item3} img2={item4} name="Pei Apple Crisp" review="1 Review" price ="$13.00"/>
+            <ProductCard img1={item5} img2={item6} name="Cookies in Cream" review="0 Review" price ="$10.00 - $13.00"/>
+            <ProductCard img1={item7} img2={item8} name="Chocolate Mud" review="0 Review" price ="$15.00"/>
+            <ProductCard img1={item9} img2={item10} name="Hot Toddy Sorbet" review="0 Review" price ="$12.00"/>
+            <ProductCard img1={item11} img2={item12} name="Sorbet Street Treats" review="1 Review" price ="$10.00"/>
+            <ProductCard img1={item13} img2={item14} name="Darkest Chocolate" review="0 Review" price ="$13.00"/>
+            <ProductCard img1={item15} img2={item16} name="Blackout Chocolate Cake" review="1 Review" price ="$12.00"/>
     
                 {/* {productData.map((product) => (
                     <div key={product.name} className="">

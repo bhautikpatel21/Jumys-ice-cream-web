@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
 
 #underline-animate:hover {
   color: red;
@@ -99,31 +101,39 @@ color: red;
 #Nav-text {
   font-family: Kalnia;
   line-height: 65px;
-  font-weight: 600;
-  font-size: 58px;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 .home-bt-shop {
-  background-color: red;
-  width: 160px;
-  height: 50px;
+  background-color: #ff0000;
+ 
   color: white;
-  font-size: 20px;
-  padding: 8px;
+  font-size: 15px;
+  padding: 10px;
+  padding-inline: 30px;
   border-radius: 40px;
-  
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.home-bt-shop:hover {
+  background-color: #000;
 }
 
 .home-bt2-shop {
-  background-color: black;
-  width: 160px;
-  height: 50px;
+  background-color: #000;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
+  padding: 10px;
+  padding-inline: 30px;
   border-radius: 40px;
-  margin-left: 20px;
+  font-weight: 600;
 }
 
+.home-bt2-shop:hover {
+  background-color: #ff0000;
+}
 
 .spin_of {
   animation-name: spin;
@@ -164,8 +174,8 @@ color: red;
 .div2-text {
   font-family: Kalnia;
   line-height: 65px;
-  font-weight: 700;
-  font-size: 65px;
+  font-weight: 600;
+  font-size: 55px;
   color: red;
 }
 
@@ -178,8 +188,8 @@ color: red;
 .div21-text {
   font-family: Kalnia;
   line-height: 65px;
-  font-weight: 700;
-  font-size: 65px;
+  font-weight: 600;
+  font-size: 55px;
   color: red;
   margin-left: 10px;
 }
@@ -262,9 +272,9 @@ color: red;
 
 .slider-font {
   font-family: Kalnia;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 60px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 #texed {
@@ -321,17 +331,18 @@ color: red;
 
 #text-card-ice-cream{
   font-family: Kalnia;
+  font-weight: 500;
 }
 
 .Tastiest-Updates {
   font-family: Kalnia;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 50px;
 }
 
 .Our-news {
   color: #e10914;
-    font-family: Kalnia;
+    font-family: "Playball", Sans-serif;
     font-size: 35px;
     line-height: 20px;
     font-weight: 400;

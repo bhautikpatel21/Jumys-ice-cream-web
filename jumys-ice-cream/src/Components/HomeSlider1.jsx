@@ -11,8 +11,8 @@ const HomeSlider1 = () => {
         <div className='w-[500px] h-[350px] mt-20 mr-40'>
             <h4 className='text-[1.1rem] font-semibold'>ICE CREAM SMILES</h4>
             <h1 id='Nav-text'>Frosty Delights: Treat Yourself To Creamy</h1><br />
-            <button className='home-bt-shop'>Shop Now</button>
-            <button className='home-bt2-shop'>See more</button>
+            <button className='home-bt-shop duration-200'>Shop Now</button>
+            <button className='home-bt2-shop duration-200'>See more</button>
         </div>
 
         <div className='w-[450px] h-[620px]  '>

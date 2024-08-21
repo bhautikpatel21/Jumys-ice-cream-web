@@ -103,7 +103,7 @@ const Home = () => {
     </div>
 
     {/* Testies update Cards */}
-    <ArticleCard/> <br />
+    <ArticleCard/> <br /><br />
 
     {/* Footer */}
     <Footer/>

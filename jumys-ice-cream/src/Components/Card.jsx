@@ -81,23 +81,23 @@ const ProductCard = (props) => {
           </div>
         </div>
         <Card.Body>
-          <Card.Title className='mt-3 font-semibold text-[25px]'>Sunshine</Card.Title>
+          <Card.Title className='mt-3 font-semibold text-[25px]'>{props.name}</Card.Title>
           <Card.Text>
             <div className="flex mt-2">
-              <div className='flex'>
+              <div className='flex gap-1'>
                 {[...Array(5)].map((star, index) => (
                   <FaStar key={index} color="red" />
                 ))}
               </div>
               <div>
-                <span className="-mt-1 ml-5  absolute">1 Reviews</span>
+                <span className="-mt-1 ml-5  absolute">{props.review}</span>
               </div>
             </div>
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem className='mt-2'>
-            <strong>$13.00</strong>
+            <strong>{props.price}</strong>
           </ListGroupItem>
         </ListGroup>
       </Card>

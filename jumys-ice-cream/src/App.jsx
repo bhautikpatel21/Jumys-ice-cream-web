@@ -12,11 +12,13 @@ import SignUp from './Pages/SignUp'
 // import ProductCard from './Components/Card'
 import ProductCard from './Components/Card'
 import List_Renderingg from './Components/Cards_slider'
+import Navbar from './Components/Nvbar_!'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    {/* <Navbar/> */}
     <Home/> 
     {/* <BlogCard/> */}
     {/* <Error404/>  */}

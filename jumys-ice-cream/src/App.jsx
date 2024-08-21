@@ -12,20 +12,22 @@ import SignUp from './Pages/SignUp'
 // import ProductCard from './Components/Card'
 import ProductCard from './Components/Card'
 import List_Renderingg from './Components/Cards_slider'
-import Navbar from './Components/Nvbar_!'
+import NumberCounter from './Components/NumberCounter'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
     {/* <Navbar/> */}
-    <Home/> 
+    {/* <Home/>  */}
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
+    {/* <NumberCounter/> */}
     {/* <Contact/> */}
     {/* <Faq2/> */}
-    {/* <Login/> */}
+    <Login/>
     {/* <Wishlist/> */}
     {/* <SignUp/> */}
     {/* <ProductCard/> */}

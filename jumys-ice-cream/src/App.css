@@ -331,7 +331,7 @@ color: red;
 
 #text-card-ice-cream{
   font-family: Kalnia;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .Tastiest-Updates {
@@ -402,14 +402,14 @@ color: red;
 
 #blog-card1-text {
   line-height: 40px;
+  filter: drop-shadow(30px 30px 30px black);
   font-family: kalnia;
+  color: #FFFFFF;
 }
 
 .tips-text {
   font-family: kalnia;
 }
-
-
 
 .tooltip {
   position: absolute;
@@ -451,4 +451,17 @@ color: red;
 
 #conPage-t1 {
   font-family: kalnia;
+}
+
+#shadow-effect {
+  filter: drop-shadow(100px 100px 100px  black);
+}
+
+#manufacture {
+  font-family: kalnia;
+  font-weight: 600;
+}
+
+#sweet{
+  font-family: "Playball", Sans-serif;
 }

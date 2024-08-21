@@ -9,6 +9,8 @@ import avtar3 from "../assets/avatar-3.jpg";
 // import avtar4 from "../assets/avatar-4.jpg"
 import ArticleCard from "../Components/ArticalCard";
 import Footer2  from "../Components/Footer2";
+import NumberCounter from "../Components/NumberCounter";
+import ScrollToTopButton from "../Components/TopButton";
 
 
 // Stat Section Data
@@ -44,10 +46,10 @@ function AboutUs() {
       </div>
 
 {/* Manufacture 1 */}
-<div className="flex flex-col md:flex-row items-center md:items-start  my-5 py-10 px-5 md:px-20 gap-x-14">
-      <div className="md:w-1/2 ">
-        <h2 className="text-red-500 text-2xl font-semibold mb-2 ">Sweet Escape</h2>
-        <h1 className="text-5xl font-bold mb-4">Manufacture</h1>
+<div className="flex flex-col md:flex-row items-center md:items-start  my-5 py-10 px-5  md:px-20 gap-x-14">
+      <div className="md:w-1/2 m-auto ">
+        <h2 className="text-red-500 text-2xl font-semibold mb-2 " id="sweet">Sweet Escape</h2>
+        <h1 className="text-5xl font-bold mb-4" id="manufacture">Manufacture</h1>
         <p className="text-gray-500 text-lg mb-6">
           Once The Ingredients Have Cooled Enough, It's Time To Pour Them Into Molds And Freeze In A Brine Bath. After That, The Ice Cream Sticks Are Dried And Packaged In The Freezer In Square Boxes. From Here, This Cool Ice Cream Is Ready To Be Delivered To Visitors...
         </p>
@@ -62,19 +64,8 @@ function AboutUs() {
     </div>
 
 {/* Stat Section Data */}
-<div className="bg-[#fff6f3] py-12">
-      <div className="container mx-auto flex justify-around">
-        {stats.map((stat, index) => (
-          <div key={index} className="text-center">
-            <h2 className="text-5xl font-bold text-red-600  font-Kalnia">{stat.value}</h2>
-            {/* <h1 className="text-red-600 text-5xl">{stat.mark}</h1> */}
-            <p className="text-black font-medium font-sana-seriDm">{stat.label}</p>
-          </div>
-        ))}
-      </div>
-    </div>
 
-
+<NumberCounter/>
 
     {/* Manufacture 2 */}
     <div className="flex flex-col md:flex-row items-center md:items-start py-10 gap-x-14 my-5 px-5 md:px-20">
@@ -98,8 +89,8 @@ function AboutUs() {
 
     {/* Testimonial section */}
     <div className="ml-20">
-      <h2 className="text-[#ff0000] text-3xl font-serif">Testimonial</h2>
-      <h1 className="text-[#000] text-5xl font-serif mt-2">Ice Cream Shop</h1>
+      <h2 className="text-[#ff0000] text-3xl font-serif" id="sweet">Testimonial</h2>
+      <h1 className="text-[#000] text-5xl font-serif mt-2" id="manufacture">Ice Cream Shop</h1>
     </div>
     <div className="flex justify-center space-x-6 mx-5 py-20">
       {/* 1st card */}
@@ -118,7 +109,7 @@ function AboutUs() {
           </div>
         </div>
         <div>
-          <p className="flex justify-center items-center text-center text-gray-700 font-bold">
+          <p className="flex justify-center items-center text-center text-gray-700 font-semibold">
             “I Absolutely love this place! The variety of flavors is impressive,
             and each scoop is packed with deliciousness....
           </p>
@@ -139,7 +130,7 @@ function AboutUs() {
             <p className="text-gray-600">CEO & Founder</p>
           </div>
         </div>
-        <p className="flex justify-center items-center text-center text-gray-700 font-bold">
+        <p className="flex justify-center items-center text-center text-gray-700 font-semibold">
           “A great company to buy from. Excellent quality products at good
           value. Delivery is efficient and quick.”
         </p>
@@ -159,36 +150,21 @@ function AboutUs() {
             <p className="text-gray-600">Designer</p>
           </div>
         </div>
-        <p className="flex justify-center items-center text-center text-gray-700 font-bold">
+        <p className="flex justify-center items-center text-center text-gray-700 font-semibold">
           “ I have never been disappointed, either for myself or as gifts, the
           pieces are lovely, reasonably...
         </p>
       </div>
-
-      {/* 4th card */}
-  {/* <div className="flex flex-col  text-center justify-center items-center p-6 bg-[#faf2e7]  shadow-md max-w-96 h-[300px]">
-        <div className="flex justify-center  items-center gap-x-6 mb-4 ">
-          <div>
-            <img
-              className="w-28 h-28 rounded-full  outline outline-white"
-              src={avtar4}
-              alt="Robeson"
-            />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold">Robeson</h3>
-            <p className="text-gray-600">Designer</p>
-          </div>
-        </div>
-        <p className="flex justify-center items-center text-center text-gray-700 font-bold">
-        “ I have never been disappointed, either for myself or as gifts, the pieces are lovely, reasonably...
-        </p>
-      </div> */}
-
     </div>
+
+      <div className="w-full h-36 flex justify-center items-center flex-col">
+        <p className="text-red-600 text-[40px]" id="sweet">Our News</p>
+        <p className="manufacture text-[50px]" id="manufacture">Testiest Updates</p>
+      </div><br/>
     <ArticleCard/><br />
 
 <Footer2/>
+<ScrollToTopButton/>
     </div>
   );
 }

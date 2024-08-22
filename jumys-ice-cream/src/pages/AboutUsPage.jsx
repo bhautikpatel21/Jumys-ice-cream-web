@@ -25,7 +25,7 @@ const stats = [
 function AboutUs() {
   return (
     <div>
-      <div className="relative w-full h-[420px]">
+      <div className="relative w-full h-auto">
         <img
           src={backgroundImage}
           alt="About Us Background"

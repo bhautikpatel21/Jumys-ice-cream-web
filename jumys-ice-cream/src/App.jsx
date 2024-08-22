@@ -29,7 +29,7 @@ function App() {
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
     {/* <NumberCounter/> */}
-    {/* <Contact/> */}
+    <Contact/>
     {/* <Faq2/> */}
     {/* <Login/> */}
     {/* <Wishlist/> */}
@@ -38,7 +38,7 @@ function App() {
     {/* <List_Renderingg/> */}
     {/* <FilterComponent/> */}
     {/* <ProductCardProductList/> */}
-    <Shop/>
+    {/* <Shop/> */}
     {/* <ShopList/> */}
     </>
 

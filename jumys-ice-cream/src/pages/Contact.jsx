@@ -11,7 +11,7 @@ function Contact() {
   return (
     <div>
       <div>
-        <div className="relative w-full h-[430px]">
+        <div className="relative w-full h-auto">
           <img
             src={backgroundImage}
             alt="About Us Background"

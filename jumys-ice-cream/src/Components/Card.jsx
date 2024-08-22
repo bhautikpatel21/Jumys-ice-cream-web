@@ -76,7 +76,7 @@ const ProductCard = (props) => {
       <Card style={{ width: '18rem' }}>
         <div className='w-[380px] h-[350px] hover:opacity-90' onMouseEnter={() => setImage(props.img2)} onMouseOut={() => setImage(props.img1)}>
           <div className='w-full h-full' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Card.Img className='w-[350px] h-[350px]' variant="top" src={image} alt="Darkest Chocolate" />
+            <Card.Img className='w-[350px] h-[350px] rounded-2xl' variant="top" src={image} alt="not found" />
             {visible && IconMenu()}
           </div>
         </div>

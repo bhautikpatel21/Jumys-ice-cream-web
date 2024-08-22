@@ -16,6 +16,7 @@ import NumberCounter from './Components/NumberCounter'
 import FilterComponent from './Components/FilterComponent'
 // import ProductCardProductList from './Components/ProductCardProductList'
 import Shop from './Pages/Shop'
+import HomeSlider1 from './Components/HomeSlider1'
 // import ShopList from './Pages/ShopList'
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
   return (
     <>
     {/* <Navbar/> */}
-    <Home/> 
+    {/* <Home/>  */}
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
@@ -40,6 +41,7 @@ function App() {
     {/* <ProductCardProductList/> */}
     {/* <Shop/> */}
     {/* <ShopList/> */}
+    <HomeSlider1/>
     </>
 
   )

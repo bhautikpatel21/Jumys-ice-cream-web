@@ -473,3 +473,37 @@ color: red;
 #sweet{
   font-family: "Playball", Sans-serif;
 }
+
+/*  |||||||||| :  Home page media query  : |||||||||||||| */
+
+@media(max-width : 425px) {
+
+  /* HOME CLIDER component */
+
+  #slider {
+    background-position: center
+  }
+  .text-section {
+    /* display: none; */
+    background-color: yellow;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  #Nav-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    /* margin-left: 50px; */
+  }
+  .iceCream-div {
+    display: none;
+  }
+  .plantR {
+    display: none;
+  }
+
+}

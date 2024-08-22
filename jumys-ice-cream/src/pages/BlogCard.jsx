@@ -13,8 +13,8 @@ const BlogCard = (props) => {
     <section className='w-full h-auto flex justify-center items-center object-cover '>
       <img className='w-full h-full' src={bgImg} alt="not found" /> 
       <div className='absolute flex-col justify-center items-center z-10 mt-28'>
-        <p className='tips-text text-[45px] font-bold'>Business Tips</p>
-        <p className='text-[15px] ml-14'>Home / <span className='text-red-600'>Business Tips</span></p>
+        <p className='tips-text text-[2.75rem] font-bold'>Business Tips</p>
+        <p className='text-[15px] ml-24'>Home / <span className='text-red-600'>Business Tips</span></p>
       </div>
     </section><br />
     <div className='w-full flex justify-center gap-4 flex-wrap py-16'>

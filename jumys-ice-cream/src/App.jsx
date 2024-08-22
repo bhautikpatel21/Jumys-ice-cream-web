@@ -25,11 +25,11 @@ function App() {
     <>
     {/* <Navbar/> */}
     {/* <Home/>  */}
-    {/* <BlogCard/> */}
+    <BlogCard/>
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
     {/* <NumberCounter/> */}
-    <Contact/>
+    {/* <Contact/> */}
     {/* <Faq2/> */}
     {/* <Login/> */}
     {/* <Wishlist/> */}

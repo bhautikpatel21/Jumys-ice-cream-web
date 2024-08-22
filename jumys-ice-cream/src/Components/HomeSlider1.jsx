@@ -6,7 +6,7 @@ import spin from '../assets/asset 4.svg'
 const HomeSlider1 = () => {
   return (
   <>
-  <div className='w-screen h-[800px] flex justify-center items-center gap-11 m ' id='slider'>
+  <div className='w-full h-[800px] flex justify-center items-center gap-11 ' id='slider'>
 
         <div className='w-[500px] h-[350px] mt-20 mr-40'>
             <h4 className='text-[1.1rem] font-semibold'>ICE CREAM SMILES</h4>

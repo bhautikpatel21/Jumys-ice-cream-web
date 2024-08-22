@@ -13,6 +13,10 @@ import SignUp from './Pages/SignUp'
 import ProductCard from './Components/Card'
 import List_Renderingg from './Components/Cards_slider'
 import NumberCounter from './Components/NumberCounter'
+import FilterComponent from './Components/FilterComponent'
+// import ProductCardProductList from './Components/ProductCardProductList'
+import Shop from './Pages/Shop'
+// import ShopList from './Pages/ShopList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,12 +31,15 @@ function App() {
     {/* <NumberCounter/> */}
     {/* <Contact/> */}
     {/* <Faq2/> */}
-    <Login/>
+    {/* <Login/> */}
     {/* <Wishlist/> */}
     {/* <SignUp/> */}
-    {/* <ProductCard/> */}
     {/* <Carousel/> */}
     {/* <List_Renderingg/> */}
+    {/* <FilterComponent/> */}
+    {/* <ProductCardProductList/> */}
+    <Shop/>
+    {/* <ShopList/> */}
     </>
 
   )

@@ -476,6 +476,14 @@ color: red;
 
 /*  |||||||||| :  Home page media query  : |||||||||||||| */
 
+@media(max-width: 1024px) {
+
+  .spin-div {
+    margin-top: 40px;
+  }
+}
+
+
 @media(max-width : 425px) {
 
   /* HOME CLIDER component */
@@ -504,6 +512,30 @@ color: red;
   }
   .plantR {
     display: none;
+  }
+
+}
+
+
+@media(max-width : 768px) {
+  #topIce {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #topIce>div{
+    /* object-fit: cover; */
+    flex-shrink: 0;
+    flex-grow: 0;
+    /* aspect-ratio: 0.6; */
+  }
+
+  #topIce img{
+    object-fit: cover;
+  }
+  #IC {
+    width:auto;
+    max-height: calc(300px + 30px)
   }
 
 }

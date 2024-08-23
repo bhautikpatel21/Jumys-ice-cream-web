@@ -10,7 +10,7 @@ import ScrollToTopButton from '../Components/TopButton'
 const BlogCard = (props) => {
   return (
     <>
-    <section className='w-full h-auto flex justify-center items-center object-cover '>
+    <section className='w-full h-auto flex justify-center items-center'>
       <img className='w-full h-full' src={bgImg} alt="not found" /> 
       <div className='absolute flex-col justify-center items-center z-10 mt-28'>
         <p className='tips-text text-[2.75rem] font-bold'>Business Tips</p>

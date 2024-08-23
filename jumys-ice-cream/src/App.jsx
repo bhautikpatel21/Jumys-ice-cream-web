@@ -17,6 +17,8 @@ import FilterComponent from './Components/FilterComponent'
 // import ProductCardProductList from './Components/ProductCardProductList'
 import Shop from './Pages/Shop'
 import HomeSlider1 from './Components/HomeSlider1'
+import Navbar from './Components/Navbar'
+
 // import ShopList from './Pages/ShopList'
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
 
   return (
     <>
-    {/* <Navbar/> */}
+    <Navbar/>
     {/* <Home/>  */}
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
@@ -41,7 +43,7 @@ function App() {
     {/* <ProductCardProductList/> */}
     {/* <Shop/> */}
     {/* <ShopList/> */}
-    <HomeSlider1/>
+    {/* <HomeSlider1/> */}
     </>
 
   )

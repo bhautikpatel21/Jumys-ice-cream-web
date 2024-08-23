@@ -59,24 +59,24 @@ const Home = () => {
 
     {/* 3 ice-creame-information */}
 
-    <div className='w-full h-[500px] flex'>
+    <div className='w-full h-auto flex' id='topIce'>
 
-        <div className='w-1/3 h-[500px] overflow-hidden flex justify-center'>
+        <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden flex justify-center' id='IC'>
             <p className='absolute mt-28 font-bold text-white z-30'><i className='hello-heading font-Playball'>hello</i><br />
             <p className='text-[55px] -ml-14 leading-tight '>SUMMER!</p></p>
             <img className='w-full h-full hover:scale-110 duration-1000' src={img17} alt="not found" />
         </div>
 
-        <div className='w-1/3 h-[500px] overflow-hidden '>
-        <div className='w-[170px] h-[170px] absolute object-cover mt-52 ml-28 z-10' >
-            <img className='w-[170px] h-[170px]' src={spin} alt="not found"/>
-            <h1 className='z-10 text-[50px] font-bold -mt-[120px] ml-6 text-white'>-30%</h1>
+        <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden ' id='IC'>
+        <div className='spin-div w-[170px] h-[10px] absolute object-cover z-10' >
+            <img className='w-[100px] h-[100px]' src={spin} alt="not found"/>
+            <h1 className='z-10 text-[20px] font-bold -mt-[70px] ml-6 text-white'>-30%</h1>
         </div>
             <img className='w-full h-full hover:scale-110 duration-1000' src={img18} alt="not found" />
         </div>
 
 
-        <div className='w-1/3 h-[500px] overflow-hidden flex justify-center items-center'>
+        <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden flex justify-center items-center' id='IC'>
             <p className='absolute font-bold text-white mt-40 z-40'><i className='text-[55px] -ml-14 leading-tight'>CREAMY</i><br />
             <p className='hello-heading'>enjoy</p></p>
             <img className='w-full h-full hover:scale-110 duration-1000' src={img19} alt="not found" />

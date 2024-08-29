@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../assets/asset 0.svg";
 // import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { FaAngleDown, FaBars,FaGripVertical, FaHeart, FaSearch, FaShoppingBasket, FaUser, } from "react-icons/fa";
+import { i,useState } from "react";
 import navImg1 from '../assets/asset 1.jpeg'
 import navImg2 from '../assets/asset 2.jpeg'
 import navImg3 from '../assets/asset 3.jpeg'
@@ -435,7 +436,7 @@ const Navbarr = () => {
 
 
      <div className='w-full h-[60px] fixed bottom-0 flex justify-around bg-white z-20' id='Mobile'>
-      <i to="shop" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-table-cells"></i>Shop</i>
+      <i to="shop" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-magnifying-glass"></i>Shop</i>
       <i to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-user"></i> Account</i>
       <i to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-magnifying-glass"></i> Search</i>
       <i to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-heart"></i> Wishlist</i>

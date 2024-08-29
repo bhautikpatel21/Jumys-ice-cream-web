@@ -27,8 +27,8 @@ function App() {
 
   return (
     <>
-    <Navbarr/>
-    {/* <Home/> */}
+    {/* <Navbarr/> */}
+    <Home/>
     {/* <Navbar/> */}
     {/* <Home/>  */}
     {/* <BlogCard/> */}

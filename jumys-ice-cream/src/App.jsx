@@ -18,6 +18,7 @@ import FilterComponent from './Components/FilterComponent'
 import Shop from './Pages/Shop'
 import HomeSlider1 from './Components/HomeSlider1'
 import Navbar from './Components/Navbar'
+import Navbarr from './Components/Navbarr'
 
 // import ShopList from './Pages/ShopList'
 
@@ -26,7 +27,9 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    <Navbarr/>
+    {/* <Home/> */}
+    {/* <Navbar/> */}
     {/* <Home/>  */}
     {/* <BlogCard/> */}
     {/* <Error404/>  */}

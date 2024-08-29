@@ -1,6 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 
+.underline-animate {
+  position: relative;
+}
+
+.underline-animate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  transition:0.3s;
+}
+
+
+.underline-animate:hover::after {
+  width: 100%;
+}
+
+.active{
+   color: red ;
+
+}
+
+@media only screen and (max-width: 1199px) {
+  #icon{
+       
+  display: none;
+
+  }
+  #navbar{
+       
+  display:none;
+
+  }
+  #button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  
+  #Menu{
+    display: none;
+
+  }
+    #Mobile{
+      display: none;
+    }
+
+}
+
+
 *{
   margin: 0;
   padding: 0;

@@ -12,7 +12,7 @@ import { FaArrowRight} from 'react-icons/fa';
 const HomeSecond_slider = () => {
   return (
   <>
-  <div className='w-full overflow-hidden h-[800px] flex  justify-between ' id='Home-slider-main-com'>
+  <div className='w-full overflow-hidden h-[800px] flex flex-col md:flex-row justify-between ' id='Home-slider-main-com'>
     <div className='h-full w-72 pt-52'>
         <img src={img1} alt="not found" className='-ml-28' />
         <img src={img2} alt="not found" />

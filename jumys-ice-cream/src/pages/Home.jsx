@@ -65,8 +65,8 @@ const Home = () => {
     <div className='w-full h-auto flex' id='topIce'>
 
         <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden flex justify-center' id='IC'>
-            <p className='absolute mt-28 font-bold text-white z-30'><i className='hello-heading font-Playball'>hello</i><br />
-            <p className='text-[55px] -ml-14 leading-tight '>SUMMER!</p></p>
+            {/* <p className='absolute mt-28 font-bold text-white z-30'><i className='hello-heading font-Playball'>hello</i><br />
+            <p className='text-[55px] -ml-14 leading-tight '>SUMMER!</p></p> */}
             <img className='w-full h-full hover:scale-110 duration-1000' src={img17} alt="not found" />
         </div>
 
@@ -80,22 +80,22 @@ const Home = () => {
 
 
         <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden flex justify-center items-center' id='IC'>
-            <p className='absolute font-bold text-white mt-40 z-40'><i className='text-[55px] -ml-14 leading-tight'>CREAMY</i><br />
-            <p className='hello-heading'>enjoy</p></p>
+            {/* <p className='absolute font-bold text-white mt-40 z-40'><i className='text-[55px] -ml-14 leading-tight'>CREAMY</i><br />
+            <p className='hello-heading'>enjoy</p></p> */}
             <img className='w-full h-full hover:scale-110 duration-1000' src={img19} alt="not found" />
         </div>
     </div>
 
-    {/* <div className='w-full h-16 font-bold flex justify-center mt-12 items-center text-[40px]' id='text-card-ice-cream'>
+    <div className='w-full h-16 font-bold flex justify-center mt-12 items-center text-[40px] leading-9 flex-wrap wra' id='text-card-ice-cream'>
         <h1>Best Ice Cream Shops</h1>
-    </div> */}
+    </div>
 
     {/* Demo Slider */}
-    {/* <List_Renderingg/><br/> <br />  */}
+    <List_Renderingg/><br/> <br /> 
    
 
     {/* Home Second Slider */}
-    {/* <HomeSecond_slider/> */}
+    <HomeSecond_slider/>
 
     {/* 4 ice-cream-flewers */}
     {/* <IceCreamCard/> */}

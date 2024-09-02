@@ -18,44 +18,47 @@ const Home = () => {
     <>
 
     {/* Header */} 
-    <Navbar/>
+    {/* <Navbar/> */}
 
     {/* Slider 1 */}
-    <HomeSlider1/>
+    {/* <HomeSlider1/> */}
 
     {/* Content */}
-    <div className='w-full h-[350px] flex gap-10 justify-center'>
 
-    <div className='h-full w-[700px] '>
-        <div className='h-[60%] w-[700px] flex'>
-            <div className='w-[40%] h-full '>
-                <h1 className='div2-text'>Best Ice Cream Shops</h1>
-            </div>
-
-            <div className='w-[60%] h-full'>
-            <p className='info'>It's quite possible that we are living in the golden age of ice cream innovation. Old-school creameries are churning out vanilla bean masterpieces honed over generations while new shops are tossing the term “chef” </p><br />
-            <a href="" className='underline'>Read More</a>
-            </div>
-        </div><br/><br/>
-        <div id='line' className='w-full h-1 border-dashed border-t-4 border-red-600 '> </div>
-    </div>
-
-    <div className='h-full w-[700px] '>
-        <div className='h-[60%] w-[700px] flex'>
-            <div className='w-[40%] h-full '>
-                <h1 className='div21-text'>wave artisan shops</h1>
-            </div>
-
-            <div className='w-[60%] h-full'>
-            <p className='info'>These ice cream shops represent everything that is well and good: new-wave artisan shops challenging the very notion of what should be placed on a cone (or stick, or between cookies), old-school parlors learning…</p><br />
-            <a href="" className='underline'>Read More</a>
-            </div>
-        </div><br/><br/>
-        <div id='line' className='w-full h-1 border-dashed border-t-4 border-red-600 '> </div>
-        <img className='ml-[550px] -mt-[100px]' src={cup} alt="not found" />
-    </div>
+    <div className='w-full h-auto flex flex-col gap-6 md:gap-10 md:flex-row justify-center'>
        
+        <div className='w-full md:w-[700px] h-auto'>
+            <div className='flex flex-col md:flex-row h-auto'>
+                <div className='w-full md:w-[40%] h-auto'>
+                    <h1 className='div2-text  md:text-5xl font-bold'>Best Ice Cream Shops</h1>
+                </div>
+    
+                <div className='w-full md:w-[60%] h-auto'>
+                    <p className='info text-base md:text-lg'>It's quite possible that we are living in the golden age of ice cream innovation. Old-school creameries are churning out vanilla bean masterpieces honed over generations while new shops are tossing the term “chef” </p><br />
+                    <a href="" className='underline text-blue-500'>Read More</a>
+                </div>
+            </div>
+            <div className='w-full h-1 border-dashed border-t-4 border-red-600 my-4'> </div>
+        </div>
+    
+        
+        <div className='w-full md:w-[700px] h-auto relative'>
+            <div className='flex flex-col md:flex-row h-auto'>
+                <div className='w-full md:w-[40%] h-auto'>
+                    <h1 className='div21-text text-xl md:text-5xl font-bold '>Wave Artisan Shops</h1>
+                </div>
+    
+                <div className='w-full md:w-[60%] h-auto'>
+                    <p className='info text-base md:text-lg'>These ice cream shops represent everything that is well and good: new-wave artisan shops challenging the very notion of what should be placed on a cone (or stick, or between cookies), old-school parlors learning…</p><br />
+                    <a href="" className='underline text-blue-500'>Read More</a>
+                </div>
+            </div>
+            <div className='w-full h-1 border-dashed border-t-4 border-red-600 my-4'> </div>
+            <img className='w-full max-w-[70px] md:max-w-[100px] mb-9 mx-auto md:absolute md:right-0 md:bottom-0 md:translate-x-4 md:translate-y-4 block' src={cup} alt="Ice Cream Cup" />
+        </div>
     </div>
+
+    
 
     {/* 3 ice-creame-information */}
 
@@ -83,30 +86,30 @@ const Home = () => {
         </div>
     </div>
 
-    <div className='w-full h-16 font-bold flex justify-center mt-12 items-center text-[40px]' id='text-card-ice-cream'>
+    {/* <div className='w-full h-16 font-bold flex justify-center mt-12 items-center text-[40px]' id='text-card-ice-cream'>
         <h1>Best Ice Cream Shops</h1>
-    </div>
+    </div> */}
 
     {/* Demo Slider */}
-    <List_Renderingg/><br/> <br /> 
+    {/* <List_Renderingg/><br/> <br />  */}
    
 
     {/* Home Second Slider */}
-    <HomeSecond_slider/>
+    {/* <HomeSecond_slider/> */}
 
     {/* 4 ice-cream-flewers */}
-    <IceCreamCard/>
+    {/* <IceCreamCard/> */}
 
-    <div className='w-full h-28 flex flex-col justify-center items-center'>
+    {/* <div className='w-full h-28 flex flex-col justify-center items-center'>
         <p className='Our-news'><i>Our News</i></p>
         <p className='Tastiest-Updates'>Tastiest Updates</p>
-    </div>
+    </div> */}
 
     {/* Testies update Cards */}
-    <ArticleCard/> <br /><br />
+    {/* <ArticleCard/> <br /><br /> */}
 
     {/* Footer */}
-    <Footer/>
+    {/* <Footer/> */}
 
     {/* Scroll To Top Button */}
     <ScrollToTopButton/>

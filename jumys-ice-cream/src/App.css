@@ -474,7 +474,7 @@ underline-animate {
 }
 
 #blog-card1-text {
-  line-height: 40px;
+  /* line-height: 40px; */
   filter: drop-shadow(30px 30px 30px black);
   font-family: kalnia;
   color: #FFFFFF;

@@ -1,19 +1,23 @@
-import React from 'react'
+import React from 'react';
 
 const BlogCardComponent = (props) => {
   return (
-    <>
-      <div className='w-1/4 h-[337px] overflow-hidden' id='blog-image'>
-      <div className='absolute w-36 rounded-3xl mt-5  ml-4 h-10 bg-white z-10 flex justify-center items-center hover:bg-red-600 hover:duration-500 hover:text-white'><a href="">Business Tips </a></div>
-      <img className='w-full h-[337px]' src={props.img} alt="not found" />
-      <div className='slide-top w-full h-[400px] drop-shadow-2xl px-9 -mt-[300px] pt-12 relative bottom-10 ' id='shadow-effect'>
-        <p className='text-white text-[20px] pt-14 mt-[130px]'>June 20,2024</p>
-        <p className='text-white text-[30px] font-bold' id='blog-card1-text'>{props.text}</p>
-        <button className='bg-black text-white w-32 h-11 rounded-full hover:bg-red-600 duration-200'>Read More</button>
+    <div className='relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2'>
+      <div className='relative overflow-hidden rounded-lg shadow-lg'>
+        <img className='w-full h-auto object-cover' src={props.img} alt="Blog" />
+        <div className='absolute top-5 left-4 bg-white rounded-full py-1 px-4 text-center z-10 transition-colors duration-300 hover:bg-red-600 hover:text-white'>
+          <a href="#" className='text-sm font-semibold'>Business Tips</a>
+        </div>
+        <div className=' absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent text-white py-4 px-6'>
+          <p className='text-xs md:text-sm'>June 20, 2024</p>
+          <p className='text-xl md:text-2xl font-bold mt-2' id='blog-card1-text'>{props.text}</p>
+          <button className='mt-4 bg-black text-white py-2 px-4 rounded-full hover:bg-red-600 transition duration-200'>
+            Read More
+          </button>
+        </div>
       </div>
-      </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default BlogCardComponent
+export default BlogCardComponent;

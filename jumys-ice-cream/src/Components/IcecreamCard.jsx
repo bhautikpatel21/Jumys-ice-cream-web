@@ -7,7 +7,7 @@ import asset44 from "../assets/asset 44.jpeg";
 
 const IceCreamCard = () => {
   return (
-    <div className="grid grid-cols-4 gap-5 m-16">
+    <div className="flex flex-wrap gap-5 m-16">
       {/* 1st card */}
       <div className="bg-[#dff6e8] mb-20 shadow-md p-6 text-center max-w-xs mx-auto">
         <div
@@ -108,3 +108,5 @@ const IceCreamCard = () => {
 };
 
 export default IceCreamCard;
+
+

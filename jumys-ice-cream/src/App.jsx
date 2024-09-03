@@ -28,9 +28,9 @@ function App() {
   return (
     <>
     {/* <Navbarr/> */}
-    <Home/>
+    {/* <Home/> */}
     {/* <Navbar/> */}
-    {/* <Home/>  */}
+    <Home/> 
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
     {/* <AboutUs/> */}

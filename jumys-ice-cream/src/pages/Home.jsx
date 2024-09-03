@@ -18,7 +18,7 @@ const Home = () => {
     <>
 
     {/* Header */} 
-    {/* <Navbar/> */}
+    <Navbar/>
 
     {/* Slider 1 */}
     {/* <HomeSlider1/> */}
@@ -71,10 +71,10 @@ const Home = () => {
         </div>
 
         <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden ' id='IC'>
-        <div className='spin-div w-[170px] h-[10px] absolute object-cover z-10' >
+        {/* <div className='spin-div w-[170px] h-[10px] absolute object-cover z-10' >
             <img className='w-[100px] h-[100px]' src={spin} alt="not found"/>
             <h1 className='z-10 text-[20px] font-bold -mt-[70px] ml-6 text-white'>-30%</h1>
-        </div>
+        </div> */}
             <img className='w-full h-full hover:scale-110 duration-1000' src={img18} alt="not found" />
         </div>
 
@@ -86,9 +86,12 @@ const Home = () => {
         </div>
     </div>
 
-    <div className='w-full h-16 font-bold flex justify-center mt-12 items-center text-[40px] leading-9 flex-wrap wra' id='text-card-ice-cream'>
-        <h1>Best Ice Cream Shops</h1>
+    <div className='w-full h-auto font-bold flex flex-col justify-center items-center mt-12 px-4 sm:px-6 md:px-8 lg:px-12' id='text-card-ice-cream'>
+      <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-center'>
+        Best Ice Cream Shops
+      </h1>
     </div>
+
 
     {/* Demo Slider */}
     <List_Renderingg/><br/> <br /> 
@@ -98,15 +101,20 @@ const Home = () => {
     <HomeSecond_slider/>
 
     {/* 4 ice-cream-flewers */}
-    {/* <IceCreamCard/> */}
+    <IceCreamCard/>
 
-    {/* <div className='w-full h-28 flex flex-col justify-center items-center'>
-        <p className='Our-news'><i>Our News</i></p>
-        <p className='Tastiest-Updates'>Tastiest Updates</p>
-    </div> */}
+    {/* Artical Card heading */}
+    <div className='w-full h-auto flex flex-col justify-center items-center py-6 sm:py-8 md:py-10 lg:py-12'>
+      <p className='Our-news  text-lg sm:text-xl md:text-2xl lg:text-3xl italic font-semibold'>
+        Our News
+      </p>
+      <p className='Tastiest-Updates text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2'>
+        Tastiest Updates
+      </p>
+    </div>
 
     {/* Testies update Cards */}
-    {/* <ArticleCard/> <br /><br /> */}
+    <ArticleCard/> <br /><br />
 
     {/* Footer */}
     {/* <Footer/> */}

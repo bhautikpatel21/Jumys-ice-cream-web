@@ -16,10 +16,10 @@ const HomeSlider1 = () => {
         </div>
 
         <div className='w-[450px] h-full flex items-end'>
-            <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center  -ml-14 ">
+            {/* <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center  -ml-14 ">
                 <img className='spin_of' src={spin} alt="" />
                 <h1 id='spin-text'>Get 30% <br />off</h1>
-            </div>
+            </div> */}
             <div className='w-full h-[85%]'>
             <img className='w-full h-full'  src={slider1_img} alt="not found" />
             </div>
@@ -30,7 +30,7 @@ const HomeSlider1 = () => {
             <img className='mt-80 ml-44' src={img_plant} alt="not found" />
         </div> */}
 
-    </div><br /><br />
+    </div><br/><br/>
   </>
   )
 }

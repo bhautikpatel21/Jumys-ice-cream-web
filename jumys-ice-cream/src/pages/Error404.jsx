@@ -4,15 +4,25 @@ import HomeFooter from '../Components/Footer2';
 function Error404() {
   return (
     <>
-    <div className='w-full h-lvh flex flex-col justify-center items-center '>
-        <h1 className='text-[300px] font-semibold -mb-11 -mt-24'>404</h1>
-        <p className='text-[50px] mb-5'>Oops! That page can't be found.</p>
-        <div className='w-64 h-[1px] bg-gray-600'></div> <br />
-        <p className='text-gray-500 text-[25px]'>We're really sorry but we can't seem to </p>
-        <p className='text-gray-500 text-[25px]'>find the page you were looking for.</p><br />
-        <button className='w-60 rounded-full h-16 text-[20px] bg-black text-white hover:bg-red-600 duration-300'>Back The HomePage</button>
-    </div>
-    <HomeFooter/>
+      <div className='w-full h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12'>
+        <h1 className='text-8xl md:text-0xl lg:text-[250px] font-semibold mb-4 md:mb-8 lg:mb-12'>
+          404
+        </h1>
+        <p className='text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 lg:mb-8'>
+          Oops! That page can't be found.
+        </p>
+        <div className='w-32 md:w-48 lg:w-64 h-[1px] bg-gray-600 mb-4 md:mb-6 lg:mb-8'></div>
+        <p className='text-gray-500 text-lg md:text-xl lg:text-2xl mb-2 md:mb-4'>
+          We're really sorry but we can't seem to
+        </p>
+        <p className='text-gray-500 text-lg md:text-xl lg:text-2xl mb-6'>
+          find the page you were looking for.
+        </p>
+        <button className='w-48 md:w-60 lg:w-64 rounded-full h-12 md:h-14 lg:h-16 text-base md:text-lg lg:text-xl bg-black text-white hover:bg-red-600 transition duration-300'>
+          Back To HomePage
+        </button>
+      </div>
+      <HomeFooter/>
     </>
   );
 }

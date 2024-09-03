@@ -21,7 +21,7 @@ const Navbar = () => {
   const HomeMenu = () => {
     return(
       <div className="">
-        <ul className="duration-1000 flex justify-center">
+        <ul className="set-font duration-1000 flex justify-center">
           <div className="absolute shadow-xl pt-3 -ml-10 text-black w-[150px] h-[330px] flex flex-col items-center space-y-3">
             <i to="" className="hover:text-red-500">
               <li className="mt-5">Home 1</li>
@@ -56,7 +56,7 @@ const Navbar = () => {
   const ShopMenu = () => {
     return (
       <div className="">
-        <ul className="flex justify-center">
+        <ul className="set-font flex justify-center">
           <div className="absolute shadow-xl text-black h-[450px] w-[1000px] pt-5">
             <div className="flex justify-around">
               <div className="space-y-2 mt-5">
@@ -123,7 +123,7 @@ const Navbar = () => {
   const ProductMenu = () => {
     return(
       <div className="">
-      <ul className="flex justify-center">
+      <ul className="set-font flex justify-center">
         <div className="absolute shadow-xl text-black h-[450px] w-[1000px] pt-5">
           <div className="flex flex-wrap justify-around">
 
@@ -198,7 +198,7 @@ const Navbar = () => {
   const BlogMenu = () => {
     return (
       <div className="">
-      <ul className="flex justify-around">
+      <ul className="set-font flex justify-around">
         <div className="absolute shadow-xl text-black h-[440px] w-[900px] pt-5">
          
           <div className="flex justify-around">
@@ -278,7 +278,7 @@ const Navbar = () => {
     return(
       <div className="">
       <ul>
-        <div className="absolute shadow-xl -ml-10 text-gray-500 flex justify-around w-[150px] h-[220px] pt-5">
+        <div className="set-font absolute shadow-xl -ml-10 text-gray-500 flex justify-around w-[150px] h-[220px] pt-5">
         <div className="mt-5 grid">
          <i to="about" className="hover:text-red-500">About Us</i>
          <i to="contact" className="hover:text-red-500">Contact</i>

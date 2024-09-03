@@ -32,9 +32,9 @@ function App() {
     {/* <Navbar/> */}
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
-    <AboutUs/>
+    {/* <AboutUs/> */}
     {/* <NumberCounter/> */}
-    {/* <Contact/> */}
+    <Contact/>
     {/* <Faq2/> */}
     {/* <Login/> */}
     {/* <Wishlist/> */}

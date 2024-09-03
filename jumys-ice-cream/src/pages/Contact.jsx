@@ -3,138 +3,111 @@ import backgroundImage from "../assets/asset 50.jpeg";
 import Map from "../Components/Map";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiLogoBehance } from "react-icons/bi";
-import Footer2 from "../Components/Footer2";
 import ScrollToTopButton from "../Components/TopButton";
 import Footer from "../Components/Footer";
 
 function Contact() {
   return (
     <div>
-      <div>
-        <div className="relative w-full h-auto">
-          <img
-            src={backgroundImage}
-            alt="About Us Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0  flex items-center justify-center mt-13">
-            <div className="text-center text-white">
-              <h1 className="text-[50px] font-bold text-black mt-10" id="conPage-t1">Contact</h1>
-              <p className="mt-2">
-                <a href="#" className="text-[#000] hover:text-[#ff0000]">
-                  Home
-                </a>{" "}
-                <span className="text-black">/</span>
-                <span className="text-red-500">Contact</span>
-              </p>
-            </div>
-          </div>
+      {/* Background Image Section */}
+      <div className="relative w-full h-60 sm:h-80 md:h-96">
+        <img
+          src={backgroundImage}
+          alt="About Us Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-black mb-2" id="conPage-t1">Contact</h1>
+          <p className="text-sm sm:text-base md:text-lg">
+            <a href="#" className="text-black hover:text-red-500">
+              Home
+            </a>{" "}
+            <span className="text-black">/</span>
+            <span className="text-red-500">Contact</span>
+          </p>
         </div>
       </div>
 
-<Map/>
+      {/* Map Component */}
+      <Map/>
 
-{/* Get Informations */}
-<div className="mt-5 flex flex-row w-full items-center justify-center pl-32 pt-20">
-      <div className="w-full h-[480px] px-5">
-        <div className="lg:col-span-1">
-          <h2 className="text-3xl font-bold font-serif mb-4">Get In Touch</h2>
-          <div className="grid gap-1 text-lg font-serif">
+      {/* Contact Information and Form Section */}
+      <div className="flex flex-col justify-center gap-16 md:flex-row  px-4 py-10 md:px-10 md:py-20 ">
+        {/* Contact Information */}
+        <div className="flex-1 max-w-md">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+          <div className="text-xl mb-4">
             <p>Rains HQ, Jens Olsens Vej 13, 8200 Aarhus N, Denmark</p>
             <p>(02) 6188 8062</p>
             <p>Jumysicecream@Gmail.Com</p>
           </div>
-          <div className="mt-9 font-serif">
+          <div className="mb-4 text-xl">
             <p>Open Hours:</p>
-            <p className="text-gray-500 mt-3">Contact Our Customer Happiness Team</p>
+            <p className="text-gray-500">Contact Our Customer Happiness Team</p>
             <p className="text-gray-500">Monday-Friday 9am-5pm</p>
           </div>
 
-            <p className="font-semibold font-mono text-xl my-2">Follow us:</p>
-          <div className="flex ">
-            <a
-              href="#"
-              className="text-[#000] hover:text-[#ff0000] mx-2 text-3xl"
-            >
-            <FaFacebook/>
+          <p className="font-semibold text-2xl mb-2">Follow us:</p>
+          <div className="flex flex-wrap gap-2 text-3xl">
+            <a href="#" className="text-black hover:text-red-500">
+              <FaFacebook />
             </a>
-         
-            <a
-              href="#"
-              className="text-[#000] hover:text-[#ff0000] mx-2 text-3xl"
-            >
-             <FaTwitter/>
+            <a href="#" className="text-black hover:text-red-500">
+              <FaTwitter />
             </a>
-
-            <a
-              href="#"
-              className="text-[#000] hover:text-[#ff0000] mx-2 text-3xl"
-            >
-             <FaYoutube/>
+            <a href="#" className="text-black hover:text-red-500">
+              <FaYoutube />
             </a>
-            <a
-              href="#"
-              className="text-[#000] hover:text-[#ff0000] mx-2 text-3xl"
-            >
-             <FaInstagram/>
+            <a href="#" className="text-black hover:text-red-500">
+              <FaInstagram />
             </a>
-            <a
-              href="#"
-              className="text-[#000] hover:text-[#ff0000] mx-2 text-3xl"
-            >
-             <BiLogoBehance/>
+            <a href="#" className="text-black hover:text-red-500">
+              <BiLogoBehance />
             </a>
-            
-
           </div>
         </div>
-      </div>
 
-      <div className=" w-full h-[480px] ">
-        <form className="w-full ">
-          <div className="flex w-full">
-            <div className="mb-4">
+        {/* Contact Form */}
+        <div className="flex-1 max-w-md">
+          <form className="space-y-4">
+            <div>
               <input
                 className="w-full p-3 border border-gray-300 rounded-full"
                 type="text"
                 placeholder="Your Name *"
               />
             </div>
-            <div className="mb-4">
+            <div>
               <input
                 className="w-full p-3 border border-gray-300 rounded-full"
                 type="email"
                 placeholder="Your Email *"
               />
             </div>
-          </div>
-          <div className="mb-4">
-            <input
-              className="w-full p-3 border border-gray-300 rounded-full"
-              type="text"
-              placeholder="Number Phone *"
-            />
-          </div>
-          <div className="mb-4">
-            <textarea
-              className="w-full p-3 border border-gray-300 rounded-2xl"
-              placeholder="Comment or Message *"
-              rows="7"
-            ></textarea>
-          </div>
-          <div className="">
-            <button className="px-10 py-3 bg-[#ff0000] hover:bg-[#000] text-[#fff]  duration-700 font-bold rounded-full">
+            <div>
+              <input
+                className="w-full p-3 border border-gray-300 rounded-full"
+                type="text"
+                placeholder="Number Phone *"
+              />
+            </div>
+            <div>
+              <textarea
+                className="w-full p-3 border border-gray-300 rounded-2xl"
+                placeholder="Comment or Message *"
+                rows="6"
+              ></textarea>
+            </div>
+            <button className="w-full px-4 py-3 bg-red-500 hover:bg-black text-white font-bold rounded-full transition duration-300">
               Send Message
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-<br />
 
-{/* Footer 2 */}
-<Footer/>
-<ScrollToTopButton/>
+      <ScrollToTopButton />
+      {/* Uncomment if you have a footer */}
+      <Footer />
     </div>
   );
 }

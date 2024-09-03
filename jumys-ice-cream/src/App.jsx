@@ -37,8 +37,8 @@ function App() {
     {/* <Contact/> */}
     {/* <Faq2/> */}
     {/* <Login/> */}
-    <Wishlist/>
-    {/* <SignUp/> */}
+    {/* <Wishlist/> */}
+    <SignUp/>
     {/* <Carousel/> */}
     {/* <List_Renderingg/> */}
     {/* <FilterComponent/> */}

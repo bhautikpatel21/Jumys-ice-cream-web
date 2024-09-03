@@ -36,8 +36,8 @@ function App() {
     {/* <NumberCounter/> */}
     {/* <Contact/> */}
     {/* <Faq2/> */}
-    <Login/>
-    {/* <Wishlist/> */}
+    {/* <Login/> */}
+    <Wishlist/>
     {/* <SignUp/> */}
     {/* <Carousel/> */}
     {/* <List_Renderingg/> */}

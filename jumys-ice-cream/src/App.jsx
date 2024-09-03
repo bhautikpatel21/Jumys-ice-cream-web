@@ -29,7 +29,7 @@ function App() {
     <>
     {/* <Navbarr/> */}
     {/* <Home/> */}
-    {/* <Navbar/> */}
+    <Navbar/>
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
@@ -38,7 +38,7 @@ function App() {
     {/* <Faq2/> */}
     {/* <Login/> */}
     {/* <Wishlist/> */}
-    <SignUp/>
+    {/* <SignUp/> */}
     {/* <Carousel/> */}
     {/* <List_Renderingg/> */}
     {/* <FilterComponent/> */}

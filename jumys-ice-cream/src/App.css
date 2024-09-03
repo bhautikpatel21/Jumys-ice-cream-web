@@ -499,6 +499,10 @@ underline-animate {
   pointer-events: none;
 }
 
+#about-page-name{
+  font-family: kalnia;
+}
+
 .group:hover .tooltip {
   opacity: 1;
 }

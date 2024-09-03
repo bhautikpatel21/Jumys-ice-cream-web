@@ -31,8 +31,8 @@ function App() {
     {/* <Home/> */}
     {/* <Navbar/> */}
     {/* <BlogCard/> */}
-    <Error404/> 
-    {/* <AboutUs/> */}
+    {/* <Error404/>  */}
+    <AboutUs/>
     {/* <NumberCounter/> */}
     {/* <Contact/> */}
     {/* <Faq2/> */}

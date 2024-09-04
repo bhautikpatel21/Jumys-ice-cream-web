@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-    {/* <Home/> */}
+    <Home/>
     {/* <Navbar/> */}
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
@@ -36,7 +36,7 @@ function App() {
     {/* <Contact/> */}
     {/* <Faq2/> */}
     {/* <Login/> */}
-    <Wishlist/>
+    {/* <Wishlist/> */}
     {/* <SignUp/> */}
     {/* <Carousel/> */}
     {/* <List_Renderingg/> */}

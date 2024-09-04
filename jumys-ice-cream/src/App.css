@@ -452,10 +452,8 @@ underline-animate {
 
 .slide-top:hover {
   transform: translateY(-50px);
-  /* Apply the slide-top transformation on hover */
 }
 
-/* Keyframes for compatibility */
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
@@ -481,7 +479,6 @@ underline-animate {
 }
 
 #blog-card1-text {
-  /* line-height: 40px; */
   filter: drop-shadow(30px 30px 30px black);
   font-family: kalnia;
   color: #FFFFFF;
@@ -558,6 +555,11 @@ underline-animate {
 
   .spin-div {
     margin-top: 40px;
+  }
+
+  .flip-vertical-right{
+    visibility: hidden;
+    display: none;
   }
 }
 

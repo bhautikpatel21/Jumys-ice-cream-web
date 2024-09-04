@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.set-font{
+.set-font {
   /* font-family: "Roboto", sans-serif; */
   font-family: "Work Sans";
 
 }
+
 underline-animate {
   position: relative;
 }
@@ -505,7 +506,7 @@ underline-animate {
   pointer-events: none;
 }
 
-#about-page-name{
+#about-page-name {
   font-family: kalnia;
 }
 

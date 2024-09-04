@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import navImg1 from '../assets/asset 1.jpeg'
 import navImg2 from '../assets/asset 2.jpeg'
 import navImg3 from '../assets/asset 3.jpeg'
+import { NavLink,Outlet } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -98,8 +99,8 @@ const Navbar = () => {
                 <div className="space-y-2 mt-5">
                   <h1 className="font-bold text-[20px]">Woo Pages</h1>
                   <i to="" className="text-gray-500 block hover:text-red-500">Order Tracking</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Login</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">WishList</i>
+                  <NavLink to="/login" className="text-gray-500 block hover:text-red-500">Login</NavLink>
+                  <NavLink to="/wishlist" className="text-gray-500 block hover:text-red-500">WishList</NavLink>
                 </div>
               </div>
               <div className="space-y-2 mt-5">
@@ -214,7 +215,7 @@ const Navbar = () => {
                   <h1 className="font-bold text-[20px]">Blog Style</h1>
                   <i to="" className="text-gray-500 block hover:text-red-500">Blog List </i>
                   <i to="" className="text-gray-500 block hover:text-red-500">Blog Grid</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Blog Card</i>
+                  <NavLink to="/blogCard" className="text-gray-500 block hover:text-red-500">Blog Card</NavLink>
                   <i to="" className="text-gray-500 block hover:text-red-500">Blog Modern</i>
                   <i to="" className="text-gray-500 block hover:text-red-500">Blog Standar</i>
                 </div>
@@ -283,21 +284,17 @@ const Navbar = () => {
         <ul>
           <div className="set-font absolute shadow-xl rounded-lg bg-white z-50 -ml-10 text-gray-500 flex justify-around w-[150px] h-[220px] pt-5">
             <div className="mt-5 grid">
-              <i to="about" className="hover:text-red-500">About Us</i>
-              <i to="contact" className="hover:text-red-500">Contact</i>
+              <NavLink to="/about" className="hover:text-red-500">About Us</NavLink>
+              <NavLink to="/contact" className="hover:text-red-500">Contact</NavLink>
               <i to="" className="hover:text-red-500">Faq</i>
-              <i to="Faq2" className="hover:text-red-500">Faq2</i>
-              <i to="page404" className="hover:text-red-500">Page 404</i>
+              <NavLink to="/faq2" className="hover:text-red-500">Faq2</NavLink>
+              <NavLink to="/error" className="hover:text-red-500">Page 404</NavLink>
             </div>
           </div>
         </ul>
       </div>
     )
   }
-
-  // Menu Bar
-
-  // HOME Page
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -378,7 +375,7 @@ const Navbar = () => {
         <div className='w-[600px] h-full flex items-center justify-around font-semibold' id='pages'>
 
           <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='w-[90px]'>
-            <a className='flex' id='underline-animate' href="">Home<FaAngleDown className='mt-[5px] ml-1' /></a>
+            <NavLink to="/" className='flex' id='underline-animate' href="">Home<FaAngleDown className='mt-[5px] ml-1' /></NavLink>
             {dropdownVisible && HomeMenu()}
           </div>
 
@@ -405,7 +402,7 @@ const Navbar = () => {
         </div>
         <div className='w-[190px] h-full flex justify-around items-center text-[22px]' id='icons'>
           <a className='icon1 text-red' href=""><FaSearch /></a>
-          <a className='icon2 text-red' href=""><FaUser /></a>
+          <NavLink to='/signup' className='icon2 text-red' href=""><FaUser /></NavLink>
           <a className='icon3 text-red' href=""><FaHeart /></a>
           <a className='icon4 text-red' href=""><FaShoppingBasket /></a>
         </div>
@@ -416,6 +413,8 @@ const Navbar = () => {
         <a className='w-24 h-full flex flex-col justify-center items-center  text-red'><FaSearch className='text-[30px]' /><p>Search</p></a>
         <a className='w-24 h-full flex flex-col justify-center items-center  text-red'><FaHeart className='text-[30px]' /><p>Wishlist</p></a>
       </div>
+
+      <Outlet/>
     </div>
   )
 }

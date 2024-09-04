@@ -18,7 +18,7 @@ const Home = () => {
     <>
 
     {/* Header */} 
-    <Navbar/>
+    {/* <Navbar/> */}
 
     {/* Slider 1 */}
     <HomeSlider1/>

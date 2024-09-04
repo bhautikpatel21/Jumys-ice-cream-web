@@ -71,3 +71,26 @@ button:focus-visible {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer components{
+  .stickyHeader{
+    position: fixed;
+    z-index: 999 !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    animation: slideDown 0.35s ease-out;  } 
+
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+}

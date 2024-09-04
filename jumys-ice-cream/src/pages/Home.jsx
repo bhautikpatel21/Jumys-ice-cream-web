@@ -21,7 +21,7 @@ const Home = () => {
     <Navbar/>
 
     {/* Slider 1 */}
-    {/* <HomeSlider1/> */}
+    <HomeSlider1/>
 
     {/* Content */}
 
@@ -117,7 +117,7 @@ const Home = () => {
     <ArticleCard/> <br /><br />
 
     {/* Footer */}
-    {/* <Footer/> */}
+    <Footer/>
 
     {/* Scroll To Top Button */}
     <ScrollToTopButton/>

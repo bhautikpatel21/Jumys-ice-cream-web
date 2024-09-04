@@ -28,8 +28,8 @@ function App() {
   return (
     <>
     {/* <Navbarr/> */}
-    {/* <Home/> */}
-    <Navbar/>
+    <Home/>
+    {/* <Navbar/> */}
     {/* <BlogCard/> */}
     {/* <Error404/>  */}
     {/* <AboutUs/> */}

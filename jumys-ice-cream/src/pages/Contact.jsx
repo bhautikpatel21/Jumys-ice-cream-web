@@ -106,7 +106,7 @@ function Contact() {
       </div>
 
       <ScrollToTopButton />
-      {/* Uncomment if you have a footer */}
+      {/* footer */}
       <Footer />
     </div>
   );

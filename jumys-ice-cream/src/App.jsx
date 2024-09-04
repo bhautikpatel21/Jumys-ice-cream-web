@@ -29,14 +29,14 @@ function App() {
     <>
     {/* <Home/> */}
     {/* <Navbar/> */}
-    <BlogCard/>
+    {/* <BlogCard/> */}
     {/* <Error404/>  */}
     {/* <AboutUs/> */}
     {/* <NumberCounter/> */}
     {/* <Contact/> */}
     {/* <Faq2/> */}
     {/* <Login/> */}
-    {/* <Wishlist/> */}
+    <Wishlist/>
     {/* <SignUp/> */}
     {/* <Carousel/> */}
     {/* <List_Renderingg/> */}

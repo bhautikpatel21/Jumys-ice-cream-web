@@ -2,25 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar } from 'react-icons/fa';
-import img20 from '../assets/asset 20.webp';
-import img21 from '../assets/asset 21.webp';
-// import imgp20 from '../assets/asset 20.webp';
-// import imgp20 from '../assets/asset 21.webp';
-import img22 from '../assets/asset 22.jpeg';
-import img23 from '../assets/asset 23.jpeg';
-import img24 from '../assets/asset 24.webp';
-import img25 from '../assets/asset 25.webp';
-import img26 from '../assets/asset 26.webp';
-import img27 from '../assets/asset 27.webp';
-import img28 from '../assets/asset 28.webp';
-import img29 from '../assets/asset 29.webp';
-import img30 from '../assets/asset 30.webp';
-import img31 from '../assets/asset 31.webp';
-import img32 from '../assets/asset 32.webp';
-import img33 from '../assets/asset 33.jpeg';
-import img34 from '../assets/asset 34.webp';
-import img35 from '../assets/asset 35.jpeg';
-
 
 const ProductCard = (props) => {
 
@@ -56,7 +37,6 @@ const ProductCard = (props) => {
             </div>
           </div>
         </Card.Body>
-        {/* <h1> Bhautik Dudhat </h1> */}
       </>
     )
   }

@@ -21,11 +21,11 @@ const Home = () => {
     {/* <Navbar/> */}
 
     {/* Slider 1 */}
-    <HomeSlider1/>
+    <HomeSlider1/><br /><br />
 
     {/* Content */}
 
-    <div className='w-full h-auto flex flex-col gap-6 md:gap-10 md:flex-row justify-center'>
+    <div className=' w-full h-auto flex flex-col gap-6 md:gap-10 md:flex-row justify-center'>
        
         <div className='w-full md:w-[700px] h-auto'>
             <div className='flex flex-col md:flex-row h-auto'>
@@ -56,13 +56,13 @@ const Home = () => {
             <div className='w-full h-1 border-dashed border-t-4 border-red-600 my-4'> </div>
             <img className='w-full max-w-[70px] md:max-w-[100px] mb-9 mx-auto md:absolute md:right-0 md:bottom-0 md:translate-x-4 md:translate-y-4 block' src={cup} alt="Ice Cream Cup" />
         </div>
-    </div>
+    </div><br /><br />
 
     
 
     {/* 3 ice-creame-information */}
-
-    <div className='w-full h-auto flex' id='topIce'>
+    {/* <div className='container m-auto'> */}
+    <div className=' w-full h-auto flex px-4' id='topIce'>
 
         <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden flex justify-center' id='IC'>
             {/* <p className='absolute mt-28 font-bold text-white z-30'><i className='hello-heading font-Playball'>hello</i><br />
@@ -85,6 +85,7 @@ const Home = () => {
             <img className='w-full h-full hover:scale-110 duration-1000' src={img19} alt="not found" />
         </div>
     </div>
+    {/* </div> */}
 
     <div className='w-full h-auto font-bold flex flex-col justify-center items-center mt-12 px-4 sm:px-6 md:px-8 lg:px-12' id='text-card-ice-cream'>
       <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-center'>

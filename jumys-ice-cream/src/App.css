@@ -533,6 +533,13 @@ underline-animate {
   transform: scale(1.1);
 }
 
+#shopbg{
+
+  background-image: url('./assets/asset 50.jpeg');
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+}
+
 #conPage-t1 {
   font-family: kalnia;
 }

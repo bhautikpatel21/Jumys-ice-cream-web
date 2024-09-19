@@ -1,7 +1,8 @@
 import React from 'react';
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import Navbar from '../Components/Navbar';
-// import Shop from './Shop';
+import Shop from './Shop';
+import ShopList from './ShopList';
 import Login from './Login';
 import AboutUs from './AboutUsPage';
 import BlogCard from './BlogCard';
@@ -24,10 +25,10 @@ const PageRouter = createBrowserRouter([
                 path : "/",
                 element : <Home/>
             },
-            // {
-            //   path : '/shop',
-            //   element : <Shop/>
-            // },
+            {
+              path : '/shop',
+              element : <ShopList/>
+            },
             {
               path : '/about',
               element : <AboutUs/>

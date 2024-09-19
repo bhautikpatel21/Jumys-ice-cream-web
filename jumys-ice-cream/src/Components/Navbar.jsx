@@ -381,7 +381,7 @@ const Navbar = () => {
           </div>
 
           <div onMouseEnter={shophandleMouseEnter} onMouseLeave={shophandleMouseLeave} className='w-[90px]'>
-            <a className='flex' id='underline-animate' href="">Shop<FaAngleDown className='mt-[5px] ml-1' /></a>
+            <NavLink to="/shop" className='flex' id='underline-animate' href="">Shop<FaAngleDown className='mt-[5px] ml-1' /></NavLink>
             {shopdownVisible && ShopMenu()}
           </div>
 

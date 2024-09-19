@@ -9,7 +9,7 @@ import { NavLink,Outlet } from 'react-router-dom';
 
 const Navbar = () => {
 
-  let Header = useRef();
+  // let Header = useRef();
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
@@ -345,24 +345,25 @@ const Navbar = () => {
   };
 
 
-  let oldScroll = window.scrollY;
-  window.onscroll = function () {
+  // let oldScroll = window.scrollY;
+  // window.onscroll = function () {
 
-    if (window.scrollY < 400) {
-      Header.current.classList.remove("stickyHeader");
-    }
-    else if (oldScroll < window.scrollY) {
-      Header.current.classList.remove("stickyHeader");
-    } else {
-      console.log("scrollup");
-      Header.current.classList.add("stickyHeader");
-    }
+  //   if (window.scrollY < 400) {
+  //     Header.current.classList.remove("stickyHeader");
+  //   }
+  //   else if (oldScroll < window.scrollY) {
+  //     Header.current.classList.remove("stickyHeader");
+  //   } else {
+  //     console.log("scrollup");
+  //     Header.current.classList.add("stickyHeader");
+  //   }
 
-    oldScroll = window.scrollY;
-  };
+  //   oldScroll = window.scrollY;
+  // };
 
   return (
-    <div ref={Header}>
+    // <div ref={Header}>
+    <div>
       <div className='w-full h-28 flex gap-2 justify-around' id='layout'>
         <div className='w-11 h-full flex justify-center items-center text-[30px]' id='menuBar'>
           <FaBars />

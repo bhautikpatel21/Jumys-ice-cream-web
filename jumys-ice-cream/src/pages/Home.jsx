@@ -17,15 +17,12 @@ const Home = () => {
   return (
     <>
 
-    {/* Header */} 
-    {/* <Navbar/> */}
-
     {/* Slider 1 */}
     <HomeSlider1/><br /><br />
 
     {/* Content */}
 
-    <div className=' w-full h-auto flex flex-col gap-6 md:gap-10 md:flex-row justify-center'>
+    <div className='container pl-6 w-full h-auto flex flex-col gap-6 md:gap-10 md:flex-row justify-center'>
        
         <div className='w-full md:w-[700px] h-auto'>
             <div className='flex flex-col md:flex-row h-auto'>
@@ -54,7 +51,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='w-full h-1 border-dashed border-t-4 border-red-600 my-4'> </div>
-            <img className='w-full max-w-[70px] md:max-w-[100px] mb-9 mx-auto md:absolute md:right-0 md:bottom-0 md:translate-x-4 md:translate-y-4 block' src={cup} alt="Ice Cream Cup" />
+            <img className='w-full max-w-[70px] md:max-w-[90px] mb-9 mx-auto md:absolute md:right-4 md:bottom-0 md:translate-x-4 md:translate-y-4 block' src={cup} alt="Ice Cream Cup" />
         </div>
     </div><br /><br />
 

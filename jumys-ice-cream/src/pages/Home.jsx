@@ -24,7 +24,7 @@ const Home = () => {
 
     <div className='container pl-6 w-full h-auto flex flex-col gap-6 md:gap-10 md:flex-row justify-center'>
        
-        <div className='w-full md:w-[700px] h-auto'>
+        <div className='w-full md:w-[700px] h-auto ml-16'>
             <div className='flex flex-col md:flex-row h-auto'>
                 <div className='w-full md:w-[40%] h-auto'>
                     <h1 className='div2-text  md:text-5xl font-bold'>Best Ice Cream Shops</h1>

@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import './App.css'
 import Layout from './Pages/Layout'
-import ShopList from './Pages/ShopList'
-import Shop from './Pages/Shop'
+import Product from './Pages/Product'
+import ProductList from './Components/NewProductPage'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Layout/>
-    {/* <ShopList/> */}
-    {/* <Shop/> */}
+    {/* <Layout/> */}
+    {/* <Product/> */}
+    <ProductList/>
     </>
 
   )

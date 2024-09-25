@@ -108,7 +108,7 @@ const Navbar = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">Side Out Light</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Side Out Dark</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Dropdown</i>
-                <i to="" className="text-gray-400 block hover:text-red-500">Cart Page</i>
+                <NavLink to="/cart" className="text-gray-900 block hover:text-red-500">Cart Page</NavLink>
                 <div className="space-y-2 mt-5">
                   <h1 className="font-bold text-[20px]">Checkout Style</h1>
                   <i to="" className="text-gray-400 block hover:text-red-500">Check out Classis</i>

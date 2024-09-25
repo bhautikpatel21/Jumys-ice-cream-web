@@ -12,6 +12,7 @@ import Home from './Home'
 import Faq2 from './Faq2'
 import SignUp from './SignUp';
 import Wishlist from './Wishlist';
+import CartPage from './CartPage';
 
 
 // Outlet
@@ -60,6 +61,10 @@ const PageRouter = createBrowserRouter([
             {
               path : '/wishlist',
               element : <Wishlist/>
+            },
+            {
+              path : '/cart',
+              element : <CartPage/>
             }
         ]
     }

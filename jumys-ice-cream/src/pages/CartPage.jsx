@@ -5,7 +5,7 @@ import HomeFooter from '../Components/Footer2';
 const CartPage = () => {
   return (
     <>
-      <div className='min-h-[500px] bg-yellow-300 flex flex-col justify-center items-center px-4 py-8'>
+      <div className='min-h-[500px] flex flex-col justify-center items-center px-4 py-8'>
         {/* Title */}
         <h1 className='text-2xl md:text-4xl font-semibold text-center'>
           Your Cart Is Currently Empty

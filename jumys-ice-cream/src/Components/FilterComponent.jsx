@@ -76,6 +76,19 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
 const FilterComponent = () => {
   const [openCategories, setOpenCategories] = useState({});
 
+  const [minPrice, setMinPrice] = useState(9);
+  const [maxPrice, setMaxPrice] = useState(110);
+
+  const handleMinChange = (e) => {
+    const value = Math.min(Number(e.target.value), maxPrice - 1); // Ensure min is less than max
+    setMinPrice(value);
+  };
+
+  const handleMaxChange = (e) => {
+    const value = Math.max(Number(e.target.value), minPrice + 1); // Ensure max is more than min
+    setMaxPrice(value);
+  };
+
   const toggleOpen = (categoryName) => {
     setOpenCategories((prevOpenCategories) => ({
       ...prevOpenCategories,
@@ -111,13 +124,24 @@ const FilterComponent = () => {
         </ul>
       </div>
 
-      {/* Price Range Section */}
-      <div className="mb-4">
-        <h3 className="text-lg font-semibold mb-2">Price</h3>
-        <input type="range" min="0" max="100" className="w-full" />
-        <div className="text-gray-700 mt-2">Range: $0.00 - $100.00</div>
-      </div>
+      {/* Price section */}
 
+    <div>
+      <h3>Price</h3>
+      <div>
+      
+        <input
+          type="range"
+          min="9"
+          max="110"
+          value={maxPrice}
+          onChange={handleMaxChange}
+          className='w-80'
+        />
+      </div>
+      <p>Range: ${minPrice}.00 - ${maxPrice}.00</p>
+    </div>
+  
       {/* Color Section */}
       <div className="mb-4 flex flex-col">
         <h3 className="text-lg font-semibold mb-2">Color</h3>

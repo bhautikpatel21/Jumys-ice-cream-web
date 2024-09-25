@@ -26,7 +26,7 @@ const Navbar = () => {
     return (
       <div className="">
         <ul className="set-font duration-1000 flex justify-center ">
-          <div className="absolute shadow-xl pt-3 bg-white z-50 rounded-lg -ml-10 text-black w-[150px] h-[330px] flex flex-col items-center space-y-3">
+          <div className="absolute shadow-xl pt-3 bg-white z-50 rounded-lg -ml-10 text-gray-400 w-[150px] h-[330px] flex flex-col items-center space-y-3">
             <i to="" className="hover:text-red-500">
               <li className="mt-5">Home 1</li>
             </i>
@@ -65,54 +65,54 @@ const Navbar = () => {
             <div className="flex justify-around">
               <div className="space-y-2 mt-5">
                 <h1 className="font-bold text-[20px]">Shop Style</h1>
-                <i to="" className="text-gray-500 block hover:text-red-500">Shop Standard</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Shop Full</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Shop Only Category</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Shop Icon Category</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Shop Image Category</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Shop Image Category 2</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Shop Sub Category</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">ShopList</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Standard</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Full</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Only Category</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Icon Category</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category 2</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Sub Category</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">ShopList</i>
               </div>
               <div className="space-y-3 mt-5">
                 <h1 className="font-bold text-[20px]">Filter Layout</h1>
-                <i to="" className="text-gray-500 block hover:text-red-500">Sidebar</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Filter Side Out</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Filter DropDown</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Filter On Top</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Filter Drawer</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Sidebar</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Filter Side Out</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Filter DropDown</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Filter On Top</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Filter Drawer</i>
                 <div className="space-y-3 mt-5">
                   <h1 className="font-bold text-[20px]">Shop Loader</h1>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Shop Pagination</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Shop Infinity</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Shop Load More</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Shop Pagination</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Shop Infinity</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Shop Load More</i>
                 </div>
               </div>
 
               <div className="space-y-2 mt-5">
                 <h1 className="font-bold text-[20px]">Hover Style</h1>
-                <i to="" className="text-gray-500 block hover:text-red-500">Icon On Hover</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Quick View Button</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Add To Cart Button</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">WhishList Icon</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Quick Shop Light</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Icon On Hover</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Quick View Button</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Add To Cart Button</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">WhishList Icon</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Quick Shop Light</i>
                 <div className="space-y-2 mt-5">
                   <h1 className="font-bold text-[20px]">Woo Pages</h1>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Order Tracking</i>
-                  <NavLink to="/login" className="text-gray-500 block hover:text-red-500">Login</NavLink>
-                  <NavLink to="/wishlist" className="text-gray-500 block hover:text-red-500">WishList</NavLink>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Order Tracking</i>
+                  <NavLink to="/login" className="text-gray-900 block hover:text-red-500">Login</NavLink>
+                  <NavLink to="/wishlist" className="text-gray-900 block hover:text-red-500">WishList</NavLink>
                 </div>
               </div>
               <div className="space-y-2 mt-5">
                 <h1 className="font-bold text-[20px]">Mini Cart</h1>
-                <i to="" className="text-gray-500 block hover:text-red-500">Side Out Light</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Side Out Dark</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Dropdown</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Cart Page</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Side Out Light</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Side Out Dark</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Dropdown</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Cart Page</i>
                 <div className="space-y-2 mt-5">
                   <h1 className="font-bold text-[20px]">Checkout Style</h1>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Check out Classis</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Check out Modern</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Check out Classis</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Check out Modern</i>
                 </div>
               </div>
 
@@ -208,30 +208,30 @@ const Navbar = () => {
             <div className="flex justify-around">
               <div className="space-y-5  mt-5">
                 <h1 className="font-bold text-[20px]">Blog Layout</h1>
-                <i to="" className="text-gray-500 block hover:text-red-500">Blog Left Sidebar</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Blog Right Sidebar</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Blog Without Sidebar</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Blog Left Sidebar</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Blog Right Sidebar</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Blog Without Sidebar</i>
                 <div className="space-y-3 mt-5">
                   <h1 className="font-bold text-[20px]">Blog Style</h1>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Blog List </i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Blog Grid</i>
-                  <NavLink to="/blogCard" className="text-gray-500 block hover:text-red-500">Blog Card</NavLink>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Blog Modern</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Blog Standar</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Blog List </i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Blog Grid</i>
+                  <NavLink to="/blogCard" className="text-gray-900 block hover:text-red-500">Blog Card</NavLink>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Blog Modern</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Blog Standar</i>
                 </div>
               </div>
               <div className="space-y-3 mt-5">
                 <h1 className="font-bold text-[20px]">Blog Format</h1>
-                <i to="" className="text-gray-500 block hover:text-red-500">Post Format Gallery</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Post Format video</i>
-                <i to="" className="text-gray-500 block hover:text-red-500">Audio</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Post Format Gallery</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Post Format video</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Audio</i>
                 <div className="space-y-3 mt-5">
                   <h1 className="font-bold text-[20px]">Post Layout</h1>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Sidebar</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">One Column</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Prallax Image</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Simple Title</i>
-                  <i to="" className="text-gray-500 block hover:text-red-500">Sticky Title</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Sidebar</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">One Column</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Prallax Image</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Simple Title</i>
+                  <i to="" className="text-gray-400 block hover:text-red-500">Sticky Title</i>
                 </div>
               </div>
               <div className="grid space-y-3 mt-5">
@@ -282,11 +282,10 @@ const Navbar = () => {
     return (
       <div className="">
         <ul>
-          <div className="set-font absolute shadow-xl rounded-lg bg-white z-50 -ml-10 text-gray-500 flex justify-around w-[150px] h-[220px] pt-5">
+          <div className="set-font absolute shadow-xl rounded-lg bg-white z-50 -ml-10 text-gray-900 flex justify-around w-[150px] h-[220px] pt-5">
             <div className="mt-5 grid">
               <NavLink to="/about" className="hover:text-red-500">About Us</NavLink>
               <NavLink to="/contact" className="hover:text-red-500">Contact</NavLink>
-              <i to="" className="hover:text-red-500">Faq</i>
               <NavLink to="/faq2" className="hover:text-red-500">Faq2</NavLink>
               <NavLink to="/error" className="hover:text-red-500">Page 404</NavLink>
             </div>

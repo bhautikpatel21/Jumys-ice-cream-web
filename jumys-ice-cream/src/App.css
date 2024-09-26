@@ -536,8 +536,8 @@ underline-animate {
 #shopbg{
 
   background-image: url('./assets/asset 50.jpeg');
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #conPage-t1 {

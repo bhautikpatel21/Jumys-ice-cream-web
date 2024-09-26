@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Layout from './Pages/Layout'
-import ShopList from './Pages/ShopList'
+import Layout from './pages/Layout'
+import ShopList from './pages/ShopList'
+import FadeInComponent from './Components/Hover'
 
 function App() {
 
   return (
     <>
     {/* <Layout/> */}
-    <ShopList/>
+    {/* <ShopList/> */}
+    <FadeInComponent/>
     </>
 
   )

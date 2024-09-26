@@ -633,3 +633,17 @@ underline-animate {
   }
 
 }
+
+/*  j query */
+
+.box {
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Adjust duration as needed */
+  display: inline-block; /* Ensure boxes are inline */
+}
+
+.fade-in {
+  opacity: 1;
+}

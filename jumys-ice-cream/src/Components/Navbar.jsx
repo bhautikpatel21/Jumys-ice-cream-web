@@ -294,7 +294,7 @@ const Navbar = () => {
   }
 
   const handleMouseEnter = () => {
-    setTimeout(() => setDropdownVisible(true),300);
+    setTimeout(() => setDropdownVisible(true),150);
   };
 
   const handleMouseLeave = () => {
@@ -304,7 +304,7 @@ const Navbar = () => {
   // Shop Page
 
   const shophandleMouseEnter = () => {
-    setTimeout(() => setShopdownVisible(true),300);
+    setTimeout(() => setShopdownVisible(true),150);
   };
 
   const shophandleMouseLeave = () => {
@@ -314,7 +314,7 @@ const Navbar = () => {
   // Product page
 
   const producthandleMouseEnter = () => {
-    setTimeout(() => setProductdownVisible(true),300);
+    setTimeout(() => setProductdownVisible(true),150);
   };
 
   const producthandleMouseLeave = () => {
@@ -324,7 +324,7 @@ const Navbar = () => {
   // Blog Page 
 
   const bloghandleMouseEnter = () => {
-    setTimeout(() => setBlogdownVisible(true),300);
+    setTimeout(() => setBlogdownVisible(true),150);
   };
 
   const bloghandleMouseLeave = () => {
@@ -334,7 +334,7 @@ const Navbar = () => {
   // Pages Page 
 
   const pagehandleMouseEnter = () => {
-    setTimeout(() => setPagedownVisible(true),300)
+    setTimeout(() => setPagedownVisible(true),150)
   };
 
   const pagehandleMouseLeave = () => {

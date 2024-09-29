@@ -9,8 +9,6 @@ import { NavLink,Outlet } from 'react-router-dom';
 
 const Navbar = () => {
 
-  // let Header = useRef();
-
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const [shopdownVisible, setShopdownVisible] = useState(false);
@@ -25,7 +23,7 @@ const Navbar = () => {
 
     return (
       <div className="">
-        <ul className="set-font duration-1000 flex justify-center ">
+        <ul className="set-font flex justify-center ">
           <div className="absolute shadow-xl pt-3 bg-white z-50 rounded-lg -ml-10 text-gray-400 w-[150px] h-[330px] flex flex-col items-center space-y-3">
             <i to="" className="hover:text-red-500">
               <li className="mt-5">Home 1</li>
@@ -296,7 +294,7 @@ const Navbar = () => {
   }
 
   const handleMouseEnter = () => {
-    setDropdownVisible(true);
+    setTimeout(() => setDropdownVisible(true),300);
   };
 
   const handleMouseLeave = () => {
@@ -306,7 +304,7 @@ const Navbar = () => {
   // Shop Page
 
   const shophandleMouseEnter = () => {
-    setShopdownVisible(true);
+    setTimeout(() => setShopdownVisible(true),300);
   };
 
   const shophandleMouseLeave = () => {
@@ -316,7 +314,7 @@ const Navbar = () => {
   // Product page
 
   const producthandleMouseEnter = () => {
-    setProductdownVisible(true);
+    setTimeout(() => setProductdownVisible(true),300);
   };
 
   const producthandleMouseLeave = () => {
@@ -326,7 +324,7 @@ const Navbar = () => {
   // Blog Page 
 
   const bloghandleMouseEnter = () => {
-    setBlogdownVisible(true);
+    setTimeout(() => setBlogdownVisible(true),300);
   };
 
   const bloghandleMouseLeave = () => {
@@ -336,7 +334,7 @@ const Navbar = () => {
   // Pages Page 
 
   const pagehandleMouseEnter = () => {
-    setPagedownVisible(true);
+    setTimeout(() => setPagedownVisible(true),300)
   };
 
   const pagehandleMouseLeave = () => {
@@ -344,24 +342,7 @@ const Navbar = () => {
   };
 
 
-  // let oldScroll = window.scrollY;
-  // window.onscroll = function () {
-
-  //   if (window.scrollY < 400) {
-  //     Header.current.classList.remove("stickyHeader");
-  //   }
-  //   else if (oldScroll < window.scrollY) {
-  //     Header.current.classList.remove("stickyHeader");
-  //   } else {
-  //     console.log("scrollup");
-  //     Header.current.classList.add("stickyHeader");
-  //   }
-
-  //   oldScroll = window.scrollY;
-  // };
-
   return (
-    // <div ref={Header}>
     <div>
       <div className='w-full h-28 flex gap-2 justify-around' id='layout'>
         <div className='w-11 h-full flex justify-center items-center text-[30px]' id='menuBar'>

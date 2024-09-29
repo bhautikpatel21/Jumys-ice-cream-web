@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import Layout from './pages/Layout'
-import ShopList from './pages/ShopList'
-import FadeInComponent from './Components/Hover'
+// import ShopList from './pages/ShopList'
 
 function App() {
 
   return (
     <>
-    {/* <Layout/> */}
+
+    <Layout/>
     {/* <ShopList/> */}
-    <FadeInComponent/>
     </>
 
   )

@@ -5,6 +5,9 @@ import ProductCardProductList from './Components/ProductCardList'
 import FilterComponent from './Components/FilterComponent'
 import ProductCardList from './Components/ProductCardList'
 import ShopList from './pages/ShopList'
+import List_Renderingg from './Components/Cards_slider'
+// import ShopProduct from './Components/ShopProduct'
+import ShopProduct from './Components/renderOnSlide'
 
 function App() {
 
@@ -12,7 +15,9 @@ function App() {
     <>
 
     {/* <Layout/> */}
-    <ShopList/>
+    {/* <ShopList/> */}
+    <ShopProduct/>
+
     </>
 
   )

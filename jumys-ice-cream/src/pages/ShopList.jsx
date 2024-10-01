@@ -59,7 +59,7 @@
 import React, { useState } from 'react';
 import { Pagination, Stack, Button } from '@mui/material';
 import FilterComponent from "../Components/FilterComponent";
-import ProductCardProductList from "../Components/ProductCardProductList";
+import ProductCardList from "../Components/ProductCardList";
 import Footer from "../Components/Footer";
 import ScrollToTopButton from "../Components/TopButton";
 
@@ -95,22 +95,22 @@ const ShopList = () => {
         </div>
 
         {/* Information */}
-        <div className={`md:w-1/3 ${showFilter ? 'block' : 'hidden'} md:block mb-4 md:mb-0`}>
+        <div className={`md:w-1/3 ${showFilter ? 'block' : 'hidden'} md:block mb-4 mt-12 md:mb-0`}>
           <FilterComponent />
         </div>
 
         {/* Product List */}
         <div className="md:w-2/3">
-          <ProductCardProductList />
+          <ProductCardList/>
         </div>
       </div>
 
       {/* Pagination */}
-      <div className="flex my-5 justify-center">
+      {/* <div className="flex my-5 justify-center">
         <Stack spacing={2}>
           <Pagination count={3} variant="outlined" color="primary" className="custom-pagination" />
         </Stack>
-      </div>
+      </div> */}
 
       <Footer />
     </div>

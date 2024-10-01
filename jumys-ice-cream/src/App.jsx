@@ -11,9 +11,9 @@ function App() {
     <>
 
     {/* <Layout/> */}
-    <ProductCardProductList/>
+    {/* <ProductCardProductList/> */}
     {/* <FilterComponent/> */}
-    {/* <ShopList/> */}
+    <ShopList/>
 
     </>
 

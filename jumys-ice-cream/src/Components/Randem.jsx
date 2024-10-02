@@ -152,10 +152,7 @@ const ShopProduct = () => {
             price: "$10.00", 
             img1: img13A, 
             img2: img13B 
-          },
-      
-      
-      
+          }, 
           { 
             name: "Green Mint Chip", 
             rev: "1 Review", 

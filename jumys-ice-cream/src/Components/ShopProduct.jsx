@@ -241,8 +241,8 @@ const ShopProduct = () => {
     ];
 
     const IconMenu = () => (
-        <Card.Body className='absolute top-0 left-0 z-50 flex flex-col gap-2'>
-            <div className="flex flex-col ml-72 mt-4 gap-4">
+        <Card.Body className='absolute top-4 right-0 z-50 flex flex-col gap-2'>
+            <div className="flex flex-col gap-4 mr-10">
                 {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
                     .map(({ icon, id }) => (
                         <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center' key={id}>

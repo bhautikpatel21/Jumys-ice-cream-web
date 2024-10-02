@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Layout from './pages/Layout'
 import ShopProduct from './Components/ShopProduct'
+import ArticleCard from './Components/ArticalCard'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
     {/* <Layout/> */}
     <ShopProduct/>
+    {/* <ArticleCard/> */}
     
     </>
 

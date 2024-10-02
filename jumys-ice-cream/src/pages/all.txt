@@ -16,13 +16,13 @@ Complated page
 
 8. PAGE 404 ✔
 
-9. SIGN UP 🛠
+9. SIGN UP ✔
 
 10. CART PAGE ✔
 
+11. shop page 🛠
 
 Uncomplate pages 
 
-1. shop page 
 
 2. simple product page

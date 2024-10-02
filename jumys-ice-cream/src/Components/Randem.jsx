@@ -144,6 +144,8 @@ const ShopProduct = () => {
             img1: img12A, 
             img2: img12B 
           },
+      
+      
           { 
             name: "Golden Nectar", 
             rev: "1 Review", 
@@ -151,6 +153,9 @@ const ShopProduct = () => {
             img1: img13A, 
             img2: img13B 
           },
+      
+      
+      
           { 
             name: "Green Mint Chip", 
             rev: "1 Review", 

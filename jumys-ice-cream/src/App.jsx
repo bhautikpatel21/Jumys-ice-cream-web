@@ -3,6 +3,8 @@ import './App.css'
 import Layout from './pages/Layout'
 import ShopProduct from './Components/ShopProduct'
 import ArticleCard from './Components/ArticalCard'
+import ProductCardList from './Components/ProductCardList'
+import ShopList from './pages/ShopList'
 
 function App() {
 
@@ -10,8 +12,10 @@ function App() {
     <>
 
     {/* <Layout/> */}
-    <ShopProduct/>
+    {/* <ShopProduct/> */}
     {/* <ArticleCard/> */}
+    {/* <ProductCardList/> */}
+    <ShopList/>
     
     </>
 

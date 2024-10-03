@@ -45,18 +45,12 @@ const ShopList = () => {
 
         {/* Product List */}
         <div className="md:w-2/3">
-          {/* <ProductCardList/> */}
+          <ProductCardList/>
           <ShopProduct/>
         </div>
       </div>
 
-      {/* Pagination */}
-      {/* <div className="flex my-5 justify-center">
-        <Stack spacing={2}>
-          <Pagination count={3} variant="outlined" color="primary" className="custom-pagination" />
-        </Stack>
-      </div> */}
-
+  
       <Footer />
     </div>
   );

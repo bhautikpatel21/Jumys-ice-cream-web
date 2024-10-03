@@ -97,7 +97,7 @@ const FilterComponent = () => {
           onChange={handleMaxChange}
           className='w-full'
         />
-        <p className="text-center">Range: ${minPrice}.00 - ${maxPrice}.00</p>
+        <p className="">Range: ${minPrice}.00 - ${maxPrice}.00</p>
       </div>
 
       {/* Color Section */}

@@ -1,6 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 // import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 // import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaList } from 'react-icons/fa';
+// import ProductCardList from './ProductCardList';
 // import img1B from "../assets/asset 66.webp";
 // import img1A from "../assets/asset 67.webp";
 // import img2A from "../assets/asset 34.webp";
@@ -267,10 +268,10 @@
 //     return (
 //         <div>
 //             <div className='mt-14 gap-8 w-full h-12 flex items-center pl-5' id='menus'>
-//                 <a href=""><FaList className="text-gray-600 text-2xl hover:text-red-600" /></a>
+//                 <a href=""><FaList className="text-gray-600 text-2xl hover:text-red-600" id='prlist' /></a>
 
-//                 <div id="div4menu" onClick={() => setColumns(2)} className="cursor-pointer">
-//                     <div className="w-6 h-6 flex flex-col-2 flex-wrap gap-1">
+//                 <div id="div4menu" onClick={() => setColumns(2)} className="cursor-pointer ">
+//                     <div className="w-6 h-6 flex flex-col-2 flex-wrap gap-1 ">
 //                         <div className="w-2 h-2 bg-gray-600"></div>
 //                         <div className="w-2 h-2 bg-gray-600"></div>
 //                         <div className="w-2 h-2 bg-gray-600"></div>
@@ -364,6 +365,8 @@
 // };
 
 // export default ShopProduct;
+
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 import React, { useState, useEffect } from 'react';
@@ -640,7 +643,7 @@ const ShopProduct = () => {
 
     const IconMenu = () => (
         <Card.Body className='absolute top-4 right-0 z-50 flex flex-col gap-2'>
-            <div className="flex flex-col gap-4 mr-10">
+            <div className="flex flex-col gap-4 mr-3">
                 {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
                     .map(({ icon, id }) => (
                         <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center' key={id}>
@@ -653,8 +656,8 @@ const ShopProduct = () => {
 
     return (
         <div>
-            <div className='mt-14 gap-8 w-full h-12 flex items-center pl-5'>
-                <a href=""><FaList className="text-gray-600 text-2xl hover:text-red-600" /></a>
+            <div className='mt-14 gap-8 w-full h-12 flex items-center mb-8 justify-end '>
+                <a href=""><FaList className="text-gray-600 text-2xl hover:text-red-600 " /></a>
                 {/* Only show menu icons if width is greater than 1000px */}
                 {window.innerWidth >= 1000 && (
                     <>
@@ -676,7 +679,7 @@ const ShopProduct = () => {
                                 <div className="w-2 h-2 bg-gray-600"></div>
                             </div>
                         </div>
-                        <div onClick={() => setColumns(4)} className="cursor-pointer">
+                        <div onClick={() => setColumns(4)} className="cursor-pointer mr-4">
                             <div className="w-12 h-6 flex flex-col-2 flex-wrap gap-1">
                                 <div className="w-2 h-2 bg-gray-600"></div>
                                 <div className="w-2 h-2 bg-gray-600"></div>

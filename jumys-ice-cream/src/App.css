@@ -657,3 +657,7 @@ underline-animate {
       grid-template-columns: repeat(2, 1fr); /* 2 columns */
   }
 }
+
+.productNameStyle{
+  font-family: Kalnia;
+}

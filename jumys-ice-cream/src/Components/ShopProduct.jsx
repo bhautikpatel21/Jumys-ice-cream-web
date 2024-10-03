@@ -703,7 +703,7 @@ const ShopProduct = () => {
                             {visibleIndices[index] && <IconMenu />}
                         </div>
                         <Card.Body>
-                            <Card.Title>{product.name}</Card.Title>
+                            <Card.Title className='productNameStyle font-medium '>{product.name}</Card.Title>
                             <Card.Text>
                                 <div className="flex">
                                     <div className='flex gap-1'>

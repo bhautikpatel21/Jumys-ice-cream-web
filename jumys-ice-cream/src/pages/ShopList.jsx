@@ -45,7 +45,7 @@ const ShopList = () => {
 
         {/* Product List */}
         <div className="md:w-2/3">
-          <ProductCardList/>
+          {/* <ProductCardList/> */}
           <ShopProduct/>
         </div>
       </div>

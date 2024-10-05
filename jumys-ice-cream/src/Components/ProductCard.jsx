@@ -22,7 +22,7 @@ const ProductCard = () => {
   const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
   return (
-    <div className="container mx-auto max-w-7xl px-4 py-1 lg:px-0">
+    <div className="container mx-auto max-w-[1400px] xl px-4 py-1 lg:px-0">
       <div className="overflow-hidden">
         <div className="mb-9 pt-4 md:px-6 md:pt-7 lg:mb-2 lg:p-8 2xl:p-10 2xl:pt-10">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
@@ -62,7 +62,7 @@ const ProductCard = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex m-2 gap-2 xl:flex-col">
+                <div className="flex  m-2 gap-2 xl:flex-col">
                   {images.map((image, index) => (
                     <div
                       key={image}

@@ -711,7 +711,7 @@ const ShopProduct = () => {
                                 alt={product.name} 
                                 className='rounded-2xl' 
                             />
-                            {visibleIndices[index] && <IconMenu />}
+                            {visibleIndices[index] && <IconMenu />} 
                         </div>
                         <Card.Body>
                             <Card.Title className='productNameStyle font-medium'>{product.name}</Card.Title>

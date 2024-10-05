@@ -70,7 +70,7 @@ const Navbar = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category 2</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Sub Category</i>
-                <i to="" className="text-gray-400 block hover:text-red-500">ShopList</i>
+                <NavLink to="/shop" className="text-gray-900 block hover:text-red-500">ShopList</NavLink>
               </div>
               <div className="space-y-3 mt-5">
                 <h1 className="font-bold text-[20px]">Filter Layout</h1>
@@ -80,10 +80,10 @@ const Navbar = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">Filter On Top</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Filter Drawer</i>
                 <div className="space-y-3 mt-5">
-                  <h1 className="font-bold text-[20px]">Shop Loader</h1>
-                  <i to="" className="text-gray-400 block hover:text-red-500">Shop Pagination</i>
-                  <i to="" className="text-gray-400 block hover:text-red-500">Shop Infinity</i>
-                  <i to="" className="text-gray-400 block hover:text-red-500">Shop Load More</i>
+                <h1 className="font-bold text-[20px]">Shop Loader</h1>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Pagination</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Infinity</i>
+                <i to="" className="text-gray-400 block hover:text-red-500">Shop Load More</i>
                 </div>
               </div>
 
@@ -95,10 +95,10 @@ const Navbar = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">WhishList Icon</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Quick Shop Light</i>
                 <div className="space-y-2 mt-5">
-                  <h1 className="font-bold text-[20px]">Woo Pages</h1>
-                  <i to="" className="text-gray-400 block hover:text-red-500">Order Tracking</i>
-                  <NavLink to="/login" className="text-gray-900 block hover:text-red-500">Login</NavLink>
-                  <NavLink to="/wishlist" className="text-gray-900 block hover:text-red-500">WishList</NavLink>
+                <h1 className="font-bold text-[20px]">Woo Pages</h1>
+                <i to="" className="text-gray-400 block hover:text-red-500">Order Tracking</i>
+                <NavLink to="/login" className="text-gray-900 block hover:text-red-500">Login</NavLink>
+                <NavLink to="/wishlist" className="text-gray-900 block hover:text-red-500">WishList</NavLink>
                 </div>
               </div>
               <div className="space-y-2 mt-5">

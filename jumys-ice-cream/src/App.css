@@ -634,27 +634,14 @@ underline-animate {
 
 }
 
-/*  j query */
-
-.box {
-  width: 80px;
-  height: 80px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Adjust duration as needed */
-  display: inline-block; /* Ensure boxes are inline */
-}
-
-.fade-in {
-  opacity: 1;
-}
 
 
 @media (max-width: 1000px) {
   #menus {
-      display: none; /* Hide the menu */
+      display: none; 
   }
   .grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-template-columns: repeat(2, 1fr);
   }
 }
 

@@ -269,7 +269,7 @@ const ShopProduct = () => {
     };
 
     const IconMenu = () => (
-      <div className='absolute top-2 right-2 flex flex-col gap-3'>
+      <div className='absolute top-2 right-2 flex flex-col gap-5'>
           {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
               .map(({ icon, id }) => (
                   <div className='w-8 h-8 bg-white rounded-full flex justify-center items-center' key={id}>
@@ -341,7 +341,7 @@ const ShopProduct = () => {
                             {visibleIndices[index] && <IconMenu />} 
                         </div>
                         <Card.Body>
-                            <Card.Title className='productNameStyle font-medium'>{product.name}</Card.Title>
+                            <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
                             <Card.Text>
                                 <div className="flex">
                                     <div className='flex gap-1'>

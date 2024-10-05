@@ -34,6 +34,7 @@ const ProductCard = () => {
                       alt="Product gallery"
                       src={activeImage}
                       className="object-cover md:h-[300px] md:w-full lg:w-[675px] lg:h-[628px]"
+                      id="mainIMG"
                     />
                   </div>
                   <div className="absolute inset-0 flex items-center justify-between">

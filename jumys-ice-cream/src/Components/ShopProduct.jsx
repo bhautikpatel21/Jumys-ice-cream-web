@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaList } from 'react-icons/fa';
+import ProductCardList from './ProductCardList';
 import img1B from "../assets/asset 66.webp";
 import img1A from "../assets/asset 67.webp";
 import img2A from "../assets/asset 34.webp";
@@ -51,6 +52,7 @@ import img24A from "../assets/asset 111.webp";
 import img24B from "../assets/asset 112.webp";
 import img25A from "../assets/asset 113.jpeg";
 import img25B from "../assets/asset 114.jpeg";
+import { Repeat } from 'lucide-react';
 
 const ShopProduct = () => {
     const [data, setData] = useState([]);
@@ -247,7 +249,7 @@ const ShopProduct = () => {
             if (window.innerWidth < 1000) {
                 setColumns(2);
             } else {
-                setColumns(4);
+                setColumns(2);
             }
         };
 
@@ -282,7 +284,7 @@ const ShopProduct = () => {
     return (
         <div>
             <div className='mt-14 gap-8 w-full h-12 flex items-center mb-8 justify-end'>
-                <a href=""><FaList className="text-gray-600 text-2xl hover:text-red-600 " /></a>
+                <a href="" id='ListTypeMenu'><FaList className="text-gray-600 text-2xl hover:text-red-600 " /></a>
                 {window.innerWidth >= 1000 && (
                     <>
                         <div onClick={() => setColumns(2)} className="cursor-pointer">
@@ -319,7 +321,7 @@ const ShopProduct = () => {
                 )}
             </div>
 
-            <div className={`grid grid-cols-${columns} gap-4 `}>
+            <div className={`grid gap-4 `} style={{gridTemplateColumns:`repeat(${columns},1fr)`}}>
                 {currentProducts.map((product, index) => (
                     <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
                         <div className='relative'
@@ -374,3 +376,5 @@ const ShopProduct = () => {
 };
 
 export default ShopProduct;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -19,6 +19,15 @@ const Navbar = () => {
 
   const [pagedownVisible, setPagedownVisible] = useState(false);
 
+
+const closeAllDropdowns = () => {
+  setDropdownVisible(false);
+  setShopdownVisible(false);
+  setProductdownVisible(false);
+  setBlogdownVisible(false);
+  setPagedownVisible(false);
+};
+
   const HomeMenu = () => {
 
     return (
@@ -70,7 +79,7 @@ const Navbar = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category 2</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Sub Category</i>
-                <NavLink to="/shop" className="text-gray-900 block hover:text-red-500">ShopList</NavLink>
+                <NavLink to="/shop" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>ShopList</NavLink>
               </div>
               <div className="space-y-3 mt-5">
                 <h1 className="font-bold text-[20px]">Filter Layout</h1>
@@ -97,8 +106,8 @@ const Navbar = () => {
                 <div className="space-y-2 mt-5">
                 <h1 className="font-bold text-[20px]">Woo Pages</h1>
                 <i to="" className="text-gray-400 block hover:text-red-500">Order Tracking</i>
-                <NavLink to="/login" className="text-gray-900 block hover:text-red-500">Login</NavLink>
-                <NavLink to="/wishlist" className="text-gray-900 block hover:text-red-500">WishList</NavLink>
+                <NavLink to="/login" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>Login</NavLink>
+                <NavLink to="/wishlist" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>WishList</NavLink>
                 </div>
               </div>
               <div className="space-y-2 mt-5">
@@ -106,7 +115,7 @@ const Navbar = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">Side Out Light</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Side Out Dark</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Dropdown</i>
-                <NavLink to="/cart" className="text-gray-900 block hover:text-red-500">Cart Page</NavLink>
+                <NavLink to="/cart" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>Cart Page</NavLink>
                 <div className="space-y-2 mt-5">
                   <h1 className="font-bold text-[20px]">Checkout Style</h1>
                   <i to="" className="text-gray-400 block hover:text-red-500">Check out Classis</i>
@@ -213,7 +222,7 @@ const Navbar = () => {
                   <h1 className="font-bold text-[20px]">Blog Style</h1>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog List </i>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog Grid</i>
-                  <NavLink to="/blogCard" className="text-gray-900 block hover:text-red-500">Blog Card</NavLink>
+                  <NavLink to="/blogCard" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>Blog Card</NavLink>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog Modern</i>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog Standar</i>
                 </div>
@@ -282,10 +291,10 @@ const Navbar = () => {
         <ul>
           <div className="set-font absolute shadow-xl rounded-lg bg-white z-50 -ml-10 text-gray-900 flex justify-around w-[150px] h-[220px] pt-5">
             <div className="mt-5 grid">
-              <NavLink to="/about" className="hover:text-red-500">About Us</NavLink>
-              <NavLink to="/contact" className="hover:text-red-500">Contact</NavLink>
-              <NavLink to="/faq2" className="hover:text-red-500">Faq2</NavLink>
-              <NavLink to="/error" className="hover:text-red-500">Page 404</NavLink>
+              <NavLink to="/about" className="hover:text-red-500" onClick={closeAllDropdowns}>About Us</NavLink>
+              <NavLink to="/contact" className="hover:text-red-500" onClick={closeAllDropdowns}>Contact</NavLink>
+              <NavLink to="/faq2" className="hover:text-red-500" onClick={closeAllDropdowns}>Faq2</NavLink>
+              <NavLink to="/error" className="hover:text-red-500" onClick={closeAllDropdowns}>Page 404</NavLink>
             </div>
           </div>
         </ul>
@@ -356,7 +365,7 @@ const Navbar = () => {
         <div className='w-[600px] h-full flex items-center justify-around font-semibold' id='pages'>
 
           <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='w-[90px]'>
-            <NavLink to="/" className='flex' id='underline-animate' href="">Home<FaAngleDown className='mt-[5px] ml-1' /></NavLink>
+            <NavLink to="/" className='flex' id='underline-animate' onClick={closeAllDropdowns} href="">Home<FaAngleDown className='mt-[5px] ml-1' /></NavLink>
             {dropdownVisible && HomeMenu()}
           </div>
 

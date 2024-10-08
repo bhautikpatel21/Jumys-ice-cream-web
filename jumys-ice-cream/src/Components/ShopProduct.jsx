@@ -52,7 +52,6 @@ import img24A from "../assets/asset 111.webp";
 import img24B from "../assets/asset 112.webp";
 import img25A from "../assets/asset 113.jpeg";
 import img25B from "../assets/asset 114.jpeg";
-import { Repeat } from 'lucide-react';
 
 const ShopProduct = () => {
     const [data, setData] = useState([]);
@@ -60,6 +59,7 @@ const ShopProduct = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [columns, setColumns] = useState(2);
+    const [showProductCardList, setShowProductCardList] = useState(false);
     const productsPerPage = 12;
 
     const Product = [
@@ -271,23 +271,35 @@ const ShopProduct = () => {
     };
 
     const IconMenu = () => (
-      <div className='absolute top-2 right-2 flex flex-col gap-5'>
-          {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
-              .map(({ icon, id }) => (
-                  <div className='w-8 h-8 bg-white rounded-full flex justify-center items-center' key={id}>
-                      <Button variant="outline-secondary" className="p-0">{icon}</Button>
-                  </div>
-              ))}
-      </div>
-  );
+        <div className='absolute top-2 right-2 flex flex-col gap-5'>
+            {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
+                .map(({ icon, id }) => (
+                    <div className='w-8 h-8 bg-white rounded-full flex justify-center items-center' key={id}>
+                        <Button variant="outline-secondary" className="p-0">{icon}</Button>
+                    </div>
+                ))}
+        </div>
+    );
+
+    const handleListTypeMenuClick = (e) => {
+        e.preventDefault(); // Prevent default behavior
+        setShowProductCardList(!showProductCardList); // Toggle the visibility of ProductCardList
+    };
+
+    const handleColumnChange = (newColumns) => {
+        setColumns(newColumns);
+        setShowProductCardList(false); // Close ProductCardList when changing columns
+    };
 
     return (
         <div>
             <div className='mt-14 gap-8 w-full h-12 flex items-center mb-8 justify-end'>
-                <a href="" id='ListTypeMenu'><FaList className="text-gray-600 text-2xl hover:text-red-600 " /></a>
+                <a href="#" id='ListTypeMenu' onClick={handleListTypeMenuClick}>
+                    <FaList className="text-gray-600 text-2xl hover:text-red-600" />
+                </a>
                 {window.innerWidth >= 1000 && (
                     <>
-                        <div onClick={() => setColumns(2)} className="cursor-pointer">
+                        <div onClick={() => handleColumnChange(2)} className="cursor-pointer">
                             <div className="w-6 h-6 flex flex-col-2 flex-wrap gap-1">
                                 <div className="w-2 h-2 bg-gray-600"></div>
                                 <div className="w-2 h-2 bg-gray-600"></div>
@@ -295,7 +307,7 @@ const ShopProduct = () => {
                                 <div className="w-2 h-2 bg-gray-600"></div>
                             </div>
                         </div>
-                        <div onClick={() => setColumns(3)} className="cursor-pointer">
+                        <div onClick={() => handleColumnChange(3)} className="cursor-pointer">
                             <div className="w-8 h-6 flex flex-col-2 flex-wrap gap-1">
                                 <div className="w-2 h-2 bg-gray-600"></div>
                                 <div className="w-2 h-2 bg-gray-600"></div>
@@ -305,7 +317,7 @@ const ShopProduct = () => {
                                 <div className="w-2 h-2 bg-gray-600"></div>
                             </div>
                         </div>
-                        <div onClick={() => setColumns(4)} className="cursor-pointer mr-4">
+                        <div onClick={() => handleColumnChange(4)} className="cursor-pointer mr-4">
                             <div className="w-12 h-6 flex flex-col-2 flex-wrap gap-1">
                                 <div className="w-2 h-2 bg-gray-600"></div>
                                 <div className="w-2 h-2 bg-gray-600"></div>
@@ -321,48 +333,52 @@ const ShopProduct = () => {
                 )}
             </div>
 
-            <div className={`grid gap-4 `} style={{gridTemplateColumns:`repeat(${columns},1fr)`}}>
-                {currentProducts.map((product, index) => (
-                    <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
-                        <div className='relative'
-                            onMouseEnter={() => {
-                                setHoveredIndex(index);
-                                setVisibleIndices(prev => ({ ...prev, [index]: true }));
-                            }}
-                            onMouseLeave={() => {
-                                setHoveredIndex(null);
-                                setVisibleIndices(prev => ({ ...prev, [index]: false }));
-                            }}
-                        >
-                            <Card.Img 
-                                variant="top" 
-                                src={hoveredIndex === index ? product.img2 : product.img1} 
-                                alt={product.name} 
-                                className='rounded-2xl' 
-                            />
-                            {visibleIndices[index] && <IconMenu />} 
-                        </div>
-                        <Card.Body>
-                            <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
-                            <Card.Text>
-                                <div className="flex">
-                                    <div className='flex gap-1'>
-                                        {[...Array(5)].map((star, idx) => (
-                                            <FaStar key={idx} color="red" />
-                                        ))}
+            {showProductCardList ? (
+                <ProductCardList /> // Render ProductCardList if visible
+            ) : (
+                <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+                    {currentProducts.map((product, index) => (
+                        <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
+                            <div className='relative'
+                                onMouseEnter={() => {
+                                    setHoveredIndex(index);
+                                    setVisibleIndices(prev => ({ ...prev, [index]: true }));
+                                }}
+                                onMouseLeave={() => {
+                                    setHoveredIndex(null);
+                                    setVisibleIndices(prev => ({ ...prev, [index]: false }));
+                                }}
+                            >
+                                <Card.Img 
+                                    variant="top" 
+                                    src={hoveredIndex === index ? product.img2 : product.img1} 
+                                    alt={product.name} 
+                                    className='rounded-2xl' 
+                                />
+                                {visibleIndices[index] && <IconMenu />} 
+                            </div>
+                            <Card.Body>
+                                <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
+                                <Card.Text>
+                                    <div className="flex">
+                                        <div className='flex gap-1'>
+                                            {[...Array(5)].map((star, idx) => (
+                                                <FaStar key={idx} color="red" />
+                                            ))}
+                                        </div>
+                                        <span className="ml-5">{product.rev}</span>
                                     </div>
-                                    <span className="ml-5">{product.rev}</span>
-                                </div>
-                            </Card.Text>
-                        </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem>
-                                <strong>{product.price}</strong>
-                            </ListGroupItem>
-                        </ListGroup>
-                    </Card>
-                ))}
-            </div>
+                                </Card.Text>
+                            </Card.Body>
+                            <ListGroup className="list-group-flush">
+                                <ListGroupItem>
+                                    <strong>{product.price}</strong>
+                                </ListGroupItem>
+                            </ListGroup>
+                        </Card>
+                    ))}
+                </div>
+            )}
 
             <div className="flex justify-center mt-8 space-x-4">
                 {[...Array(totalPages)].map((_, index) => (
@@ -376,5 +392,3 @@ const ShopProduct = () => {
 };
 
 export default ShopProduct;
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

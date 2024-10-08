@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaList } from 'react-icons/fa';
+import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaList, FaArrowLeft,FaArrowRight } from 'react-icons/fa';
 import ProductCardList from './ProductCardList';
 import img1B from "../assets/asset 66.webp";
 import img1A from "../assets/asset 67.webp";
@@ -63,7 +63,7 @@ const ShopProduct = () => {
     const productsPerPage = 12;
 
     const Product = [
-        {
+         {
             name: "Banana Cream Pudding",
             rev: "1 Review",
             price: "$12.00",
@@ -246,11 +246,7 @@ const ShopProduct = () => {
 
     useEffect(() => {
         const updateColumns = () => {
-            if (window.innerWidth < 1000) {
-                setColumns(2);
-            } else {
-                setColumns(2);
-            }
+            setColumns(window.innerWidth < 1000 ? 2 : 2);
         };
 
         window.addEventListener('resize', updateColumns);
@@ -282,13 +278,13 @@ const ShopProduct = () => {
     );
 
     const handleListTypeMenuClick = (e) => {
-        e.preventDefault(); // Prevent default behavior
-        setShowProductCardList(!showProductCardList); // Toggle the visibility of ProductCardList
+        e.preventDefault();
+        setShowProductCardList(!showProductCardList);
     };
 
     const handleColumnChange = (newColumns) => {
         setColumns(newColumns);
-        setShowProductCardList(false); // Close ProductCardList when changing columns
+        setShowProductCardList(false);
     };
 
     return (
@@ -299,94 +295,116 @@ const ShopProduct = () => {
                 </a>
                 {window.innerWidth >= 1000 && (
                     <>
-                        <div onClick={() => handleColumnChange(2)} className="cursor-pointer">
-                            <div className="w-6 h-6 flex flex-col-2 flex-wrap gap-1">
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                            </div>
+                    <div onClick={() => handleColumnChange(2)} className="cursor-pointer">
+                        <div className="w-6 h-6 flex flex-col-2 flex-wrap gap-1">
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
                         </div>
-                        <div onClick={() => handleColumnChange(3)} className="cursor-pointer">
-                            <div className="w-8 h-6 flex flex-col-2 flex-wrap gap-1">
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                            </div>
+                    </div>
+                    
+                    <div onClick={() => handleColumnChange(3)} className="cursor-pointer">
+                        <div className="w-8 h-6 flex flex-col-2 flex-wrap gap-1">
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
+                            <div className="w-2 h-2 bg-gray-600"></div>
                         </div>
-                        <div onClick={() => handleColumnChange(4)} className="cursor-pointer mr-4">
-                            <div className="w-12 h-6 flex flex-col-2 flex-wrap gap-1">
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                            </div>
-                        </div>
+                    </div>
+                    
+                    <div onClick={() => handleColumnChange(4)} className="cursor-pointer mr-4">
+                       <div className="w-12 h-6 flex flex-col-2 flex-wrap gap-1">
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                           <div className="w-2 h-2 bg-gray-600"></div>
+                       </div>
+                    </div>
                     </>
                 )}
             </div>
 
             {showProductCardList ? (
-                <ProductCardList /> // Render ProductCardList if visible
+                <ProductCardList />
             ) : (
-                <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
-                    {currentProducts.map((product, index) => (
-                        <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
-                            <div className='relative'
-                                onMouseEnter={() => {
-                                    setHoveredIndex(index);
-                                    setVisibleIndices(prev => ({ ...prev, [index]: true }));
-                                }}
-                                onMouseLeave={() => {
-                                    setHoveredIndex(null);
-                                    setVisibleIndices(prev => ({ ...prev, [index]: false }));
-                                }}
-                            >
-                                <Card.Img 
-                                    variant="top" 
-                                    src={hoveredIndex === index ? product.img2 : product.img1} 
-                                    alt={product.name} 
-                                    className='rounded-2xl' 
-                                />
-                                {visibleIndices[index] && <IconMenu />} 
-                            </div>
-                            <Card.Body>
-                                <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
-                                <Card.Text>
-                                    <div className="flex">
-                                        <div className='flex gap-1'>
-                                            {[...Array(5)].map((star, idx) => (
-                                                <FaStar key={idx} color="red" />
-                                            ))}
+                <>
+                    <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+                        {currentProducts.map((product, index) => (
+                            <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
+                                <div className='relative'
+                                    onMouseEnter={() => {
+                                        setHoveredIndex(index);
+                                        setVisibleIndices(prev => ({ ...prev, [index]: true }));
+                                    }}
+                                    onMouseLeave={() => {
+                                        setHoveredIndex(null);
+                                        setVisibleIndices(prev => ({ ...prev, [index]: false }));
+                                    }}
+                                >
+                                    <Card.Img 
+                                        variant="top" 
+                                        src={hoveredIndex === index ? product.img2 : product.img1} 
+                                        alt={product.name} 
+                                        className='rounded-2xl' 
+                                    />
+                                    {visibleIndices[index] && <IconMenu />} 
+                                </div>
+                                <Card.Body>
+                                    <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
+                                    <Card.Text>
+                                        <div className="flex">
+                                            <div className='flex gap-1'>
+                                                {[...Array(5)].map((star, idx) => (
+                                                    <FaStar key={idx} color="red" />
+                                                ))}
+                                            </div>
+                                            <span className="ml-5">{product.rev}</span>
                                         </div>
-                                        <span className="ml-5">{product.rev}</span>
-                                    </div>
-                                </Card.Text>
-                            </Card.Body>
-                            <ListGroup className="list-group-flush">
-                                <ListGroupItem>
-                                    <strong>{product.price}</strong>
-                                </ListGroupItem>
-                            </ListGroup>
-                        </Card>
-                    ))}
-                </div>
-            )}
+                                    </Card.Text>
+                                </Card.Body>
+                                <ListGroup className="list-group-flush">
+                                    <ListGroupItem>
+                                        <strong>{product.price}</strong>
+                                    </ListGroupItem>
+                                </ListGroup>
+                            </Card>
+                        ))}
+                    </div>
 
-            <div className="flex justify-center mt-8 space-x-4">
-                {[...Array(totalPages)].map((_, index) => (
-                    <button key={index} onClick={() => handlePageChange(index + 1)} className={`px-4 py-2 border rounded-full ${currentPage === index + 1 ? "bg-red-600 text-white" : "bg-white text-black"}`}>
-                        {index + 1}
-                    </button>
-                ))}
-            </div>
+                    <div className="flex justify-center mt-8 mb-5 space-x-5">
+                        <button 
+                            onClick={() => handlePageChange(currentPage - 1)} 
+                            disabled={currentPage === 1} 
+                            className="px-3 py-2 border rounded-full bg-white text-black"
+                        >
+                            <FaArrowLeft/>
+                        </button>
+                        {[...Array(totalPages)].map((_, index) => (
+                            <button 
+                                key={index} 
+                                onClick={() => handlePageChange(index + 1)} 
+                                className={`px-4 py-2 border rounded-full ${currentPage === index + 1 ? "bg-red-600 text-white" : "bg-white text-black"}`}
+                            >
+                                {index + 1}
+                            </button>
+                        ))}
+                        <button 
+                            onClick={() => handlePageChange(currentPage + 1)} 
+                            disabled={currentPage === totalPages} 
+                            className="px-3 py-2 border rounded-full bg-white text-black"
+                        >
+                            <FaArrowRight/>
+                        </button>
+                    </div>
+                </>
+            )}
         </div>
     );
 };

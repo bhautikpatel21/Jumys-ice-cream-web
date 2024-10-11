@@ -79,7 +79,7 @@ const closeAllDropdowns = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Image Category 2</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Shop Sub Category</i>
-                <NavLink to="/shop" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>ShopList</NavLink>
+                <NavLink to="/shop" className="text-gray-950 block hover:text-red-500" onClick={closeAllDropdowns}>ShopList</NavLink>
               </div>
               <div className="space-y-3 mt-5">
                 <h1 className="font-bold text-[20px]">Filter Layout</h1>
@@ -106,8 +106,8 @@ const closeAllDropdowns = () => {
                 <div className="space-y-2 mt-5">
                 <h1 className="font-bold text-[20px]">Woo Pages</h1>
                 <i to="" className="text-gray-400 block hover:text-red-500">Order Tracking</i>
-                <NavLink to="/login" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>Login</NavLink>
-                <NavLink to="/wishlist" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>WishList</NavLink>
+                <NavLink to="/login" className="text-gray-950 block hover:text-red-500" onClick={closeAllDropdowns}>Login</NavLink>
+                <NavLink to="/wishlist" className="text-gray-950 block hover:text-red-500" onClick={closeAllDropdowns}>WishList</NavLink>
                 </div>
               </div>
               <div className="space-y-2 mt-5">
@@ -115,7 +115,7 @@ const closeAllDropdowns = () => {
                 <i to="" className="text-gray-400 block hover:text-red-500">Side Out Light</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Side Out Dark</i>
                 <i to="" className="text-gray-400 block hover:text-red-500">Dropdown</i>
-                <NavLink to="/cart" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>Cart Page</NavLink>
+                <NavLink to="/cart" className="text-gray-950 block hover:text-red-500" onClick={closeAllDropdowns}>Cart Page</NavLink>
                 <div className="space-y-2 mt-5">
                   <h1 className="font-bold text-[20px]">Checkout Style</h1>
                   <i to="" className="text-gray-400 block hover:text-red-500">Check out Classis</i>
@@ -222,7 +222,7 @@ const closeAllDropdowns = () => {
                   <h1 className="font-bold text-[20px]">Blog Style</h1>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog List </i>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog Grid</i>
-                  <NavLink to="/blogCard" className="text-gray-900 block hover:text-red-500" onClick={closeAllDropdowns}>Blog Card</NavLink>
+                  <NavLink to="/blogCard" className="text-gray-950 block hover:text-red-500" onClick={closeAllDropdowns}>Blog Card</NavLink>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog Modern</i>
                   <i to="" className="text-gray-400 block hover:text-red-500">Blog Standar</i>
                 </div>
@@ -289,7 +289,7 @@ const closeAllDropdowns = () => {
     return (
       <div className="">
         <ul>
-          <div className="set-font absolute shadow-xl rounded-lg bg-white z-50 -ml-10 text-gray-900 flex justify-around w-[150px] h-[220px] pt-5">
+          <div className="set-font absolute shadow-xl rounded-lg bg-white z-50 -ml-10 text-gray-950 flex justify-around w-[150px] h-[220px] pt-5">
             <div className="mt-5 grid">
               <NavLink to="/about" className="hover:text-red-500" onClick={closeAllDropdowns}>About Us</NavLink>
               <NavLink to="/contact" className="hover:text-red-500" onClick={closeAllDropdowns}>Contact</NavLink>
@@ -391,10 +391,10 @@ const closeAllDropdowns = () => {
 
         </div>
         <div className='w-[190px] h-full flex justify-around items-center text-[22px]' id='icons'>
-          <a className='icon1 text-red' href=""><FaSearch /></a>
-          <NavLink to='/signup' className='icon2 text-red' href=""><FaUser /></NavLink>
-          <a className='icon3 text-red' href=""><FaHeart /></a>
-          <a className='icon4 text-red' href=""><FaShoppingBasket /></a>
+          {/* <a className='icon1 text-red' href=""><FaSearch /></a> */}
+          <NavLink to='/Login' className='icon2 text-red' href=""><FaUser /></NavLink>
+          <NavLink to='/wishlist' className='icon3 text-red' href=""><FaHeart /></NavLink>
+          <NavLink to='/cart' className='icon4 text-red' href=""><FaShoppingBasket /></NavLink>
         </div>
       </div>
       <div className='w-full h-[80px] fixed bottom-0 flex justify-around bg-white z-20' id='header-footer'>

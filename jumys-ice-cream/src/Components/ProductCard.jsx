@@ -3,6 +3,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaEye, FaCompressAlt } from 'react-icons/fa';
 
 import PaymentMethodImg from "../assets/paymentMethod.png";
+import img1 from "../assets/product-8-1.webp"
+import img2 from "../assets/product-8-2.webp"
+import img3 from "../assets/product-8-3.webp"
+import img4 from "../assets/product-8-4.webp"
 
 const ProductCard = () => {
   const [activeImage, setActiveImage] = useState(
@@ -13,7 +17,7 @@ const ProductCard = () => {
     "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20.webp",
     "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-1.webp",
     "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-2.webp",
-    "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-3.webp"
+    "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-3.webp",
   ];
 
   const [quantity, setQuantity] = useState(1);

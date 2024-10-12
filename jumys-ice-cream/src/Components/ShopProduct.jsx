@@ -362,6 +362,7 @@ const ShopProduct = () => {
                 <ProductCardList />
             ) : (
                 <>
+                <NavLink to="/Simple-Product">
                     <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
                         {currentProducts.map((product, index) => (
                             <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
@@ -405,6 +406,8 @@ const ShopProduct = () => {
                         ))}
                     </div>
 
+                    </NavLink>
+
                     <div className="flex justify-center mt-8 mb-5 space-x-5">
                         <button 
                             onClick={() => handlePageChange(currentPage - 1)} 
@@ -432,6 +435,7 @@ const ShopProduct = () => {
                     </div>
                 </>
             )}
+            <Outlet/>
         </div>
     );
 };

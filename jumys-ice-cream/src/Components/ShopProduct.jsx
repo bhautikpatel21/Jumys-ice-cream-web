@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaList, FaArrowLeft,FaArrowRight } from 'react-icons/fa';
 import ProductCardList from './ProductCardList';
+import ProductCard from './ProductCard';
 import img1B from "../assets/asset 66.webp";
 import img1A from "../assets/asset 67.webp";
 import img2A from "../assets/asset 34.webp";
@@ -110,7 +111,8 @@ const ShopProduct = () => {
             rev: "0 Reviews",
             price: "$12.00",
             img1: img7A,
-            img2: img7B
+            img2: img7B,
+            id : 7
         },
         {
             name: "Cookies in Cream",

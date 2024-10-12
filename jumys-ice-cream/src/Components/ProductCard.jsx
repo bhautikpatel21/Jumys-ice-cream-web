@@ -13,7 +13,7 @@ const ProductCard = () => {
     "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20.webp",
     "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-1.webp",
     "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-2.webp",
-    "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-3.webp",
+    "https://wpbingosite.com/wordpress/jumys/wp-content/uploads/2022/08/product-20-3.webp"
   ];
 
   const [quantity, setQuantity] = useState(1);

@@ -20,9 +20,6 @@ Complated page
 
 10. CART PAGE ✔
 
-11. shop page ✔
+11. shop page ✔ 
 
-
-Uncomplate pages 
-
-2. simple product page
+2. simple product page 🛠

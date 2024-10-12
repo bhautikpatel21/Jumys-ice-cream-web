@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Shop from './Shop';
+import ProductCard from '../Components/ProductCard';
 import ShopList from './ShopList';
 import Login from './Login';
 import AboutUs from './AboutUsPage';
@@ -65,6 +66,10 @@ const PageRouter = createBrowserRouter([
             {
               path : '/cart',
               element : <CartPage/>
+            },
+            {
+              path : '/Simple-Product',
+              element : <ProductCard/>
             }
         ]
     }

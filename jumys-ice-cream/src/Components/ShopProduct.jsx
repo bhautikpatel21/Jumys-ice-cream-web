@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaList, FaArrowLeft,FaArrowRight } from 'react-icons/fa';
+import { NavLink,Outlet } from 'react-router-dom';
 import ProductCardList from './ProductCardList';
-import ProductCard from './ProductCard';
+// import ProductCard from './ProductCard';
 import img1B from "../assets/asset 66.webp";
 import img1A from "../assets/asset 67.webp";
 import img2A from "../assets/asset 34.webp";
@@ -64,47 +65,53 @@ const ShopProduct = () => {
     const productsPerPage = 12;
 
     const Product = [
-         {
+        {
             name: "Banana Cream Pudding",
             rev: "1 Review",
             price: "$12.00",
             img1: img1A,
-            img2: img1B
+            img2: img1B,
+            ProductId: 1
         },
         {
             name: "Blackout Chocolate Cake",
             rev: "2 Reviews",
             price: "$12.00",
             img1: img2A,
-            img2: img2B
+            img2: img2B,
+            ProductId: 2
         },
         {
             name: "Brambleberry Crisp",
             rev: "1 Review",
             price: "$10.00",
             img1: img3A,
-            img2: img3B
+            img2: img3B,
+            ProductId: 3
         },
         {
             name: "Brown Sugar Cinnamon",
             rev: "0 Reviews",
             price: "$15.00",
             img1: img4A,
-            img2: img4B
+            img2: img4B,
+            ProductId: 4
         },
         {
             name: "Burnt Orange Dreamsicle",
             rev: "0 Reviews",
             price: "$12.00",
             img1: img5A,
-            img2: img5B
+            img2: img5B,
+            ProductId: 5
         },
         {
             name: "Chocolate Mud",
             rev: "0 Reviews",
             price: "$15.00",
             img1: img6A,
-            img2: img6B
+            img2: img6B,
+            ProductId: 6
         },
         {
             name: "Cold Brew with Coconut Cream",
@@ -112,133 +119,151 @@ const ShopProduct = () => {
             price: "$12.00",
             img1: img7A,
             img2: img7B,
-            id : 7
+            ProductId: 7
         },
         {
             name: "Cookies in Cream",
             rev: "0 Reviews",
             price: "$13.00",
             img1: img8A,
-            img2: img8B
+            img2: img8B,
+            ProductId: 8
         },
         {
             name: "Cream Puff",
             rev: "1 Review",
             price: "$11.00",
             img1: img9A,
-            img2: img9B
+            img2: img9B,
+            ProductId: 9
         },
         {
             name: "Darkest Chocolate",
             rev: "0 Reviews",
             price: "$13.00",
             img1: img10A,
-            img2: img10B
+            img2: img10B,
+            ProductId: 10
         },
         {
             name: "Double Dough",
             rev: "0 Reviews",
             price: "$10.00",
             img1: img11A,
-            img2: img11B
+            img2: img11B,
+            ProductId: 11
         },
         {
             name: "Frosé Sorbet",
             rev: "1 Review",
             price: "$12.00",
             img1: img12A,
-            img2: img12B
+            img2: img12B,
+            ProductId: 12
         },
         {
             name: "Golden Nectar",
             rev: "1 Review",
             price: "$10.00",
             img1: img13A,
-            img2: img13B
+            img2: img13B,
+            ProductId: 13
         },
         {
             name: "Green Mint Chip",
             rev: "1 Review",
             price: "$9.00",
             img1: img14A,
-            img2: img14B
+            img2: img14B,
+            ProductId: 14
         },
         {
             name: "Hot Toddy Sorbet",
             rev: "0 Review",
             price: "$12.00",
             img1: img15A,
-            img2: img15B
+            img2: img15B,
+            ProductId: 15
         },
         {
             name: "Pei Apple Crisp",
             rev: "1 Review",
             price: "$13.00",
             img1: img16A,
-            img2: img16B
+            img2: img16B,
+            ProductId: 16
         },
         {
             name: "Powdered Jelly Donut",
             rev: "0 Review",
             price: "$9.00",
             img1: img17A,
-            img2: img17B
+            img2: img17B,
+            ProductId: 17
         },
         {
             name: "Salty Caramel",
             rev: "0 Review",
             price: "$11.00",
             img1: img18A,
-            img2: img18B
+            img2: img18B,
+            ProductId: 18
         },
         {
             name: "Snow Cone Sorbet",
             rev: "0 Review",
             price: "$10.00",
             img1: img19A,
-            img2: img19B
+            img2: img19B,
+            ProductId: 19
         },
         {
             name: "Sorbet Street Treats",
             rev: "1 Review",
             price: "$10.00",
             img1: img20A,
-            img2: img20B
+            img2: img20B,
+            ProductId: 20
         },
         {
             name: "Sparkling Cherry Pie",
             rev: "0 Review",
             price: "$11.00",
             img1: img21A,
-            img2: img21B
+            img2: img21B,
+            ProductId: 21
         },
         {
-            name: "Sunshine",
-            rev: "1 Review",
-            price: "$10.00",
+            name: "Sugar Cookie Dough",
+            rev: "0 Review",
+            price: "$12.00",
             img1: img22A,
-            img2: img22B
+            img2: img22B,
+            ProductId: 22
         },
         {
-            name: "Tahini Oat Chocolate Cookies",
-            rev: "1 Review",
+            name: "Toasted Coconut",
+            rev: "0 Review",
             price: "$10.00",
             img1: img23A,
-            img2: img23B
+            img2: img23B,
+            ProductId: 23
         },
         {
-            name: "Golden Nectar",
+            name: "Vanilla Bean",
             rev: "1 Review",
-            price: "$10.00",
+            price: "$11.00",
             img1: img24A,
-            img2: img24B
+            img2: img24B,
+            ProductId: 24
         },
         {
-            name: "Zildberry Lavender",
+            name: "Whipped Maple",
             rev: "0 Review",
-            price: "$13.00",
+            price: "$11.00",
             img1: img25A,
-            img2: img25B
+            img2: img25B,
+            ProductId: 25
         },
     ];
 

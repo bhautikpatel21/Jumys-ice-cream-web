@@ -154,7 +154,7 @@ const closeAllDropdowns = () => {
               </div>
               <div className="space-y-3 mt-5">
                 <h1 className="font-bold text-[20px]">Product Type</h1>
-                <i to="" className="text-gray-500 block hover:text-red-500">Simple Product</i>
+                <NavLink to="/Simple-Product" className="text-gray-950 block hover:text-red-500" onClick={closeAllDropdowns}>Simple Product</NavLink>
                 <i to="" className="text-gray-500 block hover:text-red-500">Simple Slider</i>
                 <i to="" className="text-gray-500 block hover:text-red-500">Group Product</i>
                 <i to="" className="text-gray-500 block hover:text-red-500">Variable Product</i>

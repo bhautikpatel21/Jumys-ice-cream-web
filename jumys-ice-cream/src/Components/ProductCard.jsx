@@ -2,10 +2,18 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaEye, FaCompressAlt } from 'react-icons/fa';
 import PaymentMethodImg from "../assets/paymentMethod.png";
-import img4 from "../assets/product-8-1.webp";
-import img3 from "../assets/product-8-2.webp";
-import img2 from "../assets/product-8-3.webp";
+
+// Product 1 
 import img1 from "../assets/product-8-4.webp";
+import img2 from "../assets/product-8-3.webp";
+import img3 from "../assets/product-8-2.webp";
+import img4 from "../assets/product-8-1.webp";
+
+// Product 2
+import img5 from '../assets/product-19-1.webp'
+import img6 from '../assets/product-19-2.webp'
+import img7 from '../assets/product-19-3.webp'
+import img8 from '../assets/product-19-4.webp'
 
 const ProductCard = () => {
   const [activeImage, setActiveImage] = useState(img1);

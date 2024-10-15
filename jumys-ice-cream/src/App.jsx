@@ -5,8 +5,6 @@ import ProductCardList from './Components/ProductCardList'
 import ShopList from './pages/ShopList'
 import ShopProduct from './Components/Randem'
 import ProductCard from './Components/ProductCard'
-import ToggleMenu from './Components/Toggle'
-
 function App() {
 
   return (

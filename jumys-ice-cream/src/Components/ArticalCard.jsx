@@ -79,7 +79,7 @@ const ArticleCard = () => {
                 BUSINESS TIPS <span className="text-red-500 mx-2">•</span>
                 <span className="text-red-500 mx-2">{article.date}</span>
               </div>
-              <h2 className="home-slider-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2 font-semibold text-black hover:text-red-500">
+              <h2 className="font-serif home-slider-2 text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2 font-semibold  text-black hover:text-red-500">
                 {article.title}
               </h2>
             </div>

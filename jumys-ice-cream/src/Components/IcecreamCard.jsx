@@ -9,7 +9,7 @@ const IceCreamCard = () => {
   return (
     <div className="flex flex-wrap gap-5 m-16">
       {/* 1st card */}
-      <div className="bg-[#dff6e8] mb-20 shadow-md p-6 text-center max-w-xs mx-auto">
+      <div className="bg-[#dff6e8] mb-20 p-6 text-center max-w-xs mx-auto shadow-2xl rounded-xl hover:scale-105 duration-500">
         <div
           className="w-44 h-44 border   mx-auto rounded-full overflow-hidden mb-4 font-Kalnia"
           style={{ outline: "5px solid white" }}
@@ -21,7 +21,7 @@ const IceCreamCard = () => {
           />
         </div>
         <h3 className="font-heading text-2xl font-bold mb-2">Matcha</h3>
-        <p className="text-gray-600 mb-4">
+        <p className="cardt text-gray-700 mb-4">
           Matcha Ice Cream Needs The Absolute Balance Between Sweetness, Fatness
           And Bitterness That Is Very...
         </p>
@@ -33,7 +33,7 @@ const IceCreamCard = () => {
       </div>
 
       {/* 2nd card */}
-      <div className="bg-[#ffe4e9] mt-20  shadow-md p-6 text-center max-w-xs mx-auto">
+      <div className="bg-[#ffe4e9] mt-20 p-6 text-center max-w-xs mx-auto shadow-2xl rounded-xl hover:scale-105 duration-500">
         <div
           className="w-44 h-44 border   mx-auto rounded-full overflow-hidden mb-4 font-Kalnia"
           style={{ outline: "5px solid white" }}
@@ -45,7 +45,7 @@ const IceCreamCard = () => {
           />
         </div>
         <h3 className="font-heading text-2xl font-bold mb-2">Strawberry</h3>
-        <p className="text-gray-600 mb-4">
+        <p className="cardt text-gray-700 mb-4">
           The main ingredient is pureed fresh strawberries, so it's not the same
           as other strawberry-flavored milk...
         </p>
@@ -57,7 +57,7 @@ const IceCreamCard = () => {
       </div>
 
       {/* 3rd card */}
-      <div className="bg-[#f4eac9] mb-20 shadow-md p-6 text-center max-w-xs mx-auto">
+      <div className="bg-[#f4eac9] mb-20 p-6 text-center max-w-xs mx-auto  shadow-2xl rounded-xl hover:scale-105 duration-500">
         <div
           className="w-44 h-44 border   mx-auto rounded-full overflow-hidden mb-4 font-Kalnia"
           style={{ outline: "5px solid white" }}
@@ -69,7 +69,7 @@ const IceCreamCard = () => {
           />
         </div>
         <h3 className="font-heading text-2xl  font-bold mb-2">Orange</h3>
-        <p className="text-gray-600 mb-4">
+        <p className="cardt text-gray-700 mb-4">
           The ice cream has the sweet taste of honey and the scent of orange
           combined with the fatty milk that is...
         </p>
@@ -81,7 +81,7 @@ const IceCreamCard = () => {
       </div>
 
       {/* 4th card */}
-      <div className="bg-[#ead6c0] mt-20 shadow-md p-6 text-center max-w-xs mx-auto">
+      <div className="bg-[#ead6c0] mt-20 p-6 text-center max-w-xs mx-auto  shadow-2xl rounded-xl hover:scale-105 duration-500">
         <div
           className="w-44 h-44 border   mx-auto rounded-full overflow-hidden mb-4 font-Kalnia"
           style={{ outline: "5px solid white" }}
@@ -93,7 +93,7 @@ const IceCreamCard = () => {
           />
         </div>
         <h3 className="font-heading text-2xl font-bold mb-2">Chocolate</h3>
-        <p className="text-gray-600 mb-4">
+        <p className="cardt text-gray-700 mb-4">
           Each piece of melted chocolate blends with fresh milk and rich, thick
           butter to create surprisingly...
         </p>

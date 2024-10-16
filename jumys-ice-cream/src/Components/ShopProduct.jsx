@@ -362,9 +362,9 @@ const ShopProduct = () => {
                 <ProductCardList />
             ) : (
                 <>
-                <NavLink to="/Simple-Product">
                     <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
                         {currentProducts.map((product, index) => (
+                        <NavLink to="/Simple-Product">
                             <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
                                 <div className='relative'
                                     onMouseEnter={() => {
@@ -403,10 +403,10 @@ const ShopProduct = () => {
                                     </ListGroupItem>
                                 </ListGroup>
                             </Card>
+                        </NavLink>
                         ))}
                     </div>
 
-                    </NavLink>
 
                     <div className="flex justify-center mt-8 mb-5 space-x-5">
                         <button 

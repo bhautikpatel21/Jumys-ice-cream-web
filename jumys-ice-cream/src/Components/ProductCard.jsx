@@ -410,7 +410,7 @@ const ProductCard = () => {
       img45: img107,
       img46: img108,
       img47: img109,
-      img49: img110,
+      img48: img110,
       img49: img111,
       ProductId : 16
     },

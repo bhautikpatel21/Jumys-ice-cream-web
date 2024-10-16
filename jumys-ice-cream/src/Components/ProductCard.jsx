@@ -214,7 +214,8 @@ const ProductCard = () => {
       img1: img1, 
       img2: img2,
       img3: img3,
-      img4: img4
+      img4: img4,
+      ProductId : 1
     },
     { 
       name: "Blackout Chocolate Cake", 
@@ -223,7 +224,8 @@ const ProductCard = () => {
       img1: img5, 
       img2: img6,
       img3: img7,
-      img4: img8
+      img4: img8,
+      ProductId : 2
     },
     { 
       name: "Brambleberry Crisp", 
@@ -232,7 +234,8 @@ const ProductCard = () => {
       img1: img9, 
       img2: img10,
       img3: img11,
-      img4: img12
+      img4: img12,
+      ProductId : 3
     },
     { 
       name: "Brown Sugar Cinnamon", 
@@ -241,7 +244,8 @@ const ProductCard = () => {
       img1: img13, 
       img2: img14,
       img3: img15,
-      img4: img16
+      img4: img16,
+      ProductId : 4
     },
     { 
       name: "Burnt Orange Dreamsicle", 
@@ -250,7 +254,8 @@ const ProductCard = () => {
       img1: img17, 
       img2: img18,
       img3: img19,
-      img4: img20
+      img4: img20,
+      ProductId : 5
     },
     { 
       name: "Chocolate Mud", 
@@ -259,7 +264,8 @@ const ProductCard = () => {
       img1: img21, 
       img2: img22,
       img3: img23,
-      img4: img24
+      img4: img24,
+      ProductId : 6
     },
     { 
       name: "Cold Brew with Coconut Cream", 
@@ -268,7 +274,8 @@ const ProductCard = () => {
       img1: img25, 
       img2: img26,
       img3: img27,
-      img4: img28
+      img4: img28,
+      ProductId : 7
     },
     {
       name: "Cookies in Cream", 
@@ -277,7 +284,8 @@ const ProductCard = () => {
       img1: img29, 
       img2: img30,
       img3: img31,
-      img4: img32
+      img4: img32,
+      ProductId : 8
     },
     { 
       name: "Cream Puff", 
@@ -287,6 +295,7 @@ const ProductCard = () => {
       img2: img34,
       img3: img35,
       img4: img36,
+      ProductId : 9
     },
     { 
       name: "Darkest Chocolate", 
@@ -295,7 +304,8 @@ const ProductCard = () => {
       img1: img37, 
       img2: img38,
       img3: img39,
-      img4: img40
+      img4: img40,
+      ProductId : 10
     },
     { 
       name: "Double Dough", 
@@ -304,7 +314,8 @@ const ProductCard = () => {
       img1: img41, 
       img2: img42,
       img3: img43,
-      img4: img44
+      img4: img44,
+      ProductId : 11
     },
     { 
       name: "Frosé Sorbet", 
@@ -315,7 +326,8 @@ const ProductCard = () => {
       img3: img47,
       img4: img48,
       img5: img49,
-      img6: img50
+      img6: img50,
+      ProductId : 12
     },
     { 
       name: "Golden Nectar", 
@@ -325,6 +337,7 @@ const ProductCard = () => {
       img2: img52,
       img3: img53,
       img4: img54,
+      ProductId : 13
     },
     { 
       name: "Green Mint Chip", 
@@ -334,6 +347,7 @@ const ProductCard = () => {
       img2: img56,
       img3: img57,
       img4: img58,
+      ProductId : 14
     },
     { 
       name: "Hot Toddy Sorbet", 
@@ -343,6 +357,7 @@ const ProductCard = () => {
       img2: img60,
       img3: img61,
       img4: img62,
+      ProductId : 15
     },
     { 
       name: "Pei Apple Crisp", 
@@ -396,7 +411,8 @@ const ProductCard = () => {
       img46: img108,
       img47: img109,
       img49: img110,
-      img49: img111
+      img49: img111,
+      ProductId : 16
     },
     { 
       name: "Powdered Jelly Donut", 
@@ -405,7 +421,8 @@ const ProductCard = () => {
       img1: img112, 
       img2: img113,
       img3: img114,
-      img4: img115
+      img4: img115,
+      ProductId : 17
     },
     { 
       name: "Salty Caramel", 
@@ -414,7 +431,8 @@ const ProductCard = () => {
       img1: img116, 
       img2: img117,
       img3: img118,
-      img4: img119
+      img4: img119,
+      ProductId : 18
     },
     { 
       name: "Snow Cone Sorbet", 
@@ -423,7 +441,8 @@ const ProductCard = () => {
       img1: img120, 
       img2: img121,
       img3: img122,
-      img4: img123
+      img4: img123,
+      ProductId : 19
     },
     { 
       name: "Sorbet Street Treats", 
@@ -431,7 +450,8 @@ const ProductCard = () => {
       price: "$10.00", 
       img1: img124, 
       img2: img125,
-      img3: img126
+      img3: img126,
+      ProductId : 20
     },
     { 
       name: "Sparkling Cherry Pie", 
@@ -441,6 +461,7 @@ const ProductCard = () => {
       img2: img128,
       img3: img129,
       img4: img130,
+      ProductId : 21
     },
     { 
       name: "Sunshine", 
@@ -450,6 +471,7 @@ const ProductCard = () => {
       img2: img132,
       img3: img133,
       img4: img134,
+      ProductId : 22
     },
     { 
       name: "Tahini Oat Chocolate Cookies", 
@@ -459,6 +481,7 @@ const ProductCard = () => {
       img2: img136,
       img3: img137,
       img4: img138,
+      ProductId : 23
     },
     { 
       name: "Golden Nectar", 
@@ -468,6 +491,7 @@ const ProductCard = () => {
       img2: img140,
       img3: img141,
       img4: img142,
+      ProductId : 24
     },
     { 
       name: "Zildberry Lavender", 
@@ -477,6 +501,7 @@ const ProductCard = () => {
       img2: img144,
       img3: img145,
       img4: img146,
+      ProductId : 25
     },
 
   ];

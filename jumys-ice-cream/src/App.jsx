@@ -13,7 +13,6 @@ function App() {
     <Layout/>
     {/* <ShopList/> */}
     {/* <ProductCard/> */}
-    {/* <ToggleMenu/> */}
     </>
     
 

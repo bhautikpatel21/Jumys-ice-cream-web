@@ -1097,7 +1097,7 @@ const ProductCard = () => {
               </div>
 
               {/* Side Images Section */}
-              <div id="sideImages" className="flex flex-col h-[620px] w-[300px] overflow-x-auto gap-2 m-2">
+              <div id="sideImages" className="flex flex-col h-[620px] w- overflow-x-auto gap-2 m-2">
                 {images.map((image, index) => (
                   <div
                     key={image}

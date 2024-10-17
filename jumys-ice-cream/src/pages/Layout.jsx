@@ -68,7 +68,7 @@ const PageRouter = createBrowserRouter([
               element : <CartPage/>
             },
             {
-              path : '/Simple-Product',
+              path : '/product/:productId',
               element : <ProductCard/>
             }
         ]

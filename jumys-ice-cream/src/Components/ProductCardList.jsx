@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaShoppingCart, FaExchangeAlt, FaSearch,FaList } from "react-icons/fa";
+import { FaShoppingCart, FaExchangeAlt, FaSearch, FaList } from "react-icons/fa";
 import img1B from "../assets/asset 66.webp";
 import img1A from "../assets/asset 67.webp";
 import img2A from "../assets/asset 34.webp";

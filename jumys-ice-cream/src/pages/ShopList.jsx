@@ -49,8 +49,6 @@ const ShopList = () => {
           <ShopProduct/>
         </div>
       </div>
-
-  
       <Footer />
     </div>
   );

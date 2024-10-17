@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaEye, FaCompressAlt } from 'react-icons/fa';
 import PaymentMethodImg from "../assets/paymentMethod.png";
@@ -200,206 +201,215 @@ import img145 from "../assets/product-25-3.jpg";
 import img146 from "../assets/product-25-4.jpg";
 
 const ProductCard = () => {
-  const [activeImage, setActiveImage] = useState(img1);
+  const { productId } = useParams();
 
-  const images = [img1, img2, img3, img4];
+  const [product, setProduct] = useState([]);
+
+  const [Images, setImages] = useState([])
+
+  console.log('product', product.imageList);
+
+
+  const [activeImage, setActiveImage] = useState();
+
+  console.log(activeImage);
 
   const [quantity, setQuantity] = useState(1);
 
-  const Product = [
+  const ProductSingleView = [
     {
       name: "Banana Cream Pudding",
-      rev: "1 Review", 
-      price: "$12.00", 
-      img1: img1, 
+      rev: "1 Review",
+      price: "$12.00",
+      img1: img1,
       img2: img2,
       img3: img3,
       img4: img4,
-      ProductId : 1
+      ProductId: 1
     },
-    { 
-      name: "Blackout Chocolate Cake", 
-      rev: "2 Reviews", 
-      price: "$12.00", 
-      img1: img5, 
+    {
+      name: "Blackout Chocolate Cake",
+      rev: "2 Reviews",
+      price: "$12.00",
+      img1: img5,
       img2: img6,
       img3: img7,
       img4: img8,
-      ProductId : 2
+      ProductId: 2
     },
-    { 
-      name: "Brambleberry Crisp", 
-      rev: "1 Review", 
-      price: "$10.00", 
-      img1: img9, 
+    {
+      name: "Brambleberry Crisp",
+      rev: "1 Review",
+      price: "$10.00",
+      img1: img9,
       img2: img10,
       img3: img11,
       img4: img12,
-      ProductId : 3
+      ProductId: 3
     },
-    { 
-      name: "Brown Sugar Cinnamon", 
-      rev: "0 Reviews", 
-      price: "$15.00", 
-      img1: img13, 
+    {
+      name: "Brown Sugar Cinnamon",
+      rev: "0 Reviews",
+      price: "$15.00",
+      img1: img13,
       img2: img14,
       img3: img15,
       img4: img16,
-      ProductId : 4
+      ProductId: 4
     },
-    { 
-      name: "Burnt Orange Dreamsicle", 
-      rev: "0 Reviews", 
-      price: "$12.00", 
-      img1: img17, 
+    {
+      name: "Burnt Orange Dreamsicle",
+      rev: "0 Reviews",
+      price: "$12.00",
+      img1: img17,
       img2: img18,
       img3: img19,
       img4: img20,
-      ProductId : 5
+      ProductId: 5
     },
-    { 
-      name: "Chocolate Mud", 
-      rev: "0 Reviews", 
-      price: "$15.00", 
-      img1: img21, 
+    {
+      name: "Chocolate Mud",
+      rev: "0 Reviews",
+      price: "$15.00",
+      img1: img21,
       img2: img22,
       img3: img23,
       img4: img24,
-      ProductId : 6
+      ProductId: 6
     },
-    { 
-      name: "Cold Brew with Coconut Cream", 
-      rev: "0 Reviews", 
-      price: "$12.00", 
-      img1: img25, 
+    {
+      name: "Cold Brew with Coconut Cream",
+      rev: "0 Reviews",
+      price: "$12.00",
+      img1: img25,
       img2: img26,
       img3: img27,
       img4: img28,
-      ProductId : 7
+      ProductId: 7
     },
     {
-      name: "Cookies in Cream", 
-      rev: "0 Reviews", 
-      price: "$13.00", 
-      img1: img29, 
+      name: "Cookies in Cream",
+      rev: "0 Reviews",
+      price: "$13.00",
+      img1: img29,
       img2: img30,
       img3: img31,
       img4: img32,
-      ProductId : 8
+      ProductId: 8
     },
-    { 
-      name: "Cream Puff", 
-      rev: "1 Review", 
-      price: "$11.00", 
-      img1: img33, 
+    {
+      name: "Cream Puff",
+      rev: "1 Review",
+      price: "$11.00",
+      img1: img33,
       img2: img34,
       img3: img35,
       img4: img36,
-      ProductId : 9
+      ProductId: 9
     },
-    { 
-      name: "Darkest Chocolate", 
-      rev: "0 Reviews", 
-      price: "$13.00", 
-      img1: img37, 
+    {
+      name: "Darkest Chocolate",
+      rev: "0 Reviews",
+      price: "$13.00",
+      img1: img37,
       img2: img38,
       img3: img39,
       img4: img40,
-      ProductId : 10
+      ProductId: 10
     },
-    { 
-      name: "Double Dough", 
-      rev: "0 Reviews", 
-      price: "$10.00", 
-      img1: img41, 
+    {
+      name: "Double Dough",
+      rev: "0 Reviews",
+      price: "$10.00",
+      img1: img41,
       img2: img42,
       img3: img43,
       img4: img44,
-      ProductId : 11
+      ProductId: 11
     },
-    { 
-      name: "Frosé Sorbet", 
-      rev: "1 Review", 
-      price: "$12.00", 
+    {
+      name: "Frosé Sorbet",
+      rev: "1 Review",
+      price: "$12.00",
       img1: img45,
       img2: img46,
       img3: img47,
       img4: img48,
       img5: img49,
       img6: img50,
-      ProductId : 12
+      ProductId: 12
     },
-    { 
-      name: "Golden Nectar", 
-      rev: "1 Review", 
-      price: "$10.00", 
-      img1: img51, 
+    {
+      name: "Golden Nectar",
+      rev: "1 Review",
+      price: "$10.00",
+      img1: img51,
       img2: img52,
       img3: img53,
       img4: img54,
-      ProductId : 13
+      ProductId: 13
     },
-    { 
-      name: "Green Mint Chip", 
-      rev: "1 Review", 
-      price: "$9.00", 
-      img1: img55, 
+    {
+      name: "Green Mint Chip",
+      rev: "1 Review",
+      price: "$9.00",
+      img1: img55,
       img2: img56,
       img3: img57,
       img4: img58,
-      ProductId : 14
+      ProductId: 14
     },
-    { 
-      name: "Hot Toddy Sorbet", 
-      rev: "0 Review", 
-      price: "$12.00", 
-      img1: img59, 
+    {
+      name: "Hot Toddy Sorbet",
+      rev: "0 Review",
+      price: "$12.00",
+      img1: img59,
       img2: img60,
       img3: img61,
       img4: img62,
-      ProductId : 15
+      ProductId: 15
     },
-    { 
-      name: "Pei Apple Crisp", 
-      rev: "1 Review", 
-      price: "$13.00", 
-      img1: img63, 
-      img2: img64, 
-      img3: img65, 
-      img4: img66, 
-      img5: img67, 
-      img6: img68, 
-      img7: img69, 
-      img8: img70, 
-      img9: img71, 
-      img10: img72, 
-      img11: img73, 
-      img12: img74, 
-      img13: img75, 
-      img14: img76, 
-      img15: img77, 
-      img16: img78, 
-      img17: img79, 
-      img18: img80, 
-      img19: img81, 
-      img20: img82, 
-      img21: img83, 
-      img22: img84, 
-      img23: img85, 
-      img24: img86, 
-      img25: img87, 
-      img26: img88, 
-      img27: img89, 
-      img28: img90, 
-      img29: img91, 
-      img30: img92, 
-      img31: img93, 
-      img32: img94, 
-      img33: img95, 
-      img34: img96, 
-      img35: img97, 
-      img36: img98, 
-      img37: img99, 
+    {
+      name: "Pei Apple Crisp",
+      rev: "1 Review",
+      price: "$13.00",
+      img1: img63,
+      img2: img64,
+      img3: img65,
+      img4: img66,
+      img5: img67,
+      img6: img68,
+      img7: img69,
+      img8: img70,
+      img9: img71,
+      img10: img72,
+      img11: img73,
+      img12: img74,
+      img13: img75,
+      img14: img76,
+      img15: img77,
+      img16: img78,
+      img17: img79,
+      img18: img80,
+      img19: img81,
+      img20: img82,
+      img21: img83,
+      img22: img84,
+      img23: img85,
+      img24: img86,
+      img25: img87,
+      img26: img88,
+      img27: img89,
+      img28: img90,
+      img29: img91,
+      img30: img92,
+      img31: img93,
+      img32: img94,
+      img33: img95,
+      img34: img96,
+      img35: img97,
+      img36: img98,
+      img37: img99,
       img38: img100,
       img39: img101,
       img40: img102,
@@ -412,99 +422,108 @@ const ProductCard = () => {
       img47: img109,
       img48: img110,
       img49: img111,
-      ProductId : 16
+      ProductId: 16
     },
-    { 
-      name: "Powdered Jelly Donut", 
-      rev: "0 Review", 
-      price: "$9.00", 
-      img1: img112, 
+    {
+      name: "Powdered Jelly Donut",
+      rev: "0 Review",
+      price: "$9.00",
+      img1: img112,
       img2: img113,
       img3: img114,
       img4: img115,
-      ProductId : 17
+      ProductId: 17
     },
-    { 
-      name: "Salty Caramel", 
-      rev: "0 Review", 
-      price: "$11.00", 
-      img1: img116, 
+    {
+      name: "Salty Caramel",
+      rev: "0 Review",
+      price: "$11.00",
+      img1: img116,
       img2: img117,
       img3: img118,
       img4: img119,
-      ProductId : 18
+      ProductId: 18
     },
-    { 
-      name: "Snow Cone Sorbet", 
-      rev: "0 Review", 
-      price: "$10.00", 
-      img1: img120, 
+    {
+      name: "Snow Cone Sorbet",
+      rev: "0 Review",
+      price: "$10.00",
+      img1: img120,
       img2: img121,
       img3: img122,
       img4: img123,
-      ProductId : 19
+      ProductId: 19
     },
-    { 
-      name: "Sorbet Street Treats", 
-      rev: "1 Review", 
-      price: "$10.00", 
-      img1: img124, 
+    {
+      name: "Sorbet Street Treats",
+      rev: "1 Review",
+      price: "$10.00",
+      img1: img124,
       img2: img125,
       img3: img126,
-      ProductId : 20
+      ProductId: 20
     },
-    { 
-      name: "Sparkling Cherry Pie", 
-      rev: "0 Review", 
-      price: "$11.00", 
-      img1: img127, 
+    {
+      name: "Sparkling Cherry Pie",
+      rev: "0 Review",
+      price: "$11.00",
+      img1: img127,
       img2: img128,
       img3: img129,
       img4: img130,
-      ProductId : 21
+      ProductId: 21
     },
-    { 
-      name: "Sunshine", 
-      rev: "1 Review", 
-      price: "$10.00", 
-      img1: img131, 
+    {
+      name: "Sunshine",
+      rev: "1 Review",
+      price: "$10.00",
+      img1: img131,
       img2: img132,
       img3: img133,
       img4: img134,
-      ProductId : 22
+      ProductId: 22
     },
-    { 
-      name: "Tahini Oat Chocolate Cookies", 
-      rev: "1 Review", 
-      price: "$10.00", 
-      img1: img135, 
+    {
+      name: "Tahini Oat Chocolate Cookies",
+      rev: "1 Review",
+      price: "$10.00",
+      img1: img135,
       img2: img136,
       img3: img137,
       img4: img138,
-      ProductId : 23
+      ProductId: 23
     },
-    { 
-      name: "Golden Nectar", 
-      rev: "1 Review", 
-      price: "$10.00", 
-      img1: img139, 
+    {
+      name: "Golden Nectar",
+      rev: "1 Review",
+      price: "$10.00",
+      img1: img139,
       img2: img140,
       img3: img141,
       img4: img142,
-      ProductId : 24
+      ProductId: 24
     },
-    { 
-      name: "Zildberry Lavender", 
-      rev: "0 Review", 
-      price: "$13.00", 
-      img1: img143, 
+    {
+      name: "Zildberry Lavender",
+      rev: "0 Review",
+      price: "$13.00",
+      img1: img143,
       img2: img144,
       img3: img145,
       img4: img146,
-      ProductId : 25
+      ProductId: 25
     },
 
   ];
+
+  useEffect(() => {
+    const foundProduct = ProductSingleView.find(p => p.ProductId === parseInt(productId));
+    setProduct(foundProduct);
+    setActiveImage(foundProduct.img1)
+    setImages([foundProduct.img1, foundProduct.img2, foundProduct.img3, foundProduct.img4]);
+  }, [productId]);
+
+  if (!product) return <div>Loading...</div>;
 
   const increaseQuantity = () => setQuantity(quantity + 1);
   const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
@@ -539,10 +558,10 @@ const ProductCard = () => {
                       onClick={() =>
                         setActiveImage(
                           images[
-                            Math.min(
-                              images.indexOf(activeImage) + 1,
-                              images.length - 1
-                            )
+                          Math.min(
+                            images.indexOf(activeImage) + 1,
+                            images.length - 1
+                          )
                           ]
                         )
                       }
@@ -552,31 +571,33 @@ const ProductCard = () => {
                   </div>
                 </div>
                 <div className="flex m-2 gap-2 xl:flex-col">
-                  {images.map((image, index) => (
-                    <div
-                      key={image}
-                      className={`mr-4 flex w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[118px] lg:h-[118px] hover:border-gray-950 hover:border cursor-pointer items-center justify-center overflow-hidden transition ${
-                        activeImage === image ? "border-black" : ""
-                      }`}
-                      onClick={() => setActiveImage(image)}
-                    >
-                      <img
-                        alt={`Product ${index}`}
-                        src={image}
-                        className="object-cover hover:p-2"
-                      />
-                    </div>
-                  ))}
+                  {
+                    Images.map((image, index) => (
+                      <div
+                        key={image}
+                        className={`mr-4 flex w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[118px] lg:h-[118px] hover:border-gray-950 hover:border cursor-pointer items-center justify-center overflow-hidden transition ${activeImage === image ? "border-black" : ""
+                          }`}
+                        onClick={() => setActiveImage(image)}
+                      >
+                        <img
+                          alt={`Product ${index}`}
+                          src={image}
+                          className="object-cover hover:p-2"
+                        />
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
             <div className="flex shrink-0 px-3 flex-col lg:w-[600px] xl:w-[470px] 2xl:w-[480px] lg:h-[702px]">
               <div className="pb-2">
                 <h2 className="text-lg pb-1 mt-4 font-sans font-semibold md:text-xl xl:text-2xl">
-                  Cold Brew with Coconut Cream
+                  <h2>{product.name}</h2>
+                  {/* Cold Brew with Coconut Cream */}
                 </h2>
                 <p className="text-2xl mb-2 font-semibold font-Kalnia">
-                  $12.00
+                  {/* $12.00 */}
+                  <p>{product.price}</p>
                 </p>
                 <hr />
               </div>

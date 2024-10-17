@@ -233,9 +233,7 @@ const ProductCard = () => {
       rev: "2 Reviews",
       price: "$12.00",
       img1: img5,
-      img2: img6,
-      img3: img7,
-      img4: img8,
+      imageList : [img5,img6,img7,img8],
       ProductId: 2
     },
     {
@@ -243,9 +241,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$10.00",
       img1: img9,
-      img2: img10,
-      img3: img11,
-      img4: img12,
+      imageList : [img9,img10,img11,img12],
       ProductId: 3
     },
     {
@@ -253,9 +249,7 @@ const ProductCard = () => {
       rev: "0 Reviews",
       price: "$15.00",
       img1: img13,
-      img2: img14,
-      img3: img15,
-      img4: img16,
+      imageList:[img13,img14,img15,img16],
       ProductId: 4
     },
     {
@@ -263,9 +257,7 @@ const ProductCard = () => {
       rev: "0 Reviews",
       price: "$12.00",
       img1: img17,
-      img2: img18,
-      img3: img19,
-      img4: img20,
+      imageList:[img17,img18,img19,img20],
       ProductId: 5
     },
     {
@@ -273,9 +265,7 @@ const ProductCard = () => {
       rev: "0 Reviews",
       price: "$15.00",
       img1: img21,
-      img2: img22,
-      img3: img23,
-      img4: img24,
+      imageList:[img21,img22,img23,img24],
       ProductId: 6
     },
     {
@@ -283,9 +273,7 @@ const ProductCard = () => {
       rev: "0 Reviews",
       price: "$12.00",
       img1: img25,
-      img2: img26,
-      img3: img27,
-      img4: img28,
+      imageList:[img25,img26,img27,img28],
       ProductId: 7
     },
     {
@@ -293,9 +281,7 @@ const ProductCard = () => {
       rev: "0 Reviews",
       price: "$13.00",
       img1: img29,
-      img2: img30,
-      img3: img31,
-      img4: img32,
+      imageList:[img29,img30,img31,img32],
       ProductId: 8
     },
     {
@@ -303,9 +289,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$11.00",
       img1: img33,
-      img2: img34,
-      img3: img35,
-      img4: img36,
+      imageList:[img33,img34,img35,img36],
       ProductId: 9
     },
     {
@@ -313,9 +297,7 @@ const ProductCard = () => {
       rev: "0 Reviews",
       price: "$13.00",
       img1: img37,
-      img2: img38,
-      img3: img39,
-      img4: img40,
+      imageList:[img37,img38,img39,img40],
       ProductId: 10
     },
     {
@@ -323,9 +305,7 @@ const ProductCard = () => {
       rev: "0 Reviews",
       price: "$10.00",
       img1: img41,
-      img2: img42,
-      img3: img43,
-      img4: img44,
+      imageList:[img41,img42,img43,img44],
       ProductId: 11
     },
     {
@@ -333,14 +313,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$12.00",
       img1: img45,
-      imageList: [
-        img45,
-        img46,
-        img47,
-        img48,
-        img49,
-        img50,
-      ],
+      imageList: [img45,img46,img47,img48,img49,img50],
       ProductId: 12
     },
     {
@@ -348,9 +321,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$10.00",
       img1: img51,
-      img2: img52,
-      img3: img53,
-      img4: img54,
+      imageList:[img51,img52,img53,img54],
       ProductId: 13
     },
     {
@@ -358,9 +329,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$9.00",
       img1: img55,
-      img2: img56,
-      img3: img57,
-      img4: img58,
+      imageList:[img55,img56,img57,img58],
       ProductId: 14
     },
     {
@@ -368,9 +337,7 @@ const ProductCard = () => {
       rev: "0 Review",
       price: "$12.00",
       img1: img59,
-      img2: img60,
-      img3: img61,
-      img4: img62,
+      imageList:[img59,img60,img61,img62],
       ProductId: 15
     },
     {
@@ -378,54 +345,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$13.00",
       img1: img63,
-      img2: img64,
-      img3: img65,
-      img4: img66,
-      img5: img67,
-      img6: img68,
-      img7: img69,
-      img8: img70,
-      img9: img71,
-      img10: img72,
-      img11: img73,
-      img12: img74,
-      img13: img75,
-      img14: img76,
-      img15: img77,
-      img16: img78,
-      img17: img79,
-      img18: img80,
-      img19: img81,
-      img20: img82,
-      img21: img83,
-      img22: img84,
-      img23: img85,
-      img24: img86,
-      img25: img87,
-      img26: img88,
-      img27: img89,
-      img28: img90,
-      img29: img91,
-      img30: img92,
-      img31: img93,
-      img32: img94,
-      img33: img95,
-      img34: img96,
-      img35: img97,
-      img36: img98,
-      img37: img99,
-      img38: img100,
-      img39: img101,
-      img40: img102,
-      img41: img103,
-      img42: img104,
-      img43: img105,
-      img44: img106,
-      img45: img107,
-      img46: img108,
-      img47: img109,
-      img48: img110,
-      img49: img111,
+      imageList:[img63,img64,img65,img66,img67,img68,img69,img70,img71,img72,img73,img74,img75,img76,img77,img78,img79,img80,img81,img82,img83,img84,img85,img86,img87,img88,img89,img90,img91,img92,img93,img94,img95,img96,img97,img98,img99,img100,img101,img102,img103,img104,img105,img106,img107,img108,img109,img110,img111],
       ProductId: 16
     },
     {
@@ -433,9 +353,7 @@ const ProductCard = () => {
       rev: "0 Review",
       price: "$9.00",
       img1: img112,
-      img2: img113,
-      img3: img114,
-      img4: img115,
+      imageList:[img112,img113,img114,img115],
       ProductId: 17
     },
     {
@@ -443,9 +361,7 @@ const ProductCard = () => {
       rev: "0 Review",
       price: "$11.00",
       img1: img116,
-      img2: img117,
-      img3: img118,
-      img4: img119,
+      imageList:[img116,img117,img118,img119],
       ProductId: 18
     },
     {
@@ -453,9 +369,7 @@ const ProductCard = () => {
       rev: "0 Review",
       price: "$10.00",
       img1: img120,
-      img2: img121,
-      img3: img122,
-      img4: img123,
+      imageList:[img120,img121,img122,img123],
       ProductId: 19
     },
     {
@@ -463,8 +377,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$10.00",
       img1: img124,
-      img2: img125,
-      img3: img126,
+      imageList:[img124,img125,img126],
       ProductId: 20
     },
     {
@@ -472,9 +385,7 @@ const ProductCard = () => {
       rev: "0 Review",
       price: "$11.00",
       img1: img127,
-      img2: img128,
-      img3: img129,
-      img4: img130,
+      imageList:[img127,img128,img129,img130],
       ProductId: 21
     },
     {
@@ -482,9 +393,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$10.00",
       img1: img131,
-      img2: img132,
-      img3: img133,
-      img4: img134,
+      imageList:[img131,img132,img133,img134],
       ProductId: 22
     },
     {
@@ -492,9 +401,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$10.00",
       img1: img135,
-      img2: img136,
-      img3: img137,
-      img4: img138,
+      imageList:[img135,img136,img137,img138],
       ProductId: 23
     },
     {
@@ -502,9 +409,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$10.00",
       img1: img139,
-      img2: img140,
-      img3: img141,
-      img4: img142,
+      imageList:[img139,img140,img141,img142],
       ProductId: 24
     },
     {
@@ -512,9 +417,7 @@ const ProductCard = () => {
       rev: "0 Review",
       price: "$13.00",
       img1: img143,
-      img2: img144,
-      img3: img145,
-      img4: img146,
+      imageList:[img143,img144,img145,img146],
       ProductId: 25
     },
 
@@ -553,9 +456,9 @@ const ProductCard = () => {
                   </div>
                   <div className="absolute inset-0 flex items-center justify-between">
                     <button
-                      onClick={() =>
+                      onClick={() =>  
                         setActiveImage(
-                          images[Math.max(images.indexOf(activeImage) - 1, 0)]
+                          Images[Math.max(Images.indexOf(activeImage) - 1, 0)]
                         )
                       }
                     >
@@ -564,10 +467,10 @@ const ProductCard = () => {
                     <button
                       onClick={() =>
                         setActiveImage(
-                          images[
+                          Images[
                           Math.min(
-                            images.indexOf(activeImage) + 1,
-                            images.length - 1
+                            Images.indexOf(activeImage) + 1,
+                            Images.length - 1
                           )
                           ]
                         )
@@ -577,7 +480,7 @@ const ProductCard = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex m-2 gap-2 xl:flex-col">
+                <div id="sideImages" className="flex m-2 gap-2 xl:flex-col">
                   {
                     Images.map((image, index) => (
                       <div

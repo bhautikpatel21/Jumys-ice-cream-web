@@ -207,6 +207,9 @@ const ProductCard = () => {
 
   const [Images, setImages] = useState([])
 
+  console.log(Images);
+
+
   console.log('product', product.imageList);
 
 
@@ -222,9 +225,7 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$12.00",
       img1: img1,
-      img2: img2,
-      img3: img3,
-      img4: img4,
+      imageList: [img1,img2,img3,img4],
       ProductId: 1
     },
     {
@@ -332,11 +333,14 @@ const ProductCard = () => {
       rev: "1 Review",
       price: "$12.00",
       img1: img45,
-      img2: img46,
-      img3: img47,
-      img4: img48,
-      img5: img49,
-      img6: img50,
+      imageList: [
+        img45,
+        img46,
+        img47,
+        img48,
+        img49,
+        img50,
+      ],
       ProductId: 12
     },
     {
@@ -519,8 +523,11 @@ const ProductCard = () => {
   useEffect(() => {
     const foundProduct = ProductSingleView.find(p => p.ProductId === parseInt(productId));
     setProduct(foundProduct);
+    console.log("found Product", foundProduct)
     setActiveImage(foundProduct.img1)
-    setImages([foundProduct.img1, foundProduct.img2, foundProduct.img3, foundProduct.img4]);
+    setImages(foundProduct.imageList);
+    console.log(foundProduct.imageList);
+
   }, [productId]);
 
   if (!product) return <div>Loading...</div>;

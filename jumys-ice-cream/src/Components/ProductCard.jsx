@@ -214,6 +214,7 @@ const ProductCard = () => {
       name: "Banana Cream Pudding",
       rev: "1 Review",
       price: "$12.00",
+      color: "Yellow",
       img1: img1,
       imageList: [img1,img2,img3,img4],
       ProductId: 1
@@ -222,6 +223,7 @@ const ProductCard = () => {
       name: "Blackout Chocolate Cake",
       rev: "2 Reviews",
       price: "$12.00",
+      color: "Brick",
       img1: img5,
       imageList : [img5,img6,img7,img8],
       ProductId: 2
@@ -230,6 +232,7 @@ const ProductCard = () => {
       name: "Brambleberry Crisp",
       rev: "1 Review",
       price: "$10.00",
+      color: "Pink",
       img1: img9,
       imageList : [img9,img10,img11,img12],
       ProductId: 3
@@ -238,6 +241,7 @@ const ProductCard = () => {
       name: "Brown Sugar Cinnamon",
       rev: "0 Reviews",
       price: "$15.00",
+      color: "Yellow",
       img1: img13,
       imageList:[img13,img14,img15,img16],
       ProductId: 4
@@ -246,6 +250,7 @@ const ProductCard = () => {
       name: "Burnt Orange Dreamsicle",
       rev: "0 Reviews",
       price: "$12.00",
+      color: "Yellow",
       img1: img17,
       imageList:[img17,img18,img19,img20],
       ProductId: 5
@@ -254,6 +259,7 @@ const ProductCard = () => {
       name: "Chocolate Mud",
       rev: "0 Reviews",
       price: "$15.00",
+      color: "Brick",
       img1: img21,
       imageList:[img21,img22,img23,img24],
       ProductId: 6
@@ -262,6 +268,7 @@ const ProductCard = () => {
       name: "Cold Brew with Coconut Cream",
       rev: "0 Reviews",
       price: "$12.00",
+      color: "White",
       img1: img25,
       imageList:[img25,img26,img27,img28],
       ProductId: 7
@@ -270,6 +277,7 @@ const ProductCard = () => {
       name: "Cookies in Cream",
       rev: "0 Reviews",
       price: "$13.00",
+      color: "Black",
       img1: img29,
       imageList:[img29,img30,img31,img32],
       ProductId: 8
@@ -278,6 +286,7 @@ const ProductCard = () => {
       name: "Cream Puff",
       rev: "1 Review",
       price: "$11.00",
+      color: "Yellow",
       img1: img33,
       imageList:[img33,img34,img35,img36],
       ProductId: 9
@@ -286,6 +295,7 @@ const ProductCard = () => {
       name: "Darkest Chocolate",
       rev: "0 Reviews",
       price: "$13.00",
+      color: "Brick",
       img1: img37,
       imageList:[img37,img38,img39,img40],
       ProductId: 10
@@ -294,6 +304,7 @@ const ProductCard = () => {
       name: "Double Dough",
       rev: "0 Reviews",
       price: "$10.00",
+      color: "White",
       img1: img41,
       imageList:[img41,img42,img43,img44],
       ProductId: 11
@@ -302,6 +313,7 @@ const ProductCard = () => {
       name: "Frosé Sorbet",
       rev: "1 Review",
       price: "$12.00",
+      color: "Pink  ",
       img1: img45,
       imageList: [img45,img46,img47,img48,img49,img50],
       ProductId: 12
@@ -310,6 +322,7 @@ const ProductCard = () => {
       name: "Golden Nectar",
       rev: "1 Review",
       price: "$10.00",
+      color: "Yellow",
       img1: img51,
       imageList:[img51,img52,img53,img54],
       ProductId: 13
@@ -318,6 +331,7 @@ const ProductCard = () => {
       name: "Green Mint Chip",
       rev: "1 Review",
       price: "$9.00",
+      color: "Green ",
       img1: img55,
       imageList:[img55,img56,img57,img58],
       ProductId: 14
@@ -326,6 +340,7 @@ const ProductCard = () => {
       name: "Hot Toddy Sorbet",
       rev: "0 Review",
       price: "$12.00",
+      color: "Yellow",
       img1: img59,
       imageList:[img59,img60,img61,img62],
       ProductId: 15
@@ -334,6 +349,7 @@ const ProductCard = () => {
       name: "Pei Apple Crisp",
       rev: "1 Review",
       price: "$13.00",
+      color: "White",
       img1: img63,
       imageList:[img63,img64,img65,img66,img67,img68,img69,img70,img71,img72,img73,img74,img75,img76,img77,img78,img79,img80,img81,img82,img83,img84,img85,img86,img87,img88,img89,img90,img91,img92,img93,img94,img95,img96,img97,img98,img99,img100,img101,img102,img103,img104,img105,img106,img107,img108,img109,img110,img111],
       ProductId: 16
@@ -342,6 +358,7 @@ const ProductCard = () => {
       name: "Powdered Jelly Donut",
       rev: "0 Review",
       price: "$9.00",
+      color: "Pink",
       img1: img112,
       imageList:[img112,img113,img114,img115],
       ProductId: 17
@@ -350,6 +367,7 @@ const ProductCard = () => {
       name: "Salty Caramel",
       rev: "0 Review",
       price: "$11.00",
+      color: "Yellow",
       img1: img116,
       imageList:[img116,img117,img118,img119],
       ProductId: 18
@@ -358,6 +376,7 @@ const ProductCard = () => {
       name: "Snow Cone Sorbet",
       rev: "0 Review",
       price: "$10.00",
+      color: "Red",
       img1: img120,
       imageList:[img120,img121,img122,img123],
       ProductId: 19
@@ -366,6 +385,7 @@ const ProductCard = () => {
       name: "Sorbet Street Treats",
       rev: "1 Review",
       price: "$10.00",
+      color: "Blue",
       img1: img124,
       imageList:[img124,img125,img126],
       ProductId: 20
@@ -374,6 +394,7 @@ const ProductCard = () => {
       name: "Sparkling Cherry Pie",
       rev: "0 Review",
       price: "$11.00",
+      color: "Pink",
       img1: img127,
       imageList:[img127,img128,img129,img130],
       ProductId: 21
@@ -382,6 +403,7 @@ const ProductCard = () => {
       name: "Sunshine",
       rev: "1 Review",
       price: "$10.00",
+      color: "Lilac",
       img1: img131,
       imageList:[img131,img132,img133,img134],
       ProductId: 22
@@ -390,6 +412,7 @@ const ProductCard = () => {
       name: "Tahini Oat Chocolate Cookies",
       rev: "1 Review",
       price: "$10.00",
+      color: "Brick",
       img1: img135,
       imageList:[img135,img136,img137,img138],
       ProductId: 23
@@ -398,6 +421,7 @@ const ProductCard = () => {
       name: "Golden Nectar",
       rev: "1 Review",
       price: "$10.00",
+      color: "White",
       img1: img139,
       imageList:[img139,img140,img141,img142],
       ProductId: 24
@@ -406,6 +430,7 @@ const ProductCard = () => {
       name: "Zildberry Lavender",
       rev: "0 Review",
       price: "$13.00",
+      color: "Purple",
       img1: img143,
       imageList:[img143,img144,img145,img146],
       ProductId: 25

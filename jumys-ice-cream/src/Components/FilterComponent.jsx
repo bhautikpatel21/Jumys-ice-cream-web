@@ -59,14 +59,16 @@ const FilterComponent = () => {
   };
 
   const colors = [
-    { name: "Black", count: 2, hex: "#000000" },
+    { name: "Black", count: 1, hex: "#000000" },
     { name: "Blue", count: 1, hex: "#ADD8E6" },
-    { name: "Brick", count: 2, hex: "#A52A2A" },
-    { name: "Green", count: 2, hex: "#008000" },
+    { name: "Brick", count: 4, hex: "#A52A2A" },
+    { name: "Green", count: 1, hex: "#008000" },
     { name: "Pink", count: 4, hex: "#FFC0CB" },
     { name: "Red", count: 1, hex: "#FF0000" },
-    { name: "White", count: 3, hex: "#FFFFFF" },
-    { name: "Yellow", count: 4, hex: "#FFFF00" },
+    { name: "White", count: 4, hex: "#FFFFFF" },
+    { name: "Yellow", count: 7, hex: "#FFFF00" },
+    { name: "Purple", count: 1, hex: "#b862a8" },
+    { name: "Lilac", count: 1, hex: "#C8A2C8" },
   ];
 
   return (

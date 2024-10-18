@@ -16,8 +16,8 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
   <li className="mb-1">
     <div className="flex items-center justify-between">
       <div className="flex items-center">
-        <input type="checkbox" id={category.name} className="mr-2" />
-        <label htmlFor={category.name} className="text-gray-700">{category.name} ({category.count})</label>
+        {/* <input type="checkbox" id={category.name} className="mr-2" /> */}
+        <label htmlFor={category.name} className="text-gray-700">{category.name}</label>
       </div>
       {category.subcategories.length > 0 && (
         <button onClick={toggleOpen} className="text-lg">{isOpen ? '-' : '+'}</button>
@@ -27,8 +27,8 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
       <ul className="pl-6 mt-1">
         {category.subcategories.map((subcategory, index) => (
           <li key={index} className="flex items-center mb-1">
-            <input type="checkbox" id={subcategory.name} className="mr-2" />
-            <label htmlFor={subcategory.name} className="text-gray-700">{subcategory.name} ({subcategory.count})</label>
+            {/* <input type="checkbox" id={subcategory.name} className="mr-2" /> */}
+            <label htmlFor={subcategory.name} className="text-gray-700">{subcategory.name}</label>
           </li>
         ))}
       </ul>
@@ -36,11 +36,15 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
   </li>
 );
 
-const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect }) => {
+const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProductSelect }) => {
   const [openCategories, setOpenCategories] = useState({});
   const [minPrice, setMinPrice] = useState(9);
   const [maxPrice, setMaxPrice] = useState(45);
   const [selectedSize, setSelectedSize] = useState(null);
+
+  const handleProductSelect = (productId) => {
+    onProductSelect(productId); // Pass the selected product ID to the parent component
+  };
 
   const handleSizeChange = (size) => {
     setSelectedSize(size);
@@ -90,7 +94,7 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect }) => {
     <div className="p-4 rounded-lg w-full max-w-xs mx-auto">
       {/* Categories Section */}
       <div className="mb-4">
-        <h3 className="text-lg font-semibold mb-2">Categories</h3>
+        <h3 className="text-lg font-semibold mb-2">Available Ice-Cream</h3>
         <ul>
           {categories.map((category, index) => (
             <CategoryItem
@@ -152,11 +156,13 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect }) => {
       </div>
 
       {/* Featured Products Section */}
-      <div className="mb-4">
-        < h3 className="text-lg font-semibold mb-2">Featured Products</h3>
+        <div className="mb-4">
+        <h3 className="text-lg font-semibold mb-2">Featured Products</h3>
         <ul>
-          {[{ name: "Green Mint Chip", sleshPrice: "$12.00", price: "$9.00", image: f1 }, { name: "Salty Caramel", sleshPrice: "$13.00", price: "$11.00", image: f2 }, { name: "Wedding Cake", sleshPrice: "$13.00", price: "$12.00", image: f3 }].map((product, index) => (
-            <li key={index} className="flex items-center mb-2">
+          {[{ name: "Green Mint Chip", sleshPrice: "$32.00", price: "$28.00", ProductId: 14, image: f1 }, 
+            { name: "Salty Caramel", sleshPrice: "$38.00", price: "$29.00", ProductId: 18, image: f2 }, 
+            { name: "Wedding Cake", sleshPrice: "$29.00", price: "$22.00", ProductId: 24, image: f3 }].map((product, index) => (
+            <li key={index} className="flex items-center mb-2" onClick={() => handleProductSelect(product.ProductId)}>
               <img src={product.image} alt={product.name} className="w-16 h-16 object-cover mr-2" />
               <div className="flex flex-col">
                 <div className="text-gray-600 hover:text-[#ff0000] cursor-pointer duration-500">{product.name}</div>
@@ -169,6 +175,7 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect }) => {
           ))}
         </ul>
       </div>
+
     </div>
   );
 };

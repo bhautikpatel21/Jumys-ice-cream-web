@@ -55,7 +55,7 @@ import img24B from "../assets/asset 112.webp";
 import img25A from "../assets/asset 113.jpeg";
 import img25B from "../assets/asset 114.jpeg";
 
-const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize}) => {
+const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selectedProductId}) => {
   const [data, setData] = useState([]);
   const [visibleIndices, setVisibleIndices] = useState({});
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -351,9 +351,13 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize}) => {
     );
   });
 
+  const selectedProduct = selectedProductId ? data.find(product => product.ProductId === selectedProductId) : null;
+
+  
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = selectedProduct ? [selectedProduct] : filteredProducts.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage);
+  // const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const handlePageChange = (page) => {

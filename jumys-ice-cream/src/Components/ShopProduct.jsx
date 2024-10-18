@@ -171,7 +171,7 @@ const ShopProduct = ({ selectedColor }) => {
         price: "$12.00",
         img1: img12A,
         img2: img12B,
-        color: "Pink  ",
+        color: "Pink",
         ProductId: 12
       },
       {

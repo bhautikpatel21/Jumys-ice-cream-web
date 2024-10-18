@@ -109,9 +109,9 @@ const FilterComponent = ({ onColorSelect }) => {
       {/* Color Section */}
       <div className="mb-4 flex flex-col">
         <h3 className="text-lg font-semibold mb-2">Color</h3>
-        <ul className="flex flex-col">
+        <ul className="flex flex-col ">
           {colors.map((color, index) => (
-            <li key={index} className="flex items-center mr-2 mb-2" onClick={() => handleColorClick(color.name)}>
+            <li key={index} className="flex items-center mr-2 mb-2 w-28 cursor-pointer" onClick={() => handleColorClick(color.name)}>
               <span
                 className="block w-7 h-7 rounded-full mr-2 border border-gray-400 hover:border-gray-950"
                 style={{ backgroundColor: color.hex }}

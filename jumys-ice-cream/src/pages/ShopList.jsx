@@ -9,7 +9,14 @@ import ScrollToTopButton from "../Components/TopButton";
 
 const ShopList = () => {
   const [showFilter, setShowFilter] = useState(false);
-  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [minPrice, setMinPrice] = useState(9);
+  const [maxPrice, setMaxPrice] = useState(45); 
+
+  const handlePriceChange = (min, max) => {
+    setMinPrice(min);
+    setMaxPrice(max);
+  };
 
   const toggleFilter = () => {
     setShowFilter(prev => !prev);
@@ -41,13 +48,13 @@ const ShopList = () => {
 
         {/* Information */}
         <div className={`md:w-1/3 ${showFilter ? 'block' : 'hidden'} md:block mb-4 mt-12 md:mb-0`}>
-        <FilterComponent onColorSelect={setSelectedColor} />
+        <FilterComponent onColorSelect={setSelectedColor} onPriceChange={handlePriceChange}/>
         </div>
 
         {/* Product List */}
         <div className="md:w-2/3">
           {/* <ProductCardList/> */}
-          <ShopProduct selectedColor={selectedColor} />
+          <ShopProduct selectedColor={selectedColor} minPrice={minPrice} maxPrice={maxPrice} />
           </div>
       </div>
       <Footer />

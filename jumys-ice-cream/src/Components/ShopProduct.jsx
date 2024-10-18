@@ -55,7 +55,7 @@ import img24B from "../assets/asset 112.webp";
 import img25A from "../assets/asset 113.jpeg";
 import img25B from "../assets/asset 114.jpeg";
 
-const ShopProduct = ({ selectedColor }) => {
+const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
   const [data, setData] = useState([]);
   const [visibleIndices, setVisibleIndices] = useState({});
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -294,6 +294,11 @@ const ShopProduct = ({ selectedColor }) => {
     ]
   )
 
+  // const filteredProducts = data.filter(product => {
+  //   const priceValue = Number(product.price.replace(/[^0-9.-]+/g, ""));
+  //   return priceValue >= minPrice && priceValue <= maxPrice && (selectedColor ? product.color.toLowerCase() === selectedColor.toLowerCase() : true);
+  // });
+
   useEffect(() => {
     setData(Product);
   }, []);
@@ -311,9 +316,14 @@ const ShopProduct = ({ selectedColor }) => {
     };
   }, []);
 
-  const filteredProducts = selectedColor
-    ? data.filter(product => product.color.toLowerCase() === selectedColor.toLowerCase())
-    : data;
+  // const filteredProducts = selectedColor
+  //   ? data.filter(product => product.color.toLowerCase() === selectedColor.toLowerCase())
+  //   : data;
+
+  const filteredProducts = data.filter(product => {
+    const priceValue = Number(product.price.replace(/[^0-9.-]+/g, ""));
+    return priceValue >= minPrice && priceValue <= maxPrice && (selectedColor ? product.color.toLowerCase() === selectedColor.toLowerCase() : true);
+  }); 
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;

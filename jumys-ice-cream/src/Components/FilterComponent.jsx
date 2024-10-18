@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import f1 from '../assets/f1.webp';
 import f2 from '../assets/f2.webp';
 import f3 from '../assets/f3.webp';
@@ -36,7 +36,7 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
   </li>
 );
 
-const FilterComponent = ({ onColorSelect }) => {
+const FilterComponent = ({ onColorSelect, onPriceChange  }) => {
   const [openCategories, setOpenCategories] = useState({});
   const [minPrice, setMinPrice] = useState(9);
   const [maxPrice, setMaxPrice] = useState(45);
@@ -73,7 +73,12 @@ const FilterComponent = ({ onColorSelect }) => {
 
   const handleColorClick = (color) => {
     onColorSelect(color);
-  };
+  };  
+
+  useEffect(() => {
+    // Call the onPriceChange function to pass the price range to the parent
+    onPriceChange(minPrice, maxPrice);
+  }, [minPrice, maxPrice]);
 
   return (
     <div className="p-4 rounded-lg w-full max-w-xs mx-auto">

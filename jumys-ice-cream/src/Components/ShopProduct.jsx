@@ -55,7 +55,7 @@ import img24B from "../assets/asset 112.webp";
 import img25A from "../assets/asset 113.jpeg";
 import img25B from "../assets/asset 114.jpeg";
 
-const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
+const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize}) => {
   const [data, setData] = useState([]);
   const [visibleIndices, setVisibleIndices] = useState({});
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -73,7 +73,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img1A,
         img2: img1B,
         color: "Yellow",
-        size : ['s','m','l','xl'],
+        size : ['s','m','l'],
         ProductId: 1
       },
       {
@@ -319,11 +319,6 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
     ]
   )
 
-  // const filteredProducts = data.filter(product => {
-  //   const priceValue = Number(product.price.replace(/[^0-9.-]+/g, ""));
-  //   return priceValue >= minPrice && priceValue <= maxPrice && (selectedColor ? product.color.toLowerCase() === selectedColor.toLowerCase() : true);
-  // });
-
   useEffect(() => {
     setData(Product);
   }, []);
@@ -341,14 +336,20 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
     };
   }, []);
 
-  // const filteredProducts = selectedColor
-  //   ? data.filter(product => product.color.toLowerCase() === selectedColor.toLowerCase())
-  //   : data;
+  // const filteredProducts = data.filter(product => {
+  //   const priceValue = Number(product.price.replace(/[^0-9.-]+/g, ""));
+  //   return priceValue >= minPrice && priceValue <= maxPrice && (selectedColor ? product.color.toLowerCase() === selectedColor.toLowerCase() : true);
+  // }); 
 
   const filteredProducts = data.filter(product => {
     const priceValue = Number(product.price.replace(/[^0-9.-]+/g, ""));
-    return priceValue >= minPrice && priceValue <= maxPrice && (selectedColor ? product.color.toLowerCase() === selectedColor.toLowerCase() : true);
-  }); 
+    return (
+      priceValue >= minPrice &&
+      priceValue <= maxPrice &&
+      (selectedColor ? product.color.toLowerCase() === selectedColor.toLowerCase() : true) &&
+      (selectedSize ? product.size.includes(selectedSize.toLowerCase()) : true) // Filter by size
+    );
+  });
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;

@@ -12,6 +12,7 @@ const ShopList = () => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [minPrice, setMinPrice] = useState(9);
   const [maxPrice, setMaxPrice] = useState(45); 
+  const [selectedSize, setSelectedSize] = useState(null);
 
   const handlePriceChange = (min, max) => {
     setMinPrice(min);
@@ -48,13 +49,13 @@ const ShopList = () => {
 
         {/* Information */}
         <div className={`md:w-1/3 ${showFilter ? 'block' : 'hidden'} md:block mb-4 mt-12 md:mb-0`}>
-        <FilterComponent onColorSelect={setSelectedColor} onPriceChange={handlePriceChange}/>
+        <FilterComponent onColorSelect={setSelectedColor} onPriceChange={handlePriceChange} onSizeSelect={setSelectedSize}/>
         </div>
 
         {/* Product List */}
         <div className="md:w-2/3">
           {/* <ProductCardList/> */}
-          <ShopProduct selectedColor={selectedColor} minPrice={minPrice} maxPrice={maxPrice} />
+          <ShopProduct selectedColor={selectedColor} minPrice={minPrice} maxPrice={maxPrice} selectedSize={selectedSize}  />
           </div>
       </div>
       <Footer />

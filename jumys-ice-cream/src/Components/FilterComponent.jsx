@@ -36,11 +36,17 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
   </li>
 );
 
-const FilterComponent = ({ onColorSelect, onPriceChange  }) => {
+const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect }) => {
   const [openCategories, setOpenCategories] = useState({});
   const [minPrice, setMinPrice] = useState(9);
   const [maxPrice, setMaxPrice] = useState(45);
+  const [selectedSize, setSelectedSize] = useState(null);
 
+  const handleSizeChange = (size) => {
+    setSelectedSize(size);
+    onSizeSelect(size); // Pass the selected size to the parent component
+  };
+  
   const handleMinChange = (e) => {
     const value = Math.min(Number(e.target.value), maxPrice - 1);
     setMinPrice(value);
@@ -127,13 +133,18 @@ const FilterComponent = ({ onColorSelect, onPriceChange  }) => {
         </ul>
       </div>
 
-      {/* Size Section */}
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Size</h3>
         <ul>
-          {["L", "M", "S", "XS"].map((size, index) => (
+          {["L", "M", "S", "XL"].map((size, index) => (
             <li key={index} className="flex items-center mb-1">
-              <input type="checkbox" id={size} className="mr-2" />
+              <input
+                type='radio'
+                name="product"
+                id={size}
+                className="mr-2"
+                onChange={() => handleSizeChange(size)} // Handle size change
+              />
               <label htmlFor={size} className="text-gray-700">{size}</label>
             </li>
           ))}

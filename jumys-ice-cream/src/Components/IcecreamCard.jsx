@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import asset41 from "../assets/asset 41.jpeg"
 import asset42 from "../assets/asset 42.jpeg";
 import asset43 from "../assets/asset 43.jpeg";
-import asset44 from "../assets/asset 44.jpeg";
+import asset44 from "../assets/asset_44-removebg-preview.png";
 
 const IceCreamCard = () => {
   return (
@@ -83,13 +83,13 @@ const IceCreamCard = () => {
       {/* 4th card */}
       <div className="bg-[#ead6c0] mt-20 p-6 text-center max-w-xs mx-auto  shadow-2xl rounded-xl hover:scale-105 duration-500">
         <div
-          className="w-44 h-44 border   mx-auto rounded-full overflow-hidden mb-4 font-Kalnia"
+          className="w-44 h-44 border mx-auto rounded-full overflow-hidden mb-4 font-Kalnia z-20"
           style={{ outline: "5px solid white" }}
         >
           <img
             src={asset44}
             alt="Matcha Ice Cream"
-            className="w-full h-full  homeIcecreem"
+            className="w-full h-full hover:scale-150 duration-700 z-50"
           />
         </div>
         <h3 className="font-heading text-2xl font-bold mb-2">Chocolate</h3>

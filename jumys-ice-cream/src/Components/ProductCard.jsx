@@ -514,6 +514,11 @@ const ProductCard = () => {
                   >
                     +
                   </button>
+                </div><br />
+                <div className="flex gap-3">
+                  <div className="w-10 h-10 flex justify-center items-center border cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500">S</div>
+                  <div className="w-10 h-10 flex justify-center items-center border cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500">M</div>
+                  <div className="w-10 h-10 flex justify-center items-center border cursor-not-allowed  hover:bg-red-600 hover:text-white opacity-50">L</div>
                 </div>
 
                 <button className="flex-1 bg-black w-full mt-4 py-2 text-white rounded-full hover:bg-[#ff0000]">

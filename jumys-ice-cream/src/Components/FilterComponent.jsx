@@ -39,7 +39,7 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
 const FilterComponent = ({ onColorSelect }) => {
   const [openCategories, setOpenCategories] = useState({});
   const [minPrice, setMinPrice] = useState(9);
-  const [maxPrice, setMaxPrice] = useState(110);
+  const [maxPrice, setMaxPrice] = useState(45);
 
   const handleMinChange = (e) => {
     const value = Math.min(Number(e.target.value), maxPrice - 1);
@@ -98,7 +98,7 @@ const FilterComponent = ({ onColorSelect }) => {
         <input
           type="range"
           min="9"
-          max="110"
+          max="45"
           value={maxPrice}
           onChange={handleMaxChange}
           className='w-full'

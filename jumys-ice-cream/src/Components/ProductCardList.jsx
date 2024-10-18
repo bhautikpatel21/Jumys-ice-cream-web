@@ -62,21 +62,21 @@ const ProductCardList = () => {
     {
       name: "Banana Cream Pudding",
       rev: "1 Review", 
-      price: "$12.00", 
+      price: "$14.00", 
       img1: img1A, 
       img2: img1B
     },
     { 
       name: "Blackout Chocolate Cake", 
       rev: "2 Reviews", 
-      price: "$12.00", 
+      price: "$18.00", 
       img1: img2A, 
       img2: img2B 
     },
     { 
       name: "Brambleberry Crisp", 
       rev: "1 Review", 
-      price: "$10.00", 
+      price: "$11.00", 
       img1: img3A, 
       img2: img3B 
     },
@@ -90,14 +90,14 @@ const ProductCardList = () => {
     { 
       name: "Burnt Orange Dreamsicle", 
       rev: "0 Reviews", 
-      price: "$12.00", 
+      price: "$19.00", 
       img1: img5A, 
       img2: img5B 
     },
     { 
       name: "Chocolate Mud", 
       rev: "0 Reviews", 
-      price: "$15.00", 
+      price: "$25.00", 
       img1: img6A, 
       img2: img6B 
     },
@@ -111,96 +111,91 @@ const ProductCardList = () => {
     {
       name: "Cookies in Cream", 
       rev: "0 Reviews", 
-      price: "$13.00", 
+      price: "$26.00", 
       img1: img8A, 
       img2: img8B 
     },
     { 
       name: "Cream Puff", 
       rev: "1 Review", 
-      price: "$11.00", 
+      price: "$15.00", 
       img1: img9A, 
       img2: img9B 
     },
     { 
       name: "Darkest Chocolate", 
       rev: "0 Reviews", 
-      price: "$13.00", 
+      price: "$10.00", 
       img1: img10A, 
       img2: img10B 
     },
     { 
       name: "Double Dough", 
       rev: "0 Reviews", 
-      price: "$10.00", 
+      price: "$19.00", 
       img1: img11A, 
       img2: img11B 
     },
     { 
       name: "Frosé Sorbet", 
       rev: "1 Review", 
-      price: "$12.00", 
+      price: "$13.00", 
       img1: img12A, 
       img2: img12B 
     },
-
-
     { 
       name: "Golden Nectar", 
       rev: "1 Review", 
-      price: "$10.00", 
+      price: "$20.00", 
       img1: img13A, 
       img2: img13B 
     },
-
-
-
     { 
       name: "Green Mint Chip", 
       rev: "1 Review", 
-      price: "$9.00", 
+      price: "$28.00", 
       img1: img14A, 
       img2: img14B 
     },
     { 
       name: "Hot Toddy Sorbet", 
       rev: "0 Review", 
-      price: "$12.00", 
+      price: "$9.00", 
       img1: img15A, 
       img2: img15B 
     },
     { 
       name: "Pei Apple Crisp", 
       rev: "1 Review", 
-      price: "$13.00", 
+      price: "$32.00", 
       img1: img16A, 
       img2: img16B 
     },
     { 
       name: "Powdered Jelly Donut", 
       rev: "0 Review", 
-      price: "$9.00", 
+      price: "$44.00", 
       img1: img17A, 
       img2: img17B 
     },
     { 
       name: "Salty Caramel", 
       rev: "0 Review", 
-      price: "$11.00", 
+      price: "$29.00", 
       img1: img18A, 
       img2: img18B 
     },
     { 
       name: "Snow Cone Sorbet", 
       rev: "0 Review", 
-      price: "$10.00", 
+      price: "$17.00", 
       img1: img19A, 
       img2: img19B 
     },
     { 
       name: "Sorbet Street Treats", 
       rev: "1 Review", 
-      price: "$10.00", 
+      price: "$45.00", 
       img1: img20A, 
       img2: img20B 
     },
@@ -214,28 +209,28 @@ const ProductCardList = () => {
     { 
       name: "Sunshine", 
       rev: "1 Review", 
-      price: "$10.00", 
+      price: "$16.00", 
       img1: img22A, 
       img2: img22B 
     },
     { 
       name: "Tahini Oat Chocolate Cookies", 
       rev: "1 Review", 
-      price: "$10.00", 
+      price: "$21.00", 
       img1: img23A, 
       img2: img23B 
     },
     { 
-      name: "Golden Nectar", 
+      name: "Wedding Cake", 
       rev: "1 Review", 
-      price: "$10.00", 
+      price: "$22.00", 
       img1: img24A, 
       img2: img24B 
     },
     { 
       name: "Zildberry Lavender", 
       rev: "0 Review", 
-      price: "$13.00", 
+      price: "$37.00", 
       img1: img25A, 
       img2: img25B 
     },

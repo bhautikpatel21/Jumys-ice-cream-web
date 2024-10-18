@@ -73,6 +73,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img1A,
         img2: img1B,
         color: "Yellow",
+        size : ['s','m','l','xl'],
         ProductId: 1
       },
       {
@@ -82,6 +83,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img2A,
         img2: img2B,
         color: "Brick",
+        size : ['s','m','l'],
         ProductId: 2
       },
       {
@@ -91,6 +93,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img3A,
         img2: img3B,
         color: "Pink",
+        size : ['s','m','l','xl'],
         ProductId: 3
       },
       {
@@ -100,6 +103,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img4A,
         img2: img4B,
         color: "Yellow",
+        size : ['s','m'],
         ProductId: 4
       },
       {
@@ -109,6 +113,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img5A,
         img2: img5B,
         color: "Yellow",
+        size : ['m','l','xl'],
         ProductId: 5
       },
       {
@@ -118,6 +123,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img6A,
         img2: img6B,
         color: "Brick",
+        size : ['m','l'],
         ProductId: 6
       },
       {
@@ -127,6 +133,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img7A,
         img2: img7B,
         color: "White",
+        size : ['l','xl'],
         ProductId: 7
       },
       {
@@ -136,6 +143,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img8A,
         img2: img8B,
         color: "Black",
+        size : ['s','m','l','xl'],
         ProductId: 8
       },
       {
@@ -145,6 +153,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img9A,
         img2: img9B,
         color: "Yellow",
+        size : ['m','l'],
         ProductId: 9
       },
       {
@@ -154,6 +163,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img10A,
         img2: img10B,
         color: "Brick",
+        size : ['s','m','l'],
         ProductId: 10
       },
       {
@@ -163,6 +173,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img11A,
         img2: img11B,
         color: "White",
+        size : ['s','m','l'],
         ProductId: 11
       },
       {
@@ -172,6 +183,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img12A,
         img2: img12B,
         color: "Pink",
+        size : ['s','m','l'],
         ProductId: 12
       },
       {
@@ -181,6 +193,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img13A,
         img2: img13B,
         color: "Yellow",
+        size : ['m','l'],
         ProductId: 13
       },
       {
@@ -190,6 +203,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img14A,
         img2: img14B,
         color: "Green",
+        size : ['s','m','l','xl'],
         ProductId: 14
       },
       {
@@ -199,6 +213,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img15A,
         img2: img15B,
         color: "Yellow",
+        size : ['s','m' ],
         ProductId: 15
       },
       {
@@ -208,6 +223,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img16A,
         img2: img16B,
         color: "White",
+        size : ['m','l'],
         ProductId: 16
       },
       {
@@ -217,6 +233,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img17A,
         img2: img17B,
         color: "Pink",
+        size : ['s','m','l'],
         ProductId: 17
       },
       {
@@ -226,6 +243,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img18A,
         img2: img18B,
         color: "Yellow",
+        size : ['s','m','l','xl'],
         ProductId: 18
       },
       {
@@ -235,6 +253,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img19A,
         img2: img19B,
         color: "Red",
+        size : ['s','m','l','xl'],
         ProductId: 19
       },
       {
@@ -244,6 +263,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img20A,
         img2: img20B,
         color: "Blue",
+        size : ['l','xl'],
         ProductId: 20
       },
       {
@@ -253,6 +273,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img21A,
         img2: img21B,
         color: "Pink",
+        size : ['m','l'],
         ProductId: 21
       },
       {
@@ -262,6 +283,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img22A,
         img2: img22B,
         color: "Lilac",
+        size : ['s','m','l','xl'],
         ProductId: 22
       },
       {
@@ -271,6 +293,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img23A,
         img2: img23B,
         color: "Brick",
+        size : ['m','l'],
         ProductId: 23
       },
       {
@@ -280,6 +303,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img24A,
         img2: img24B,
         color: "White",
+        size : ['m','l','xl'],
         ProductId: 24
       },
       {
@@ -289,6 +313,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice}) => {
         img1: img25A,
         img2: img25B,
         color: "Purple",
+        size : ['s','m','l'],
         ProductId: 25
       },
     ]

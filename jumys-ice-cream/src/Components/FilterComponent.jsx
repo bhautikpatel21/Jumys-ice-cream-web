@@ -36,7 +36,7 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
   </li>
 );
 
-const FilterComponent = () => {
+const FilterComponent = ({ onColorSelect }) => {
   const [openCategories, setOpenCategories] = useState({});
   const [minPrice, setMinPrice] = useState(9);
   const [maxPrice, setMaxPrice] = useState(110);
@@ -70,6 +70,10 @@ const FilterComponent = () => {
     { name: "Purple", count: 1, hex: "#b862a8" },
     { name: "Lilac", count: 1, hex: "#C8A2C8" },
   ];
+
+  const handleColorClick = (color) => {
+    onColorSelect(color);
+  };
 
   return (
     <div className="p-4 rounded-lg w-full max-w-xs mx-auto">
@@ -107,7 +111,7 @@ const FilterComponent = () => {
         <h3 className="text-lg font-semibold mb-2">Color</h3>
         <ul className="flex flex-col">
           {colors.map((color, index) => (
-            <li key={index} className="flex items-center mr-2 mb-2">
+            <li key={index} className="flex items-center mr-2 mb-2" onClick={() => handleColorClick(color.name)}>
               <span
                 className="block w-7 h-7 rounded-full mr-2 border border-gray-400 hover:border-gray-950"
                 style={{ backgroundColor: color.hex }}
@@ -133,7 +137,7 @@ const FilterComponent = () => {
 
       {/* Featured Products Section */}
       <div className="mb-4">
-        <h3 className="text-lg font-semibold mb-2">Featured Products</h3>
+        < h3 className="text-lg font-semibold mb-2">Featured Products</h3>
         <ul>
           {[{ name: "Green Mint Chip", sleshPrice: "$12.00", price: "$9.00", image: f1 }, { name: "Salty Caramel", sleshPrice: "$13.00", price: "$11.00", image: f2 }, { name: "Wedding Cake", sleshPrice: "$13.00", price: "$12.00", image: f3 }].map((product, index) => (
             <li key={index} className="flex items-center mb-2">

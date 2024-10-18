@@ -9,6 +9,7 @@ import ScrollToTopButton from "../Components/TopButton";
 
 const ShopList = () => {
   const [showFilter, setShowFilter] = useState(false);
+  const [selectedColor, setSelectedColor] = useState('');
 
   const toggleFilter = () => {
     setShowFilter(prev => !prev);
@@ -40,14 +41,14 @@ const ShopList = () => {
 
         {/* Information */}
         <div className={`md:w-1/3 ${showFilter ? 'block' : 'hidden'} md:block mb-4 mt-12 md:mb-0`}>
-          <FilterComponent />
+        <FilterComponent onColorSelect={setSelectedColor} />
         </div>
 
         {/* Product List */}
         <div className="md:w-2/3">
           {/* <ProductCardList/> */}
-          <ShopProduct/>
-        </div>
+          <ShopProduct selectedColor={selectedColor} />
+          </div>
       </div>
       <Footer />
     </div>

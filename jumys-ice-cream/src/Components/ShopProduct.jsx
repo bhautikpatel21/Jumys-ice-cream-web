@@ -55,394 +55,420 @@ import img24B from "../assets/asset 112.webp";
 import img25A from "../assets/asset 113.jpeg";
 import img25B from "../assets/asset 114.jpeg";
 
-const ShopProduct = () => {
-    const [data, setData] = useState([]);
-    const [visibleIndices, setVisibleIndices] = useState({});
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [columns, setColumns] = useState(2);
-    const [showProductCardList, setShowProductCardList] = useState(false);
-    const productsPerPage = 12;
+const ShopProduct = ({ selectedColor }) => {
+  const [data, setData] = useState([]);
+  const [visibleIndices, setVisibleIndices] = useState({});
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [columns, setColumns] = useState(2);
+  const [showProductCardList, setShowProductCardList] = useState(false);
+  const productsPerPage = 12;
 
-    const [Product] = useState(
+  const [Product] = useState(
+    [
+      {
+        name: "Banana Cream Pudding",
+        rev: "1 Review",
+        price: "$12.00",
+        img1: img1A,
+        img2: img1B,
+        color: "Yellow",
+        ProductId: 1
+      },
+      {
+        name: "Blackout Chocolate Cake",
+        rev: "2 Reviews",
+        price: "$12.00",
+        img1: img2A,
+        img2: img2B,
+        color: "Brick",
+        ProductId: 2
+      },
+      {
+        name: "Brambleberry Crisp",
+        rev: "1 Review",
+        price: "$10.00",
+        img1: img3A,
+        img2: img3B,
+        color: "Pink",
+        ProductId: 3
+      },
+      {
+        name: "Brown Sugar Cinnamon",
+        rev: "0 Reviews",
+        price: "$15.00",
+        img1: img4A,
+        img2: img4B,
+        color: "Yellow",
+        ProductId: 4
+      },
+      {
+        name: "Burnt Orange Dreamsicle",
+        rev: "0 Reviews",
+        price: "$12.00",
+        img1: img5A,
+        img2: img5B,
+        color: "Yellow",
+        ProductId: 5
+      },
+      {
+        name: "Chocolate Mud",
+        rev: "0 Reviews",
+        price: "$15.00",
+        img1: img6A,
+        img2: img6B,
+        color: "Brick",
+        ProductId: 6
+      },
+      {
+        name: "Cold Brew with Coconut Cream",
+        rev: "0 Reviews",
+        price: "$12.00",
+        img1: img7A,
+        img2: img7B,
+        color: "White",
+        ProductId: 7
+      },
+      {
+        name: "Cookies in Cream",
+        rev: "0 Reviews",
+        price: "$13.00",
+        img1: img8A,
+        img2: img8B,
+        color: "Black",
+        ProductId: 8
+      },
+      {
+        name: "Cream Puff",
+        rev: "1 Review",
+        price: "$11.00",
+        img1: img9A,
+        img2: img9B,
+        color: "Yellow",
+        ProductId: 9
+      },
+      {
+        name: "Darkest Chocolate",
+        rev: "0 Reviews",
+        price: "$13.00",
+        img1: img10A,
+        img2: img10B,
+        color: "Brick",
+        ProductId: 10
+      },
+      {
+        name: "Double Dough",
+        rev: "0 Reviews",
+        price: "$10.00",
+        img1: img11A,
+        img2: img11B,
+        color: "White",
+        ProductId: 11
+      },
+      {
+        name: "Frosé Sorbet",
+        rev: "1 Review",
+        price: "$12.00",
+        img1: img12A,
+        img2: img12B,
+        color: "Pink  ",
+        ProductId: 12
+      },
+      {
+        name: "Golden Nectar",
+        rev: "1 Review",
+        price: "$10.00",
+        img1: img13A,
+        img2: img13B,
+        color: "Yellow",
+        ProductId: 13
+      },
+      {
+        name: "Green Mint Chip",
+        rev: "1 Review",
+        price: "$9.00",
+        img1: img14A,
+        img2: img14B,
+        color: "Green ",
+        ProductId: 14
+      },
+      {
+        name: "Hot Toddy Sorbet",
+        rev: "0 Review",
+        price: "$12.00",
+        img1: img15A,
+        img2: img15B,
+        color: "Yellow",
+        ProductId: 15
+      },
+      {
+        name: "Pei Apple Crisp",
+        rev: "1 Review",
+        price: "$13.00",
+        img1: img16A,
+        img2: img16B,
+        color: "White",
+        ProductId: 16
+      },
+      {
+        name: "Powdered Jelly Donut",
+        rev: "0 Review",
+        price: "$9.00",
+        img1: img17A,
+        img2: img17B,
+        color: "Pink",
+        ProductId: 17
+      },
+      {
+        name: "Salty Caramel",
+        rev: "0 Review",
+        price: "$11.00",
+        img1: img18A,
+        img2: img18B,
+        color: "Yellow",
+        ProductId: 18
+      },
+      {
+        name: "Snow Cone Sorbet",
+        rev: "0 Review",
+        price: "$10.00",
+        img1: img19A,
+        img2: img19B,
+        color: "Red",
+        ProductId: 19
+      },
+      {
+        name: "Sorbet Street Treats",
+        rev: "1 Review",
+        price: "$10.00",
+        img1: img20A,
+        img2: img20B,
+        color: "Blue",
+        ProductId: 20
+      },
+      {
+        name: "Sparkling Cherry Pie",
+        rev: "0 Review",
+        price: "$11.00",
+        color: 'yellow',
+        img1: img21A,
+        img2: img21B,
+        color: "Pink",
+        ProductId: 21
+      },
+      {
+        name: "Sugar Cookie Dough",
+        rev: "0 Review",
+        price: "$12.00",
+        img1: img22A,
+        img2: img22B,
+        color: "Lilac",
+        ProductId: 22
+      },
+      {
+        name: "Toasted Coconut",
+        rev: "0 Review",
+        price: "$10.00",
+        img1: img23A,
+        img2: img23B,
+        color: "Brick",
+        ProductId: 23
+      },
+      {
+        name: "Vanilla Bean",
+        rev: "1 Review",
+        price: "$11.00",
+        img1: img24A,
+        img2: img24B,
+        color: "White",
+        ProductId: 24
+      },
+      {
+        name: "Whipped Maple",
+        rev: "0 Review",
+        price: "$11.00",
+        img1: img25A,
+        img2: img25B,
+        color: "Purple",
+        ProductId: 25
+      },
+    ]
+  )
 
-        [
-            {
-                name: "Banana Cream Pudding",
-                rev: "1 Review",
-                price: "$12.00",
-                img1: img1A,
-                img2: img1B,
-                ProductId: 1
-            },
-            {
-                name: "Blackout Chocolate Cake",
-                rev: "2 Reviews",
-                price: "$12.00",
-                img1: img2A,
-                img2: img2B,
-                ProductId: 2
-            },
-            {
-                name: "Brambleberry Crisp",
-                rev: "1 Review",
-                price: "$10.00",
-                img1: img3A,
-                img2: img3B,
-                ProductId: 3
-            },
-            {
-                name: "Brown Sugar Cinnamon",
-                rev: "0 Reviews",
-                price: "$15.00",
-                img1: img4A,
-                img2: img4B,
-                ProductId: 4
-            },
-            {
-                name: "Burnt Orange Dreamsicle",
-                rev: "0 Reviews",
-                price: "$12.00",
-                img1: img5A,
-                img2: img5B,
-                ProductId: 5
-            },
-            {
-                name: "Chocolate Mud",
-                rev: "0 Reviews",
-                price: "$15.00",
-                img1: img6A,
-                img2: img6B,
-                ProductId: 6
-            },
-            {
-                name: "Cold Brew with Coconut Cream",
-                rev: "0 Reviews",
-                price: "$12.00",
-                img1: img7A,
-                img2: img7B,
-                ProductId: 7
-            },
-            {
-                name: "Cookies in Cream",
-                rev: "0 Reviews",
-                price: "$13.00",
-                img1: img8A,
-                img2: img8B,
-                ProductId: 8
-            },
-            {
-                name: "Cream Puff",
-                rev: "1 Review",
-                price: "$11.00",
-                img1: img9A,
-                img2: img9B,
-                ProductId: 9
-            },
-            {
-                name: "Darkest Chocolate",
-                rev: "0 Reviews",
-                price: "$13.00",
-                img1: img10A,
-                img2: img10B,
-                ProductId: 10
-            },
-            {
-                name: "Double Dough",
-                rev: "0 Reviews",
-                price: "$10.00",
-                img1: img11A,
-                img2: img11B,
-                ProductId: 11
-            },
-            {
-                name: "Frosé Sorbet",
-                rev: "1 Review",
-                price: "$12.00",
-                img1: img12A,
-                img2: img12B,
-                ProductId: 12
-            },
-            {
-                name: "Golden Nectar",
-                rev: "1 Review",
-                price: "$10.00",
-                img1: img13A,
-                img2: img13B,
-                ProductId: 13
-            },
-            {
-                name: "Green Mint Chip",
-                rev: "1 Review",
-                price: "$9.00",
-                img1: img14A,
-                img2: img14B,
-                ProductId: 14
-            },
-            {
-                name: "Hot Toddy Sorbet",
-                rev: "0 Review",
-                price: "$12.00",
-                img1: img15A,
-                img2: img15B,
-                ProductId: 15
-            },
-            {
-                name: "Pei Apple Crisp",
-                rev: "1 Review",
-                price: "$13.00",
-                img1: img16A,
-                img2: img16B,
-                ProductId: 16
-            },
-            {
-                name: "Powdered Jelly Donut",
-                rev: "0 Review",
-                price: "$9.00",
-                img1: img17A,
-                img2: img17B,
-                ProductId: 17
-            },
-            {
-                name: "Salty Caramel",
-                rev: "0 Review",
-                price: "$11.00",
-                img1: img18A,
-                img2: img18B,
-                ProductId: 18
-            },
-            {
-                name: "Snow Cone Sorbet",
-                rev: "0 Review",
-                price: "$10.00",
-                img1: img19A,
-                img2: img19B,
-                ProductId: 19
-            },
-            {
-                name: "Sorbet Street Treats",
-                rev: "1 Review",
-                price: "$10.00",
-                img1: img20A,
-                img2: img20B,
-                ProductId: 20
-            },
-            {
-                name: "Sparkling Cherry Pie",
-                rev: "0 Review",
-                price: "$11.00",
-                color:'yellow',
-                img1: img21A,
-                img2: img21B,
-                ProductId: 21
-            },
-            {
-                name: "Sugar Cookie Dough",
-                rev: "0 Review",
-                price: "$12.00",
-                img1: img22A,
-                img2: img22B,
-                ProductId: 22
-            },
-            {
-                name: "Toasted Coconut",
-                rev: "0 Review",
-                price: "$10.00",
-                img1: img23A,
-                img2: img23B,
-                ProductId: 23
-            },
-            {
-                name: "Vanilla Bean",
-                rev: "1 Review",
-                price: "$11.00",
-                img1: img24A,
-                img2: img24B,
-                ProductId: 24
-            },
-            {
-                name: "Whipped Maple",
-                rev: "0 Review",
-                price: "$11.00",
-                img1: img25A,
-                img2: img25B,
-                ProductId: 25
-            },
-        ]
-    )
+  useEffect(() => {
+    setData(Product);
+  }, []);
 
-    useEffect(() => {
-        setData(Product);
-    }, []);
-
-
-    useEffect(() => {
-        const updateColumns = () => {
-            setColumns(window.innerWidth < 1000 ? 2 : 2);
-        };
-
-        window.addEventListener('resize', updateColumns);
-        updateColumns();
-
-        return () => {
-            window.removeEventListener('resize', updateColumns);
-        };
-    }, []);
-
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = data.slice(indexOfFirstProduct, indexOfLastProduct);
-    const totalPages = Math.ceil(data.length / productsPerPage);
-
-    const handlePageChange = (page) => {
-        setCurrentPage(page);
+  useEffect(() => {
+    const updateColumns = () => {
+      setColumns(window.innerWidth < 1000 ? 2 : 2);
     };
 
-    const IconMenu = () => (
-        <div className='absolute top-2 right-2 flex flex-col gap-5'>
-            {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
-                .map(({ icon, id }) => (
-                    <div className='w-8 h-8 bg-white rounded-full flex justify-center items-center' key={id}>
-                        <Button variant="outline-secondary" className="p-0">{icon}</Button>
-                    </div>
-                ))}
-        </div>
-    );
+    window.addEventListener('resize', updateColumns);
+    updateColumns();
 
-    const handleListTypeMenuClick = (e) => {
-        e.preventDefault();
-        setShowProductCardList(!showProductCardList);
+    return () => {
+      window.removeEventListener('resize', updateColumns);
     };
+  }, []);
 
-    const handleColumnChange = (newColumns) => {
-        setColumns(newColumns);
-        setShowProductCardList(false);
-    };
+  const filteredProducts = selectedColor
+    ? data.filter(product => product.color.toLowerCase() === selectedColor.toLowerCase())
+    : data;
 
-    return (
-        <div>
-            <div className='mt-14 gap-8 w-full h-12 flex items-center mb-8 justify-end'>
-                <a href="#" id='ListTypeMenu' onClick={handleListTypeMenuClick}>
-                    <FaList className="text-gray-600 text-2xl hover:text-red-600" />
-                </a>
-                {window.innerWidth >= 1000 && (
-                    <>
-                        <div onClick={() => handleColumnChange(2)} className="cursor-pointer">
-                            <div className="w-6 h-6 flex flex-col-2 flex-wrap gap-1">
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                            </div>
-                        </div>
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
-                        <div onClick={() => handleColumnChange(3)} className="cursor-pointer">
-                            <div className="w-8 h-6 flex flex-col-2 flex-wrap gap-1">
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                            </div>
-                        </div>
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
-                        <div onClick={() => handleColumnChange(4)} className="cursor-pointer mr-4">
-                            <div className="w-12 h-6 flex flex-col-2 flex-wrap gap-1">
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                                <div className="w-2 h-2 bg-gray-600"></div>
-                            </div>
-                        </div>
-                    </>
-                )}
+  const IconMenu = () => (
+    <div className='absolute top-2 right-2 flex flex-col gap-5'>
+      {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
+        .map(({ icon, id }) => (
+          <div className='w-8 h-8 bg-white rounded-full flex justify-center items-center' key={id}>
+            <Button variant="outline-secondary" className="p-0">{icon}</Button>
+          </div>
+        ))}
+    </div>
+  );
+
+  const handleListTypeMenuClick = (e) => {
+    e.preventDefault();
+    setShowProductCardList(!showProductCardList);
+  };
+
+  const handleColumnChange = (newColumns) => {
+    setColumns(newColumns);
+    setShowProductCardList(false);
+  };
+
+  return (
+    <div>
+      <div className='mt-14 gap-8 w-full h-12 flex items-center mb-8 justify-end'>
+        <a href="#" id='ListTypeMenu ' onClick={handleListTypeMenuClick}>
+          <FaList className="text-gray-600 text-2xl hover:text-red-600" />
+        </a>
+        {window.innerWidth >= 1000 && (
+          <>
+            <div onClick={() => handleColumnChange(2)} className="cursor-pointer">
+              <div className="w-6 h-6 flex flex-col-2 flex-wrap gap-1">
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+              </div>
             </div>
 
-            {showProductCardList ? (
-                <ProductCardList /> 
-            ) : (
-            <>
-                <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
-                    {currentProducts.map((product, index) => (
-                        <NavLink to={`/product/${product.ProductId}`}>
-                            <Card key={index} style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
-                                <div className='relative'
-                                    onMouseEnter={() => {
-                                        setHoveredIndex(index);
-                                        setVisibleIndices(prev => ({ ...prev, [index]: true }));
-                                    }}
-                                    onMouseLeave={() => {
-                                        setHoveredIndex(null);
-                                        setVisibleIndices(prev => ({ ...prev, [index]: false }));
-                                    }}
-                                >
-                                    <Card.Img
-                                        variant="top"
-                                        src={hoveredIndex === index ? product.img2 : product.img1}
-                                        alt={product.name}
-                                        className='rounded-2xl'
-                                    />
-                                    {visibleIndices[index] && <IconMenu />}
-                                </div>
-                                <Card.Body>
-                                    <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
-                                    <Card.Text>
-                                        <div className="flex">
-                                            <div className='flex gap-1'>
-                                                {[...Array(5)].map((star, idx) => (
-                                                    <FaStar key={idx} color="red" />
-                                                ))}
-                                            </div>
-                                            <span className="ml-5">{product.rev}</span>
-                                        </div>
-                                    </Card.Text>
-                                </Card.Body>
-                                <ListGroup className="list-group-flush">
-                                    <ListGroupItem>
-                                        <strong>{product.price}</strong>
-                                    </ListGroupItem>
-                                </ListGroup>
-                            </Card>
-                        </NavLink>
-                    ))}
-                </div>
+            <div onClick={() => handleColumnChange(3)} className="cursor-pointer">
+              <div className="w-8 h-6 flex flex-col-2 flex-wrap gap-1">
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+              </div>
+            </div>
 
+            <div onClick={() => handleColumnChange(4)} className="cursor-pointer mr-4">
+              <div className="w-12 h-6 flex flex-col-2 flex-wrap gap-1">
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+                <div className="w-2 h-2 bg-gray-600"></div>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
 
-                <div className="flex justify-center mt-8 mb-5 space-x-5">
-                    <button
-                        onClick={() => handlePageChange(currentPage - 1)}
-                        disabled={currentPage === 1}
-                        className="px-3 py-2 border rounded-full bg-white text-black"
-                    >
-                        <FaArrowLeft />
-                    </button>
-                    {[...Array(totalPages)].map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => handlePageChange(index + 1)}
-                            className={`px-4 py-2 border rounded-full ${currentPage === index + 1 ? "bg-red-600 text-white" : "bg-white text-black"}`}
-                        >
-                            {index + 1}
-                        </button>
-                    ))}
-                    <button
-                        onClick={() => handlePageChange(currentPage + 1)}
-                        disabled={currentPage === totalPages}
-                        className="px-3 py-2 border rounded-full bg-white text-black"
-                    >
-                        <FaArrowRight />
-                    </button>
-                </div>
-            </>
-            )}
-            <Outlet />
-        </div>
-    );
+      {showProductCardList ? (
+        <ProductCardList />
+      ) : (
+        <>
+          <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+            {currentProducts.map((product, index) => (
+              <NavLink to={`/product/${product.ProductId}`} key={index}>
+                <Card style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
+                  <div className='relative'
+                    onMouseEnter={() => {
+                      setHoveredIndex(index);
+                      setVisibleIndices(prev => ({ ...prev, [index]: true }));
+                    }}
+                    onMouseLeave={() => {
+                      setHoveredIndex(null);
+                      setVisibleIndices(prev => ({ ...prev, [index]: false }));
+                    }}
+                  >
+                    <Card.Img
+                      variant="top"
+                      src={hoveredIndex === index ? product.img2 : product.img1}
+                      alt={product.name}
+                      className='rounded-2xl'
+                    />
+                    {visibleIndices[index] && <IconMenu />}
+                  </div>
+                  <Card.Body>
+                    <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
+                    <Card.Text>
+                      <div className="flex">
+                        <div className='flex gap-1'>
+                          {[...Array(5)].map((star, idx) => (
+                            <FaStar key={idx} color="red" />
+                          ))}
+                        </div>
+                        <span className="ml-5">{product.rev}</span>
+                      </div>
+                    </Card.Text>
+                  </Card.Body>
+                  <ListGroup className="list-group-flush">
+                    <ListGroupItem>
+                      <strong>{product.price}</strong>
+                    </ListGroupItem>
+                  </ListGroup>
+                </Card>
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="flex justify-center mt-8 mb-5 space-x-5">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-3 py-2 border rounded-full bg-white text-black"
+            >
+              <FaArrowLeft />
+            </button>
+            {[...Array(totalPages)].map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handlePageChange(index + 1)}
+                className={`px-4 py-2 border rounded-full ${currentPage === index + 1 ? "bg-red-600 text-white" : "bg-white text-black"}`}
+              >
+                {index + 1}
+              </button>
+            ))}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-3 py-2 border rounded-full bg-white text-black"
+            >
+              <FaArrowRight />
+            </button>
+          </div>
+        </>
+      )}
+      <Outlet />
+    </div>
+  );
 };
 
 export default ShopProduct;

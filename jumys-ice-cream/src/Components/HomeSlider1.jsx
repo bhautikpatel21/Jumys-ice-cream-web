@@ -77,3 +77,4 @@ const HomeSlider1 = () => {
 };
 
 export default HomeSlider;
+

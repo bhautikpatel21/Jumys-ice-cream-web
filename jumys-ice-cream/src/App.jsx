@@ -13,10 +13,10 @@ function App() {
   return (
     <>
 
-    <Layout/>
+    {/* <Layout/> */}
     {/* <ShopList/> */}
     {/* <ProductCard/> */}
-    {/* <HomeSlider2/> */}
+    <HomeSlider2/>
     {/* <HomeSlider3/> */}
     </>
       

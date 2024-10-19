@@ -16,8 +16,8 @@ function App() {
     {/* <Layout/> */}
     {/* <ShopList/> */}
     {/* <ProductCard/> */}
-    <HomeSlider2/>
-    {/* <HomeSlider3/> */}
+    {/* <HomeSlider2/> */}
+    <HomeSlider3/>
     </>
       
     

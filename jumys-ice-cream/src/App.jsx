@@ -6,6 +6,7 @@ import ShopList from './pages/ShopList'
 import ShopProduct from './Components/Randem'
 import ProductCard from './Components/ProductCard'
 import HomeSlider2 from './Components/HomeSlider2'
+import HomeSlider3 from './Components/HomeSlider3'
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
     {/* <Layout/> */}
     {/* <ShopList/> */}
     {/* <ProductCard/> */}
-    <HomeSlider2/>
+    {/* <HomeSlider2/> */}
+    <HomeSlider3/>
     </>
       
     

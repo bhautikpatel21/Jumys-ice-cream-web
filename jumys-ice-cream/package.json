@@ -20,6 +20,7 @@
     "@reach/menu-button": "^0.18.0",
     "bootstrap": "^5.3.3",
     "formik": "^2.4.6",
+    "framer-motion": "^11.11.9",
     "jquery": "^3.7.1",
     "lucide-react": "^0.424.0",
     "mdb-react-ui-kit": "^8.0.0",

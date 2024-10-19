@@ -672,6 +672,8 @@ underline-animate {
   font-style: oblique;
 }
 
+/* Slider 3  -> */
+
 
 @keyframes fadeIn {
   0% {
@@ -703,6 +705,7 @@ underline-animate {
   animation: scaleUp 0.5s ease-in-out forwards;
 }
 
+/* Slider 2 ->  */
 
 @keyframes fadeIn {
   0% {

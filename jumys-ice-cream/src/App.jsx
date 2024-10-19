@@ -5,17 +5,19 @@ import ProductCardList from './Components/ProductCardList'
 import ShopList from './pages/ShopList'
 import ShopProduct from './Components/Randem'
 import ProductCard from './Components/ProductCard'
+import HomeSlider2 from './Components/HomeSlider2'
 
 function App() {
 
   return (
     <>
 
-    <Layout/>
+    {/* <Layout/> */}
     {/* <ShopList/> */}
     {/* <ProductCard/> */}
-      
+    <HomeSlider2/>
     </>
+      
     
 
   )

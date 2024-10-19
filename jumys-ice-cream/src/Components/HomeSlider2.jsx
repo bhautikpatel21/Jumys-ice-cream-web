@@ -9,7 +9,7 @@ const HomeSlider2 = () => {
   return (
     <div
       className="w-full h-auto flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 p-4 md:p-8 relative lg:pt-24"
-      id="slider"
+      id="slider2"
     >
       {/* Content Section */}
       <div className="flex-1 max-w-lg">
@@ -60,6 +60,12 @@ const HomeSlider2 = () => {
         </div>
       </div>
       <img className='mt-80 ml-44 absolute right-0 bottom-3' src={leaf2} alt="not found" />
+      <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center left-36 -ml-10 bottom-10">
+        <div>
+            <h1 className="text-red-600 text-8xl font-Playball ml-7">2</h1>
+            <div className="h-1 w-28 bg-red-500"></div>
+        </div>
+      </div>
     </div>
   );
 };

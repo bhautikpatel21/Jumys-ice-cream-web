@@ -164,8 +164,20 @@ underline-animate {
 
 /* ||||||||||||||||||||||| HOME ||||||||||||||||||||||||||| */
 
-#slider {
+#slider1 {
   background-image: url('./assets/slider1-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#slider2 {
+  background-image: url('./assets/slider2-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#slider3 {
+  background-image: url('./assets/slider3-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -175,6 +187,13 @@ underline-animate {
   line-height: 65px;
   font-weight: 700;
   font-size: 50px;
+}
+
+#Nav-text3 {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 45px;
 }
 
 .home-bt-shop {

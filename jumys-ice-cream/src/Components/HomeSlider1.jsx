@@ -6,19 +6,16 @@ import spin from "../assets/asset 4.svg";
 const HomeSlider1 = () => {
   return (
     <div
-      className="w-full h-auto flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 p-4 md:p-8 relative lg:pt-24"
-      id="slider"
+      className="w-full flex flex-col md:flex-row justify-center items-center gap-8 p-4 md:p-8 relative lg:pt-24"
+      id="slider1"
     >
       {/* Content Section */}
       <div className="flex-1 max-w-lg">
-        <h4 className="text-lg md:text-xl font-semibold font-serif">ICE CREAM SMILES</h4>
-        <h1
-          className="text-xl md:text-3xl font-bold mt-2 md:mt-4"
-          id="Nav-text"
-        >
+        <h4 className="text-lg md:text-xl font-semibold font-serif text-center md:text-left">ICE CREAM SMILES</h4>
+        <h1 className="text-xl md:text-3xl font-bold mt-2 md:mt-4 text-center md:text-left" id="Nav-text">
           Frosty Delights: Treat Yourself To Creamy
         </h1>
-        <div className="mt-4 flex flex-col md:flex-row gap-4">
+        <div className="mt-4 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
           <button className="home-bt-shop duration-200 px-8 py-3 text-base md:text-lg">
             Shop Now
           </button>
@@ -29,29 +26,39 @@ const HomeSlider1 = () => {
       </div>
 
       {/* Image Section */}
-      <div className="max-w-xs md:max-w-sm relative mx-12">
-        <div className="">
-          <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center  -ml-14 mt-20">
-            <img className="spin_of" src={spin} alt="" />
-            <h1 id="spin-text">
-              Get 30% <br />
-              off
-            </h1>
-          </div>
+      <div className="max-w-xs md:max-w-sm relative mx-4 md:mx-12">
+        <div className="relative">
+        <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center  -ml-14 mt-20">
+             <img className="spin_of" src={spin} alt="" />
+             <h1 id="spin-text">
+               Get 30% <br />
+               off
+             </h1>
+           </div>
           <div
             className="flip-vertical-right sm:hidden lg:block w-32 h-32 absolute rounded-e-md text-[25px] -right-24"
             id="good-root"
           ></div>
         </div>
-        <div className="max-w-7xl h-[570px]">
+        <div className="max-w-full h-[400px] md:h-[570px]">
           <img
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
             src={slider1_img}
             alt="Ice Cream"
           />
         </div>
       </div>
-      <img className='mt-80 ml-44 absolute right-0 bottom-0' src={img_plant} alt="not found" />
+
+      {/* Decorative Plant Image */}
+      <img className="absolute right-0 bottom-0 max-w-xs md:max-w-sm" src={img_plant} alt="Plant Decoration" />
+
+      {/* Promotional Text */}
+      <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center left-10 bottom-10 md:left-36 md:-ml-10">
+        <div>
+          <h1 className="text-red-600 text-5xl md:text-8xl font-Playball text-center">1</h1>
+          <div className="h-1 w-28 bg-red-500 mx-auto"></div>
+        </div>
+      </div>
     </div>
   );
 };

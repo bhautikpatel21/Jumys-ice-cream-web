@@ -6,12 +6,12 @@ import spin from "../assets/asset 4.svg";
 const HomeSlider1 = () => {
   return (
     <div
-      className="w-full h-auto flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 p-4 md:p-8 relative"
+      className="w-full h-auto flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 p-4 md:p-8 relative lg:pt-24"
       id="slider"
     >
       {/* Content Section */}
       <div className="flex-1 max-w-lg">
-        <h4 className="text-lg md:text-xl font-semibold">ICE CREAM SMILES</h4>
+        <h4 className="text-lg md:text-xl font-semibold font-serif">ICE CREAM SMILES</h4>
         <h1
           className="text-xl md:text-3xl font-bold mt-2 md:mt-4"
           id="Nav-text"
@@ -43,7 +43,7 @@ const HomeSlider1 = () => {
             id="good-root"
           ></div>
         </div>
-        <div className="max-w-7xl">
+        <div className="max-w-7xl h-[570px]">
           <img
             className="w-full h-auto object-cover"
             src={slider1_img}
@@ -51,7 +51,7 @@ const HomeSlider1 = () => {
           />
         </div>
       </div>
-      {/* <img className='mt-80 ml-44' src={img_plant} alt="not found" /> */}
+      <img className='mt-80 ml-44 absolute right-0' src={img_plant} alt="not found" />
     </div>
   );
 };

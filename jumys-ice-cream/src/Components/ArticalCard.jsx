@@ -55,7 +55,7 @@ const ArticleCard = () => {
   );
 
   return (
-    <div className='flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-8'>
+    <div className='flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-8 drop-shadow-2xl'>
       <button
         className="bg-white hover:bg-red-500 rounded-full w-10 h-10 p-2 shadow text-gray-900 hover:text-white"
         onClick={handlePrev}

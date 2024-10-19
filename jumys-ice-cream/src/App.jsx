@@ -13,7 +13,7 @@ function App() {
   return (
     <>
 
-    {/* <Layout/> */}
+    <Layout/>
     {/* <ShopList/> */}
     {/* <ProductCard/> */}
     {/* <HomeSlider2/> */}

@@ -51,6 +51,10 @@ const HomeSlider1 = () => {
             <img className="spin_of" src={spin} alt="" />
             <h1 id="spin-text">Get 30% <br /> off</h1>
           </div>
+          <div
+            className="flip-vertical-right sm:hidden lg:block w-32 h-32 absolute rounded-e-md text-[25px] -right-24"
+            id="good-root"
+          ></div>
           <div className="flip-vertical-right sm:hidden lg:block w-32 h-32 absolute rounded-e-md text-[25px] -right-24"></div>
         </div>
         <div className="max-w-full h-[400px] md:h-[570px]">

@@ -6,7 +6,7 @@ import Img from '../assets/asset 48.svg';
 function Footer() {
   return (
     <footer className="bg-black text-white w-full relative">
-      <div className="px-4 py-10 md:py-16 lg:py-24">
+      <div className="px-4 pb-5 pt-14 md:py-5 lg:pb-5 lg:pt-14">
         {/* Newsletter Section */}
         <div className="flex flex-col items-center text-center mb-8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" id='footer-text1'>
@@ -58,7 +58,8 @@ function Footer() {
               <FaBeer />
             </a>
           </div>
-        </div>
+        </div><br />
+        <h1 className='text-red-200'>Created By Bhautik Dudhat 💻</h1>
       </div>
     </footer>
   );

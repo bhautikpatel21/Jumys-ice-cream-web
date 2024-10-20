@@ -4,6 +4,7 @@ import asset41 from "../assets/asset_41-removebg-preview.png"
 import asset42 from "../assets/asset_42-removebg-preview.png";
 import asset43 from "../assets/asset_43-removebg-preview.png";
 import asset44 from "../assets/asset_44-removebg-preview.png";
+import { NavLink,Outlet } from "react-router-dom";
 
 const IceCreamCard = () => {
   return (
@@ -27,7 +28,7 @@ const IceCreamCard = () => {
         </p>
         <div className="flex justify-center">
           <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <FaArrowRight/>
+            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
           </button>
         </div>
       </div>
@@ -51,7 +52,7 @@ const IceCreamCard = () => {
         </p>
         <div className="flex justify-center">
         <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <FaArrowRight/>
+            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
           </button>
         </div>
       </div>
@@ -75,7 +76,7 @@ const IceCreamCard = () => {
         </p>
         <div className="flex justify-center">
         <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <FaArrowRight/>
+            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
           </button>
         </div>
       </div>
@@ -99,7 +100,7 @@ const IceCreamCard = () => {
         </p>
         <div className="flex justify-center">
         <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <FaArrowRight/>
+            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
           </button>                           
         </div>
       </div>

@@ -92,7 +92,6 @@ const Home = () => {
         </h1>
       </div>
 
-
       {/* Demo Slider */}
       <List_Renderingg /><br /> <br />
 

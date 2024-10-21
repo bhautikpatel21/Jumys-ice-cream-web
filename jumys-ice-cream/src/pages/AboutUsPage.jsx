@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import backgroundImage from "../assets/asset 50.jpeg";
 import iceCreamImage1 from '../assets/asset 64.jpg';
 import iceCreamImage2 from '../assets/asset 65.jpg';
@@ -8,12 +8,21 @@ import avtar2 from "../assets/avatar-2.jpg";
 import avtar3 from "../assets/avatar-3.jpg";
 import ScrollToTopButton from "../Components/TopButton";
 import ArticleCard from "../Components/ArticalCard";
-import Footer2  from "../Components/Footer2";
+import Footer2 from "../Components/Footer2";
 import NumberCounter from "../Components/NumberCounter";
 
 const AboutUs = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Delay before the animation starts
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div>
+    <div className={`transition-all duration-700 ${isVisible ? 'fade-in' : 'opacity-0 translate-y-10'}`}>
       {/* Hero Section */}
       <div className="relative w-full h-auto">
         <img
@@ -41,7 +50,7 @@ const AboutUs = () => {
             Once the ingredients have cooled enough, it's time to pour them into molds and freeze in a brine bath. After that, the ice cream sticks are dried and packaged in the freezer in square boxes. From here, this cool ice cream is ready to be delivered to visitors...
           </p>
           <button className="bg-red-600 hover:bg-black text-white px-6 py-3 rounded-full flex items-center duration-300">
-            View More <ArrowRight className="ml-2"/>
+            View More <ArrowRight className="ml-2" />
           </button>
         </div>
         <div className="w-full md:w-1/2 overflow-hidden">
@@ -49,7 +58,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <NumberCounter/> 
+      <NumberCounter />
 
       {/* Manufacture 2 */}
       <div className="flex flex-col md:flex-row items-center my-5 py-10 px-5 md:px-10 lg:px-20 gap-4 md:gap-10">
@@ -63,7 +72,7 @@ const AboutUs = () => {
             On hot summer days like today, in addition to a glass of cool beverage, a glass of ice cream can also help relieve some of the heat. Ice cream is popular not only among children but also loved by many people of many different ages…
           </p>
           <button className="bg-red-600 hover:bg-black text-white px-6 py-3 rounded-full flex items-center duration-300">
-            View More <ArrowRight className="ml-2"/>
+            View More <ArrowRight className="ml-2" />
           </button>
         </div>
       </div>

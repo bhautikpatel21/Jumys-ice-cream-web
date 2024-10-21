@@ -3,6 +3,7 @@ import slider2_img from "../assets/asset 8.png";
 import leaf from "../assets/asset 10.png";
 import leaf2 from "../assets/asset 9.png";
 import spin from "../assets/asset 4.svg";
+import { NavLink,Outlet } from "react-router-dom";
 
 const HomeSlider2 = () => {
   return (
@@ -17,12 +18,19 @@ const HomeSlider2 = () => {
           Frosty Delights: Treat Yourself To Creamy
         </h1>
         <div className="mt-4 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+
+        <NavLink to="/shop">
           <button className="home-bt-shop duration-200 px-8 py-3 text-base md:text-lg hover:scale-105 hover:bg-red-500 hover:text-white">
             Shop Now
           </button>
+          </NavLink>
+
+          <NavLink to="/shop">
           <button className="home-bt2-shop duration-200 px-8 py-3 text-base md:text-lg hidden lg:block hover:scale-105 hover:bg-red-500 hover:text-white">
             See more
           </button>
+          </NavLink>
+
         </div>
       </div>
 
@@ -55,6 +63,7 @@ const HomeSlider2 = () => {
           <div className="h-1 w-28 bg-red-500 mx-auto"></div>
         </div>
       </div>
+      <Outlet/>
     </div>
   );
 };

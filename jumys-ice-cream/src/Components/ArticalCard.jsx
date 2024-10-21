@@ -32,12 +32,12 @@ const ArticleCard = () => {
     },
     {
       image: assent46,
-      title: "Sustainable Ice Cream Packaging Flavor Trends",
+      title: "Sustainable Packaging Flavor Trends",
       date: "February 4, 2024",
     },
     {
       image: assent47,
-      title: "How To Market Seasonal Ice Cream Flavors",
+      title: "How To Market Seasonal Flavors",
       date: "December 10, 2023",
     },
   ];

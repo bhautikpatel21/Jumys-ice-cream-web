@@ -63,7 +63,7 @@ const Home = () => {
         <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden flex justify-center relative' id='IC'>
           <p className='absolute mt-28 font-bold text-white z-30 text-center w-full md:mt-10'>
             <i className='hello-heading font-Playball text-[20px] md:text-[30px] lg:text-[40px]'>hello</i><br />
-            <span className='text-[30px] md:text-[45px] lg:text-[55px] -ml-14 leading-tight'>SUMMER!</span>
+            <span className='text-[30px] md:text-[45px] lg:text-[55px] -ml-14 leading-tight font-serif'>SUMMER!</span>
           </p>
           <img className='w-full h-full hover:scale-110 transition-transform duration-1000' src={img17} alt="not found" />
         </div>
@@ -77,7 +77,7 @@ const Home = () => {
         </div>
 
         <div className='w-full md:w-1/3 aspect-[1.3] h-auto overflow-hidden flex justify-center items-center relative' id='IC'>
-          <p className='absolute font-bold text-white mt-40 z-40 text-center w-full md:mt-10'>
+          <p className='absolute font-serif font-black text-white mt-40 z-40 text-center w-full md:mt-10'>
             <span className='text-[30px] md:text-[45px] lg:text-[55px] leading-tight '>CREAMY</span><br />
             <i className='hello-heading text-[20px] md:text-[30px] '>enjoy</i>
           </p>
@@ -86,7 +86,7 @@ const Home = () => {
       </div>
 
       <div className='w-full h-auto font-bold flex flex-col justify-center items-center mt-12 px-4 sm:px-6 md:px-8 lg:px-12' id='text-card-ice-cream'>
-        <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-center'>
+        <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-center -mb-10'>
           Best Ice Cream Shops
         </h1>
       </div>

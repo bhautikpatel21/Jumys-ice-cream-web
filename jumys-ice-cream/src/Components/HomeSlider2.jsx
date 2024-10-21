@@ -39,7 +39,7 @@ const HomeSlider2 = () => {
         <div className="relative">
           <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center -ml-14 mt-44">
             <img className="spin_of" src={spin} alt="" />
-            <h1 id="spin-text">Get 30% <br /> off</h1>
+            <h1 className="font-serif" id="spin-text">Get 30% <br /> off</h1>
           </div>
 
           <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center -ml-56">

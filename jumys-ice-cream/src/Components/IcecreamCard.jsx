@@ -27,9 +27,11 @@ const IceCreamCard = () => {
           And Bitterness That Is Very...
         </p>
         <div className="flex justify-center">
+        <NavLink to="/shop"> 
           <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
+            <FaArrowRight/>
           </button>
+          </NavLink>
         </div>
       </div>
 
@@ -51,9 +53,11 @@ const IceCreamCard = () => {
           as other strawberry-flavored milk...
         </p>
         <div className="flex justify-center">
+        <NavLink to="/shop"> 
         <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
+           <FaArrowRight/>
           </button>
+          </NavLink>
         </div>
       </div>
 
@@ -75,9 +79,11 @@ const IceCreamCard = () => {
           combined with the fatty milk that is...
         </p>
         <div className="flex justify-center">
+        <NavLink to="/shop"> 
         <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
+           <FaArrowRight/>
           </button>
+          </NavLink>
         </div>
       </div>
 
@@ -99,9 +105,11 @@ const IceCreamCard = () => {
           butter to create surprisingly...
         </p>
         <div className="flex justify-center">
+        <NavLink to="/shop">
         <button className=" bg-[#ffffff] hover:bg-[#ff0000] rounded-full p-2 shadow text-gray-950 hover:text-gray-100 transition">
-            <NavLink to="/shop"> <FaArrowRight/> </NavLink>
-          </button>                           
+            <FaArrowRight/> 
+          </button>   
+          </NavLink>                        
         </div>
       </div>
     </div>

@@ -783,7 +783,6 @@ underline-animate {
   animation: fade-in 0.8s ease-in-out;
 }
 
-/* ////////////////////////////////////////////////////////////////// */
 /* ShopList.css */
 
 .shopbg {
@@ -844,4 +843,37 @@ underline-animate {
 a:hover {
   transition: color 0.3s;
   color: #ff0000; 
+}
+
+
+/* ///////////////////////////////// */
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Slide-up Animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out forwards;
 }

@@ -54,8 +54,6 @@ const Home = () => {
         </div>
       </div><br /><br />
 
-
-
       {/* 3 ice-creame-information */}
 
       <div className='w-full h-auto flex flex-wrap px-4' id='topIce'>

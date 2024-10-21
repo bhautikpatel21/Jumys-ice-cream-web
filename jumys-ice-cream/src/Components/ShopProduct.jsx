@@ -359,10 +359,10 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selected
 
   const IconMenu = () => (
     <div className='absolute top-2 right-2 flex flex-col gap-5'>
-      {[{ icon: <FaShoppingCart />, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
+      {[{ icon: <FaShoppingCart/>, id: 'cart' }, { icon: <FaSearch />, id: 'search' }, { icon: <FaHeart />, id: 'heart' }, { icon: <FaShareAlt />, id: 'share' }]
         .map(({ icon, id }) => (
           <div className='w-8 h-8 bg-white rounded-full flex justify-center items-center' key={id}>
-            <Button variant="outline-secondary" className="p-0">{icon}</Button>
+            <Button variant="outline-secondary" className="p-0 hover:text-red-500">{icon}</Button>
           </div>
         ))}
     </div>
@@ -428,7 +428,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selected
         <>
           <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
             {currentProducts.map((product, index) => (
-              <NavLink to={`/product/${product.ProductId}`} key={index}>
+              <NavLink to={`/product/${product.ProductId}`} key={index} className="hover:text-black">
                 <Card style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
                   <div className='relative'
                     onMouseEnter={() => {

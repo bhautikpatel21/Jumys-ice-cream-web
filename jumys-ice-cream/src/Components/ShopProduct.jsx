@@ -3,7 +3,6 @@ import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaStar, FaList, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import ProductCardList from './ProductCardList';
-// import ProductCard from './ProductCard';
 import img1B from "../assets/asset 66.webp";
 import img1A from "../assets/asset 67.webp";
 import img2A from "../assets/asset 34.webp";
@@ -336,11 +335,6 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selected
     };
   }, []);
 
-  // const filteredProducts = data.filter(product => {
-  //   const priceValue = Number(product.price.replace(/[^0-9.-]+/g, ""));
-  //   return priceValue >= minPrice && priceValue <= maxPrice && (selectedColor ? product.color.toLowerCase() === selectedColor.toLowerCase() : true);
-  // }); 
-
   const filteredProducts = data.filter(product => {
     const priceValue = Number(product.price.replace(/[^0-9.-]+/g, ""));
     return (
@@ -357,7 +351,6 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selected
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = selectedProduct ? [selectedProduct] : filteredProducts.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage);
-  // const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const handlePageChange = (page) => {

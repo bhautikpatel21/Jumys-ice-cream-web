@@ -17,7 +17,7 @@ const AboutUs = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 100); // Delay before the animation starts
+    }, 100); 
     return () => clearTimeout(timer);
   }, []);
 

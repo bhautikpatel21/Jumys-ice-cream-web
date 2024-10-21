@@ -6,17 +6,15 @@ import img2 from "../assets/asset 2.jpeg";
 import img3 from "../assets/asset 3.jpeg";
 import HomeFooter from "../Components/Footer2";
 import ScrollToTopButton from "../Components/TopButton";
-// import './BlogCard.css'; // Import CSS for animations
 
 const BlogCard = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    // Trigger animation when the component is mounted
     const timer = setTimeout(() => {
       setIsPageLoaded(true);
-    }, 100); // Adjust the duration as needed
-
+    }, 100); 
+    
     return () => clearTimeout(timer);
   }, []);
 

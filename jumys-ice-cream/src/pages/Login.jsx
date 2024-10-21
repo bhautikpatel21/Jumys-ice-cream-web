@@ -2,17 +2,15 @@ import React, { useState, useEffect } from 'react';
 import backgroundImage from "../assets/asset 50.jpeg";
 import { FaUser } from 'react-icons/fa';
 import Footer2 from '../Components/Footer2';
-// import './Login.css'; // Assuming you add the styles in a separate CSS file
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    // Trigger the fade-in animation when the component is mounted
     const timer = setTimeout(() => {
       setIsPageLoaded(true);
-    }, 100); // Delay to allow for the transition
+    }, 100); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -23,7 +21,6 @@ const Login = () => {
 
   return (
     <div className={`relative ${isPageLoaded ? 'fade-in' : ''}`}>
-      {/* Background Image Section */}
       <div className="relative w-full h-60 sm:h-80 md:h-[400px]">
         <img
           src={backgroundImage}
@@ -42,7 +39,6 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Login Forms */}
       <div className="flex flex-col md:flex-row gap-8 p-6 md:p-10 mt-10">
         {/* Login */}
         <div className={`p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up`}>
@@ -195,7 +191,7 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Footer2 */}
+      {/* Footer */}
       <Footer2 />
     </div>
   );

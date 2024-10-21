@@ -1,7 +1,6 @@
 import React from 'react';
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import Navbar from '../Components/Navbar';
-import Shop from './Shop';
 import ProductCard from '../Components/ProductCard';
 import ShopList from './ShopList';
 import Login from './Login';
@@ -14,9 +13,6 @@ import Faq2 from './Faq2'
 import SignUp from './SignUp';
 import Wishlist from './Wishlist';
 import CartPage from './CartPage';
-
-
-// Outlet
 
 const PageRouter = createBrowserRouter([
     {

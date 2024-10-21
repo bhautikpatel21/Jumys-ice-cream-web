@@ -16,7 +16,6 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
   <li className="mb-1">
     <div className="flex items-center justify-between">
       <div className="flex items-center">
-        {/* <input type="checkbox" id={category.name} className="mr-2" /> */}
         <label htmlFor={category.name} className="text-gray-700">{category.name}</label>
       </div>
       {category.subcategories.length > 0 && (
@@ -27,7 +26,6 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
       <ul className="pl-6 mt-1">
         {category.subcategories.map((subcategory, index) => (
           <li key={index} className="flex items-center mb-1">
-            {/* <input type="checkbox" id={subcategory.name} className="mr-2" /> */}
             <label htmlFor={subcategory.name} className="text-gray-700">{subcategory.name}</label>
           </li>
         ))}
@@ -43,12 +41,12 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProduct
   const [selectedSize, setSelectedSize] = useState(null);
 
   const handleProductSelect = (productId) => {
-    onProductSelect(productId); // Pass the selected product ID to the parent component
+    onProductSelect(productId);
   };
 
   const handleSizeChange = (size) => {
     setSelectedSize(size);
-    onSizeSelect(size); // Pass the selected size to the parent component
+    onSizeSelect(size);
   };
   
   const handleMinChange = (e) => {
@@ -86,13 +84,11 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProduct
   };  
 
   useEffect(() => {
-    // Call the onPriceChange function to pass the price range to the parent
     onPriceChange(minPrice, maxPrice);
   }, [minPrice, maxPrice]);
 
   return (
     <div className="p-4 rounded-lg w-full max-w-xs mx-auto">
-      {/* Categories Section */}
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Available Ice-Cream</h3>
         <ul>
@@ -107,7 +103,6 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProduct
         </ul>
       </div>
 
-      {/* Price section */}
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Price</h3>
         <input
@@ -121,7 +116,6 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProduct
         <p className="">Range: ${minPrice}.00 - ${maxPrice}.00</p>
       </div>
 
-      {/* Color Section */}
       <div className="mb-4 flex flex-col">
         <h3 className="text-lg font-semibold mb-2">Color</h3>
         <ul className="flex flex-col ">
@@ -155,7 +149,6 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProduct
         </ul>
       </div>
 
-      {/* Featured Products Section */}
         <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Featured Products</h3>
         <ul>

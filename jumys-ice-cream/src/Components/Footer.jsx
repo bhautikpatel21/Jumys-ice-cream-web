@@ -1,5 +1,4 @@
 import React from 'react';
-import Footerlogo from "../assets/asset 0.svg";
 import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
 import Img from '../assets/asset 48.svg';
 
@@ -7,7 +6,6 @@ function Footer() {
   return (
     <footer className="bg-black text-white w-full relative">
       <div className="px-4 pb-5 pt-14 md:py-5 lg:pb-5 lg:pt-14">
-        {/* Newsletter Section */}
         <div className="flex flex-col items-center text-center mb-8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" id='footer-text1'>
             Sign up for our newsletter!
@@ -30,10 +28,8 @@ function Footer() {
           </div>
         </div>
 
-        {/* Divider Line */}
         <div className='w-full h-px bg-gray-800 opacity-80 mb-8'></div>
 
-        {/* Footer Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-4 md:space-x-6">
             <img id='logo' className='w-20 md:w-24' src={Img} alt="Logo" />

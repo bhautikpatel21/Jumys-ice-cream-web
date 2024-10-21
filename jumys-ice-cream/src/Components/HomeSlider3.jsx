@@ -33,7 +33,6 @@ const HomeSlider3 = () => {
         </div>
       </div>
 
-      {/* Decorative Leaf 1 */}
       <div className="absolute w-32 h-32 flex justify-center items-center right-20 top-24 md:right-16 md:top-20 animate-scale-up">
         <img src={leaf4} alt="Leaf decoration" />
       </div>
@@ -50,15 +49,11 @@ const HomeSlider3 = () => {
         />
       </div>
 
-      {/* Decorative Leaf 2 */}
       <img className='hidden md:block absolute right-0 bottom-3 animate-fade-in' src={leaf2} alt="Not found" />
-       
-      {/* Decorative Leaf 3 */}
       <div className="absolute w-32 h-32 flex justify-center items-center left-0 -ml-10 bottom-44 md:bottom-10">
         <img src={leaf3} alt="Leaf decoration" />
       </div>
 
-      {/* Promotional Text with Bounce Animation */}
       <div className="absolute w-32 h-32 flex justify-center items-center left-36 -ml-10 bottom-10 animate-bounce">
         <div className="text-center">
           <h1 className="text-red-600 text-5xl md:text-8xl font-Playball">3</h1>

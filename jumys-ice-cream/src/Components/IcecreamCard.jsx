@@ -112,6 +112,7 @@ const IceCreamCard = () => {
           </NavLink>                        
         </div>
       </div>
+      <Outlet/>
     </div>
   );
 };

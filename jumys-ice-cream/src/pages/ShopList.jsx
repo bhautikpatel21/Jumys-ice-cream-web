@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Pagination, Stack, Button } from '@mui/material';
 import FilterComponent from "../Components/FilterComponent";
-import ProductCardList from "../Components/ProductCardList";
 import Footer from "../Components/Footer";
 import ShopProduct from '../Components/ShopProduct';
 import ScrollToTopButton from "../Components/TopButton";
-// import './ShopList.css'; // Assuming you add the styles in a separate CSS file
 
 const ShopList = () => {
   const [showFilter, setShowFilter] = useState(false);
@@ -18,14 +16,12 @@ const ShopList = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Scroll to the top when the component is mounted
     window.scrollTo(0, 0);
 
-    // Simulate a loading delay
     const timer = setTimeout(() => {
-      setIsLoading(false); // Hide the loader and display the content
-      setIsPageLoaded(true); // Trigger the fade-in animation for the content
-    }, 2000); // 2-second delay for the animation
+      setIsLoading(false); 
+      setIsPageLoaded(true);
+    }, 2000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -62,14 +58,12 @@ const ShopList = () => {
           </div>
 
           <div className="flex flex-col md:flex-row p-4">
-            {/* Toggle Button for Filter on Small Screens */}
             <div className="md:hidden mb-4 scale-up">
               <Button variant="outlined" onClick={toggleFilter}>
                 {showFilter ? 'Hide Filters' : 'Show Filters'}
               </Button>
             </div>
 
-            {/* Filter Section */}
             <div className={`md:w-1/3 ${showFilter ? 'block' : 'hidden'} md:block mb-4 mt-12 md:mb-0 scale-up`}>
               <FilterComponent
                 onColorSelect={setSelectedColor}
@@ -79,7 +73,6 @@ const ShopList = () => {
               />
             </div>
 
-            {/* Product List Section */}
             <div className="md:w-2/3 scale-up">
               <ShopProduct
                 selectedColor={selectedColor}

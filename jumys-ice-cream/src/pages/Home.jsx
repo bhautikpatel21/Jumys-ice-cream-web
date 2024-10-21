@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
 import spin from '../assets/asset 4.svg'
 import cup from '../assets/asset 16.png'
 import img17 from '../assets/asset 17.jpeg'
@@ -92,17 +91,13 @@ const Home = () => {
         </h1>
       </div>
 
-      {/* Demo Slider */}
       <List_Renderingg /><br /> <br />
 
 
-      {/* Home Second Slider */}
       <HomeSecond_slider />
 
-      {/* 4 ice-cream-flewers */}
       <IceCreamCard />
 
-      {/* Artical Card heading */}
       <div className='w-full h-auto flex flex-col justify-center items-center py-6 sm:py-8 md:py-10 lg:py-12'>
         <p className='Our-news  text-lg sm:text-xl md:text-2xl lg:text-3xl italic font-semibold'>
           Our News
@@ -112,13 +107,10 @@ const Home = () => {
         </p>
       </div>
 
-      {/* Testies update Cards */}
       <ArticleCard /> <br /><br />
 
-      {/* Footer */}
       <Footer />
 
-      {/* Scroll To Top Button */}
       <ScrollToTopButton />
 
     </>

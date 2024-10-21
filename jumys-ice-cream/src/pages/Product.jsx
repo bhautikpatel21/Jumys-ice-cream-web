@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ProductCard from "../Components/ProductCard";
 import Footer2 from "../Components/Footer2";
 import HomeProductCardMid from "../Components/Card";
-// import Top from "../Components/Top";
 
 const Product = () => {
   const [activeTab, setActiveTab] = useState('reviews');
@@ -13,7 +12,6 @@ const Product = () => {
 
   return (
     <div>
-    {/* <Top/> */}
       <ProductCard />
 
       <div className="my-5">

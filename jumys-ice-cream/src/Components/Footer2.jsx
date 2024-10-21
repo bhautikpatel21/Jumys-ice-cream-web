@@ -62,8 +62,7 @@ function HomeFooter() {
             <MDBCol md="6" lg="3">
               <h6 className="text-xl md:text-2xl lg:text-3xl py-5">About Us</h6>
               <ul className="list-disc space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-red-600
-                                ">Our Story</a></li>
+                <li><a href="#" className="hover:text-red-600">Our Story</a></li>
                 <li><a href="#" className="hover:text-red-600">Contact</a></li>
                 <li><a href="#" className="hover:text-red-600">Affiliate Program</a></li>
                 <li><a href="#" className="hover:text-red-600">Referral Program</a></li>

@@ -237,12 +237,10 @@ const ProductCardList = () => {
 
   ];
 
-  // Calculate the index of the first product on the current page
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = Product.slice(indexOfFirstProduct, indexOfLastProduct);
 
-  // Calculate total pages
   const totalPages = Math.ceil(Product.length / productsPerPage);
 
   const handlePageChange = (page) => {
@@ -273,7 +271,6 @@ const ProductCardList = () => {
 
           {/* Product Details */}
           <div className="flex flex-col justify-between w-full">
-            {/* Product Title, Rating, and Price */}
             <div>
               <h2 className="text-3xl font-bold text-[#000] hover:text-[#ff0000] duration-500 cursor-pointer">
                 {product.name}

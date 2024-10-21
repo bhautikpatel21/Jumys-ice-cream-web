@@ -12,9 +12,9 @@ const HomeSlider = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentSlider((prev) => (prev < 3 ? prev + 1 : 1));
-    }, 4000); // Change slides every 4 seconds
+    }, 4000); 
 
-    return () => clearTimeout(timer); // Cleanup on unmount
+    return () => clearTimeout(timer);
   }, [currentSlider]);
 
   return (
@@ -29,7 +29,6 @@ const HomeSlider = () => {
 const HomeSlider1 = () => {
   return (
     <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8 p-4 md:p-8 relative lg:pt-24 animate-fade-in" id="slider1">
-      {/* Content Section */}
       <div className="flex-1 max-w-lg text-center md:text-left">
         <h4 className="text-lg md:text-xl font-semibold font-serif">ICE CREAM SMILES</h4>
         <h1 className="text-xl md:text-3xl font-bold mt-2 md:mt-4" id="Nav-text">
@@ -52,7 +51,6 @@ const HomeSlider1 = () => {
         </div>
       </div>
 
-      {/* Image Section */}
       <div className="max-w-xs md:max-w-sm relative mx-4 md:mx-12">
         <div className="relative">
           <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center -ml-14 mt-20">
@@ -70,10 +68,8 @@ const HomeSlider1 = () => {
         </div>
       </div>
 
-      {/* Decorative Plant Image */}
       <img className="absolute right-0 bottom-0 max-w-xs md:max-w-sm" src={img_plant} alt="Plant Decoration" />
 
-      {/* Promotional Text with Bounce Animation */}
       <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center left-10 bottom-10 md:left-36 md:-ml-10 animate-bounce">
         <div>
           <h1 className="text-red-600 text-5xl md:text-8xl font-Playball text-center">1</h1>

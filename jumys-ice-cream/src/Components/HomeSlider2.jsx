@@ -53,10 +53,8 @@ const HomeSlider2 = () => {
         </div>
       </div>
 
-      {/* Decorative Plant Image */}
       <img className="absolute right-0 bottom-0 max-w-xs md:max-w-sm" src={leaf2} alt="Plant Decoration" />
 
-      {/* Promotional Text with Bounce Animation */}
       <div className="w-32 h-32 absolute rounded-e-md text-[25px] flex justify-center items-center left-10 bottom-10 md:left-36 md:-ml-10 animate-bounce">
         <div>
           <h1 className="text-red-600 text-5xl md:text-8xl font-Playball text-center">2</h1>

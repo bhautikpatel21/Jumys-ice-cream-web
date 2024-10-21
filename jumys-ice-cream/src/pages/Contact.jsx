@@ -5,23 +5,20 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiLogoBehance } from "react-icons/bi";
 import ScrollToTopButton from "../Components/TopButton";
 import Footer from "../Components/Footer";
-// import './Contact.css'; // Import CSS for animations
 
 function Contact() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    // Trigger animation when the component is mounted
     const timer = setTimeout(() => {
       setIsPageLoaded(true);
-    }, 100); // Adjust the duration as needed
+    }, 100); 
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className={`contact ${isPageLoaded ? 'fade-in' : ''}`}>
-      {/* Background Image Section */}
       <div className="relative w-full h-60 sm:h-80 md:h-96">
         <img
           src={backgroundImage}
@@ -40,12 +37,9 @@ function Contact() {
         </div>
       </div>
 
-      {/* Map Component */}
       <Map />
 
-      {/* Contact Information and Form Section */}
       <div className={`flex flex-col justify-center gap-16 md:flex-row px-4 py-10 md:px-10 md:py-20 ${isPageLoaded ? 'slide-up' : ''}`}>
-        {/* Contact Information */}
         <div className="flex-1 max-w-md">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <div className="text-xl mb-4">
@@ -79,7 +73,6 @@ function Contact() {
           </div>
         </div>
 
-        {/* Contact Form */}
         <div className="flex-1 max-w-md">
           <form className="space-y-4">
             <div>

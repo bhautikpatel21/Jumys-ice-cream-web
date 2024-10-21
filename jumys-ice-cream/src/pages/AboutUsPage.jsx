@@ -34,7 +34,7 @@ const AboutUs = () => {
           <div className="text-center text-black bg-opacity-50 p-6 rounded-lg">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold" id="about-page-name">About Us</h1>
             <p className="mt-2 text-sm sm:text-base md:text-lg">
-              <a href="#" className="text-black hover:text-red-500">Home</a> <span className="text-white">/</span>
+              <a href="#" className="text-black hover:text-red-500">Home</a> <span className="text-black">/</span>
               <span className="text-red-500">About Us</span>
             </p>
           </div>

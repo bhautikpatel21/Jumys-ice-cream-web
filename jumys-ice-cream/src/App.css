@@ -984,3 +984,19 @@ a:hover {
 }
 
 /* //////////////////////////////// */
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95); /* Slightly smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Normal size */
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out; /* Duration of fade-in effect */
+}

@@ -941,3 +941,44 @@ a:hover {
 .slide-up {
   animation: slideUp 0.5s ease-in-out forwards;
 }
+
+/* /////////////////////////////////// */
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out; /* Duration of fade-in */
+}
+
+/* Slide-up Animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Initial State of Slide-up */
+.slide-up {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start below */
+  transition: all 0.5s ease-in-out; /* Duration for smooth effect */
+}
+
+/* Active State for Slide-up */
+.slide-up.active {
+  opacity: 1; /* Show */
+  transform: translateY(0); /* Move to original position */
+}

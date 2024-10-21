@@ -767,3 +767,18 @@ underline-animate {
   animation: bounce 1s infinite;
 }
 
+/* CSS for Fade-In Animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slide up slightly on entry */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-animation {
+  animation: fade-in 0.8s ease-in-out;
+}

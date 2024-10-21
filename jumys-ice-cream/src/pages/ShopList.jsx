@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pagination, Stack, Button } from '@mui/material';
 import FilterComponent from "../Components/FilterComponent";
 import ProductCardList from "../Components/ProductCardList";
@@ -14,7 +13,12 @@ const ShopList = () => {
   const [maxPrice, setMaxPrice] = useState(45); 
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedProductId, setSelectedProductId] = useState(null);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
+  useEffect(() => {
+    // Trigger the animation by setting the state to true when the component mounts
+    setIsPageLoaded(true);
+  }, []);
 
   const handlePriceChange = (min, max) => {
     setMinPrice(min);
@@ -26,7 +30,7 @@ const ShopList = () => {
   };
 
   return (
-    <div>
+    <div className={isPageLoaded ? 'fade-in-animation' : ''}>
       <ScrollToTopButton />
       <div className="relative w-full h-[400px]" id="shopbg">
         <div className="absolute inset-0 flex items-center justify-center">
@@ -49,17 +53,28 @@ const ShopList = () => {
           </Button>
         </div>
 
-        {/* Information */}
+        {/* Filter Section */}
         <div className={`md:w-1/3 ${showFilter ? 'block' : 'hidden'} md:block mb-4 mt-12 md:mb-0`}>
-        <FilterComponent onColorSelect={setSelectedColor} onPriceChange={handlePriceChange} onSizeSelect={setSelectedSize} onProductSelect={setSelectedProductId}/>
+          <FilterComponent
+            onColorSelect={setSelectedColor}
+            onPriceChange={handlePriceChange}
+            onSizeSelect={setSelectedSize}
+            onProductSelect={setSelectedProductId}
+          />
         </div>
 
-        {/* Product List */}
+        {/* Product List Section */}
         <div className="md:w-2/3">
-          {/* <ProductCardList/> */}
-          <ShopProduct selectedColor={selectedColor} minPrice={minPrice} maxPrice={maxPrice} selectedSize={selectedSize} selectedProductId={selectedProductId} />
-          </div>
+          <ShopProduct
+            selectedColor={selectedColor}
+            minPrice={minPrice}
+            maxPrice={maxPrice}
+            selectedSize={selectedSize}
+            selectedProductId={selectedProductId}
+          />
+        </div>
       </div>
+
       <Footer />
     </div>
   );

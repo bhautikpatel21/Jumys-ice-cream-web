@@ -31,7 +31,7 @@ const HomeSlider1 = () => {
     <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8 p-4 md:p-8 relative lg:pt-24 animate-fade-in" id="slider1">
       <div className="flex-1 max-w-lg text-center md:text-left">
         <h4 className="text-lg md:text-xl font-semibold font-serif">ICE CREAM SMILES</h4>
-        <h1 className="text-xl md:text-3xl font-bold mt-2 md:mt-4" id="Nav-text">
+        <h1 className="text-xl md:text-3xl font-bold mt-2 md:mt-4" id="Nav-text3">
           Frosty Delights: Treat Yourself To Creamy
         </h1>
         <div className="mt-4 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
@@ -63,7 +63,7 @@ const HomeSlider1 = () => {
           ></div>
           <div className="flip-vertical-right sm:hidden lg:block w-32 h-32 absolute rounded-e-md text-[25px] -right-24"></div>
         </div>
-        <div className="max-w-full h-[400px] md:h-[570px]">
+        <div className="max-w-full h-[400px] lg:-mb-8  md:h-[570px]">
           <img className="w-full h-full object-cover" src={slider1_img} alt="Ice Cream" />
         </div>
       </div>

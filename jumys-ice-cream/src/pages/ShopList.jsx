@@ -44,7 +44,7 @@ const ShopList = () => {
       ) : (
         <div className={isPageLoaded ? 'fade-in-animation slide-in' : ''}>
           <ScrollToTopButton />
-          <div className="relative w-full h-[400px]" id="shopbg">
+          <div className="relative w-full h-[400px] object-cover" id="shopbg">
             <div className="absolute inset-0 flex items-center justify-center bounce-in">
               <div className="flex flex-col text-center items-center justify-center text-white mt-28">
                 <h1 className="text-4xl font-bold text-black">Shop List</h1>

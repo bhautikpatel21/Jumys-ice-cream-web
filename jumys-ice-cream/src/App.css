@@ -785,12 +785,6 @@ underline-animate {
 
 /* ShopList.css */
 
-.shopbg {
-  background: linear-gradient(135deg, rgba(243, 156, 18, 0.6), rgba(231, 76, 60, 0.6)),
-              url('https://example.com/your-image.jpg') center/cover no-repeat;
-  height: 400px;
-}
-
 .loading-spinner {
   display: flex;
   align-items: center;

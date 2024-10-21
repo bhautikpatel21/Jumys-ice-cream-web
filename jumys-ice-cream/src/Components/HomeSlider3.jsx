@@ -43,7 +43,7 @@ const HomeSlider3 = () => {
           <img src={leaf} alt="Leaf decoration" />
         </div>
         <img
-          className="w-full h-auto md:h-[570px] object-cover"
+          className="w-full h-auto md:h-[570px] lg:-mb-8 object-cover"
           src={slider3_img}
           alt="Ice Cream"
         />

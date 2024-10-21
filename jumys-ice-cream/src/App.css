@@ -784,3 +784,64 @@ underline-animate {
 }
 
 /* ////////////////////////////////////////////////////////////////// */
+/* ShopList.css */
+
+.shopbg {
+  background: linear-gradient(135deg, rgba(243, 156, 18, 0.6), rgba(231, 76, 60, 0.6)),
+              url('https://example.com/your-image.jpg') center/cover no-repeat;
+  height: 400px;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fade-in-animation {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-title {
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+a:hover {
+  transition: color 0.3s;
+  color: #ff0000; 
+}

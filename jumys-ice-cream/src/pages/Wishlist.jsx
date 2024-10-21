@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/asset 50.jpeg";
 import { FaFacebookF, FaTwitter, FaShareAlt, FaEnvelope } from "react-icons/fa";
 import Footer2 from "../Components/Footer2";
+// import './Wishlist.css'; // Assuming you add the styles in a separate CSS file
 
 const Wishlist = () => {
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Trigger the fade-in animation when the component is mounted
+    const timer = setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 100); // Delay to allow for the transition
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="relative">
+    <div className={`relative ${isPageLoaded ? 'fade-in' : ''}`}>
       {/* Background Image Section */}
       <div className="relative w-full h-60 md:h-[400px]">
         <img
@@ -28,7 +40,7 @@ const Wishlist = () => {
       </div>
 
       {/* Wishlist Section */}
-      <div className="flex flex-col md:flex-row justify-between px-4 md:px-10 my-10 md:my-20">
+      <div className={`flex flex-col md:flex-row justify-between px-4 md:px-10 my-10 md:my-20 ${isPageLoaded ? 'slide-up' : ''}`}>
         {/* No Products Message and Share Links */}
         <div className="flex flex-col space-y-4 mb-8 md:mb-0 md:w-1/2">
           <p className="text-base md:text-lg text-gray-600">There Are No Products On The Wishlist!</p>

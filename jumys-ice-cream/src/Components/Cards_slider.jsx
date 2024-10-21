@@ -1,7 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 import React, { useState, useRef } from 'react';
 import Slider from 'react-slick';
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
@@ -34,21 +33,11 @@ const sliderSettings = {
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
-        // {
-        //     breakpoint: 1024,
-        //     settings: {
-        //         slidesToShow: 2,
-        //         slidesToScroll: 1,
-        //         infinite: true,
-        //         dots: true
-        //     }
-        // },
         {
             breakpoint: 1400,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
-             
             }
         },
         {
@@ -57,45 +46,16 @@ const sliderSettings = {
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
         }
     ]
 };
-
-// const IconMenu = () => {
-//     return (
-//       <>
-//     <Card.Body className='z-50 -mt-[310px] ml-64 text-[20px] h-10 '>
-//         <div className="flex gap-4 mt-4 z-40 flex-col">
-
-//           <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2' >
-//           <Button variant="outline-secondary">
-//             <FaShoppingCart/>
-//           </Button>
-//           </div>
-
-//           <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2'>
-//           <Button variant="outline-secondary">
-//             <FaSearch />
-//           </Button>
-//           </div>
-
-//           <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2'>
-//           <Button variant="outline-secondary">
-//             <FaHeart />
-//           </Button>
-//           </div>
-
-//           <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center -mb-2'>
-//           <Button variant="outline-secondary">
-//             <FaShareAlt />
-//           </Button>
-//           </div>
-//         </div>
-//       </Card.Body>
-//       {/* <h1> Bhautik Dudhat </h1> */}
-//       </>
-//     )
-//   }
 
 const List_Renderingg = () => {
     const [productData] = useState([
@@ -104,56 +64,56 @@ const List_Renderingg = () => {
             price: 1000,
             img: item1,
             img2: item2,
-            re : '1 Review'
+            re: '1 Review'
         },
         {
             name: 'Poe Apple Crisp',
             price: 1300,
             img: item3,
             img2: item4,
-            re : '1 Review'
+            re: '1 Review'
         },
         {
             name: 'Cookies In Cream',
             price: 1300,
             img: item5,
             img2: item6,
-            re : '0 Review'
+            re: '0 Review'
         },
         {
             name: 'Chocolate Mud',
             price: 1500,
             img: item7,
             img2: item8,
-            re : '0 Review'
+            re: '0 Review'
         },
         {
             name: 'Hot Toddy Sorbet',
             price: 1200,
             img: item9,
             img2: item10,
-            re : '0 Review'
+            re: '0 Review'
         },
         {
             name: 'Sorbet Street Treats',
             price: 1000,
             img: item11,
-            img2 : item12,
-            re : '1 Review'
+            img2: item12,
+            re: '1 Review'
         },
         {
             name: 'Darkest Chocolate',
             price: 1300,
             img: item13,
-            img2 : item14,
-            re : '1 Review'
+            img2: item14,
+            re: '1 Review'
         },
         {
             name: 'Blackout Chocolate Cake',
             price: 1200,
             img: item15,
-            img2 : item16,
-            re : '1 Review'
+            img2: item16,
+            re: '1 Review'
         },
     ]);
 
@@ -168,50 +128,25 @@ const List_Renderingg = () => {
     };
 
     return (
-        <div className="carousel-container w-full pt-10  xl:pl-10 2xl:pl-24">
-            <Button onClick={prevSlide} className="carousel-button prev-button z-20  w-14 h-14 rounded-full flex justify-center items-center ml-16"><FaLessThan className="w-5 h-5"/></Button>
-          
+        <div className="carousel-container w-full pt-10 xl:pl-10 2xl:pl-24 overflow-hidden">
+            <Button onClick={prevSlide} className="carousel-button prev-button z-20 w-14 h-14 rounded-full flex justify-center items-center ml-16">
+                <FaLessThan className="w-5 h-5" />
+            </Button>
             <Slider ref={sliderRef} {...sliderSettings} className="carousel-slider">
-            <ProductCard img1={item1} img2={item2} name="Sunshine" review="1 Review" price ="$10.00" />
-            <ProductCard img1={item3} img2={item4} name="Pei Apple Crisp" review="1 Review" price ="$13.00"/>
-            <ProductCard img1={item5} img2={item6} name="Cookies in Cream" review="0 Review" price ="$10.00 - $13.00"/>
-            <ProductCard img1={item7} img2={item8} name="Chocolate Mud" review="0 Review" price ="$15.00"/>
-            <ProductCard img1={item9} img2={item10} name="Hot Toddy Sorbet" review="0 Review" price ="$12.00"/>
-            <ProductCard img1={item11} img2={item12} name="Sorbet Street Treats" review="1 Review" price ="$10.00"/>
-            <ProductCard img1={item13} img2={item14} name="Darkest Chocolate" review="0 Review" price ="$13.00"/>
-            <ProductCard img1={item15} img2={item16} name="Blackout Chocolate Cake" review="1 Review" price ="$12.00"/>
-    
-                {/* {productData.map((product) => (
-                    <div key={product.name} className="">
-                        <Card className="w-[350px] rounded-md border">
-                            <div className='w-[350px] h-[300px]'>
-                                <img src={product.img} alt={product.name} className='w-full h-full object-cover' />
-                            </div>
-                            <Card.Body>
-                                <Card.Title className='mt-3 font-semibold text-[25px]'>{product.name}</Card.Title>
-                                <Card.Text>
-                                    <div className="flex mt-2">
-                                        <div className='flex'>
-                                            {[...Array(5)].map((star, index) => (
-                                                <FaStar key={index} color="red" />
-                                            ))}
-                                        </div>
-                                        <div>
-                                            <span className="-mt-1 ml-5 absolute">{product.re}</span>
-                                        </div>
-                                    </div>
-                                </Card.Text>
-                            </Card.Body>
-                            <ListGroup className="list-group-flush">
-                                <ListGroupItem className='mt-2'>
-                                    <strong>${(product.price / 100).toFixed(2)}</strong>
-                                </ListGroupItem>
-                            </ListGroup>
-                        </Card>
-                    </div>
-                ))} */}
+                {productData.map((product) => (
+                    <ProductCard
+                        key={product.name}
+                        img1={product.img}
+                        img2={product.img2}
+                        name={product.name}
+                        review={product.re}
+                        price={`$${(product.price / 100).toFixed(2)}`}
+                    />
+                ))}
             </Slider>
-            <Button onClick={nextSlide} className="carousel-button next-button  w-14 h-14 rounded-full  flex justify-center items-center mr-16"><FaGreaterThan  className="w-5 h-5"/></Button>
+            <Button onClick={nextSlide} className="carousel-button next-button w-14 h-14 rounded-full flex justify-center items-center mr-16">
+                <FaGreaterThan className="w-5 h-5" />
+            </Button>
         </div>
     );
 }

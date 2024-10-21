@@ -1000,3 +1000,33 @@ a:hover {
 .fade-in {
   animation: fadeIn 0.5s ease-in-out; /* Duration of fade-in effect */
 }
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-slider {
+  width: 100%;
+}
+
+.carousel-button {
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .carousel-slider {
+      padding: 0 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .carousel-button {
+      width: 50px;
+      height: 50px;
+  }
+}

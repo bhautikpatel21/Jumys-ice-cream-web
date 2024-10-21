@@ -38,7 +38,7 @@ const ScrollToTopButton = () => {
 
     return (
         visible && (
-            <button
+            <button 
                 onClick={scrollToTop}
                 style={{
                     position: 'fixed',

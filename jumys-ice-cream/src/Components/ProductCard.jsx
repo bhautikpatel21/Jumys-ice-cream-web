@@ -199,9 +199,7 @@ import img143 from "../assets/product-25-1.jpg";
 import img144 from "../assets/product-25-2.jpg";
 import img145 from "../assets/product-25-3.jpg";
 import img146 from "../assets/product-25-4.jpg";
-
-// Import product images...
-
+  
 const ProductCard = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState([]);

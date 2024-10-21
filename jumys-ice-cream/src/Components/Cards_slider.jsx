@@ -155,18 +155,8 @@ const List_Renderingg = () => {
       </Button>
       <Slider ref={sliderRef} {...sliderSettings} className="carousel-slider">
         {productData.map((product) => (
-            // <NavLink to="/product/:productId">
-            //  <ProductCard
-            //      key={product.name}
-            //      img1={product.img}
-            //      img2={product.img2}
-            //      name={product.name}
-            //      review={product.re}
-            //      price={`$${(product.price / 100).toFixed(2)}`}
-            //  />
-            //  </NavLink>
             <div key={product.ProductId}>
-                    <NavLink to={`/product/${product.ProductId}`}>
+                    <NavLink to={`/product/${product.ProductId}`} className="hover:text-black">
                         <ProductCard
                             img1={product.img}
                             img2={product.img2}

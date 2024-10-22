@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import backgroundImage from "../assets/asset 50.jpeg";
 import { FaUser } from 'react-icons/fa';
 import Footer2 from '../Components/Footer2';
+import ScrollToTopButton from '../Components/TopButton';
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -29,7 +30,7 @@ const Login = () => {
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4 py-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-black mb-2">My Account</h1>
+            <h1 className="text-3xl md:text-4xl text-black mb-2 " id="manufacture">My Account</h1>
             <p className="text-sm md:text-base">
               <a href="#" className="text-black hover:text-red-500">Home</a>{" "}
               <span className="text-black">/</span>
@@ -193,6 +194,7 @@ const Login = () => {
 
       {/* Footer */}
       <Footer2 />
+      <ScrollToTopButton/>
     </div>
   );
 }

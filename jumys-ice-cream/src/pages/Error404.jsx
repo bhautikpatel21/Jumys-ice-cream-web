@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import HomeFooter from '../Components/Footer2';
 import { NavLink,Outlet } from 'react-router-dom';
+import ScrollToTopButton from '../Components/TopButton';
 
 function Error404() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -36,6 +37,7 @@ function Error404() {
         </NavLink>
       </div>
       <HomeFooter />
+      <ScrollToTopButton/>
     </>
   );
 }

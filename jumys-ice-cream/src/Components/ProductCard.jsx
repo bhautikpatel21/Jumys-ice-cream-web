@@ -215,6 +215,7 @@ const ProductCard = () => {
       color: "Yellow",
       img1: img1,
       imageList: [img1,img2,img3,img4],
+      size : ['s','m','l'],
       ProductId: 1
     },
     {
@@ -224,6 +225,7 @@ const ProductCard = () => {
       color: "Brick",
       img1: img5,
       imageList : [img5,img6,img7,img8],
+      size : ['s','m','l'],
       ProductId: 2
     },
     {
@@ -233,6 +235,7 @@ const ProductCard = () => {
       color: "Pink",
       img1: img9,
       imageList : [img9,img10,img11,img12],
+      size : ['s','m','l','xl'],
       ProductId: 3
     },
     {
@@ -242,6 +245,7 @@ const ProductCard = () => {
       color: "Yellow",
       img1: img13,
       imageList:[img13,img14,img15,img16],
+      size : ['s','m'],
       ProductId: 4
     },
     {
@@ -251,6 +255,7 @@ const ProductCard = () => {
       color: "Yellow",
       img1: img17,
       imageList:[img17,img18,img19,img20],
+      size : ['m','l','xl'],
       ProductId: 5
     },
     {
@@ -260,6 +265,7 @@ const ProductCard = () => {
       color: "Brick",
       img1: img21,
       imageList:[img21,img22,img23,img24],
+      size : ['m','l'],
       ProductId: 6
     },
     {
@@ -269,6 +275,7 @@ const ProductCard = () => {
       color: "White",
       img1: img25,
       imageList:[img25,img26,img27,img28],
+      size : ['l','xl'],
       ProductId: 7
     },
     {
@@ -278,6 +285,7 @@ const ProductCard = () => {
       color: "Black",
       img1: img29,
       imageList:[img29,img30,img31,img32],
+      size : ['s','m','l','xl'],
       ProductId: 8
     },
     {
@@ -287,6 +295,7 @@ const ProductCard = () => {
       color: "Yellow",
       img1: img33,
       imageList:[img33,img34,img35,img36],
+      size : ['m','l'],
       ProductId: 9
     },
     {
@@ -296,6 +305,7 @@ const ProductCard = () => {
       color: "Brick",
       img1: img37,
       imageList:[img37,img38,img39,img40],
+      size : ['s','m','l'],
       ProductId: 10
     },
     {
@@ -305,6 +315,7 @@ const ProductCard = () => {
       color: "White",
       img1: img41,
       imageList:[img41,img42,img43,img44],
+      size : ['s','m','l'],
       ProductId: 11
     },
     {
@@ -314,6 +325,7 @@ const ProductCard = () => {
       color: "Pink  ",
       img1: img45,
       imageList: [img45,img46,img47,img48,img49,img50],
+      size : ['s','m','l'],
       ProductId: 12
     },
     {
@@ -323,6 +335,7 @@ const ProductCard = () => {
       color: "Yellow",
       img1: img51,
       imageList:[img51,img52,img53,img54],
+      size : ['m','l'],
       ProductId: 13
     },
     {
@@ -332,6 +345,7 @@ const ProductCard = () => {
       color: "Green ",
       img1: img55,
       imageList:[img55,img56,img57,img58],
+      size : ['s','m','l','xl'],
       ProductId: 14
     },
     {
@@ -341,6 +355,7 @@ const ProductCard = () => {
       color: "Yellow",
       img1: img59,
       imageList:[img59,img60,img61,img62],
+      size : ['s','m' ],
       ProductId: 15
     },
     {
@@ -350,6 +365,7 @@ const ProductCard = () => {
       color: "White",
       img1: img63,
       imageList:[img63,img64,img65,img66,img67,img68,img69,img70,img71,img72,img73,img74,img75,img76,img77,img78,img79,img80,img81,img82,img83,img84,img85,img86,img87,img88,img89,img90,img91,img92,img93,img94,img95,img96,img97,img98,img99,img100,img101,img102,img103,img104,img105,img106,img107,img108,img109,img110,img111],
+      size : ['m','l'],
       ProductId: 16
     },
     {
@@ -359,6 +375,7 @@ const ProductCard = () => {
       color: "Pink",
       img1: img112,
       imageList:[img112,img113,img114,img115],
+      size : ['s','m','l'],
       ProductId: 17
     },
     {
@@ -368,6 +385,7 @@ const ProductCard = () => {
       color: "Yellow",
       img1: img116,
       imageList:[img116,img117,img118,img119],
+      size : ['s','m','l','xl'],
       ProductId: 18
     },
     {
@@ -377,6 +395,7 @@ const ProductCard = () => {
       color: "Red",
       img1: img120,
       imageList:[img120,img121,img122,img123],
+      size : ['s','m','l','xl'],
       ProductId: 19
     },
     {
@@ -386,6 +405,7 @@ const ProductCard = () => {
       color: "Blue",
       img1: img124,
       imageList:[img124,img125,img126],
+      size : ['l','xl'],
       ProductId: 20
     },
     {
@@ -395,6 +415,7 @@ const ProductCard = () => {
       color: "Pink",
       img1: img127,
       imageList:[img127,img128,img129,img130],
+      size : ['m','l'],
       ProductId: 21
     },
     {
@@ -404,6 +425,7 @@ const ProductCard = () => {
       color: "Lilac",
       img1: img131,
       imageList:[img131,img132,img133,img134],
+      size : ['s','m','l','xl'],
       ProductId: 22
     },
     {
@@ -413,6 +435,7 @@ const ProductCard = () => {
       color: "Brick",
       img1: img135,
       imageList:[img135,img136,img137,img138],
+      size : ['m','l'],
       ProductId: 23
     },
     {
@@ -422,6 +445,7 @@ const ProductCard = () => {
       color: "White",
       img1: img139,
       imageList:[img139,img140,img141,img142],
+      size : ['m','l','xl'],
       ProductId: 24
     },
     {
@@ -431,6 +455,7 @@ const ProductCard = () => {
       color: "Purple",
       img1: img143,
       imageList:[img143,img144,img145,img146],
+      size : ['s','m','l'],
       ProductId: 25
     },
   ];
@@ -454,7 +479,6 @@ const ProductCard = () => {
       <div className="overflow-hidden">
         <div className="mb-9 pt-4 md:px-6 md:pt-7 lg:mb-2 lg:p-8 2xl:p-10 2xl:pt-10">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
-            {/* Main Image Section */}
             <div className="mb-6 flex justify-center overflow-hidden md:mb-8 lg:mb-0 xl:flex">
               <div className="relative w-full shrink-0 overflow-hidden rounded-md md:mb-3 xl:w-[480px] 2xl:w-[650px]">
                 <div className="relative flex items-center justify-center">
@@ -479,7 +503,6 @@ const ProductCard = () => {
                 </div>
               </div>
 
-              {/* Side Images Section */}
               <div id="sideImages" className="flex flex-col h-[620px] overflow-x-auto gap-2 m-2">
                 {images.map((image, index) => (
                   <div
@@ -497,9 +520,7 @@ const ProductCard = () => {
               </div>
             </div>
 
-            {/* Product Details Section */}
             <div className="flex shrink-0 px-3 flex-col lg:w-[600px] xl:w-[470px] 2xl:w-[480px] lg:h-[702px]">
-              {/* Product Info */}
               <div className="pb-2">
                 <h2 className="text-lg pb-1 mt-4 font-sans font-semibold md:text-xl xl:text-2xl">
                   {product.name}
@@ -538,11 +559,22 @@ const ProductCard = () => {
                     +
                   </button>
                 </div><br />
-                <div className="flex gap-3">
-                  <div className="w-10 h-10 flex justify-center items-center border cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500">S</div>
-                  <div className="w-10 h-10 flex justify-center items-center border cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500">M</div>
-                  <div className="w-10 h-10 flex justify-center items-center border cursor-not-allowed  hover:bg-red-600 hover:text-white opacity-50">L</div>
+
+                <div className="mb-4 mt-2">
+                  <div className="flex items-center space-x-2">
+                    {['S', 'M', 'L', 'XL'].map((size) => (
+                      <div
+                        key={size}
+                        className={`w-10 h-10 flex justify-center items-center border cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500 ${
+                          product && product.size && product.size.includes(size.toLowerCase()) ? '' : 'opacity-50 cursor-not-allowed'
+                        }`}
+                      >
+                        {size}
+                      </div>
+                    ))}
+                  </div>
                 </div>
+
 
                 <button className="flex-1 bg-black w-full mt-4 py-2 text-white rounded-full hover:bg-[#ff0000]">
                   Add to Cart
@@ -555,7 +587,6 @@ const ProductCard = () => {
                 </button>
               </div>
 
-              {/* Icons Section */}
               <div className="m-1 p-1 space-x-1 flex justify-center">
                 <div className="flex flex-row">
                   <a
@@ -594,7 +625,6 @@ const ProductCard = () => {
                 </div>
               </div>
 
-              {/* Payment & Shipping Info */}
               <div className="mb-4 bg-gray-200 p-4">
                 <div className="flex space-x-2 mt-2 justify-center">
                   <img src={PaymentMethodImg} alt="payment method" />

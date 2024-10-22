@@ -21,7 +21,7 @@ const ShopList = () => {
     const timer = setTimeout(() => {
       setIsLoading(false); 
       setIsPageLoaded(true);
-    }, 2000); 
+    }, 1000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -47,7 +47,7 @@ const ShopList = () => {
           <div className="relative w-full h-[400px] object-cover" id="shopbg">
             <div className="absolute inset-0 flex items-center justify-center bounce-in">
               <div className="flex flex-col text-center items-center justify-center text-white mt-28">
-                <h1 className="text-4xl font-bold text-black">Shop List</h1>
+                <h1 className="text-4xl font-bold text-black" id='manufacture'>Shop List</h1>
                 <p className="mt-2">
                   <a href="#" className="text-[#000] hover:text-[#ff0000]">Home</a>
                   <span className="text-black mx-3">/</span>

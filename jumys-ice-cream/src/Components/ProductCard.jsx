@@ -206,6 +206,7 @@ const ProductCard = () => {
   const [images, setImages] = useState([]);
   const [activeImage, setActiveImage] = useState();
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState(null);
 
   const ProductSingleView = [
         {
@@ -565,9 +566,14 @@ const ProductCard = () => {
                     {['S', 'M', 'L', 'XL'].map((size) => (
                       <div
                         key={size}
-                        className={`w-10 h-10 flex justify-center items-center border cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500 ${
-                          product && product.size && product.size.includes(size.toLowerCase()) ? '' : 'opacity-50 cursor-not-allowed'
+                        className={`w-10 h-10 flex justify-center items-center border border-black cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500 ${
+                          product && product.size && product.size.includes(size.toLowerCase()) ? (selectedSize === size ? 'bg-red-600 text-white' : '') : 'opacity-50 cursor-none border-gray-400'
                         }`}
+                        onClick={() => {
+                          if (product && product.size && product.size.includes(size.toLowerCase())) {
+                            setSelectedSize(size); 
+                          }
+                        }}
                       >
                         {size}
                       </div>

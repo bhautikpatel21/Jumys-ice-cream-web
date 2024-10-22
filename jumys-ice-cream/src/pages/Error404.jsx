@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import HomeFooter from '../Components/Footer2';
+import { NavLink,Outlet } from 'react-router-dom';
 
 function Error404() {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -28,9 +29,11 @@ function Error404() {
         <p className='text-gray-500 text-lg md:text-xl lg:text-2xl mb-6'>
           find the page you were looking for.
         </p>
+        <NavLink to="/">
         <button className='w-48 md:w-60 lg:w-64 rounded-full h-12 md:h-14 lg:h-16 text-base md:text-lg lg:text-xl bg-black text-white hover:bg-red-600 transition duration-300'>
           Back To HomePage
         </button>
+        </NavLink>
       </div>
       <HomeFooter />
     </>

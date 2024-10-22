@@ -54,7 +54,7 @@ const AboutUs = () => {
           </button>
         </div>
         <div className="w-full md:w-1/2 overflow-hidden">
-          <img src={iceCreamImage1} alt="Ice Cream" className="w-full h-auto object-cover" />
+          <img src={iceCreamImage1} alt="Ice Cream" className="w-full h-auto object-cover hover:scale-105 duration-700" />
         </div>
       </div>
 

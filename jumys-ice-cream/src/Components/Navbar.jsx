@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import {
   FaAngleDown,
@@ -22,7 +22,6 @@ const Navbar = () => {
   const [pagedownVisible, setPagedownVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
-  const navbarRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,22 +31,6 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        navbarRef.current.classList.add('scrolled');
-      } else {
-        navbarRef.current.classList.remove('scrolled');
-      }
-    };
-  
-    window.addEventListener('scroll', handleScroll);
-  
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -553,7 +536,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div ref={navbarRef} className="sticky top-0 z-50 w-full h-28 flex gap-2 justify-around" id="layout">
+      <div className="w-full h-28 flex gap-2 justify-around" id="layout">
         <div
           className="w-11 h-full flex justify-center items-center text-[30px]"
           id="menuBar"

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/asset 50.jpeg";
 import { FaFacebookF, FaTwitter, FaShareAlt, FaEnvelope } from "react-icons/fa";
 import Footer2 from "../Components/Footer2";
+import ScrollToTopButton from "../Components/TopButton";
 
 const Wishlist = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -80,6 +81,7 @@ const Wishlist = () => {
       </div>
 
       <Footer2 />
+      <ScrollToTopButton/>
     </div>
   );
 };

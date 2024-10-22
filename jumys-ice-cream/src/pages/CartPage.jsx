@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import HomeFooter from '../Components/Footer2';
+import ScrollToTopButton from '../Components/TopButton';
 
 const CartPage = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -27,6 +28,7 @@ const CartPage = () => {
         </button>
       </div>
       <HomeFooter />
+      <ScrollToTopButton/>
     </>
   );
 };

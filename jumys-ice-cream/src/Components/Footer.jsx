@@ -1,8 +1,20 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
 import Img from '../assets/asset 48.svg';
 
 function Footer() {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email) {
+      setSubscribed(true);
+      setEmail(''); 
+    }
+  };
+
   return (
     <footer className="bg-black text-white w-full relative">
       <div className="px-4 pb-5 pt-14 md:py-5 lg:pb-5 lg:pt-14">
@@ -13,19 +25,27 @@ function Footer() {
           <p className="text-sm md:text-base lg:text-lg text-gray-400">
             Be the first to know about new flavors and more
           </p>
-          <div className="mt-6 flex flex-col md:flex-row items-center gap-4">
-            <input
-              type="text"
-              className="w-full md:w-80 p-3 border border-gray-600 rounded-lg bg-gray-800 placeholder-gray-400"
-              placeholder="Your Email..."
-            />
-            <button
-              className="mt-4 md:mt-0 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition duration-300"
-              type="submit"
-            >
-              Subscribe
-            </button>
-          </div>
+          
+          {!subscribed ? (
+            <div className="mt-6 flex flex-col md:flex-row items-center gap-4">
+              <input
+                type="text"
+                className="w-full md:w-80 p-3 border border-gray-600 rounded-lg bg-gray-800 placeholder-gray-400"
+                placeholder="Your Email..."
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} 
+              />
+              <button
+                className="mt-4 md:mt-0 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition duration-300"
+                type="submit"
+                onClick={handleSubscribe} 
+              >
+                Subscribe
+              </button>
+            </div>
+          ) : (
+            <p className="mt-4 text-lg text-green-400">Thank You for subscribing!</p>
+          )}
         </div>
 
         <div className='w-full h-px bg-gray-800 opacity-80 mb-8'></div>

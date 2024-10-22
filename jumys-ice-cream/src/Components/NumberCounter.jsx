@@ -1,12 +1,12 @@
 import React from 'react';
 import CountUp from 'react-countup';
 
-function NumberCounter() {
+function NumberCounter({ startCounting }) {
   const Counter = ({ end, label }) => {
     return (
       <div className="text-center mx-4 sm:mx-6 md:mx-8 lg:mx-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-red-600">
-          <CountUp end={end} duration={2.5} />
+          {startCounting ? <CountUp end={end} duration={2.5} /> : 0}
           {label.includes('%') ? '%' : '+'}
         </h2>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black mt-2">{label}</p>

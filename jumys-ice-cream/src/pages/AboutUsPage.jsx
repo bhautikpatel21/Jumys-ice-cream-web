@@ -13,12 +13,25 @@ import NumberCounter from "../Components/NumberCounter";
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showCounter, setShowCounter] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 100); 
-    return () => clearTimeout(timer);
+    }, 100);
+
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowCounter(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
@@ -58,7 +71,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <NumberCounter />
+      {/* Number Counter */}
+      {showCounter && <NumberCounter startCounting={showCounter} />}
 
       {/* Manufacture 2 */}
       <div className="flex flex-col md:flex-row items-center my-5 py-10 px-5 md:px-10 lg:px-20 gap-4 md:gap-10">

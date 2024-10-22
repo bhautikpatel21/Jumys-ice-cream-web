@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiLogoBehance } from "react-icons/bi";
 import {
   MDBFooter,
@@ -10,12 +10,27 @@ import {
 import { FaArrowRight, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
 
 function HomeFooter() {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(email)) {
+      setMessage('Thank You for subscribing!');
+      setEmail('');
+    } else {
+      setMessage('Please enter a valid email address.');
+    }
+  };
+
   return (
     <MDBFooter bgColor="black" className="text-lg-start text-muted">
       <section className="pb-5 text-white">
         <MDBContainer className="px-4 sm:px-6 lg:px-8 pt-14">
           <MDBRow className="flex flex-col md:flex-row justify-around">
-            <MDBCol md="6" lg="3" className="py-7 mb-4 ">
+            <MDBCol md="6" lg="3" className="py-7 mb-4">
               <h6 className="text-white font-serif text-xl md:text-2xl lg:text-3xl fw-bold mb-4">
                 <MDBIcon icon="gem" className="me-2" />
                 Our Newsletter
@@ -30,11 +45,14 @@ function HomeFooter() {
                   name="email"
                   placeholder="Your Email"
                   className="bg-black text-white placeholder-gray-400 h-10 w-full md:w-3/4 px-3 focus:outline-none"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="bg-[#e10914] hover:bg-gray-700 text-white flex justify-center items-center text-xl w-12 h-12 rounded-full cursor-pointer transition duration-300">
+              <div className="bg-[#e10914] hover:bg-gray-700 text-white flex justify-center items-center text-xl w-12 h-12 rounded-full cursor-pointer transition duration-300" onClick={handleSubscribe}>
                 <FaArrowRight />
               </div>
+              {message && <p className="mt-4 text-green-400">{message}</p>}
             </MDBCol>
 
             <MDBCol md="3" lg="2" className="mb-4">

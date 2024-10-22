@@ -62,7 +62,7 @@ const AboutUs = () => {
           <p className="text-gray-500 text-base md:text-lg mb-6">
             Once the ingredients have cooled enough, it's time to pour them into molds and freeze in a brine bath. After that, the ice cream sticks are dried and packaged in the freezer in square boxes. From here, this cool ice cream is ready to be delivered to visitors...
           </p>
-          <button className="bg-red-600 hover:bg-black text-white px-6 py-3 rounded-full flex items-center duration-300">
+          <button className="bg-red-600 hover:bg-black text-white px-6 py-3 rounded-full flex items-center duration-300 font-medium">
             View More <ArrowRight className="ml-2" />
           </button>
         </div>
@@ -85,7 +85,7 @@ const AboutUs = () => {
           <p className="text-gray-500 text-base md:text-lg mb-6">
             On hot summer days like today, in addition to a glass of cool beverage, a glass of ice cream can also help relieve some of the heat. Ice cream is popular not only among children but also loved by many people of many different ages…
           </p>
-          <button className="bg-red-600 hover:bg-black text-white px-6 py-3 rounded-full flex items-center duration-300">
+          <button className="bg-red-600 hover:bg-black text-white px-6 py-3 rounded-full flex items-center duration-300 font-medium">
             View More <ArrowRight className="ml-2" />
           </button>
         </div>
@@ -134,8 +134,8 @@ const AboutUs = () => {
 
       {/* Final Section */}
       <div className="text-center py-10 px-5 md:px-10 lg:px-20">
-        <p className="text-red-600 text-3xl">Our News</p>
-        <p className="text-black text-4xl md:text-5xl mt-2">Testiest Updates</p>
+        <p className="text-red-600 text-3xl" id="sweet">Our News</p>
+        <p className="text-black text-4xl md:text-5xl mt-2" id="manufacture">Testiest Updates</p>
       </div>
 
       {/* Optional Components */}

@@ -67,7 +67,7 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProduct
   };
 
   const colors = [
-    { name: "All", count: 25 },
+    { name: "Click Here", count: " All " },
     { name: "Black", count: 1, hex: "#000000" },
     { name: "Blue", count: 1, hex: "#ADD8E6" },
     { name: "Brick", count: 4, hex: "#A52A2A" },
@@ -81,7 +81,7 @@ const FilterComponent = ({ onColorSelect, onPriceChange, onSizeSelect, onProduct
   ];
 
   const handleColorClick = (color) => {
-    onColorSelect(color === "All" ? null : color); 
+    onColorSelect(color === "Click Here" ? null : color); 
   };
 
   useEffect(() => {

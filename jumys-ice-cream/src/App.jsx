@@ -20,7 +20,6 @@ function App() {
     {/* <HomeSlider3/> */}
     </>
       
-
   )
 }
 

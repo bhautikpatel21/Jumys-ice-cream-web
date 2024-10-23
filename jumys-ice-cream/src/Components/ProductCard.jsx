@@ -525,7 +525,7 @@ const ProductCard = () => {
 
             <div className="flex shrink-0 px-1 flex-col lg:w-[500px] xl:w-[470px] 2xl:w-[480px] lg:h-[702px]">
               <div className="pb-2">
-                <h2 className="text-lg pb-1 mt-4 font-sans font-semibold md:text-xl xl:text-2xl ">
+                <h2 className="text-lg pb-1 mt-4 font-serif font-semibold md:text-xl xl:text-2xl">
                   {product.name}
                 </h2>
                 <p className="text-2xl mb-2 font-semibold font-Kalnia">
@@ -654,9 +654,9 @@ const ProductCard = () => {
                   </a>
                 </p>
               </div>
-              <div className="text-gray-600 flex">
+              <div className="text-gray-600 flex gap-3">
                 Categories:
-                <div className="space-x-1">
+                <div className="space-x-1 gap-4 flex">
                   <span className="text-black hover:text-[#ff0000] cursor-pointer">
                     Chocolate
                   </span>

@@ -5,10 +5,10 @@ const port = process.env.PORT;
 app.use(express.json());
 const mongoose = require('mongoose');
 
-const adminRoutes = require('./Routes/Admin/Login.Routes');
+const adminRoutes = require('./Routes/Admin/Index.Routes');
 app.use('/api/admin',adminRoutes);
 
-const userRoutes = require('./Routes/User/Login.Routes');
+const userRoutes = require('./Routes/User/Index.Routes');
 app.use('/api/user',userRoutes);
 
 async function main() {

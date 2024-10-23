@@ -523,7 +523,7 @@ const ProductCard = () => {
 
 
 
-            <div className="flex shrink-0 px-3 flex-col lg:w-[600px] xl:w-[470px] 2xl:w-[480px] lg:h-[702px]">
+            <div className="flex shrink-0 px-1 flex-col lg:w-[500px] xl:w-[470px] 2xl:w-[480px] lg:h-[702px]">
               <div className="pb-2">
                 <h2 className="text-lg pb-1 mt-4 font-sans font-semibold md:text-xl xl:text-2xl ">
                   {product.name}

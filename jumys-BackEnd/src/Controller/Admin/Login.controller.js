@@ -44,7 +44,7 @@ exports.loginAdmin = async(req, res) => {
     }
 };
 
-exports.getAllAdmin = async(req, res) => {
+exports.getAllUsers = async(req, res) => {
     try {
         let admin = await userService.getAllUsers({isDelete: false});
         console.log(admin);
@@ -58,7 +58,7 @@ exports.getAllAdmin = async(req, res) => {
     }
 };
 
-exports.getAdmin = async(req, res) => {
+exports.getUser = async(req, res) => {
     try {
         let admin = await userService.getUserById(req.query.adminId);
         console.log(admin);
@@ -72,7 +72,7 @@ exports.getAdmin = async(req, res) => {
     }
 };
 
-exports.updateAdmin = async(req, res) => {
+exports.updateUser = async(req, res) => {
     try {
         let admin = await userService.getUserById(req.query.adminId);
         if(!admin){
@@ -86,7 +86,7 @@ exports.updateAdmin = async(req, res) => {
     }
 };
 
-exports.deleteAdmin = async(req, res) => {
+exports.deleteUser = async(req, res) => {
     try {
         let admin = await userService.getUserById(req.query.adminId);
         if (!admin) {

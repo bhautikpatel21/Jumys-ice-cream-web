@@ -22,3 +22,38 @@
 
 - run command  - npm run dev
 
+
+ ||  : login page : ||
+
+- APi's 
+
+- || Admin || 
+
+- registerAdmin -  http://localhost:7410/api/admin/login/register-admin
+
+- loginAdmin - http://localhost:7410/api/admin/login/login-admin
+
+- getUser - http://localhost:7410/api/admin/login/get-admin
+
+- getAllUsers - http://localhost:7410/api/admin/login/get-all-admin
+
+- updateUser - http://localhost:7410/api/admin/login/update-admin
+
+- deleteUser - http://localhost:7410/api/admin/login/delete-admin
+
+
+- || User || 
+
+- registerAdmin -  http://localhost:7410/api/user/login/register-user
+
+- loginAdmin - http://localhost:7410/api/user/login/login-user
+
+- getUser - http://localhost:7410/api/user/login/get-user
+
+- getAllUsers - http://localhost:7410/api/user/login/get-all-user
+
+- updateUser - http://localhost:7410/api/user/login/update-user
+
+- updatePassword - http://localhost:7410/api/user/login/update-password
+
+- deleteUser - http://localhost:7410/api/user/login/delete-user

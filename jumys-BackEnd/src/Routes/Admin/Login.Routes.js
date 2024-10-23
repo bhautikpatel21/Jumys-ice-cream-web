@@ -6,10 +6,10 @@ const {adminVerifyToken} = require('../../Helpers/AdminVerifyToken');
 const {
     registerAdmin,
     loginAdmin,
-    getAdmin,
-    getAllAdmin,
-    updateAdmin,
-    deleteAdmin
+    getUser,
+    getAllUsers,
+    updateUser,
+    deleteUser
 
 } = require('../../Controller/Admin/Login.controller');
 
@@ -17,12 +17,12 @@ adminRoutes.post('/register-admin',registerAdmin);
 
 adminRoutes.post('/login-admin',loginAdmin);
 
-adminRoutes.get('/get-admin',adminVerifyToken,getAdmin);
+adminRoutes.get('/get-admin',adminVerifyToken,getUser);
 
-adminRoutes.get('/get-all-admin',adminVerifyToken,getAllAdmin);
+adminRoutes.get('/get-all-admin',adminVerifyToken,getAllUsers);
 
-adminRoutes.put('/update-admin',adminVerifyToken,updateAdmin);
+adminRoutes.put('/update-admin',adminVerifyToken,updateUser);
 
-adminRoutes.post('/delete-admin',adminVerifyToken ,deleteAdmin);
+adminRoutes.post('/delete-admin',adminVerifyToken ,deleteUser);
 
 module.exports = adminRoutes;

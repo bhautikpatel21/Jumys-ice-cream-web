@@ -5,6 +5,12 @@ const port = process.env.PORT;
 app.use(express.json());
 const mongoose = require('mongoose');
 
+const adminRoutes = require('./Routes/Admin/Login.Routes');
+app.use('/api/admin',adminRoutes);
+
+const userRoutes = require('./Routes/User/Login.Routes');
+app.use('/api/user',userRoutes);
+
 async function main() {
     await mongoose.connect(process.env.MONGO_DB);          
 }

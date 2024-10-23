@@ -1,0 +1,23 @@
+
+ ||  : NODE JS INSTALLATION :  ||
+
+- npm init   OR   npm init-y
+
+- npm i nodemon 
+
+- npm i express 
+
+- npm i mongoose
+
+- npm i dotenv 
+
+- npm i jsonwebtoken
+
+- npm i bcrypt 
+
+- npm i morgan
+
+- npm i multer
+
+
+- run command  - npm run dev

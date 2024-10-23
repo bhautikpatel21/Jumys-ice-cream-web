@@ -569,7 +569,7 @@ const ProductCard = () => {
                       <div
                         key={size}
                         className={`w-10 h-10 flex justify-center items-center border border-black cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500 ${
-                          product && product.size && product.size.includes(size.toLowerCase()) ? (selectedSize === size ? 'bg-red-600 text-white' : '') : 'opacity-50 cursor-none border-gray-400'
+                          product && product.size && product.size.includes(size.toLowerCase()) ? (selectedSize === size ? 'bg-red-600 text-white' : '') : 'opacity-50 border-gray-400 cursor-not-allowed'
                         }`}
                         onClick={() => {
                           if (product && product.size && product.size.includes(size.toLowerCase())) {

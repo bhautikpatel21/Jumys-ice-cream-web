@@ -44,5 +44,16 @@ module.exports = class loginServices {
             console.log(error);
             return error.message;
         }
+    };
+
+    // Update user 
+
+    async updateUser(id,body) {
+        try {
+            return await User.findByIdAndUpdate(id,{$set : body},{new : true});
+        } catch (error) {
+            console.log(error);
+            return error.message;
+        }
     }
 }

@@ -4,6 +4,10 @@ const app = express();
 const port = process.env.PORT;                                           
 app.use(express.json());
 const mongoose = require('mongoose');
+const path = require('path');
+const imagePath = path.join(__dirname,'images');
+app.use('/images',express.static(imagePath));
+
 
 const adminRoutes = require('./Routes/Admin/Index.Routes');
 app.use('/api/admin',adminRoutes);

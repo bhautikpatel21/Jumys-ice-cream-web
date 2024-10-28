@@ -250,7 +250,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5173/api/user/login/login-user', {
+      const response = await axios.post('http://localhost:7410/api/user/login/login-user', {
         email: loginEmail,
         password: loginPassword,
       });
@@ -269,7 +269,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5173/api/user/login/register', {
+      const response = await axios.post('http://localhost:7410/api/user/login/register', {
         username: registerUsername,
         email: registerEmail,
         password: registerPassword,

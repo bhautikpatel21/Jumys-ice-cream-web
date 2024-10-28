@@ -3,6 +3,7 @@ import backgroundImage from "../assets/asset 50.jpeg";
 import { FaUser } from 'react-icons/fa';
 import Footer2 from '../Components/Footer2';
 import ScrollToTopButton from '../Components/TopButton';
+import axios from 'axios'
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -50,7 +51,7 @@ const Login = () => {
           <form>
             <div className="mb-4">
               <label className="block mb-2 text-sm md:text-base text-gray-600">
-                Username Or Email Address <span className="text-red-500">*</span>
+              Email Address <span className="text-red-500">*</span>
               </label>
               <input
                 className="w-full px-3 py-2 md:py-3 leading-tight text-gray-700 border rounded-full focus:outline-none focus:shadow-outline"
@@ -118,7 +119,7 @@ const Login = () => {
             </div>
             <button
               className="w-full px-4 py-2 font-bold text-white bg-black rounded-full hover:bg-red-500 transition duration-300 focus:outline-none focus:shadow-outline"
-              type="button"
+              type="submit"
             >
               LOGIN
             </button>
@@ -184,7 +185,7 @@ const Login = () => {
             </div>
             <button
               className="w-full px-4 py-2 mt-6 font-bold text-white bg-gray-400 rounded-full hover:bg-red-500 transition duration-300 focus:outline-none focus:shadow-outline"
-              type="button"
+              type="submit"
             >
               REGISTER
             </button>
@@ -200,3 +201,5 @@ const Login = () => {
 }
 
 export default Login;
+
+//////////////////////////////////////////////////////////////////////

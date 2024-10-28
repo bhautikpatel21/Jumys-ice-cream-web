@@ -18,7 +18,8 @@ const userRoutes = require('./Routes/User/Index.Routes');
 app.use('/api/user',userRoutes);
 
 async function main() {
-    await mongoose.connect(process.env.MONGO_DB);          
+    await mongoose.connect(process.env.MONGO_DB,{
+    });          
 }
 main()
 .then(() => console.log('DB is connected...'))

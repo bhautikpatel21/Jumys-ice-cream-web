@@ -14,7 +14,7 @@ const {
 
 } = require('../../Controller/User/Login.controller');
 
-userRoutes.post('/register-user',registerUser);
+userRoutes.post('/register',registerUser);
 
 userRoutes.post('/login-user',loginUser);
 

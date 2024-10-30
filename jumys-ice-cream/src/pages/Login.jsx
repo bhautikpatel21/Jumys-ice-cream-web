@@ -255,6 +255,7 @@ const Login = () => {
         password: loginPassword,
       });
       console.log('Login Success:', response.data);
+      alert('Login successfully');
       // Handle successful login, e.g., redirect or store token
     } catch (err) {
       alert('Login failed. Please check your credentials.');
@@ -275,6 +276,7 @@ const Login = () => {
         password: registerPassword,
       });
       console.log('Registration Success:', response.data);
+      alert('Register successfully..... please do login')
       // Handle successful registration, e.g., redirect or show success message
     } catch (err) {
       alert('Registration failed. Please try again.');

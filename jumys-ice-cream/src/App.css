@@ -839,86 +839,6 @@ a:hover {
   color: #ff0000; 
 }
 
-
-/* ///////////////////////////////// */
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Slide-up Animation */
-@keyframes slideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.slide-up {
-  animation: slideUp 0.5s ease-in-out forwards;
-}
-/* ////////////////////////////////////////// */
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Slide-up Animation */
-@keyframes slideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.slide-up {
-  animation: slideUp 0.5s ease-in-out forwards;
-}
-
-/* /////////////////////////////////////////// */
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
 /* Slide-up Animation (optional) */
 @keyframes slideUp {
   0% {
@@ -934,34 +854,6 @@ a:hover {
 /* If you want to apply slide-up animation to content */
 .slide-up {
   animation: slideUp 0.5s ease-in-out forwards;
-}
-
-/* /////////////////////////////////// */
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out; /* Duration of fade-in */
-}
-
-/* Slide-up Animation */
-@keyframes slideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* Initial State of Slide-up */

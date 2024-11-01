@@ -1,5 +1,3 @@
-//////////////////////////////////////////////////////////////////////////////////////////
-
 import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/asset 50.jpeg";
 import { FaUser } from "react-icons/fa";

@@ -44,9 +44,9 @@
 
 - || User || 
 
-- registerUser -  http://localhost:5173/api/user/login/register
+- registerUser -  http://localhost:7410/api/user/login/register
 
-- loginUser - http://localhost:5173/api/user/login/login-user
+- loginUser - http://localhost:7410/api/user/login/login-user
 
 - getUser - http://localhost:7410/api/user/login/get-user
 

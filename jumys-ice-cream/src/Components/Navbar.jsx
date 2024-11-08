@@ -249,7 +249,7 @@ const Navbar = () => {
               {" "}
               <h1 className="font-bold text-[20px]">Product Type</h1>{" "}
               <NavLink
-                to="/Simple-Product"
+                to="/shop"
                 className="text-gray-950 block hover:text-red-500"
                 onClick={closeAllDropdowns}
               >

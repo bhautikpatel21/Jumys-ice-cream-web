@@ -57,3 +57,5 @@
 - updatePassword - http://localhost:7410/api/user/login/update-password
 
 - deleteUser - http://localhost:7410/api/user/login/delete-user
+
+- logoutUser - http://localhost:7410/api/user/login/logout-user

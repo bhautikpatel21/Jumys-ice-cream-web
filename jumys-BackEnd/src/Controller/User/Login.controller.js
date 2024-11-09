@@ -169,3 +169,19 @@ exports.updatePassword = async (req, res) => {
       .json({ message: `Internal Server Error..${console.error()}` });
   }
 };
+
+exports.logOut = async(req,res) => {
+  try {
+    let token = req.headers['authorization']; 
+
+    if(!token) {
+      return res.status(404).json({message : `User already loguted...`});
+    }
+    await userService.logoutUser(token);  
+    res.status(200).json({ message: 'Logged out successfully' });
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({message : `Internal server Error...${console.error()}`});
+  }
+}

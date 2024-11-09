@@ -10,7 +10,8 @@ const {
     getUser,
     updatePassword,
     updateUser,
-    deleteUser
+    deleteUser,
+    logOut
 
 } = require('../../Controller/User/Login.controller');
 
@@ -27,5 +28,7 @@ userRoutes.put('/update-user',userVerifyToken,updateUser);
 userRoutes.put('/update-password',userVerifyToken,updatePassword);
 
 userRoutes.post('/delete-user',userVerifyToken,deleteUser);
+
+userRoutes.post('/logout-user',userVerifyToken,logOut);
 
 module.exports = userRoutes;

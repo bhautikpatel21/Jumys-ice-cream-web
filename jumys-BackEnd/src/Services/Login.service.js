@@ -1,4 +1,5 @@
 const User  = require('../Model/Login.Model');
+const jwt = require('jsonwebtoken');
 
 module.exports = class loginServices {
 
@@ -54,6 +55,25 @@ module.exports = class loginServices {
         } catch (error) {
             console.log(error);
             return error.message;
+        }
+    };
+
+    // logout user 
+
+    async logoutUser(token) {
+        try {
+            return new Promise((resolve, reject) => {
+                if (token) {
+                  resolve({ message: 'Logged out successfully' });
+                } else {
+                  reject({ message: 'No token provided' });
+                }
+              });
+              
+        } catch (error) {
+            console.log(error);
+            console.log("No token Provided");
+            return error.message
         }
     }
 }

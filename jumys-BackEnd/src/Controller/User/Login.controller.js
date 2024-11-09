@@ -70,18 +70,23 @@ exports.getAllUser = async (req, res) => {
 
 exports.getUser = async (req, res) => {
   try {
-    let user = await userService.getUserById(req.query.userId);
-    if (!user) {
-      return res.status(404).json({ message: `User is Not Found...` });
-    }
-    res.status(200).json(user);
+      const userId = req.query.userId || req.user._id; 
+      if (!userId) {
+          return res.status(400).json({ message: "User ID missing" });
+      }
+
+      const user = await userService.getUserById(userId);
+      if (!user) {
+          return res.status(404).json({ message: "User not found" });
+      }
+
+      res.status(200).json(user);
   } catch (error) {
-    console.log(error);
-    res
-      .status(500)
-      .json({ message: `Internal Server Error...${console.error()}` });
+      console.error("Error in getUser:", error);
+      res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
 
 exports.updateUser = async (req, res) => {
   try {

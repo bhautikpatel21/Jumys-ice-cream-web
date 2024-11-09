@@ -448,7 +448,7 @@ const Login = () => {
       localStorage.removeItem("authToken");
       setToken(null); 
       setUserProfile(null);
-      alert("Logged out successfully");
+      // alert("Logged out successfully");
       setShowLogoutModal(false); // Close the modal
     } catch (err) {
       console.error("Logout failed:", err);
@@ -476,27 +476,51 @@ const Login = () => {
   );
 
   // Modal for logout confirmation
+  
+  // const ConfirmationModal = ({ onConfirm, onCancel }) => (
+  //   <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
+  //     <div className="bg-white p-6 rounded-lg shadow-lg">
+  //       <p>Are you sure you want to log out?</p>
+  //       <div className="mt-4">
+  //         <button
+  //           onClick={onConfirm}
+  //           className="px-4 py-2 bg-blue-500 text-white rounded mr-2"
+  //         >
+  //           Yes
+  //         </button>
+  //         <button
+  //           onClick={onCancel}
+  //           className="px-4 py-2 bg-gray-300 text-black rounded"
+  //         >
+  //           No
+  //         </button>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
+  
   const ConfirmationModal = ({ onConfirm, onCancel }) => (
     <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg">
-        <p>Are you sure you want to log out?</p>
-        <div className="mt-4">
+      <div className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full">
+        <p className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-4">Are you sure you want to log out?</p>
+        <div className="mt-4 flex justify-center gap-3 sm:gap-4">
           <button
             onClick={onConfirm}
-            className="px-4 py-2 bg-blue-500 text-white rounded mr-2"
+            className="px-4 py-2 sm:px-6 sm:py-3 bg-blue-500 text-white rounded-full text-sm sm:text-base md:text-lg"
           >
-            OK
+            Yes
           </button>
           <button
             onClick={onCancel}
-            className="px-4 py-2 bg-gray-300 text-black rounded"
+            className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-300 text-black rounded-full text-sm sm:text-base md:text-lg"
           >
-            Cancel
+            No
           </button>
         </div>
       </div>
     </div>
   );
+  
 
   return (
     <div className={`relative ${isPageLoaded ? "fade-in" : ""}`}>
@@ -588,7 +612,7 @@ const Login = () => {
               </div>
               <div className="flex justify-center mb-6 mt-4">
                 <button
-                  className="w-full py-3 px-4 bg-red-500 text-white rounded-lg hover:bg-red-400"
+                  className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"
                   type="submit"
                   disabled={loading}
                 >
@@ -679,7 +703,7 @@ const Login = () => {
               </div>
               <div className="flex justify-center mb-6 mt-4">
                 <button
-                  className="w-full py-3 px-4 bg-red-500 text-white rounded-lg hover:bg-red-400"
+                  className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"
                   type="submit"
                   disabled={loading}
                 >

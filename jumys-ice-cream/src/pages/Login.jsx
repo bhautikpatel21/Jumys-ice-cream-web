@@ -19,6 +19,7 @@
 //   const [showLogin, setShowLogin] = useState(false);
 //   const [userProfile, setUserProfile] = useState(null);
 //   const [token, setToken] = useState(null);
+//   const [showLogoutModal, setShowLogoutModal] = useState(false); // State to control logout modal
 
 //   useEffect(() => {
 //     const timer = setTimeout(() => {
@@ -66,7 +67,7 @@
 //       console.log("Login Success:", response.data);
 //       const userToken = response.data.token;
 //       setToken(userToken);
-//       await getUserProfile(userToken); 
+//       await getUserProfile(userToken);
 //       alert("Login successful");
 //     } catch (err) {
 //       alert("Login failed. Please check your credentials.");
@@ -100,6 +101,10 @@
 //   };
 
 //   const handleLogout = async () => {
+//     setShowLogoutModal(true); // Show the logout confirmation modal
+//   };
+
+//   const confirmLogout = async () => {
 //     try {
 //       await axios.post("http://localhost:7410/api/user/login/logout-user", {}, {
 //         headers: {
@@ -107,13 +112,19 @@
 //         },
 //       });
 //       localStorage.removeItem("authToken");
-//       setToken(null); 
+//       setToken(null);
 //       setUserProfile(null);
-//       alert("Logged out successfully");
+//       // alert("Logged out successfully");
+//       setShowLogoutModal(false); // Close the modal
 //     } catch (err) {
 //       console.error("Logout failed:", err);
 //       alert("Logout failed. Please try again.");
+//       setShowLogoutModal(false); // Close the modal
 //     }
+//   };
+
+//   const cancelLogout = () => {
+//     setShowLogoutModal(false); // Close the modal without doing anything
 //   };
 
 //   const UserProfile = () => (
@@ -121,7 +132,8 @@
 //       <h2 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">User Profile</h2>
 //       <p className="text-gray-700"><strong>Username:</strong> {userProfile?.username}</p>
 //       <p className="text-gray-700"><strong>Email:</strong> {userProfile?.email}</p>
-//       <button 
+//       <button className="font-bold text-xl px-5 py-3 rounded-xl bg-blue-500 mr-5 text-white mt-4">Edit</button>
+//       <button
 //         className="font-bold text-xl px-5 py-3 rounded-xl bg-red-500 text-white mt-4"
 //         onClick={handleLogout}
 //       >
@@ -129,6 +141,31 @@
 //       </button>
 //     </div>
 //   );
+
+//   // Modal for logout confirmation
+  
+//   const ConfirmationModal = ({ onConfirm, onCancel }) => (
+//     <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
+//       <div className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full">
+//         <p className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-4">Are you sure you want to log out?</p>
+//         <div className="mt-4 flex justify-center gap-3 sm:gap-4">
+//           <button
+//             onClick={onConfirm}
+//             className="px-4 py-2 sm:px-6 sm:py-3 bg-blue-500 text-white rounded-full text-sm sm:text-base md:text-lg"
+//           >
+//             Yes
+//           </button>
+//           <button
+//             onClick={onCancel}
+//             className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-300 text-black rounded-full text-sm sm:text-base md:text-lg"
+//           >
+//             No
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+  
 
 //   return (
 //     <div className={`relative ${isPageLoaded ? "fade-in" : ""}`}>
@@ -192,47 +229,57 @@
 //                   />
 //                   <button
 //                     type="button"
-//                     className="absolute inset-y-0 right-0 px-3 text-gray-700 focus:outline-none"
 //                     onClick={togglePasswordVisibility}
+//                     className="absolute top-2 right-2 text-gray-600"
 //                   >
 //                     <svg
-//                       className="w-6 h-6"
-//                       fill="none"
-//                       stroke="currentColor"
-//                       viewBox="0 0 24 24"
-//                       xmlns="http://www.w3.org/2000/svg"
-//                     >
-//                       <path
-//                         strokeLinecap="round"
-//                         strokeLinejoin="round"
-//                         strokeWidth="2"
-//                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-//                       />
-//                       <path
-//                         strokeLinecap="round"
-//                         strokeLinejoin="round"
-//                         strokeWidth="2"
-//                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-//                       />
-//                     </svg>
+//                        className="w-6 h-6"
+//                        fill="none"
+//                        stroke="currentColor"
+//                        viewBox="0 0 24 24"
+//                        xmlns="http://www.w3.org/2000/svg"
+//                      >
+//                        <path
+//                          strokeLinecap="round"
+//                          strokeLinejoin="round"
+//                          strokeWidth="2"
+//                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+//                        />
+//                        <path
+//                          strokeLinecap="round"
+//                          strokeLinejoin="round"
+//                          strokeWidth="2"
+//                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+//                        />
+//                      </svg>
 //                   </button>
 //                 </div>
 //               </div>
-
-//               <button
-//                 type="submit"
-//                 className="w-full bg-blue-500 text-white py-2 rounded-full mt-4 hover:bg-blue-600 transition duration-300"
-//               >
-//                 Login
-//               </button>
-//               {error && <div className="text-red-500 mt-2">{error}</div>}
+//               <div className="flex justify-center mb-6 mt-4">
+//                 <button
+//                   className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"
+//                   type="submit"
+//                   disabled={loading}
+//                 >
+//                   {loading ? "Loading..." : "Login"}
+//                 </button>
+//               </div>
+//               <p className="text-center text-sm text-gray-600">
+//                 Don't have an account?{" "}
+//                 <span
+//                   className="text-red-500 cursor-pointer"
+//                   onClick={() => setShowLogin(false)}
+//                 >
+//                   Register Here
+//                 </span>
+//               </p>
 //             </form>
 //           </div>
 //         ) : (
 //           <div className="w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up">
 //             <div className="flex items-center text-lg md:text-2xl gap-x-2 mb-6 underline">
 //               <FaUser />
-//               <h2 className="font-bold text-gray-800">Create an Account</h2>
+//               <h2 className="font-bold text-gray-800">Register</h2>
 //             </div>
 //             <form onSubmit={handleRegister}>
 //               <div className="mb-4">
@@ -273,64 +320,70 @@
 //                   />
 //                   <button
 //                     type="button"
-//                     className="absolute inset-y-0 right-0 px-3 text-gray-700 focus:outline-none"
 //                     onClick={toggleRegisterPasswordVisibility}
+//                     className="absolute top-2 right-2 text-gray-600"
 //                   >
 //                     <svg
-//                       className="w-6 h-6"
-//                       fill="none"
-//                       stroke="currentColor"
-//                       viewBox="0 0 24 24"
-//                       xmlns="http://www.w3.org/2000/svg"
-//                     >
-//                       <path
-//                         strokeLinecap="round"
-//                         strokeLinejoin="round"
-//                         strokeWidth="2"
-//                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-//                       />
-//                       <path
-//                         strokeLinecap="round"
-//                         strokeLinejoin="round"
-//                         strokeWidth="2"
-//                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-//                       />
-//                     </svg>
+//                        className="w-6 h-6"
+//                        fill="none"
+//                        stroke="currentColor"
+//                        viewBox="0 0 24 24"
+//                        xmlns="http://www.w3.org/2000/svg"
+//                      >
+//                        <path
+//                          strokeLinecap="round"
+//                          strokeLinejoin="round"
+//                          strokeWidth="2"
+//                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+//                        />
+//                        <path
+//                          strokeLinecap="round"
+//                          strokeLinejoin="round"
+//                          strokeWidth="2"
+//                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+//                        />
+//                      </svg>
 //                   </button>
 //                 </div>
 //               </div>
-
-//               <button
-//                 type="submit"
-//                 className="w-full bg-blue-500 text-white py-2 rounded-full mt-4 hover:bg-blue-600 transition duration-300"
-//               >
-//                 Create Account
-//               </button>
-//               <div className="mt-6 text-center">
-//                   <p className="text-gray-600 text-sm md:text-base">
-//                     Already have an account?{" "}
-//                     <button
-//                       className="text-red-500 hover:text-red-700"
-//                       onClick={() => setShowLogin(true)}
-//                     >
-//                       Login here
-//                     </button>
-//                   </p>
-//                 </div>
+//               <div className="flex justify-center mb-6 mt-4">
+//                 <button
+//                   className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"
+//                   type="submit"
+//                   disabled={loading}
+//                 >
+//                   {loading ? "Loading..." : "Register"}
+//                 </button>
+//               </div>
+//               <p className="text-center text-sm text-gray-600">
+//                 Already have an account?{" "}
+//                 <span
+//                   className="text-red-500 cursor-pointer"
+//                   onClick={() => setShowLogin(true)}
+//                 >
+//                   Login Here
+//                 </span>
+//               </p>
 //             </form>
 //           </div>
 //         )}
 //       </div>
 
-//       <Footer2 />
 //       <ScrollToTopButton />
+
+//       <Footer2 />
+
+//       {/* Confirmation Modal */}
+//       {showLogoutModal && (
+//         <ConfirmationModal onConfirm={confirmLogout} onCancel={cancelLogout} />
+//       )}
 //     </div>
 //   );
 // };
 
 // export default Login;
 
-//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/asset 50.jpeg";
@@ -352,8 +405,13 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [userProfile, setUserProfile] = useState(null);
-  const [token, setToken] = useState(null);
-  const [showLogoutModal, setShowLogoutModal] = useState(false); // State to control logout modal
+  const [token, setToken] = useState(null);  
+  const [showLogoutModal, setShowLogoutModal] = useState(false); 
+  const [showEditForm, setShowEditForm] = useState(false);
+  const [updatedUsername, setUpdatedUsername] = useState("");
+  console.log(updatedUsername);
+  const [updatedEmail, setUpdatedEmail] = useState("");
+  console.log(updatedEmail);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -378,6 +436,8 @@ const Login = () => {
         },
       });
       setUserProfile(response.data);
+      setUpdatedUsername(response.data.username);
+      setUpdatedEmail(response.data.email);
       console.log("User Profile Data:", response.data);
     } catch (err) {
       console.error("Failed to fetch user profile:", err);
@@ -401,7 +461,7 @@ const Login = () => {
       console.log("Login Success:", response.data);
       const userToken = response.data.token;
       setToken(userToken);
-      await getUserProfile(userToken); 
+      await getUserProfile(userToken);
       alert("Login successful");
     } catch (err) {
       alert("Login failed. Please check your credentials.");
@@ -435,7 +495,7 @@ const Login = () => {
   };
 
   const handleLogout = async () => {
-    setShowLogoutModal(true); // Show the logout confirmation modal
+    setShowLogoutModal(true); 
   };
 
   const confirmLogout = async () => {
@@ -446,19 +506,47 @@ const Login = () => {
         },
       });
       localStorage.removeItem("authToken");
-      setToken(null); 
+      setToken(null);
       setUserProfile(null);
-      // alert("Logged out successfully");
-      setShowLogoutModal(false); // Close the modal
+      setShowLogoutModal(false); 
     } catch (err) {
       console.error("Logout failed:", err);
       alert("Logout failed. Please try again.");
-      setShowLogoutModal(false); // Close the modal
+      setShowLogoutModal(false);
     }
   };
 
   const cancelLogout = () => {
-    setShowLogoutModal(false); // Close the modal without doing anything
+    setShowLogoutModal(false); 
+  };
+
+  const handleUpdateUser = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await axios.put(
+        "http://localhost:7410/api/user/login/update-user",
+        {
+          username: updatedUsername,
+          email: updatedEmail,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            
+          },
+        }
+      );
+      console.log("Update Success:", response.data);
+      setUserProfile(response.data);
+      alert("Profile updated successfully!");
+      setShowEditForm(false); 
+    } catch (err) {
+      console.log(error);
+      alert("Failed to update profile. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const UserProfile = () => (
@@ -466,7 +554,13 @@ const Login = () => {
       <h2 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">User Profile</h2>
       <p className="text-gray-700"><strong>Username:</strong> {userProfile?.username}</p>
       <p className="text-gray-700"><strong>Email:</strong> {userProfile?.email}</p>
-      <button 
+      <button
+        className="font-bold text-xl px-5 py-3 rounded-xl bg-blue-500 mr-5 text-white mt-4"
+        onClick={() => setShowEditForm(true)}
+      >
+        Edit
+      </button>
+      <button
         className="font-bold text-xl px-5 py-3 rounded-xl bg-red-500 text-white mt-4"
         onClick={handleLogout}
       >
@@ -475,30 +569,6 @@ const Login = () => {
     </div>
   );
 
-  // Modal for logout confirmation
-  
-  // const ConfirmationModal = ({ onConfirm, onCancel }) => (
-  //   <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
-  //     <div className="bg-white p-6 rounded-lg shadow-lg">
-  //       <p>Are you sure you want to log out?</p>
-  //       <div className="mt-4">
-  //         <button
-  //           onClick={onConfirm}
-  //           className="px-4 py-2 bg-blue-500 text-white rounded mr-2"
-  //         >
-  //           Yes
-  //         </button>
-  //         <button
-  //           onClick={onCancel}
-  //           className="px-4 py-2 bg-gray-300 text-black rounded"
-  //         >
-  //           No
-  //         </button>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
-  
   const ConfirmationModal = ({ onConfirm, onCancel }) => (
     <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
       <div className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full">
@@ -520,7 +590,6 @@ const Login = () => {
       </div>
     </div>
   );
-  
 
   return (
     <div className={`relative ${isPageLoaded ? "fade-in" : ""}`}>
@@ -548,7 +617,44 @@ const Login = () => {
 
       <div className="flex flex-col md:flex-row gap-8 p-6 md:p-10 mt-10 items-center">
         {userProfile ? (
-          <UserProfile />
+          showEditForm ? (
+            <div className="w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up">
+              <h2 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">Update User Info</h2>
+              <form onSubmit={handleUpdateUser}>
+                <div className="mb-4">
+                  <label className="block mb-2 text-sm md:text-base text-gray-600">Username</label>
+                  <input
+                    className="w-full px-3 py-2 border-2 border-gray-400 md:py-3 leading-tight text-gray-700 rounded-full focus:outline-none focus:shadow-outline"
+                    type="text"
+                    value={updatedUsername}
+                    onChange={(e) => setUpdatedUsername(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block mb-2 text-sm md:text-base text-gray-600">Email Address</label>
+                  <input
+                    className="w-full px-3 py-2 border-2 border-gray-400 md:py-3 leading-tight text-gray-700 rounded-full focus:outline-none focus:shadow-outline"
+                    type="email"
+                    value={updatedEmail}
+                    onChange={(e) => setUpdatedEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="flex justify-center mb-6 mt-4">
+                  <button
+                    className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"
+                    type="submit"
+                    disabled={loading}
+                  >
+                    {loading ? "Loading..." : "Update Profile"}
+                  </button>
+                </div>
+              </form>
+            </div>
+          ) : (
+            <UserProfile />
+          )
         ) : showLogin ? (
           <div className="w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up">
             <div className="flex items-center text-lg md:text-2xl gap-x-2 mb-6 underline">
@@ -588,25 +694,25 @@ const Login = () => {
                     className="absolute top-2 right-2 text-gray-600"
                   >
                     <svg
-                       className="w-6 h-6"
-                       fill="none"
-                       stroke="currentColor"
-                       viewBox="0 0 24 24"
-                       xmlns="http://www.w3.org/2000/svg"
-                     >
-                       <path
-                         strokeLinecap="round"
-                         strokeLinejoin="round"
-                         strokeWidth="2"
-                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                       />
-                       <path
-                         strokeLinecap="round"
-                         strokeLinejoin="round"
-                         strokeWidth="2"
-                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                       />
-                     </svg>
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -679,25 +785,25 @@ const Login = () => {
                     className="absolute top-2 right-2 text-gray-600"
                   >
                     <svg
-                       className="w-6 h-6"
-                       fill="none"
-                       stroke="currentColor"
-                       viewBox="0 0 24 24"
-                       xmlns="http://www.w3.org/2000/svg"
-                     >
-                       <path
-                         strokeLinecap="round"
-                         strokeLinejoin="round"
-                         strokeWidth="2"
-                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                       />
-                       <path
-                         strokeLinecap="round"
-                         strokeLinejoin="round"
-                         strokeWidth="2"
-                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                       />
-                     </svg>
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
                   </button>
                 </div>
               </div>

@@ -253,6 +253,7 @@ const Login = () => {
                     required
                   />
                 </div>
+                <button className="bg-green-300 p-3 rounded-xl text-gray-800 font-mono">change Password</button>
                 <div className="flex justify-center mb-6 mt-4">
                   <button
                     className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"

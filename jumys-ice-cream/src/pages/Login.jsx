@@ -146,21 +146,20 @@ const Login = () => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            
           },
         }
       );
       console.log("Update Success:", response.data);
-      setUserProfile(response.data);
+      await getUserProfile(token);  // Reload the updated user profile
       alert("Profile updated successfully!");
       setShowEditForm(false);
     } catch (err) {
-      console.log(error);
+      console.log(err);
       alert("Failed to update profile. Please try again.");
     } finally {
       setLoading(false);
     }
-  };
+  };  
 
   const UserProfile = () => (
     <div className="w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up">
@@ -456,5 +455,3 @@ const Login = () => {
 };
 
 export default Login;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

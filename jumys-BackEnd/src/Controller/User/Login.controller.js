@@ -122,7 +122,8 @@ exports.updateUser = async (req, res) => {
       user = await userService.updateUser(userId, { ...req.body });
 
       // Respond with the updated user
-      res.status(200).json({ user, message: "User updated successfully!" });
+    res.status(200).json({ user, message: "User updated successfully!" });
+    
   } catch (error) {
       console.error(error);
       res.status(500).json({ message: `Internal Server Error` });

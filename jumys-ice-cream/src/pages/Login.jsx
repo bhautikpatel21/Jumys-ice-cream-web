@@ -22,9 +22,7 @@ const Login = () => {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false);
   const [updatedUsername, setUpdatedUsername] = useState("");
-  console.log(updatedUsername);
   const [updatedEmail, setUpdatedEmail] = useState("");
-  console.log(updatedEmail);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -159,13 +157,16 @@ const Login = () => {
     } finally {
       setLoading(false);
     }
-  };  
+  };
 
   const UserProfile = () => (
     <div className="w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up">
       <h2 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">User Profile</h2>
       <p className="text-gray-700"><strong>Username:</strong> {userProfile?.username}</p>
       <p className="text-gray-700"><strong>Email:</strong> {userProfile?.email}</p>
+      {/* <p className="text-gray-700"><strong>#Username:</strong> {userProfile?.username}{userProfile.user?.username}</p>
+      <p className="text-gray-700"><strong>#Email:</strong> {userProfile?.email}{userProfile.user?.email}</p> */}
+
       <button
         className="font-bold text-xl px-5 py-3 rounded-xl bg-blue-500 mr-5 text-white mt-4"
         onClick={() => setShowEditForm(true)}
@@ -178,6 +179,99 @@ const Login = () => {
       >
         Logout
       </button>
+    </div>
+  );
+
+  const ChangePassword = () => (
+    <div className="w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up">
+      <div className="flex items-center text-lg md:text-2xl gap-x-2 mb-6 underline">
+        <FaUser />
+        <h2 className="font-bold text-gray-800">Update Password</h2>
+      </div>
+      <form onSubmit={handleRegister}>
+        <div className="mb-4">
+          <label className="block mb-2 text-sm md:text-base text-gray-600">
+            Old Password <span className="text-red-500">*</span>
+          </label>
+          <input
+            className="w-full px-3 py-2 border-2 border-gray-400 md:py-3 leading-tight text-gray-700 rounded-full focus:outline-none focus:shadow-outline"
+            type="text"
+            // value={registerUsername}
+            // onChange={(e) => setRegisterUsername(e.target.value)}
+            // required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block mb-2 text-sm md:text-base text-gray-600">
+            New Password <span className="text-red-500">*</span>
+          </label>
+          <input
+            className="w-full px-3 py-2 border-2 border-gray-400 md:py-3 leading-tight text-gray-700 rounded-full focus:outline-none focus:shadow-outline"
+            type="email"
+            // value={registerEmail}
+            // onChange={(e) => setRegisterEmail(e.target.value)}
+            // required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block mb-2 text-sm md:text-base text-gray-600">
+            Confirm Password <span className="text-red-500">*</span>
+          </label>
+          <div className="relative">
+            <input
+              className="w-full px-3 py-2 border-2 border-gray-400 md:py-3 leading-tight text-gray-700 rounded-full focus:outline-none focus:shadow-outline"
+              type={registerPasswordVisible ? "text" : "password"}
+              // value={registerPassword}
+              // onChange={(e) => setRegisterPassword(e.target.value)}
+              // required
+            />
+            <button
+              type="button"
+              onClick={toggleRegisterPasswordVisibility}
+              className="absolute top-2 right-2 text-gray-600"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-center mb-6 mt-4">
+          <button
+            className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? "Loading..." : "Register"}
+          </button>
+        </div>
+        <p className="text-center text-sm text-gray-600">
+        {" "}
+          <span
+            className="text-red-500 cursor-pointer"
+            onClick={() => setShowLogin(true)}
+          >
+            Login Here
+          </span>
+        </p>
+      </form>
     </div>
   );
 
@@ -253,7 +347,8 @@ const Login = () => {
                     required
                   />
                 </div>
-                <button className="bg-green-300 p-3 rounded-xl text-gray-800 font-mono">change Password</button>
+                <button className="bg-green-300 p-3 rounded-xl text-gray-800 font-mono"
+                >change Password</button>
                 <div className="flex justify-center mb-6 mt-4">
                   <button
                     className="w-full py-3 px-4 bg-red-500 text-white rounded-xl hover:bg-red-400"

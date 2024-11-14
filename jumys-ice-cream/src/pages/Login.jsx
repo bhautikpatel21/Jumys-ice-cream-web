@@ -653,10 +653,10 @@ const Login = () => {
       <p><strong>Username:</strong> {userProfile?.username}</p>
       <p><strong>Email:</strong> {userProfile?.email}</p>
 
-      <button className="bg-blue-500 text-white px-4 py-2 mt-4 rounded" onClick={() => setShowEditForm(true)}>
+      <button className="bg-blue-500 text-white px-4 py-2 mt-4 rounded mr-3" onClick={() => setShowEditForm(true)}>
         Edit
       </button>
-      <button className="bg-red-500 text-white px-4 py-2 mt-4 rounded" onClick={handleLogout}>
+      <button className="bg-red-500 text-white px-4 py-2 mt-4 rounded mr-3" onClick={handleLogout}>
         Logout
       </button>
       <button className="bg-green-500 text-white px-4 py-2 mt-4 rounded" onClick={() => setShowChangePasswordForm(true)}>
@@ -712,7 +712,8 @@ const Login = () => {
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
                   required
-                />
+                  />
+                  
                 <input
                   className="w-full mb-4 p-2 border rounded"
                   type="password"

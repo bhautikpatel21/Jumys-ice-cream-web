@@ -540,6 +540,7 @@ const Login = () => {
       setToken(userToken);
       await getUserProfile(userToken);
       alert("Login successful");
+      console.log("Login Success:", response.data);
     } catch (err) {
       alert("Login failed. Please check your credentials.");
     } finally {
@@ -561,6 +562,7 @@ const Login = () => {
           password: registerPassword,
         }
       );
+      console.log("Registration Success:", response.data);
       alert("Registered successfully. Please log in.");
       setShowLogin(true);
     } catch (err) {
@@ -614,6 +616,7 @@ const Login = () => {
       );
       await getUserProfile(token);
       alert("Profile updated successfully!");
+      console.log("Update Success:", response.data);
       setShowEditForm(false);
     } catch (err) {
       alert("Failed to update profile. Please try again.");
@@ -665,15 +668,51 @@ const Login = () => {
     </div>
   );
 
+     const ConfirmationModal = ({ onConfirm, onCancel }) => (
+     <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
+       <div className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full">
+         <p className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-4">Are you sure you want to log out?</p>
+         <div className="mt-4 flex justify-center gap-3 sm:gap-4">
+           <button
+             onClick={onConfirm}
+             className="px-4 py-2 sm:px-6 sm:py-3 bg-blue-500 text-white rounded-full text-sm sm:text-base md:text-lg"
+           >
+             Yes
+           </button>
+           <button
+             onClick={onCancel}
+             className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-300 text-black rounded-full text-sm sm:text-base md:text-lg"
+           >
+             No
+           </button>
+         </div>
+       </div>
+     </div>
+   );
+
   return (
     <div className={`relative ${isPageLoaded ? "fade-in" : ""}`}>
-      <div className="relative w-full h-60">
-        <img src={backgroundImage} alt="Background" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center text-center text-white">
-          <h1 className="text-3xl font-bold">My Account</h1>
-        </div>
-      </div>
-
+         <div className="relative w-full h-60 sm:h-80 md:h-[400px]">
+         <img
+           src={backgroundImage}
+           alt="About Us Background"
+           className="w-full h-full object-cover"
+         />
+         <div className="absolute inset-0 flex items-center justify-center">
+           <div className="text-center text-white px-4 py-6">
+             <h1 className="text-3xl md:text-4xl text-black mb-2" id="manufacture">
+               My Account
+             </h1>
+             <p className="text-sm md:text-base">
+               <a href="#" className="text-black hover:text-red-500">
+                 Home
+               </a>{" "}
+               <span className="text-black">/</span>
+               <span className="text-red-500">My Account</span>
+             </p>
+           </div>
+         </div>
+       </div>
       <div className="flex flex-col items-center gap-8 p-6 mt-10">
         {userProfile ? (
           showEditForm ? (
@@ -907,6 +946,11 @@ const Login = () => {
 
       <Footer2 />
       <ScrollToTopButton />
+
+             {/* Confirmation Modal */}
+       {showLogoutModal && (
+         <ConfirmationModal onConfirm={confirmLogout} onCancel={cancelLogout} />
+       )}
     </div>
   );
 };

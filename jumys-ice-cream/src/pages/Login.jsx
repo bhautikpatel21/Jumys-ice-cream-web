@@ -4,6 +4,8 @@ import { FaUser } from "react-icons/fa";
 import Footer2 from "../Components/Footer2";
 import ScrollToTopButton from "../Components/TopButton";
 import axios from "axios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -27,6 +29,10 @@ const Login = () => {
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showOldPassword, setShowOldPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -167,32 +173,6 @@ const Login = () => {
       setLoading(false);
     }
   };
-
-  // const handleChangePassword = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   try {
-  //     await axios.put(
-  //       "http://localhost:7410/api/user/login/update-password",
-  //       {
-  //         oldPassword,
-  //         newPassword,
-  //         confirmPassword
-  //       },
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-  //     alert("Password updated successfully!");
-  //     setShowChangePasswordForm(false);
-  //   } catch (err) {
-  //     alert("Failed to update password. Please try again.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
@@ -336,42 +316,70 @@ const Login = () => {
             </div>
           ) : showChangePasswordForm ? (
             <div className="w-full max-w-md mx-auto p-6 bg-white border rounded-lg shadow-lg">
-              <h2 className="text-lg font-bold mb-4">Change Password</h2>
-              <form onSubmit={handleChangePassword}>
-                <input
-                  className="w-full mb-4 p-2 border rounded"
-                  type="password"
-                  placeholder="Current Password"
-                  value={oldPassword}
-                  onChange={(e) => setOldPassword(e.target.value)}
-                  required
-                />
-                
-                <input
-                  className="w-full mb-4 p-2 border rounded"
-                  type="password"
-                  placeholder="New Password"
-                  value={newPassword}
-                  onChange={(e) => setNewPassword(e.target.value)}
-                  required
-                />
+      <h2 className="text-lg font-bold mb-4">Change Password</h2>
+      <form onSubmit={handleChangePassword}>
+        <div className="relative mb-4">
+          <input
+            className="w-full p-2 border rounded"
+            type={showOldPassword ? "text" : "password"}
+            placeholder="Current Password"
+            value={oldPassword}
+            onChange={(e) => setOldPassword(e.target.value)}
+            required
+          />
+          <button
+            type="button"
+            className="absolute right-2 top-2 text-gray-600"
+            onClick={() => setShowOldPassword(!showOldPassword)}
+          >
+            <FontAwesomeIcon icon={showOldPassword ? faEyeSlash : faEye} />
+          </button>
+        </div>
 
-                <input
-                  className="w-full mb-4 p-2 border rounded"
-                  type="password"
-                  placeholder="Confirm Password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  required
-                />
-                <button
-                  className="w-full bg-green-500 text-white py-2 rounded"
-                  type="submit"
-                >
-                  {loading ? "Changing Password..." : "Change Password"}
-                </button>
-              </form>
-            </div>
+        <div className="relative mb-4">
+          <input
+            className="w-full p-2 border rounded"
+            type={showNewPassword ? "text" : "password"}
+            placeholder="New Password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+            required
+          />
+          <button
+            type="button"
+            className="absolute right-2 top-2 text-gray-600"
+            onClick={() => setShowNewPassword(!showNewPassword)}
+          >
+            <FontAwesomeIcon icon={showNewPassword ? faEyeSlash : faEye} />
+          </button>
+        </div>
+
+        <div className="relative mb-4">
+          <input
+            className="w-full p-2 border rounded"
+            type={showConfirmPassword ? "text" : "password"}
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+          <button
+            type="button"
+            className="absolute right-2 top-2 text-gray-600"
+            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+          >
+            <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
+          </button>
+        </div>
+
+        <button
+          className="w-full bg-green-500 text-white py-2 rounded"
+          type="submit"
+        >
+          {loading ? "Changing Password..." : "Change Password"}
+        </button>
+      </form>
+    </div>
           ) : (
             <UserProfile />
           )

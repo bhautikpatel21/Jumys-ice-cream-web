@@ -15,6 +15,8 @@
     "@emotion/styled": "^11.13.0",
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/material": "^5.16.7",
     "@mui/styled-engine": "^5.16.6",
     "@reach/menu-button": "^0.18.0",

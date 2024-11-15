@@ -24,8 +24,9 @@ const Login = () => {
   const [showChangePasswordForm, setShowChangePasswordForm] = useState(false);
   const [updatedUsername, setUpdatedUsername] = useState("");
   const [updatedEmail, setUpdatedEmail] = useState("");
-  const [currentPassword, setCurrentPassword] = useState("");
+  const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -160,15 +161,42 @@ const Login = () => {
     }
   };
 
+  // const handleChangePassword = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   try {
+  //     await axios.put(
+  //       "http://localhost:7410/api/user/login/update-password",
+  //       {
+  //         oldPassword,
+  //         newPassword,
+  //         confirmPassword
+  //       },
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`,
+  //         },
+  //       }
+  //     );
+  //     alert("Password updated successfully!");
+  //     setShowChangePasswordForm(false);
+  //   } catch (err) {
+  //     alert("Failed to update password. Please try again.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleChangePassword = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
       await axios.put(
-        "http://localhost:7410/api/user/login/update-password",
+        `http://localhost:7410/api/user/login/update-password?userId=${userProfile._id}`,
         {
-          currentPassword,
+          oldPassword,
           newPassword,
+          confirmPassword,
         },
         {
           headers: {
@@ -179,12 +207,12 @@ const Login = () => {
       alert("Password updated successfully!");
       setShowChangePasswordForm(false);
     } catch (err) {
-      alert("Failed to update password. Please try again.");
+      alert(err.response?.data?.message || "Failed to update password. Please try again.");
     } finally {
       setLoading(false);
     }
   };
-
+  
   const UserProfile = () => (
     <div className="w-full max-w-md mx-auto p-6 bg-white border rounded-lg shadow-lg">
       <h2 className="text-lg font-bold mb-4">User Profile</h2>
@@ -283,8 +311,8 @@ const Login = () => {
                   className="w-full mb-4 p-2 border rounded"
                   type="password"
                   placeholder="Current Password"
-                  value={currentPassword}
-                  onChange={(e) => setCurrentPassword(e.target.value)}
+                  value={oldPassword}
+                  onChange={(e) => setOldPassword(e.target.value)}
                   required
                   />
                   
@@ -294,6 +322,15 @@ const Login = () => {
                   placeholder="New Password"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
+                  required
+                />
+
+<input
+                  className="w-full mb-4 p-2 border rounded"
+                  type="password"
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                 />
                 <button className="w-full bg-green-500 text-white py-2 rounded" type="submit">
@@ -482,7 +519,7 @@ const Login = () => {
       <Footer2 />
       <ScrollToTopButton />
 
-             {/* Confirmation Modal */}
+       {/* Confirmation Modal */}
        {showLogoutModal && (
          <ConfirmationModal onConfirm={confirmLogout} onCancel={cancelLogout} />
        )}

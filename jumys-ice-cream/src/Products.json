@@ -24,8 +24,8 @@
       "rev": "1 Review",
       "price": "$10.00",
       "color": "Pink",
-      "img1": "/images/img9.jpg",
-      "imageList": ["/images/img9.jpg", "/images/img10.jpg", "/images/img11.jpg", "/images/img12.jpg"],
+      "img1": "/assets/product-3-1.webp",
+      "imageList": ["/assets/product-3-1.webp", "/assets/product-3-2.webp", "/assets/product-3-3.webp", "/assets/product-3-4.webp"],
       "size": ["s", "m", "l", "xl"],
       "ProductId": 3
     },
@@ -34,8 +34,8 @@
       "rev": "0 Reviews",
       "price": "$15.00",
       "color": "Yellow",
-      "img1": "/images/img13.jpg",
-      "imageList": ["/images/img13.jpg", "/images/img14.jpg", "/images/img15.jpg", "/images/img16.jpg"],
+      "img1": "/assets/product-4-1.webp",
+      "imageList": ["/assets/product-4-1.webp", "/assets/product-4-2.webp", "/assets/product-4-3.webp", "/assets/product-4-4.webp"],
       "size": ["s", "m"],
       "ProductId": 4
     },
@@ -44,9 +44,8 @@
       "rev": "0 Reviews",
       "price": "$12.00",
       "color": "Yellow",
-      "img1": "/images/img17.jpg",
-      "imageList": ["/images/img17.jpg", "/images/img18.jpg", "/images/img19.jpg", "/images/img20.jpg"],
-      "size": ["m", "l", "xl"],
+      "img1": "/assets/product-5-1.webp",
+      "imageList": ["/assets/product-5-1.webp", "/assets/product-5-2.webp", "/assets/product-5-3.webp", "/assets/product-5-4.webp"],
       "ProductId": 5
     },
     {
@@ -54,8 +53,8 @@
       "rev": "0 Reviews",
       "price": "$15.00",
       "color": "Brick",
-      "img1": "/images/img21.jpg",
-      "imageList": ["/images/img21.jpg", "/images/img22.jpg", "/images/img23.jpg", "/images/img24.jpg"],
+      "img1": "/assets/product-6-1.webp",
+      "imageList": ["/assets/product-6-1.webp", "/assets/product-6-2.webp", "/assets/product-6-3.webp", "/assets/product-6-4.webp"],
       "size": ["m", "l"],
       "ProductId": 6
     },
@@ -64,9 +63,8 @@
       "rev": "0 Reviews",
       "price": "$12.00",
       "color": "White",
-      "img1": "/images/img25.jpg",
-      "imageList": ["/images/img25.jpg", "/images/img26.jpg", "/images/img27.jpg", "/images/img28.jpg"],
-      "size": ["l", "xl"],
+      "img1": "/assets/product-7-1.webp",
+      "imageList": ["/assets/product-7-1.webp", "/assets/product-7-2.webp", "/assets/product-7-3.webp", "/assets/product-7-4.webp"],
       "ProductId": 7
     },
     {
@@ -74,8 +72,8 @@
       "rev": "0 Reviews",
       "price": "$13.00",
       "color": "Black",
-      "img1": "/images/img29.jpg",
-      "imageList": ["/images/img29.jpg", "/images/img30.jpg", "/images/img31.jpg", "/images/img32.jpg"],
+      "img1": "/assets/product-8-1.webp",
+      "imageList": ["/assets/product-8-1.webp", "/assets/product-8-2.webp", "/assets/product-8-3.webp", "/assets/product-8-4.webp"],
       "size": ["s", "m", "l", "xl"],
       "ProductId": 8
     },
@@ -84,8 +82,8 @@
       "rev": "1 Review",
       "price": "$11.00",
       "color": "Yellow",
-      "img1": "/images/img33.jpg",
-      "imageList": ["/images/img33.jpg", "/images/img34.jpg", "/images/img35.jpg", "/images/img36.jpg"],
+      "img1": "/assets/product-9-1.webp",
+      "imageList": ["/assets/product-9-1.webp", "/assets/product-9-2.webp", "/assets/product-9-3.webp", "/assets/product-9-4.webp"],
       "size": ["m", "l"],
       "ProductId": 9
     },
@@ -94,8 +92,8 @@
       "rev": "0 Reviews",
       "price": "$13.00",
       "color": "Brick",
-      "img1": "/images/img37.jpg",
-      "imageList": ["/images/img37.jpg", "/images/img38.jpg", "/images/img39.jpg", "/images/img40.jpg"],
+      "img1": "/assets/product-10-1.webp",
+      "imageList": ["/assets/product-10-1.webp", "/assets/product-10-2.jpg", "/assets/product-10-3.webp", "/assets/product-10-4.webp"],
       "size": ["s", "m", "l"],
       "ProductId": 10
     },
@@ -104,8 +102,8 @@
       "rev": "0 Reviews",
       "price": "$10.00",
       "color": "White",
-      "img1": "/images/img41.jpg",
-      "imageList": ["/images/img41.jpg", "/images/img42.jpg", "/images/img43.jpg", "/images/img44.jpg"],
+      "img1": "/assets/product-11-1.webp",
+      "imageList": ["/assets/product-11-1.webp", "/assets/product-11-2.webp", "/assets/product-11-3.webp", "/assets/product-11-4.webp"],
       "size": ["s", "m", "l"],
       "ProductId": 11
     },
@@ -114,8 +112,8 @@
       "rev": "1 Review",
       "price": "$12.00",
       "color": "Pink",
-      "img1": "/images/img45.jpg",
-      "imageList": ["/images/img45.jpg", "/images/img46.jpg", "/images/img47.jpg", "/images/img48.jpg"],
+      "img1": "/assets/product-12-1.webp",
+      "imageList": ["/assets/product-12-1.webp", "/assets/product-12-2.webp", "/assets/product-12-3.webp", "/assets/product-12-4.webp","/assets/product-12-5.webp","/assets/product-12-6.webp"],
       "size": ["s", "m", "l"],
       "ProductId": 12
     },
@@ -124,8 +122,8 @@
       "rev": "1 Review",
       "price": "$10.00",
       "color": "Yellow",
-      "img1": "/images/img51.jpg",
-      "imageList": ["/images/img51.jpg", "/images/img52.jpg", "/images/img53.jpg", "/images/img54.jpg"],
+      "img1": "/assets/product-13-1.webp",
+      "imageList": ["/assets/product-13-1.webp", "/assets/product-13-2.webp", "/assets/product-13-3.webp", "/assets/product-13-4.webp"],
       "size": ["m", "l"],
       "ProductId": 13
     },
@@ -134,8 +132,8 @@
       "rev": "1 Review",
       "price": "$9.00",
       "color": "Green",
-      "img1": "/images/img55.jpg",
-      "imageList": ["/images/img55.jpg", "/images/img56.jpg", "/images/img57.jpg", "/images/img58.jpg"],
+      "img1": "/assets/product-14-1.webp",
+      "imageList": ["/assets/product-14-1.webp", "/assets/product-14-2.webp", "/assets/product-14-3.webp", "/assets/product-14-4.webp"],
       "size": ["s", "m", "l", "xl"],
       "ProductId": 14
     },
@@ -144,8 +142,8 @@
       "rev": "0 Review",
       "price": "$12.00",
       "color": "Yellow",
-      "img1": "/images/img59.jpg",
-      "imageList": ["/images/img59.jpg", "/images/img60.jpg", "/images/img61.jpg", "/images/img62.jpg"],
+      "img1": "/assets/product-15-1.webp",
+      "imageList": ["/assets/product-15-1.webp", "/assets/product-15-2.webp", "/assets/product-15-3.webp", "/assets/product-15-4.webp"],
       "size": ["s", "m"],
       "ProductId": 15
     }

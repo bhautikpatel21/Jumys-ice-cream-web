@@ -1,0 +1,153 @@
+[
+    {
+      "name": "Banana Cream Pudding",
+      "rev": "1 Review",
+      "price": "$12.00",
+      "color": "Yellow",
+      "img1": "/assets/product-1-1.webp",
+      "imageList": ["/assets/product-1-1.webp", "/assets/product-1-2.webp", "/assets/product-1-3.webp", "/assets/product-1-4.webp"],
+      "size": ["s", "m", "l"],
+      "ProductId": 1
+    },
+    {
+      "name": "Blackout Chocolate Cake",
+      "rev": "2 Reviews",
+      "price": "$12.00",
+      "color": "Brick",
+      "img1": "/assets/product-2-1.webp",
+      "imageList": ["/assets/product-2-1.webp", "/assets/product-2-2.jpg", "/assets/product-2-3.webp", "/assets/product-2-4.webp"],
+      "size": ["s", "m", "l"],
+      "ProductId": 2
+    },
+    {
+      "name": "Brambleberry Crisp",
+      "rev": "1 Review",
+      "price": "$10.00",
+      "color": "Pink",
+      "img1": "/images/img9.jpg",
+      "imageList": ["/images/img9.jpg", "/images/img10.jpg", "/images/img11.jpg", "/images/img12.jpg"],
+      "size": ["s", "m", "l", "xl"],
+      "ProductId": 3
+    },
+    {
+      "name": "Brown Sugar Cinnamon",
+      "rev": "0 Reviews",
+      "price": "$15.00",
+      "color": "Yellow",
+      "img1": "/images/img13.jpg",
+      "imageList": ["/images/img13.jpg", "/images/img14.jpg", "/images/img15.jpg", "/images/img16.jpg"],
+      "size": ["s", "m"],
+      "ProductId": 4
+    },
+    {
+      "name": "Burnt Orange Dreamsicle",
+      "rev": "0 Reviews",
+      "price": "$12.00",
+      "color": "Yellow",
+      "img1": "/images/img17.jpg",
+      "imageList": ["/images/img17.jpg", "/images/img18.jpg", "/images/img19.jpg", "/images/img20.jpg"],
+      "size": ["m", "l", "xl"],
+      "ProductId": 5
+    },
+    {
+      "name": "Chocolate Mud",
+      "rev": "0 Reviews",
+      "price": "$15.00",
+      "color": "Brick",
+      "img1": "/images/img21.jpg",
+      "imageList": ["/images/img21.jpg", "/images/img22.jpg", "/images/img23.jpg", "/images/img24.jpg"],
+      "size": ["m", "l"],
+      "ProductId": 6
+    },
+    {
+      "name": "Cold Brew with Coconut Cream",
+      "rev": "0 Reviews",
+      "price": "$12.00",
+      "color": "White",
+      "img1": "/images/img25.jpg",
+      "imageList": ["/images/img25.jpg", "/images/img26.jpg", "/images/img27.jpg", "/images/img28.jpg"],
+      "size": ["l", "xl"],
+      "ProductId": 7
+    },
+    {
+      "name": "Cookies in Cream",
+      "rev": "0 Reviews",
+      "price": "$13.00",
+      "color": "Black",
+      "img1": "/images/img29.jpg",
+      "imageList": ["/images/img29.jpg", "/images/img30.jpg", "/images/img31.jpg", "/images/img32.jpg"],
+      "size": ["s", "m", "l", "xl"],
+      "ProductId": 8
+    },
+    {
+      "name": "Cream Puff",
+      "rev": "1 Review",
+      "price": "$11.00",
+      "color": "Yellow",
+      "img1": "/images/img33.jpg",
+      "imageList": ["/images/img33.jpg", "/images/img34.jpg", "/images/img35.jpg", "/images/img36.jpg"],
+      "size": ["m", "l"],
+      "ProductId": 9
+    },
+    {
+      "name": "Darkest Chocolate",
+      "rev": "0 Reviews",
+      "price": "$13.00",
+      "color": "Brick",
+      "img1": "/images/img37.jpg",
+      "imageList": ["/images/img37.jpg", "/images/img38.jpg", "/images/img39.jpg", "/images/img40.jpg"],
+      "size": ["s", "m", "l"],
+      "ProductId": 10
+    },
+    {
+      "name": "Double Dough",
+      "rev": "0 Reviews",
+      "price": "$10.00",
+      "color": "White",
+      "img1": "/images/img41.jpg",
+      "imageList": ["/images/img41.jpg", "/images/img42.jpg", "/images/img43.jpg", "/images/img44.jpg"],
+      "size": ["s", "m", "l"],
+      "ProductId": 11
+    },
+    {
+      "name": "Frosé Sorbet",
+      "rev": "1 Review",
+      "price": "$12.00",
+      "color": "Pink",
+      "img1": "/images/img45.jpg",
+      "imageList": ["/images/img45.jpg", "/images/img46.jpg", "/images/img47.jpg", "/images/img48.jpg"],
+      "size": ["s", "m", "l"],
+      "ProductId": 12
+    },
+    {
+      "name": "Golden Nectar",
+      "rev": "1 Review",
+      "price": "$10.00",
+      "color": "Yellow",
+      "img1": "/images/img51.jpg",
+      "imageList": ["/images/img51.jpg", "/images/img52.jpg", "/images/img53.jpg", "/images/img54.jpg"],
+      "size": ["m", "l"],
+      "ProductId": 13
+    },
+    {
+      "name": "Green Mint Chip",
+      "rev": "1 Review",
+      "price": "$9.00",
+      "color": "Green",
+      "img1": "/images/img55.jpg",
+      "imageList": ["/images/img55.jpg", "/images/img56.jpg", "/images/img57.jpg", "/images/img58.jpg"],
+      "size": ["s", "m", "l", "xl"],
+      "ProductId": 14
+    },
+    {
+      "name": "Hot Toddy Sorbet",
+      "rev": "0 Review",
+      "price": "$12.00",
+      "color": "Yellow",
+      "img1": "/images/img59.jpg",
+      "imageList": ["/images/img59.jpg", "/images/img60.jpg", "/images/img61.jpg", "/images/img62.jpg"],
+      "size": ["s", "m"],
+      "ProductId": 15
+    }
+  ]
+  

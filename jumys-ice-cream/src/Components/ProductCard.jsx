@@ -13,17 +13,7 @@ const ProductCard = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
 
-  // useEffect(() => {
-  //   const foundProduct = ProductSingleView.find(p => p.ProductId === parseInt(productId));
-  //   setProduct(foundProduct);
-  //   if (foundProduct) {
-  //     setActiveImage(foundProduct.img1);
-  //     setImages(foundProduct.imageList);
-  //   }
-  // }, [productId]);
-
   useEffect(() => {
-    // Find the product from the imported Product.json data
     const foundProduct = ProductData.find(
       (p) => p.ProductId === parseInt(productId)
     );

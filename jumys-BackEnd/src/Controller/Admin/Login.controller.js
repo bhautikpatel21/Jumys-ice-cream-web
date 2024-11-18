@@ -58,19 +58,38 @@ exports.getAllUsers = async(req, res) => {
     }
 };
 
-exports.getUser = async(req, res) => {
+// exports.getUser = async(req, res) => {
+//     try {
+//         let admin = await userService.getUserById(req.query.adminId);
+//         console.log(admin);
+//         if (!admin) {
+//             return res.status(404).json({ message: "Admin not found..." });
+//         }
+//         res.status(200).json(admin);
+//     } catch (error) {
+//         console.log(error);
+//         res.status(500).json({ message: `Internal Server Error..${console.error()}`});
+//     }
+// };
+
+exports.getUser = async (req, res) => {
     try {
-        let admin = await userService.getUserById(req.query.adminId);
-        console.log(admin);
-        if (!admin) {
-            return res.status(404).json({ message: "Admin not found..." });
+        const adminId = req.query.adminId || req.admin._id; 
+        if (!adminId) {
+            return res.status(400).json({ message: "Admin ID missing" });
         }
-        res.status(200).json(admin);
+  
+        const admin = await userService.getUserById(adminId);
+        if (!admin) {
+            return res.status(404).json({ message: "Admin not found" });
+        }
+  
+        res.status(200).json(user);
     } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: `Internal Server Error..${console.error()}`});
+        console.error("Error in getUser:", error);
+        res.status(500).json({ message: "Internal Server Error" });
     }
-};
+  };
 
 exports.updateUser = async(req, res) => {
     try {

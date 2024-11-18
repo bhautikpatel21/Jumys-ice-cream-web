@@ -193,7 +193,7 @@
       "price": "$10.00",
       "color": "Blue",
       "img1": "/assets/product-20-1.webp",
-      "imageList": ["/assets/product-20-1.webp", "/assets/product-20-2.webp", "/assets/product-20-3.webp", "/assets/product-20-4.webp"],
+      "imageList": ["/assets/product-20-1.webp", "/assets/product-20-2.webp", "/assets/product-20-3.webp"],
       "size": ["l","x"],
       "ProductId": 20
     },

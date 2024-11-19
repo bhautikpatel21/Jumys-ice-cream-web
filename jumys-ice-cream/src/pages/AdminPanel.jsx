@@ -272,7 +272,7 @@ const AdminPanel = () => {
               className="text-3xl md:text-4xl text-black mb-2"
               id="manufacture"
             >
-              My Account
+              Admin Account
             </h1>
             <p className="text-sm md:text-base">
               <a href="#" className="text-black hover:text-red-500">

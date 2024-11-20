@@ -125,7 +125,7 @@ const AdminLogin = () => {
   const confirmLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:7410/api/user/login/logout-user",
+        " http://localhost:7410/api/admin/login/logout-admin",
         {},
         {
           headers: {
@@ -153,7 +153,7 @@ const AdminLogin = () => {
     setLoading(true);
     try {
       const response = await axios.put(
-        "http://localhost:7410/api/user/login/update-user",
+        "http://localhost:7410/api/admin/login/update-admin",
         {
           username: updatedUsername,
           email: updatedEmail,

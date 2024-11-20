@@ -41,6 +41,10 @@
 
 - deleteUser - http://localhost:7410/api/admin/login/delete-admin
 
+- logout admin - http://localhost:7410/api/admin/login/logout-admin
+
+- update password - 
+
 
 - || User || 
 

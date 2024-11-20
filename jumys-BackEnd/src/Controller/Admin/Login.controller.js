@@ -92,20 +92,26 @@ exports.getUser = async (req, res) => {
     }
 };
 
-
-exports.updateUser = async(req, res) => {
+exports.updateUser = async (req, res) => {
     try {
-        let admin = await userService.getUserById(req.query.adminId);
-        if(!admin){
-            return res.status(404).json({ message: `Admin Not Found...` });
+        const adminId = req.admin._id;
+
+        let admin = await userService.getUserById(adminId);
+
+        if (!admin) {
+            return res.status(404).json({ message: `Admin not found` });
         }
-        admin = await userService.updateUser(admin._id, {...req.body});
-        res.status(201).json({admin, message: `Admin Updated Successfully...`})
+
+        admin = await userService.updateUser(adminId, { ...req.body });
+
+        res.status(200).json({ admin, message: `Admin update successfully...........` });
+
     } catch (error) {
         console.log(error);
-        res.status(500).json({ message: `Internal Server Error..${console.error()}`});
+        res.status(500).json({ message: `Interanal server error` });
     }
-};
+    
+}
 
 exports.deleteUser = async(req, res) => {
     try {
@@ -120,3 +126,20 @@ exports.deleteUser = async(req, res) => {
         res.status(500).json({ message: `Internal Server Error..${console.error()}`});
     }
 };
+
+exports.logOut = async (req, res) => {
+    try {
+        let token = req.headers[`authorization`];
+
+        if (!token) {
+            return re.status(404).json({ message: `User alreay logouted` });
+        }
+        
+        await userService.logoutUser(token);
+        res.status(200).json({ message: `Logged out successfully` });
+        
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: `Interanal server error.......${console.error()}`});
+    }
+}

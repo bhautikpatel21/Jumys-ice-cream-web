@@ -87,42 +87,19 @@ exports.getUser = async (req, res) => {
   }
 };
 
-
-// exports.updateUser = async (req, res) => {
-//   try {
-//     let user = await userService.getUserById(req.query.userId);
-//     if (!user) {
-//       return res.status(404).json({ message: `User Not Found....` });
-//     }
-//     user = await userService.updateUser(user._id, { ...req.body });
-//     res
-//       .status(201)
-//       .json({ user, message: `User Details Updated SuccesFully...` });
-//   } catch (error) {
-//     console.log(error);
-//     res
-//       .status(500)
-//       .json({ message: `Internal Server Error...${console.error()}` });
-//   }
-// };
-
 exports.updateUser = async (req, res) => {
   try {
-      // Get the user from the request object (from the verified token)
       const userId = req.user._id;
 
-      // Get the user to be updated
       let user = await userService.getUserById(userId);
       
       if (!user) {
           return res.status(404).json({ message: "User not found" });
       }
 
-      // Update the user details
       user = await userService.updateUser(userId, { ...req.body });
 
-      // Respond with the updated user
-    res.status(200).json({ user, message: "User updated successfully!" });
+      res.status(200).json({ user, message: "User updated successfully!" });
     
   } catch (error) {
       console.error(error);
@@ -146,54 +123,6 @@ exports.deleteUser = async (req, res) => {
       .json({ message: `Internal Server Error...${console.error()}` });
   }
 };
-
-// exports.updatePassword = async (req, res) => {
-//   try {
-//     let user = await userService.getUserById(req.query.userId);
-//     if (!user) {
-//       return res.json({ message: `User Not Found...` });
-//     }
-//     let comparePassword = await bcrypt.compare(
-//       req.body.oldPassword,
-//       req.user.password
-//     );
-//     let oldPassword = req.body.oldPassword;
-//     if (!oldPassword) {
-//       return res.json({ message: `Old Password is not Found...` });
-//     }
-//     if (!comparePassword) {
-//       return res.json({ message: `Old Password is not Match...` });
-//     }
-//     let newPassword = req.body.newPassword;
-//     if (!newPassword) {
-//       return res.json({ message: `New Password is not Found...` });
-//     }
-//     if (newPassword === oldPassword) {
-//       return res.json({
-//         message: `Old Password And New Password Are Same Please Enter Diffrent Password..`,
-//       });
-//     }
-//     let confirmPassword = req.body.confirmPassword;
-//     if (!confirmPassword) {
-//       return res.json({ message: `Confirm Password is not Found...` });
-//     }
-//     if (newPassword !== confirmPassword) {
-//       return res.json({
-//         message: `New Password And Confirm Password is not Same...`,
-//       });
-//     }
-//     let hashPassword = await bcrypt.hash(newPassword, 10);
-//     user = await userService.updateUser(req.user._id, {
-//       password: hashPassword,
-//     });
-//     res.status(200).json({ user, message: "Password changed successfully..." });
-//   } catch (error) {
-//     console.log(error);
-//     res
-//       .status(500)
-//       .json({ message: `Internal Server Error..${console.error()}` });
-//   }
-// };
 
 exports.updatePassword = async (req, res) => {
   try {

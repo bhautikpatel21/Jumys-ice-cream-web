@@ -9,7 +9,8 @@ const {
     getUser,
     getAllUsers,
     updateUser,
-    deleteUser
+    deleteUser,
+    logOut
 
 } = require('../../Controller/Admin/Login.controller');
 
@@ -23,6 +24,8 @@ adminRoutes.get('/get-all-admin',adminVerifyToken,getAllUsers);
 
 adminRoutes.put('/update-admin',adminVerifyToken,updateUser);
 
-adminRoutes.post('/delete-admin',adminVerifyToken ,deleteUser);
+adminRoutes.post('/delete-admin', adminVerifyToken, deleteUser);
+
+adminRoutes.post('/logout-admin',adminVerifyToken,logOut)
 
 module.exports = adminRoutes;

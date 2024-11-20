@@ -49,16 +49,17 @@ const AdminLogin = () => {
     setRegisterPasswordVisible(!registerPasswordVisible);
   };
 
-  const getUserProfile = async (userToken) => {
+  const getUserProfile = async (adminToken) => {
     try {
       const response = await axios.get(
-        "http://localhost:7410/api/user/login/get-user",
+        "http://localhost:7410/api/admin/login/get-admin",
         {
           headers: {
-            Authorization: `Bearer ${userToken}`,
+            Authorization: `Bearer ${adminToken}`,
           },
         }
       );
+      console.log(response.data)
       setUserProfile(response.data);
       setUpdatedUsername(response.data.username);
       setUpdatedEmail(response.data.email);
@@ -81,9 +82,9 @@ const AdminLogin = () => {
           password: loginPassword,
         }
       );
-      const userToken = response.data.token;
-      setToken(userToken);
-      await getUserProfile(userToken);
+      const adminToken = response.data.token;
+      setToken(adminToken);
+      await getUserProfile(adminToken);
       alert("Login successful");
       console.log("Login Success:", response.data);
     } catch (err) {

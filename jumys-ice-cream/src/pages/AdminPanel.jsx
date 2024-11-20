@@ -49,13 +49,13 @@ const AdminPanel = () => {
     setRegisterPasswordVisible(!registerPasswordVisible);
   };
 
-  const getUserProfile = async (adminToken) => {
+  const getUserProfile = async (userToken) => {
     try {
       const response = await axios.get(
-        "http://localhost:7410/api/admin/login/get-admin",
+        "http://localhost:7410/api/user/login/get-user",
         {
           headers: {
-            Authorization: `Bearer ${adminToken}`,
+            Authorization: `Bearer ${userToken}`,
           },
         }
       );
@@ -76,15 +76,15 @@ const AdminPanel = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7410/api/admin/login/login-admin",
+        "http://localhost:7410/api/user/login/login-user",
         {
           email: loginEmail,
           password: loginPassword,
         }
       );
-      const userToken = response.data.token;
-      setToken(userToken);
-      await getUserProfile(userToken);
+      const adminToken = response.data.token;
+      setToken(adminToken);
+      await getUserProfile(adminToken);
       alert("Login successful");
       console.log("Login Success:", response.data);
     } catch (err) {
@@ -101,7 +101,7 @@ const AdminPanel = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7410/api/admin/login/register-admin",
+        "http://localhost:7410/api/user/login/register",
         {
           username: registerUsername,
           email: registerEmail,

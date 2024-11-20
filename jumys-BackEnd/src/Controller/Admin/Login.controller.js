@@ -74,22 +74,24 @@ exports.getAllUsers = async(req, res) => {
 
 exports.getUser = async (req, res) => {
     try {
-        const adminId = req.query.adminId || req.admin._id;
+        const adminId = req.query.adminId || req.admin._id; // req.admin should exist if middleware works
         if (!adminId) {
-            return res.status(400).json({ message: "Admin ID missing" });
+            return res.status(400).json({ message: "Admin ID is required" });
         }
-  
-        const admin = await userService.getUserById(adminId);
+
+        const admin = await userService.getUserById(adminId); // Ensure userService.getUserById is correct
         if (!admin) {
             return res.status(404).json({ message: "Admin not found" });
         }
-  
+
         res.status(200).json(admin);
+
     } catch (error) {
         console.error("Error in getUser:", error);
         res.status(500).json({ message: "Internal Server Error" });
     }
-  };
+};
+
 
 exports.updateUser = async(req, res) => {
     try {

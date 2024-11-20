@@ -206,7 +206,7 @@ const AdminLogin = () => {
 
   const UserProfile = () => (
     <div className="w-full max-w-md mx-auto p-6 bg-white border rounded-lg shadow-lg">
-      <h2 className="text-lg font-bold mb-4">User Profile</h2>
+      <h2 className="text-lg font-bold mb-4">Admin  Profile</h2>
       <p>
         <strong>Username:</strong> {userProfile?.username}
       </p>

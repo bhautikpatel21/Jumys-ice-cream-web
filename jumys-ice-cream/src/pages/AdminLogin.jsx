@@ -180,7 +180,7 @@ const AdminLogin = () => {
     setLoading(true);
     try {
       await axios.put(
-        `http://localhost:7410/api/user/login/update-password?userId=${userProfile._id}`,
+        `http://localhost:7410/api/admin/login/update-password?adminId=${userProfile._id}`,
         {
           oldPassword,
           newPassword,

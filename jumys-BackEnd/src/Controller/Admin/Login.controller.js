@@ -140,6 +140,41 @@ exports.logOut = async (req, res) => {
         
     } catch (error) {
         console.log(error);
-        res.status(500).json({ message: `Interanal server error.......${console.error()}`});
+        res.status(500).json({ message: `Interanal server error.......${console.error()}` });
     }
-}
+};
+
+exports.updatePassword = async (req, res) => {
+    try {
+      const { adminId } = req.query;
+      const { oldPassword, newPassword, confirmPassword } = req.body;
+  
+      // Validate user exists
+      const admin = await userService.getUserById(adminId);
+      if (!admin) {
+        return res.status(404).json({ message: "User not found" });
+      }
+  
+      // Check if old password is correct
+      const isMatch = await bcrypt.compare(oldPassword, admin.password);
+      if (!isMatch) {
+        return res.status(400).json({ message: "Incorrect old password" });
+      }
+  
+      // Check if new passwords match
+      if (newPassword !== confirmPassword) {
+        return res.status(400).json({ message: "New passwords do not match" });
+      }
+  
+      // Update password
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      admin.password = hashedPassword;
+      await admin.save();
+  
+      res.status(200).json({ message: "Password updated successfully" });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: "Server error" });
+    }
+  }
+  

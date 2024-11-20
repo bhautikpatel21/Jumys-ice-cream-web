@@ -43,7 +43,7 @@
 
 - logout admin - http://localhost:7410/api/admin/login/logout-admin
 
-- update password - 
+- update password - http://localhost:7410/api/admin/login/update-password
 
 
 - || User || 

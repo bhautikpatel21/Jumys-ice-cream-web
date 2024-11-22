@@ -266,26 +266,31 @@ const AdminLogin = () => {
   );
 
   const AllUsersDisplay = () => (
-    <div className="w-full max-w-md mx-auto p-6 bg-white border rounded-lg shadow-lg">
-      <h2 className="text-lg font-bold mb-4">All Users</h2>
-      {allUsers.length > 0 ? (
-        <ul className="list-disc pl-5">
-          {allUsers.map((user) => (
-            <li key={user._id}>
-              <strong>Username:</strong> {user.username}, <strong>Email:</strong> {user.email}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No users found.</p>
-      )}
-      <button
-        className="mt-4 bg-gray-500 text-white px-4 py-2 rounded"
-        onClick={() => setShowAllUsers(false)}  // Hide the users list
-      >
-        Close
-      </button>
+  <div className="w-full bg-white border p-4 rounded-lg shadow-lg">
+  <h2 className="text-2xl font-bold  mb-4 text-center">All Users</h2>
+  {allUsers.length > 0 ? (
+    <div className="flex flex-wrap justify-center gap-6">
+      {allUsers.map((user) => (
+        <div key={user._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+          <div className="bg-yellow-300 text-center text-wrap p-4 rounded-lg">
+            <strong>Username:</strong> {user.username},<br/>
+            <strong>Email:</strong> {user.email},<br/>
+            <button className="px-4 py-2 rounded-xl mt-2 bg-red-500 text-white">DELETE</button>
+          </div>
+        </div>
+      ))}
     </div>
+  ) : (
+    <p>No users found.</p>
+  )}
+  <button
+    className="mt-4 bg-gray-500 text-white px-4 py-2 rounded"
+    onClick={() => setShowAllUsers(false)} 
+  >
+    Close
+  </button>
+</div>
+
   );
  
   const ConfirmationModal = ({ onConfirm, onCancel }) => (

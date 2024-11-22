@@ -115,12 +115,12 @@ exports.updateUser = async (req, res) => {
 
 exports.deleteUser = async(req, res) => {
     try {
-        let admin = await userService.getUserById(req.query.adminId);
-        if (!admin) {
-            return res.status(404).json({message:"Admin not found..."});
+        let user = await userService.getUserById(req.query.userId);
+        if (!user) {
+            return res.status(404).json({message:"user not found..."});
         }
-        admin = await userService.updateUser(admin._id, {isDelete: true});
-        res.status(200).json({admin,message: `Admin Deleted Succesfully...`});
+        user = await userService.updateUser(user._id, {isDelete: true});
+        res.status(200).json({user,message: `Admin Deleted Succesfully...`});
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: `Internal Server Error..${console.error()}`});

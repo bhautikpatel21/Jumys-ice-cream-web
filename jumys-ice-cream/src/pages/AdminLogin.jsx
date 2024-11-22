@@ -34,7 +34,6 @@ const AdminLogin = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [allUsers, setAllUsers] = useState([]);
   const [showAllUsers, setShowAllUsers] = useState(false);  // New state for toggling user display
-
   
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -265,6 +264,28 @@ const AdminLogin = () => {
     
   );
 
+  const handleDeleteUser  = async (userId) => {
+    if (!token) {
+      alert("You must be logged in as an admin to delete users.");
+      return;
+    }
+
+    try {
+      await axios.delete(`http://localhost:7410/api/admin/login/delete-admin`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        data: { id: userId }, // send userId in the body of the DELETE request
+      });
+      // Remove the deleted user from the state
+      setAllUsers((prevUsers) => prevUsers.filter(user => user._id !== userId));
+      alert("User  deleted successfully!");
+    } catch (err) {
+      console.error("Failed to delete user:", err);
+      alert("Failed to delete user. Please try again.");
+    }
+  };
+
   const AllUsersDisplay = () => (
   <div className="w-full bg-white border p-4 rounded-lg shadow-lg">
   <h2 className="text-2xl font-bold  mb-4 text-center">All Users</h2>
@@ -275,7 +296,9 @@ const AdminLogin = () => {
           <div className="bg-yellow-300 text-center text-wrap p-4 rounded-lg">
             <strong>Username:</strong> {user.username},<br/>
             <strong>Email:</strong> {user.email},<br/>
-            <button className="px-4 py-2 rounded-xl mt-2 bg-red-500 text-white">DELETE</button>
+            <button className="px-4 py-2 rounded-xl mt-2 bg-red-500 text-white"
+            onClick={() => handleDeleteUser (user._id)}
+            >DELETE</button>
           </div>
         </div>
       ))}
@@ -289,8 +312,7 @@ const AdminLogin = () => {
   >
     Close
   </button>
-</div>
-
+  </div>
   );
  
   const ConfirmationModal = ({ onConfirm, onCancel }) => (

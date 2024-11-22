@@ -32,8 +32,10 @@ const AdminLogin = () => {
   const [showOldPassword, setShowOldPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [allUsers, setAllUsers] = useState([]);
+  const [showAllUsers, setShowAllUsers] = useState(false);  // New state for toggling user display
 
-
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPageLoaded(true);
@@ -148,6 +150,26 @@ const AdminLogin = () => {
     setShowLogoutModal(false);
   };
 
+  const handleShowAllUsers = async () => {
+    if (!token) {
+      alert("You must be logged in as an admin to view users.");
+      return;
+    }
+
+    try {
+      const response = await axios.get("http://localhost:7410/api/admin/login/get-all-admin", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setAllUsers(response.data);
+      setShowAllUsers(true);  // Show all users when the data is fetched
+    } catch (err) {
+      console.error("Failed to fetch users:", err);
+      alert("Failed to fetch users. Please try again.");
+    }
+  };
+
   const handleUpdateUser = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -235,10 +257,37 @@ const AdminLogin = () => {
 
       <button
         className="bg-yellow-600 text-white px-4 py-2 mt-4 rounded"
-      >Show All Users </button>
+        onClick={handleShowAllUsers}
+      >
+        Show All Users
+      </button>
     </div>
+    
   );
 
+  const AllUsersDisplay = () => (
+    <div className="w-full max-w-md mx-auto p-6 bg-white border rounded-lg shadow-lg">
+      <h2 className="text-lg font-bold mb-4">All Users</h2>
+      {allUsers.length > 0 ? (
+        <ul className="list-disc pl-5">
+          {allUsers.map((user) => (
+            <li key={user._id}>
+              <strong>Username:</strong> {user.username}, <strong>Email:</strong> {user.email}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No users found.</p>
+      )}
+      <button
+        className="mt-4 bg-gray-500 text-white px-4 py-2 rounded"
+        onClick={() => setShowAllUsers(false)}  // Hide the users list
+      >
+        Close
+      </button>
+    </div>
+  );
+ 
   const ConfirmationModal = ({ onConfirm, onCancel }) => (
     <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
       <div className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full">
@@ -386,7 +435,10 @@ const AdminLogin = () => {
       </form>
     </div>
           ) : (
+            <>
             <UserProfile />
+            {showAllUsers && <AllUsersDisplay />}
+          </>
           )
         ) : showLogin ? (
           <div className="w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 md:p-12 bg-white border border-gray-200 rounded-lg shadow-lg flex-1 slide-up">

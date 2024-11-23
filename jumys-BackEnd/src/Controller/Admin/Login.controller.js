@@ -126,6 +126,21 @@ exports.deleteUser = async(req, res) => {
         res.status(500).json({ message: `Internal Server Error..${console.error()}`});
     }
 };
+  
+// exports.deleteUser  = async (req, res) => {
+//     try {
+//         const userId = req.query.userId; // Make sure you're getting it from query params
+//         let user = await userService.getUserById(userId);
+//         if (!user) {
+//             return res.status(404).json({ message: "User  not found..." });
+//         }
+//         user = await userService.updateUser (user._id, { isDelete: true });
+//         res.status(200).json({ user, message: `Admin deleted successfully...` });
+//     } catch (error) {
+//         console.log(error);
+//         res.status(500).json({ message: `Internal Server Error: ${error.message}` });
+//     }
+// };
 
 exports.logOut = async (req, res) => {
     try {

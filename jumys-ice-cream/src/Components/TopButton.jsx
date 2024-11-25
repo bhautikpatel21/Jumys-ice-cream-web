@@ -4,7 +4,6 @@ const ScrollToTopButton = () => {
     const [visible, setVisible] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-    // Show or hide the button based on scroll position
     const handleScroll = () => {
         if (window.scrollY > 300) {
             setVisible(true);
@@ -13,17 +12,14 @@ const ScrollToTopButton = () => {
         }
     };
 
-    // Check screen size to update button position
     const handleResize = () => {
         setIsSmallScreen(window.innerWidth <= 1200);
     };
 
-    // Add event listeners on component mount
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
 
-        // Check the screen size on the initial render
         handleResize();
 
         return () => {

@@ -561,7 +561,6 @@ const Login = () => {
       <Footer2 />
       <ScrollToTopButton />
 
-      {/* Confirmation Modal */}
       {showLogoutModal && (
         <ConfirmationModal onConfirm={confirmLogout} onCancel={cancelLogout} />
       )}

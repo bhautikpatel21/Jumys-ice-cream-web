@@ -69,7 +69,6 @@ const Product = () => {
   <h1 className="text-3xl font-Kalnia">Recently Viewed Products</h1>
 </div>
 
-
 <HomeProductCardMid/>
 
 <div className="mt-5"></div>

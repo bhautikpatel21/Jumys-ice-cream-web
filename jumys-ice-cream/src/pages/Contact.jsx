@@ -111,7 +111,6 @@ function Contact() {
       </div>
 
       <ScrollToTopButton />
-      {/* footer */}
       <Footer />
     </div>
   );

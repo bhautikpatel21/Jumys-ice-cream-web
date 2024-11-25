@@ -58,28 +58,14 @@ exports.getAllUsers = async(req, res) => {
     }
 };
 
-// exports.getUser = async(req, res) => {
-//     try {
-//         let admin = await userService.getUserById(req.query.adminId);
-//         console.log(admin);
-//         if (!admin) {
-//             return res.status(404).json({ message: "Admin not found..." });
-//         }
-//         res.status(200).json(admin);
-//     } catch (error) {
-//         console.log(error);
-//         res.status(500).json({ message: `Internal Server Error..${console.error()}`});
-//     }
-// };
-
 exports.getUser = async (req, res) => {
     try {
-        const adminId = req.query.adminId || req.admin._id; // req.admin should exist if middleware works
+        const adminId = req.query.adminId || req.admin._id;
         if (!adminId) {
             return res.status(400).json({ message: "Admin ID is required" });
         }
 
-        const admin = await userService.getUserById(adminId); // Ensure userService.getUserById is correct
+        const admin = await userService.getUserById(adminId); 
         if (!admin) {
             return res.status(404).json({ message: "Admin not found" });
         }
@@ -126,21 +112,6 @@ exports.deleteUser = async(req, res) => {
         res.status(500).json({ message: `Internal Server Error..${console.error()}`});
     }
 };
-  
-// exports.deleteUser  = async (req, res) => {
-//     try {
-//         const userId = req.query.userId; // Make sure you're getting it from query params
-//         let user = await userService.getUserById(userId);
-//         if (!user) {
-//             return res.status(404).json({ message: "User  not found..." });
-//         }
-//         user = await userService.updateUser (user._id, { isDelete: true });
-//         res.status(200).json({ user, message: `Admin deleted successfully...` });
-//     } catch (error) {
-//         console.log(error);
-//         res.status(500).json({ message: `Internal Server Error: ${error.message}` });
-//     }
-// };
 
 exports.logOut = async (req, res) => {
     try {
@@ -164,24 +135,20 @@ exports.updatePassword = async (req, res) => {
       const { adminId } = req.query;
       const { oldPassword, newPassword, confirmPassword } = req.body;
   
-      // Validate user exists
       const admin = await userService.getUserById(adminId);
       if (!admin) {
         return res.status(404).json({ message: "User not found" });
       }
   
-      // Check if old password is correct
       const isMatch = await bcrypt.compare(oldPassword, admin.password);
       if (!isMatch) {
         return res.status(400).json({ message: "Incorrect old password" });
       }
   
-      // Check if new passwords match
       if (newPassword !== confirmPassword) {
         return res.status(400).json({ message: "New passwords do not match" });
       }
   
-      // Update password
       const hashedPassword = await bcrypt.hash(newPassword, 10);
       admin.password = hashedPassword;
       await admin.save();

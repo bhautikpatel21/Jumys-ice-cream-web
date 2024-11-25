@@ -25,7 +25,7 @@ adminRoutes.get('/get-all-admin',adminVerifyToken,getAllUsers);
 
 adminRoutes.put('/update-admin',adminVerifyToken,updateUser);
 
-adminRoutes.post('/delete-admin', adminVerifyToken, deleteUser);
+adminRoutes.delete('/delete-admin',adminVerifyToken,deleteUser);
 
 adminRoutes.post('/logout-admin', adminVerifyToken, logOut);
 

@@ -264,28 +264,6 @@ const AdminLogin = () => {
     
   );
 
-  // const handleDeleteUser  = async (userId) => {
-  //   if (!token) {
-  //     alert("You must be logged in as an admin to delete users.");
-  //     return;
-  //   }
-
-  //   try {
-  //     await axios.delete(`http://localhost:7410/api/admin/login/delete-admin`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //       data: { id: userId }, // send userId in the body of the DELETE request
-  //     });
-  //     // Remove the deleted user from the state
-  //     setAllUsers((prevUsers) => prevUsers.filter(user => user._id !== userId));
-  //     alert("User  deleted successfully!");
-  //   } catch (err) {
-  //     console.error("Failed to delete user:", err);
-  //     alert("Failed to delete user. Please try again.");
-  //   }
-  // };
-
   const handleDeleteUser  = async (userId) => {
     if (!token) {
       alert("You must be logged in as an admin to delete users.");
@@ -300,12 +278,11 @@ const AdminLogin = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          params: { userId }, // send userId as a query parameter
+          params: { userId },
         }
       );
       console.log("Delete response:", response.data);
   
-      // Remove the deleted user from the state
       setAllUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
       alert("User  deleted successfully!");
     } catch (err) {
@@ -313,7 +290,6 @@ const AdminLogin = () => {
       alert("Failed to delete user. Please try again.");
     }
   };
-  
   
   const AllUsersDisplay = () => (
   <div className="w-full bg-white border p-4 rounded-lg shadow-lg">

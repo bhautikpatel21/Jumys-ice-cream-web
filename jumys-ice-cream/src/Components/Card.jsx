@@ -9,7 +9,6 @@ const   ProductCard = (props) => {
 
   const [visible, setVisible] = useState(false);
 
-
   const IconMenu = () => {
     return (
       <>
@@ -39,9 +38,7 @@ const   ProductCard = (props) => {
         </Card.Body>
       </>
     )
-  }
-
-  // Set Icon 
+  } 
 
   const handleMouseEnter = () => {
     setVisible(true);

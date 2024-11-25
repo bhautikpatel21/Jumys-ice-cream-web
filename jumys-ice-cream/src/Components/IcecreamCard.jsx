@@ -118,5 +118,3 @@ const IceCreamCard = () => {
 };
 
 export default IceCreamCard;
-
-

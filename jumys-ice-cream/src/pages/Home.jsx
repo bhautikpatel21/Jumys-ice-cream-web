@@ -16,10 +16,7 @@ const Home = () => {
   return (
     <>
 
-      {/* Slider 1 */}
       <HomeSlider1 /><br /><br />
-
-      {/* Content */}
 
       <div className=' pl-6 w-full h-auto flex flex-col gap-6 md:gap-10 md:flex-row justify-center '>
 
@@ -37,7 +34,6 @@ const Home = () => {
           <div className='w-full h-1 border-dashed border-t-4 border-red-600 my-4'> </div>
         </div>
 
-
         <div className='w-full md:w-[700px] h-auto relative'>
           <div className='flex flex-col md:flex-row h-auto'>
             <div className='w-full md:w-[40%] h-auto'>
@@ -53,8 +49,6 @@ const Home = () => {
           <img className='w-full max-w-[70px] md:max-w-[90px] mb-9 mx-auto md:absolute md:right-4 md:bottom-0 md:translate-x-4 md:translate-y-4 block' src={cup} alt="Ice Cream Cup" />
         </div>
       </div><br /><br />
-
-      {/* 3 ice-creame-information */}
 
       <div className='w-full h-auto flex flex-wrap px-4' id='topIce'>
 
@@ -90,7 +84,6 @@ const Home = () => {
       </div>
 
       <List_Renderingg /><br /> <br />
-
 
       <HomeSecond_slider />
 

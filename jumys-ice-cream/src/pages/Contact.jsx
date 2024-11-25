@@ -45,7 +45,7 @@ function Contact() {
           <div className="text-xl mb-4">
             <p>Rains HQ, Jens Olsens Vej 13, 8200 Aarhus N, Denmark</p>
             <p>(02) 6188 8062</p>
-            <p>Jumysicecream@Gmail.Com</p>
+            <p>bdudhat293@Gmail.Com</p>
           </div>
           <div className="mb-4 text-xl">
             <p>Open Hours:</p>

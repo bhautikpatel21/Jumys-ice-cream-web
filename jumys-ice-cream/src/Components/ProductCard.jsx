@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaShoppingCart, FaSearch, FaHeart, FaShareAlt, FaEye, FaCompressAlt } from 'react-icons/fa';
+import { FaHeart, FaShareAlt, FaEye, FaCompressAlt } from 'react-icons/fa';
 import PaymentMethodImg from "../assets/paymentMethod.png";
 import ProductData from '../Products.json';
 
@@ -35,7 +35,6 @@ const ProductCard = () => {
       <div className="overflow-hidden">
         <div className="mb-9 pt-4 md:px-6 md:pt-7 lg:mb-2 lg:p-8 2xl:p-10 2xl:pt-10">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
-          {/* lg:flex-col lg:w-[140px] lg:h-[620px] */}
           <div id="sideImages" className="flex flex-row lg:flex-col lg:w-[140px] lg:h-[620px] overflow-x-auto gap-2 m-2">
               {images.map((image, index) => (
                 <div

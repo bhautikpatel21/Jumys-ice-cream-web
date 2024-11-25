@@ -36,7 +36,6 @@ const AboutUs = () => {
 
   return (
     <div className={`transition-all duration-700 ${isVisible ? 'fade-in' : 'opacity-0 translate-y-10'}`}>
-      {/* Hero Section */}
       <div className="relative w-full h-auto">
         <img
           src={backgroundImage}
@@ -132,13 +131,11 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Final Section */}
       <div className="text-center py-10 px-5 md:px-10 lg:px-20">
         <p className="text-red-600 text-3xl" id="sweet">Our News</p>
         <p className="text-black text-4xl md:text-5xl mt-2" id="manufacture">Testiest Updates</p>
       </div>
 
-      {/* Optional Components */}
       <ArticleCard />
       <Footer2 />
       <ScrollToTopButton />

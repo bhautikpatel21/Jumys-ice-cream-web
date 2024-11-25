@@ -20,7 +20,7 @@ const HomeSlider2 = () => {
         <div className="mt-4 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
 
         <NavLink to="/shop">
-          <button className="home-bt-shop duration-200 px-8 py-3 text-base md:text-lg hover:scale-105 hover:bg-red-500 hover:text-white">
+          <button className="home-bt-shop duration-200 px-8 py-3 text-base md:text-lg hover:scale-105 hover:bg-black hover:text-white">
             Shop Now
           </button>
           </NavLink>

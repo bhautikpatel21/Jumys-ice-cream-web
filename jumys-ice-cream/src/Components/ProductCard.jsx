@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaHeart, FaShareAlt, FaEye, FaCompressAlt } from 'react-icons/fa';
+import { FaHeart, FaShareAlt, FaEye, FaCompressAlt } from "react-icons/fa";
 import PaymentMethodImg from "../assets/paymentMethod.png";
-import ProductData from '../Products.json';
+import ProductData from "../Products.json";
 
 const ProductCard = () => {
   const { productId } = useParams();
@@ -12,6 +12,7 @@ const ProductCard = () => {
   const [activeImage, setActiveImage] = useState();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
+  const [showShareOptions, setShowShareOptions] = useState(false);
 
   useEffect(() => {
     const foundProduct = ProductData.find(
@@ -20,7 +21,7 @@ const ProductCard = () => {
 
     if (foundProduct) {
       setProduct(foundProduct);
-      setActiveImage(foundProduct.imageList[0]); // Set the first image as active
+      setActiveImage(foundProduct.imageList[0]);
       setImages(foundProduct.imageList);
     }
   }, [productId]);
@@ -35,11 +36,16 @@ const ProductCard = () => {
       <div className="overflow-hidden">
         <div className="mb-9 pt-4 md:px-6 md:pt-7 lg:mb-2 lg:p-8 2xl:p-10 2xl:pt-10">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
-          <div id="sideImages" className="flex flex-row lg:flex-col lg:w-[140px] lg:h-[620px] overflow-x-auto gap-2 m-2">
+            <div
+              id="sideImages"
+              className="flex flex-row lg:flex-col lg:w-[140px] lg:h-[620px] overflow-x-auto gap-2 m-2"
+            >
               {images.map((image, index) => (
                 <div
                   key={image}
-                  className={`flex-shrink-0 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[118px] lg:h-[118px] cursor-pointer items-center justify-center overflow-hidden transition ${activeImage === image ? "border-black border-2" : ""}`}
+                  className={`flex-shrink-0 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[118px] lg:h-[118px] cursor-pointer items-center justify-center overflow-hidden transition ${
+                    activeImage === image ? "border-black border-2" : ""
+                  }`}
                   onClick={() => setActiveImage(image)}
                 >
                   <img
@@ -63,20 +69,31 @@ const ProductCard = () => {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-between">
                   <button
-                    onClick={() => setActiveImage(images[Math.max(images.indexOf(activeImage) - 1, 0)])}
+                    onClick={() =>
+                      setActiveImage(
+                        images[Math.max(images.indexOf(activeImage) - 1, 0)]
+                      )
+                    }
                   >
                     <ChevronLeft className="w-8 h-8 ml-4 rounded-full text-[#000] hover:text-[#fff] bg-[#fff] hover:bg-[#ff0000]" />
                   </button>
                   <button
-                    onClick={() => setActiveImage(images[Math.min(images.indexOf(activeImage) + 1, images.length - 1)])}
+                    onClick={() =>
+                      setActiveImage(
+                        images[
+                          Math.min(
+                            images.indexOf(activeImage) + 1,
+                            images.length - 1
+                          )
+                        ]
+                      )
+                    }
                   >
                     <ChevronRight className="w-8 h-8 mr-4 rounded-full text-[#000] hover:text-[#fff] bg-[#fff] hover:bg-[#ff0000]" />
                   </button>
                 </div>
               </div>
             </div>
-
-
 
             <div className="flex shrink-0 px-1 flex-col lg:w-[500px] xl:w-[470px] 2xl:w-[480px] lg:h-[702px]">
               <div className="pb-2">
@@ -116,19 +133,30 @@ const ProductCard = () => {
                   >
                     +
                   </button>
-                </div><br />
+                </div>
+                <br />
 
                 <div className="mb-4 mt-2">
                   <div className="flex items-center space-x-2">
-                    {['S', 'M', 'L', 'XL'].map((size) => (
+                    {["S", "M", "L", "XL"].map((size) => (
                       <div
                         key={size}
                         className={`w-10 h-10 flex justify-center items-center border border-black cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500 ${
-                          product && product.size && product.size.includes(size.toLowerCase()) ? (selectedSize === size ? 'bg-red-600 text-white' : '') : 'opacity-50 border-gray-400 cursor-not-allowed'
+                          product &&
+                          product.size &&
+                          product.size.includes(size.toLowerCase())
+                            ? selectedSize === size
+                              ? "bg-red-600 text-white"
+                              : ""
+                            : "opacity-50 border-gray-400 cursor-not-allowed"
                         }`}
                         onClick={() => {
-                          if (product && product.size && product.size.includes(size.toLowerCase())) {
-                            setSelectedSize(size); 
+                          if (
+                            product &&
+                            product.size &&
+                            product.size.includes(size.toLowerCase())
+                          ) {
+                            setSelectedSize(size);
                           }
                         }}
                       >
@@ -149,45 +177,81 @@ const ProductCard = () => {
                 </button>
               </div>
 
-              <div className="m-1 p-1 space-x-1 flex justify-center">
-                <div className="flex flex-row">
+              <div className="m-1 p-1 flex flex-wrap justify-center space-x-2 sm:space-x-4">
+                <div className="flex flex-row items-center space-x-2">
                   <a
                     href="#"
                     className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000]"
                   >
                     <FaHeart />
                   </a>
-                  <button className="py-2 px-2 rounded-full text-black">
+                  <button className="py-2 rounded-full text-black text-sm sm:text-base">
                     Browse Wishlist
                   </button>
                 </div>
 
-                <div className="flex flex-row">
+                <div className="relative flex flex-row items-center space-x-2">
                   <a
-                    href="#"
-                    className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000]"
-                  >
-                    <FaCompressAlt />
-                  </a>
-                  <button className="py-2 px-2 rounded-full text-black">
-                    Compare
-                  </button>
-                </div>
-
-                <div className="flex flex-row">
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000]"
+                    onClick={() => setShowShareOptions(!showShareOptions)}
+                    className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000] cursor-pointer"
                   >
                     <FaShareAlt />
                   </a>
-                  <button className="py-2 px-2 rounded-full text-black">
+                  <button className="py-2 rounded-full text-black text-sm sm:text-base">
                     Share
                   </button>
+
+                  {/* Share Options */}
+                  {showShareOptions && (
+                    <div className="absolute top-12 right-0 w-44 bg-yellow-100 border rounded-xl font-semibold shadow-lg z-10">
+                      <ul>
+                        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                          <a
+                            href="https://facebook.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Share on Facebook
+                          </a>
+                        </li>
+                        
+                        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                          <a
+                            href="https://twitter.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Share on Twitter
+                          </a>
+                        </li>
+
+                        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                          <a
+                            href={`https://api.whatsapp.com/send?text=Check out this product: ${window.location.href}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Share on WhatsApp
+                          </a>
+                        </li>
+
+                        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                          <a
+                            href={`https://t.me/share/url?url=${window.location.href}&text=Check out this product!`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Share on Telegram
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+
                 </div>
               </div>
 
-              <div className="mb-4 bg-gray-200 p-4">
+              <div className="mb-4 bg-blue-100 p-4">
                 <div className="flex space-x-2 mt-2 justify-center">
                   <img src={PaymentMethodImg} alt="payment method" />
                 </div>

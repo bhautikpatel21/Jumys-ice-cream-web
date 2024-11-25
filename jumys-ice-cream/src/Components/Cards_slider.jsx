@@ -1,21 +1,13 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
-// import { NavLink } from "react-router-dom";
-import { Card, Button, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import {
-  FaShoppingCart,
-  FaSearch,
-  FaHeart,
-  FaShareAlt,
-  FaStar,
   FaLessThan,
   FaGreaterThan,
 } from "react-icons/fa";
 
-// Import images
 import item1 from "../assets/asset 20.webp";
 import item2 from "../assets/asset 21.webp";
 import item3 from "../assets/asset 22.jpeg";
@@ -35,7 +27,6 @@ import item16 from "../assets/asset 35.jpeg";
 import ProductCard from "./Card";
 import { NavLink,Outlet } from "react-router-dom";
 
-// Slider settings
 const sliderSettings = {
   dots: true,
   infinite: true,
@@ -174,7 +165,7 @@ const List_Renderingg = () => {
       >
         <FaGreaterThan className="w-5 h-5" />
       </Button>
-      {/* <Outlet/> */}
+      <Outlet/>
     </div>
   );
 };

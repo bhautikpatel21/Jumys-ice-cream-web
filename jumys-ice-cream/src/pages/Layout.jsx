@@ -13,6 +13,7 @@ import Faq2 from './Faq2'
 import SignUp from './SignUp';
 import Wishlist from './Wishlist';
 import CartPage from './CartPage';
+import AdminLogin from './AdminLogin';
 
 const PageRouter = createBrowserRouter([
     {
@@ -66,6 +67,10 @@ const PageRouter = createBrowserRouter([
             {
               path : '/product/:productId',
               element : <ProductCard/>
+            },
+            {
+              path : '/admin-login',
+              element : <AdminLogin/>
             }
         ]
     }

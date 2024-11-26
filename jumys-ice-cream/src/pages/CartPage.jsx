@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import HomeFooter from '../Components/Footer2';
 import ScrollToTopButton from '../Components/TopButton';
-import Home from '../pages/Home';
 import { NavLink,Outlet } from 'react-router-dom';
 
 const CartPage = () => {

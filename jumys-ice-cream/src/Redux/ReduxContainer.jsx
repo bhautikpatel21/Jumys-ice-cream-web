@@ -4,7 +4,7 @@ import { increment , decrement } from './ProductSlice'
 
 const ReduxContainer = () => {
 
-    const ProductData = useSelector(state => state.counter.count)
+    const ProductData = useSelector(state => state)
 
     console.log('ReduxContainer', ProductData);
     
@@ -15,8 +15,8 @@ const ReduxContainer = () => {
     return (
       <>
             <div>ReduxContainer</div>
-            <div>{ProductData}</div>
             <button onClick={() => dispatch(increment())}>Increment</button>
+            <button onClick={() => dispatch(decrement())}>decrement</button>
       </>
   )
 }

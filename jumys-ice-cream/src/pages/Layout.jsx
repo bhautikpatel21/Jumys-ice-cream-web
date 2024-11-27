@@ -14,6 +14,7 @@ import SignUp from './SignUp';
 import Wishlist from './Wishlist';
 import CartPage from './CartPage';
 import AdminLogin from './AdminLogin';
+import ReduxContainer from '../Redux/ReduxContainer';
 
 const PageRouter = createBrowserRouter([
     {
@@ -71,7 +72,11 @@ const PageRouter = createBrowserRouter([
             {
               path : '/admin-login',
               element : <AdminLogin/>
-            }
+          },
+          {
+            path : '/redux',
+            element : <ReduxContainer/>
+          }
         ]
     }
 ])

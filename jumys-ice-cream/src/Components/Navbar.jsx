@@ -521,11 +521,16 @@ const Navbar = () => {
             >
               Page 404
             </NavLink>
+                <NavLink to="/redux" onClick={toggleMenu}>
+                  Redux
+                </NavLink>
           </div>
         </div>
       </ul>
     </div>
   );
+
+
 
   const toggleMenu = () => {
     if (isMobile) {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaHeart, FaShareAlt, FaEye, FaCompressAlt } from "react-icons/fa";
+import { FaHeart, FaShareAlt, FaEye , FaCompressAlt } from "react-icons/fa";
 import PaymentMethodImg from "../assets/paymentMethod.png";
 import ProductData from "../Products.json";
 
@@ -13,6 +13,7 @@ const ProductCard = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
   const [showShareOptions, setShowShareOptions] = useState(false);
+  
 
   useEffect(() => {
     const foundProduct = ProductData.find(

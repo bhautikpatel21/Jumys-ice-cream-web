@@ -15,7 +15,7 @@ const adminRoutes = require('./Routes/Admin/Index.Routes');
 app.use('/api/admin',adminRoutes);
 
 const userRoutes = require('./Routes/User/Index.Routes');
-app.use('/api/user',userRoutes);
+app.use('/api/user', userRoutes);
 
 async function main() {
     await mongoose.connect(process.env.MONGO_DB,{

@@ -1,33 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import { FaArrowLeft } from 'react-icons/fa';
-// import HomeFooter from '../Components/Footer2';
-// import ScrollToTopButton from '../Components/TopButton';
-// import { NavLink,Outlet } from 'react-router-dom';
-
-// const CartPage = () => {
-//   const [isPageLoaded, setIsPageLoaded] = useState(false);
-
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       setIsPageLoaded(true);
-//     }, 100); 
-
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   return (
-//     <>
-//       <div>
-
-//       </div>
-//       <HomeFooter />
-//       <ScrollToTopButton/>
-//     </>
-//   );
-// };
-
-// export default CartPage;
-
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import HomeFooter from "../Components/Footer2";

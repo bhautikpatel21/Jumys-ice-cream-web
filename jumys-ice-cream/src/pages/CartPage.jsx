@@ -255,7 +255,8 @@ const CartPage = () => {
 
                 <button
                   onClick={() => removeItem(index)}
-                  className="ml-auto text-red-500 hover:text-red-700"
+                  className="ml-auto text-black p-3 rounded-xl hover:scale-110 hover:duration-300 font-semibold bg-blue-300"
+                  
                 >
                   Remove
                 </button>
@@ -269,7 +270,7 @@ const CartPage = () => {
           <div className="mt-8">
             <button
               onClick={clearCart}
-              className="text-red-600 hover:text-red-800 font-semibold"
+              className="text-red-00 hover:scale-110 hover:duration-300 font-semibold bg-red-500  p-3 rounded-xl"
             >
               Clear Cart
             </button>

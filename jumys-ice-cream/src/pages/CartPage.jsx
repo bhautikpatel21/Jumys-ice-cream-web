@@ -69,7 +69,7 @@ const CartPage = () => {
           </div>
         )}
         <div className="mt-8">
-          <NavLink to="/" className="flex items-center text-blue-500">
+          <NavLink to="/shop" className="flex items-center text-blue-500">
             <FaArrowLeft className="mr-2" /> Continue Shopping
           </NavLink>
         </div>

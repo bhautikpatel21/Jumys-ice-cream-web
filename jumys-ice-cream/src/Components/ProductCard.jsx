@@ -188,7 +188,7 @@ const ProductCard = () => {
                   </button>
                 </NavLink>
 
-                <div className="flex space-x-4 mb-4">
+                <div className="flex space-x-4 mb-4 mt-3">
                   <button className="flex-1 border py-2 rounded-full text-black hover:text-white bg-white hover:bg-[#ff0000]">
                     Buy Now
                   </button>

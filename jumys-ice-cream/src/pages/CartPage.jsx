@@ -13,6 +13,15 @@ const CartPage = () => {
     setCartItems(storedCart);
   }, []);
 
+  // Remove item function
+  const removeItem = (index) => {
+    // Remove the item from the array
+    const updatedCart = cartItems.filter((item, i) => i !== index);
+    setCartItems(updatedCart);
+    // Update the localStorage
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <div className="container mx-auto px-4 py-6 lg:px-0 lg:py-8 max-w-screen-lg">
@@ -40,6 +49,13 @@ const CartPage = () => {
                     <p className="text-sm text-gray-600">Size: {item.selectedSize}</p>
                   )}
                 </div>
+                {/* Remove Button */}
+                <button
+                  onClick={() => removeItem(index)}
+                  className="ml-auto text-red-500 hover:text-red-700"
+                >
+                  Remove
+                </button>
               </div>
             ))}
           </div>

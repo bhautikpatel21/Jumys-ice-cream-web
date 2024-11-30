@@ -12,11 +12,17 @@ const CartPage = () => {
     setCartItems(storedCart);
   }, []);
 
+  // Function to remove a specific item
   const removeItem = (index) => {
     const updatedCart = cartItems.filter((item, i) => i !== index);
     setCartItems(updatedCart);
-    
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
+  // Function to clear all items
+  const clearCart = () => {
+    setCartItems([]);
+    localStorage.setItem("cart", JSON.stringify([]));
   };
 
   return (
@@ -54,6 +60,18 @@ const CartPage = () => {
                 </button>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Clear Cart Button */}
+        {cartItems.length > 0 && (
+          <div className="mt-8">
+            <button
+              onClick={clearCart}
+              className="text-red-600 hover:text-red-800 font-semibold"
+            >
+              Clear Cart
+            </button>
           </div>
         )}
 

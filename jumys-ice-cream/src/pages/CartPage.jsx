@@ -48,7 +48,7 @@ const CartPage = () => {
                   />
                   <div className="ml-4">
                     <h3 className="font-semibold text-lg md:text-xl">{item.name}</h3>
-                    <p className="text-sm text-gray-600">Price: {item.price}</p>
+                    <p className="text-sm text-gray-600">Price: <span> $</span> {item.price}</p>
                     <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>
                     {item.selectedSize && (
                       <p className="text-sm text-gray-600">Size: {item.selectedSize}</p>

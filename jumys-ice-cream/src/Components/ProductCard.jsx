@@ -37,13 +37,12 @@ const ProductCard = () => {
     const cartItem = {
       productId: product.ProductId,
       name: product.name,
-      price: product.price,
+      price: product.price * quantity, 
       quantity,
       selectedSize,
-      image: product.imageList[0], // Take the first image as a preview
+      image: product.imageList[0], 
     };
 
-    // Save the cart item to localStorage
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(cartItem);
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -56,7 +55,6 @@ const ProductCard = () => {
           <div className="flex flex-col lg:flex-row lg:space-x-8">
 
             <div className="flex flex-col lg:flex-row gap-4">
-              {/* Thumbnails */}
               <div
                 id="sideImages"
                 className="flex flex-row lg:flex-col lg:w-[140px] lg:h-[620px] overflow-x-auto gap-2 m-2"
@@ -125,6 +123,7 @@ const ProductCard = () => {
                   {product.name}
                 </h2>
                 <p className="text-2xl mb-2 font-semibold font-Kalnia">
+                <span>$</span>
                   {product.price}
                 </p>
                 <hr />

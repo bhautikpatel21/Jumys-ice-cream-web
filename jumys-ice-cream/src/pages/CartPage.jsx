@@ -8,17 +8,14 @@ const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    // Retrieve cart items from localStorage
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(storedCart);
   }, []);
 
-  // Remove item function
   const removeItem = (index) => {
-    // Remove the item from the array
     const updatedCart = cartItems.filter((item, i) => i !== index);
     setCartItems(updatedCart);
-    // Update the localStorage
+    
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
@@ -49,7 +46,6 @@ const CartPage = () => {
                     <p className="text-sm text-gray-600">Size: {item.selectedSize}</p>
                   )}
                 </div>
-                {/* Remove Button */}
                 <button
                   onClick={() => removeItem(index)}
                   className="ml-auto text-red-500 hover:text-red-700"

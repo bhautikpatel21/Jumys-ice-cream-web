@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaHeart, FaShareAlt, FaEye } from "react-icons/fa";
-import { NavLink,Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import ProductData from "../Products.json";
 import PaymentMethodImg from "../assets/paymentMethod.png";
 
@@ -62,9 +62,8 @@ const ProductCard = () => {
               {images.map((image, index) => (
                 <div
                   key={image}
-                  className={`flex-shrink-0 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[118px] lg:h-[118px] cursor-pointer items-center justify-center overflow-hidden transition ${
-                    activeImage === image ? "border-black border-2" : ""
-                  }`}
+                  className={`flex-shrink-0 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[118px] lg:h-[118px] cursor-pointer items-center justify-center overflow-hidden transition ${activeImage === image ? "border-black border-2" : ""
+                    }`}
                   onClick={() => setActiveImage(image)}
                 >
                   <img
@@ -101,10 +100,10 @@ const ProductCard = () => {
                     onClick={() =>
                       setActiveImage(
                         images[
-                          Math.min(
-                            images.indexOf(activeImage) + 1,
-                            images.length - 1
-                          )
+                        Math.min(
+                          images.indexOf(activeImage) + 1,
+                          images.length - 1
+                        )
                         ]
                       )
                     }
@@ -152,15 +151,14 @@ const ProductCard = () => {
                     {["S", "M", "L", "XL"].map((size) => (
                       <div
                         key={size}
-                        className={`w-10 h-10 flex justify-center items-center border border-black cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500 ${
-                          product &&
+                        className={`w-10 h-10 flex justify-center items-center border border-black cursor-pointer hover:bg-red-600 hover:text-white hover:duration-500 ${product &&
                           product.size &&
                           product.size.includes(size.toLowerCase())
-                            ? selectedSize === size
-                              ? "bg-red-600 text-white"
-                              : ""
-                            : "opacity-50 border-gray-400 cursor-not-allowed"
-                        }`}
+                          ? selectedSize === size
+                            ? "bg-red-600 text-white"
+                            : ""
+                          : "opacity-50 border-gray-400 cursor-not-allowed"
+                          }`}
                         onClick={() => {
                           if (
                             product &&
@@ -186,131 +184,131 @@ const ProductCard = () => {
                   </button>
                 </NavLink>
 
-                 <div className="flex space-x-4 mb-4">
-                 <button className="flex-1 border py-2 rounded-full text-black hover:text-white bg-white hover:bg-[#ff0000]">
-                   Buy Now
-                 </button>
-               </div>
-
-<div className="m-1 p-1 flex flex-wrap justify-center space-x-2 sm:space-x-4">
-<div className="flex flex-row items-center space-x-2">
-  <a
-    href="#"
-    className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000]"
-  >
-    <FaHeart />
-  </a>
-  <button className="py-2 rounded-full text-black text-sm sm:text-base">
-    Browse Wishlist
-  </button>
-</div>
-
-<div className="relative flex flex-row items-center space-x-2">
-  <a
-    onClick={() => setShowShareOptions(!showShareOptions)}
-    className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000] cursor-pointer"
-  >
-    <FaShareAlt />
-  </a>
-  <button className="py-2 rounded-full text-black text-sm sm:text-base">
-    Share
-  </button>
-
-  {/* Share Options */}
-  {showShareOptions && (
-    <div className="absolute top-12 right-0 w-44 bg-yellow-100 border rounded-xl font-semibold shadow-lg z-10">
-      <ul>
-        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Share on Facebook
-          </a>
-        </li>
-        
-        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Share on Twitter
-          </a>
-        </li>
-
-        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
-          <a
-            href={`https://api.whatsapp.com/send?text=Check out this product: ${window.location.href}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Share on WhatsApp
-          </a>
-        </li>
-
-        <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
-          <a
-            href={`https://t.me/share/url?url=${window.location.href}&text=Check out this product!`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Share on Telegram
-          </a>
-        </li>
-      </ul>
-    </div>
-  )}
-
-</div>
-</div>
-
-
-<div className="mb-4 bg-blue-100 p-4">
-<div className="flex space-x-2 mt-2 justify-center">
-  <img src={PaymentMethodImg} alt="payment method" />
-</div>
-<p className="text-black text-center mt-2">
-  Guaranteed Checkout
-</p>
-</div>
-<div className="mb-4">
-<p className="text-gray-600">
-  Free Worldwide Shipping On All Orders Over $100
-</p>
-<p className="text-gray-600">
-  Delivers In: 3-7 Working Days{" "}
-  <a
-    href="#"
-    className="text-black cursor-pointer underline hover:text-[#ff0000]"
-  >
-    Shipping & Return
-  </a>
-</p>
-</div>
-<div className="text-gray-600 flex gap-3">
-Categories:
-<div className="space-x-1 gap-4 flex">
-  <span className="text-black hover:text-[#ff0000] cursor-pointer">
-    Chocolate
-  </span>
-  <span className="text-black hover:text-[#ff0000] cursor-pointer">
-    Milkshakes
-  </span>
-  <span className="text-black hover:text-[#ff0000] cursor-pointer">
-    Strawberry
-  </span>
-</div>
-</div>
-                
+                <div className="flex space-x-4 mb-4">
+                  <button className="flex-1 border py-2 rounded-full text-black hover:text-white bg-white hover:bg-[#ff0000]">
+                    Buy Now
+                  </button>
                 </div>
+
+                <div className="m-1 p-1 flex flex-wrap justify-center space-x-2 sm:space-x-4">
+                  <div className="flex flex-row items-center space-x-2">
+                    <a
+                      href="#"
+                      className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000]"
+                    >
+                      <FaHeart />
+                    </a>
+                    <button className="py-2 rounded-full text-black text-sm sm:text-base">
+                      Browse Wishlist
+                    </button>
+                  </div>
+
+                  <div className="relative flex flex-row items-center space-x-2">
+                    <a
+                      onClick={() => setShowShareOptions(!showShareOptions)}
+                      className="w-10 h-10 rounded-full flex border justify-center items-center text-black hover:text-white bg-white hover:bg-[#ff0000] cursor-pointer"
+                    >
+                      <FaShareAlt />
+                    </a>
+                    <button className="py-2 rounded-full text-black text-sm sm:text-base">
+                      Share
+                    </button>
+
+                    {/* Share Options */}
+                    {showShareOptions && (
+                      <div className="absolute top-12 right-0 w-44 bg-yellow-100 border rounded-xl font-semibold shadow-lg z-10">
+                        <ul>
+                          <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                            <a
+                              href="https://facebook.com"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Share on Facebook
+                            </a>
+                          </li>
+
+                          <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                            <a
+                              href="https://twitter.com"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Share on Twitter
+                            </a>
+                          </li>
+
+                          <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                            <a
+                              href={`https://api.whatsapp.com/send?text=Check out this product: ${window.location.href}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Share on WhatsApp
+                            </a>
+                          </li>
+
+                          <li className="p-2 hover:bg-gray-200 text-sm sm:text-base cursor-pointer">
+                            <a
+                              href={`https://t.me/share/url?url=${window.location.href}&text=Check out this product!`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Share on Telegram
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+
+                  </div>
+                </div>
+
+
+                <div className="mb-4 bg-blue-100 p-4">
+                  <div className="flex space-x-2 mt-2 justify-center">
+                    <img src={PaymentMethodImg} alt="payment method" />
+                  </div>
+                  <p className="text-black text-center mt-2">
+                    Guaranteed Checkout
+                  </p>
+                </div>
+                <div className="mb-4">
+                  <p className="text-gray-600">
+                    Free Worldwide Shipping On All Orders Over $100
+                  </p>
+                  <p className="text-gray-600">
+                    Delivers In: 3-7 Working Days{" "}
+                    <a
+                      href="#"
+                      className="text-black cursor-pointer underline hover:text-[#ff0000]"
+                    >
+                      Shipping & Return
+                    </a>
+                  </p>
+                </div>
+                <div className="text-gray-600 flex gap-3">
+                  Categories:
+                  <div className="space-x-1 gap-4 flex">
+                    <span className="text-black hover:text-[#ff0000] cursor-pointer">
+                      Chocolate
+                    </span>
+                    <span className="text-black hover:text-[#ff0000] cursor-pointer">
+                      Milkshakes
+                    </span>
+                    <span className="text-black hover:text-[#ff0000] cursor-pointer">
+                      Strawberry
+                    </span>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
-      <Outlet/>
       </div>
+      <Outlet />
+    </div>
   );
 };
 

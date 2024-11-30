@@ -54,8 +54,9 @@ const ProductCard = () => {
       <div className="overflow-hidden">
         <div className="mb-9 pt-4 md:px-6 md:pt-7 lg:mb-2 lg:p-8 2xl:p-10 2xl:pt-10">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
+            
             {/* Image Navigation */}
-            <div
+            {/* <div
               id="sideImages"
               className="flex flex-row lg:flex-col lg:w-[140px] lg:h-[620px] overflow-x-auto gap-2 m-2"
             >
@@ -73,7 +74,33 @@ const ProductCard = () => {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
+
+
+<div className="flex flex-col lg:flex-row gap-4">
+  {/* Thumbnails */}
+  <div
+    id="sideImages"
+    className="flex flex-row lg:flex-col lg:w-[140px] lg:h-[620px] overflow-x-auto gap-2 m-2"
+  >
+    {images.map((image, index) => (
+      <div
+        key={image}
+        className={`flex-shrink-0 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[118px] lg:h-[118px] cursor-pointer items-center justify-center overflow-hidden transition ${
+          activeImage === image ? "border-black border-2" : ""
+        }`}
+        onClick={() => setActiveImage(image)}
+      >
+        <img
+          alt={`Product ${index}`}
+          src={image}
+          className="object-cover w-full h-full"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
 
             {/* Main Image */}
             <div className="mb-6 flex justify-center overflow-hidden md:mb-8 lg:mb-0 xl:flex">

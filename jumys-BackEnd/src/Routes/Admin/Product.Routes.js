@@ -1,7 +1,7 @@
 const express = require('express');
 const productRoutes = express.Router();
 
-// const { adminVerifyToken } = require('../../Helpers/adminVerifyToken');
+const { adminVerifyToken } = require('../../Helpers/adminVerifyToken');
 
 const {
     addNewProduct,
@@ -11,14 +11,14 @@ const {
     deleteProduct
 } = require('../../Controller/Admin/Product.controller');
 
-productRoutes.post('/add-product', addNewProduct);
+productRoutes.post('/add-product',adminVerifyToken, addNewProduct);
 
-productRoutes.get('/get-All-product', getAllProducts);
+productRoutes.get('/get-All-product',adminVerifyToken, getAllProducts);
 
-productRoutes.get('/get-product', getProduct);
+productRoutes.get('/get-product',adminVerifyToken, getProduct);
 
-productRoutes.put('/update-product', updateProduct);
+productRoutes.put('/update-product',adminVerifyToken, updateProduct);
 
-productRoutes.delete('/delete-product', deleteProduct);
+productRoutes.delete('/delete-product',adminVerifyToken, deleteProduct);
 
 module.exports = productRoutes;

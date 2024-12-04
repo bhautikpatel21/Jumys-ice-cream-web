@@ -1,47 +1,24 @@
-// const express = require('express');
-// const productRoutes = express.Router();
-
-// const {
-    
-//     addNewProduct,
-//     getAllProducts,
-//     getProduct,
-//     updateProduct,
-//     deleteProduct
-
-// } = require('../../Controller/Admin/Product.controller');
-
-// productRoutes.post('/add-product', addNewProduct);
-
-// productRoutes.get('/get-All-product', getAllProducts);
-
-// productRoutes.get('/get-product', getProduct);
-
-// productRoutes.put('/update-product', updateProduct);
-
-// productRoutes.delete('/delete-product', deleteProduct);
-
-// module.exports = productRoutes;
-
-
 const express = require('express');
-const ProductController = require('../../Controller/Admin/Product.controller');
+const productRoutes = express.Router();
 
-const Productrouter = express.Router();
+// const { adminVerifyToken } = require('../../Helpers/adminVerifyToken');
 
-// Add product
-Productrouter.post('/add-product', ProductController.addProduct);
+const {
+    addNewProduct,
+    getAllProducts,
+    getProduct,
+    updateProduct,
+    deleteProduct
+} = require('../../Controller/Admin/Product.controller');
 
-// Get a single product by productId
-Productrouter.get('/:productId', ProductController.getProduct);
+productRoutes.post('/add-product', addNewProduct);
 
-// Get all products
-Productrouter.get('/', ProductController.getAllProducts);
+productRoutes.get('/get-All-product', getAllProducts);
 
-// Update product
-Productrouter.put('/:productId', ProductController.updateProduct);
+productRoutes.get('/get-product', getProduct);
 
-// Delete product
-Productrouter.delete('/:productId', ProductController.deleteProduct);
+productRoutes.put('/update-product', updateProduct);
 
-module.exports = Productrouter;
+productRoutes.delete('/delete-product', deleteProduct);
+
+module.exports = productRoutes;

@@ -65,3 +65,8 @@
 - logoutUser - http://localhost:7410/api/user/login/logout-user
 
 - getmail - http://localhost:7410/api/user/email/sendm
+
+
+- || Product ||
+
+- addProduct - http://localhost:7410/api/admin/product/add-product

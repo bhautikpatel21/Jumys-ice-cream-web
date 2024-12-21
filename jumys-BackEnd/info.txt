@@ -70,3 +70,12 @@
 - || Product ||
 
 - addProduct - http://localhost:7410/api/admin/product/add-product
+
+- For email validation 
+  email: {
+        type: String,
+        unique: true,
+        required: true,
+        match: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com)$/,  // Regex to validate email ending with .com
+        message: 'Email must end with .com'
+    },

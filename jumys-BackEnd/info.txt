@@ -72,6 +72,7 @@
 - addProduct - http://localhost:7410/api/admin/product/add-product
 
 - For email validation 
+
   email: {
         type: String,
         unique: true,
@@ -79,3 +80,26 @@
         match: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com)$/,  // Regex to validate email ending with .com
         message: 'Email must end with .com'
     },
+
+- Fot hide password in login 
+
+  exports.loginUser = async(req, res) => {
+    try {
+        let user = await userService.getUser({ email: req.body.email, isDelete: false});
+        console.log(user);
+        if(!user){
+            return res.status(400).json({ message: `Email Not Found...`});
+        }
+        let checkPassword = await bcrypt.compare(req.body.password, user.password);
+        if (!checkPassword) {
+            return res.status(401).json({ message: `Password Not Match...`});
+        }
+        user.password = undefined;
+        let token = jwt.sign({ userId: user._id}, 'User');
+        console.log(token);
+        res.status(200).json({user,token, message: `User Login SuccesFully..`})
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message: `Internal Server Error...`})
+    }
+};

@@ -1,0 +1,1 @@
+add product = http://localhost:7410/api/admin/product/add-product

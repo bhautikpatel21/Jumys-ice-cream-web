@@ -4,14 +4,14 @@ const productRoutes = express.Router();
 const { adminVerifyToken } = require('../../Helpers/adminVerifyToken');
 
 const {
-    addNewProduct,
-    getAllProducts,
+    addProduct,
     getProduct,
+    getAllProducts,
     updateProduct,
     deleteProduct
 } = require('../../Controller/Admin/Product.controller');
 
-productRoutes.post('/add-product',adminVerifyToken, addNewProduct);
+productRoutes.post('/add-product',adminVerifyToken, addProduct);
 
 productRoutes.get('/get-All-product',adminVerifyToken, getAllProducts);
 

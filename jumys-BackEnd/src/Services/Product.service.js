@@ -43,19 +43,19 @@ module.exports = class ProductServices {
     };
 
     // GET ALL PRODUCT
-    async getAllProducts(query) {
+    async getAllProducts(body) {
         try {
-            let categoryWise = query.category && query.category !=="" ? [
-                { $match: { category: query.category} }
-            ] : [];
-            let find = [
-                { $match : { isDelete: false} },
-                ...categoryWise
-            ];
+            return await Product.find(body);
+        } catch (error) {
+            console.log(error);
+            return error.message;
+        }
+    };
 
-            let result = await Product.aggregate(find);
-            return result;
-
+    // DELETE PRODUCT 
+    async deleteProduct(id) {
+        try {
+            return await Product.findByIdAndDelete(id);
         } catch (error) {
             console.log(error);
             return error.message;

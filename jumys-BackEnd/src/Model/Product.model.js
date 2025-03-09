@@ -7,18 +7,38 @@ const productSchema = mongoose.Schema({
         required : true
     },
 
-    count :  {
-        type : Number,
-        default : 10
+    rev :  {
+        type : String,
+        required : true
     },
 
-    views : {
+    price : {
         type : Number,
         required : true
     },
 
-    sizes : {
+    color : {
+        type : String,
+        required : true
+    },
+
+    img1 : {
+        type : String,
+        required : true
+    },
+
+    imageList : {
         type : [String],
+        required : true
+    },
+
+    size : {
+        type : [String],
+        required : true
+    },
+
+    ProductId : {
+        type : Number,
         required : true
     },
 

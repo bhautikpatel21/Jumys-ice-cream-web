@@ -623,9 +623,23 @@ const Navbar = () => {
           className="w-[190px] h-full flex justify-around items-center text-[22px]"
           id="icons"
         >
-          <NavLink to="/login" className="icon2 text-red">
-            <FaUser />
-          </NavLink>
+          <div className="relative group">
+            <NavLink to="/login" className="icon2 text-red">
+              <FaUser />
+            </NavLink>
+            {localStorage.getItem('adminToken') && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 hidden group-hover:block">
+                <div className="py-1">
+                  <NavLink
+                    to="/admin/add-product"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Add Product
+                  </NavLink>
+                </div>
+              </div>
+            )}
+          </div>
           <NavLink to="/wishlist" className="icon3 text-red">
             <FaHeart />
           </NavLink>

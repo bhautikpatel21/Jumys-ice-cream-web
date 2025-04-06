@@ -1,8 +1,10 @@
 const express = require('express');
 const productRoutes = express.Router();
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
 
 const { adminVerifyToken } = require('../../Helpers/adminVerifyToken');
-
 const {
     addProduct,
     getProduct,
@@ -11,14 +13,36 @@ const {
     deleteProduct
 } = require('../../Controller/Admin/Product.controller');
 
-productRoutes.post('/add-product',adminVerifyToken, addProduct);
+// Ensure the "uploads" directory exists
+const uploadDir = path.join(__dirname, '../../uploads');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+}
 
-productRoutes.get('/get-All-product',adminVerifyToken, getAllProducts);
+// Set up Multer storage
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, uploadDir); // Save images in "uploads" folder
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
+    }
+});
 
-productRoutes.get('/get-product',adminVerifyToken, getProduct);
+const upload = multer({ storage: storage });
 
-productRoutes.put('/update-product',adminVerifyToken, updateProduct);
+// Routes with image upload handling
+productRoutes.post('/add-product', upload.fields([
+    { name: 'img1', maxCount: 1 }, // Single image
+    { name: 'imageList', maxCount: 5 } // Multiple images (max 5)
+]), addProduct);
 
-productRoutes.delete('/delete-product',adminVerifyToken, deleteProduct);
+productRoutes.get('/get-All-product', adminVerifyToken, getAllProducts);
+productRoutes.get('/get-product', adminVerifyToken, getProduct);
+productRoutes.put('/update-product', adminVerifyToken, upload.fields([
+    { name: 'img1', maxCount: 1 },
+    { name: 'imageList', maxCount: 5 }
+]), updateProduct);
+productRoutes.delete('/delete-product', adminVerifyToken, deleteProduct);
 
 module.exports = productRoutes;

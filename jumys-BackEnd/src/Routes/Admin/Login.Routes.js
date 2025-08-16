@@ -1,7 +1,7 @@
 const express = require('express');
 const adminRoutes = express.Router();
 
-const {adminVerifyToken} = require('../../Helpers/AdminVerifyToken');
+// const {adminVerifyToken} = require('../../Helpers/AdminVerifyToken');
 
 const {
     registerAdmin,
@@ -19,16 +19,16 @@ adminRoutes.post('/register-admin',registerAdmin);
 
 adminRoutes.post('/login-admin',loginAdmin);
 
-adminRoutes.get('/get-admin',adminVerifyToken,getUser);
+adminRoutes.get('/get-admin',getUser);
 
-adminRoutes.get('/get-all-admin',adminVerifyToken,getAllUsers);
+adminRoutes.get('/get-all-admin',getAllUsers);
 
-adminRoutes.put('/update-admin',adminVerifyToken,updateUser);
+adminRoutes.put('/update-admin',updateUser);
 
-adminRoutes.delete('/delete-admin',adminVerifyToken,deleteUser);
+adminRoutes.delete('/delete-admin',deleteUser);
 
-adminRoutes.post('/logout-admin', adminVerifyToken, logOut);
+adminRoutes.post('/logout-admin', logOut);
 
-adminRoutes.put('/update-password', adminVerifyToken, updatePassword);
+adminRoutes.put('/update-password', updatePassword);
 
 module.exports = adminRoutes;
